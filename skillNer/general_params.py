@@ -1,6 +1,6 @@
 
 # list of punctuation
-list_punctuations = ['/','·',',''.','-','(',')',',',':']
+list_punctuations = ['/', '·', ',', '.', '-', '(', ')', ',', ':']
 
 # list of redundant words to remove from text
 s_gram_redundant = [

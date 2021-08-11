@@ -3,7 +3,7 @@ from typing import List
 # installed packs
 # 
 # my packs
-from skillNer.cleaner import Cleaner, stem_text, lem_text, find_index_phrase, nlp
+from skillNer.cleaner import Cleaner, stem_text, find_index_phrase, nlp
 from skillNer.general_params import s_gram_redundant
 
 
@@ -45,26 +45,27 @@ class Text:
         cleaner = Cleaner(include_cleaning_functions=["remove_punctuation", "remove_extra_space"])
         self.transformed_text = cleaner(text)
 
-        # list of words within text
+        # list that holds all words within text
         self.list_words = []
-        for raw_word in self.transformed_text.split(" "):
-            word = Word(raw_word)
 
-            # add attributes
-            word.stemmed = stem_text(raw_word)
-            word.lemmed = lem_text(raw_word, nlp=nlp)
-
-            self.list_words.append(word)
-
-        # detect stop words
+        # construct list of words and create meta data object
         doc = nlp(self.transformed_text)
 
-        for token, i in zip(doc, range(len(self))):
-            self[i].is_stop_word = token.is_stop
+        for token in doc:
+            # create word object
+            word = Word(token.text)
 
+            # lem and stem
+            word.lemmed = token.lemma_
+            word.stemmed = stem_text(token.text)
+
+            # stop word and machability
+            word.is_stop_word = token.is_stop
             # a stop word is unmatchable
             if token.is_stop:
-                self[i].is_matchable = False
+                word.is_matchable = False
+
+            self.list_words.append(word)
 
         # detect unmatchable words
         for redundant_word in s_gram_redundant:
@@ -73,11 +74,23 @@ class Text:
             for index in list_index:
                 self[index].is_matchable = False
     
-    def stemmed(self):
-        return " ".join([word.stemmed for word in self.list_words])
+    # return stemmed form of text either as str or list of words
+    def stemmed(self, as_list: bool = False):
+        list_stems = [word.stemmed for word in self.list_words]
 
-    def lemmed(self):
-        return " ".join([word.lemmed for word in self.list_words])
+        if as_list:
+            return list_stems
+
+        return " ".join(list_stems)
+
+    # return lemmed form of text either as str or list of words
+    def lemmed(self, as_list: bool = False):
+        list_lems = [word.lemmed for word in self.list_words]
+
+        if as_list:
+            return list_lems
+
+        return " ".join(list_lems)
 
     # return raw version of text when converted to str
     def __str__(self):
