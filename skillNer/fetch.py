@@ -12,7 +12,7 @@ client_id = "5f379hywuvh7fvan" # replace 'your_client_id' with your client id fr
 client_secret = "hfCkXQEy" # replace 'your_client_secret' with your client secret from your api invite email
 scope = "emsi_open" # ok to leave as is, this is the scope we will used
 
-payload = f"client_id={client_id }&client_secret={client_secret}&grant_type=client_credentials&scope={scope}" # set credentials and scope
+payload = f"client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials&scope={scope}" # set credentials and scope
 headers = {'content-type': 'application/x-www-form-urlencoded'} # headers for the response
 access_token = json.loads((requests.request("POST", auth_endpoint, data=payload, headers=headers)).text)['access_token'] # grabs request's text and loads as JSON, then pulls the access token from that
 

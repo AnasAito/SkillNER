@@ -1,11 +1,11 @@
-# process_n_gram ,process_uni_gram : filter and score 
+# process_n_gram, process_uni_gram : filter and score 
 
 # native packs
 import collections
 # installed packs
 import numpy as np
 # my packs
-# 
+from skillNer.text_class import Text
 
 
 class Utils:
@@ -40,10 +40,10 @@ class Utils:
 
     def one_gram_sim(self, text_str, skill_str):
         # transform into sentence 
-        text = text_str+' '+skill_str
+        text = text_str + ' ' + skill_str
         tokens = self.nlp(text)
         token1, token2 = tokens[0], tokens[1]
-    # print(token1, token2)
+
         return token1.similarity(token2)
 
     def similarity(self, texts):
@@ -54,18 +54,17 @@ class Utils:
 
     def get_sim(self, skill_name, f, input_text):
         text = skill_name.lower().replace(f,'').strip()
-        #print('props : ', skill_name,'/', f ,'/',input_text)
-        #print('sim /',text,'/',input_text)
+
         return self.similarity([text,input_text])
 
     def make_one(self, cluster, len_):
-        a = [1]*len_
+        a = [1] * len_
         return [1*(i in cluster) for i,one in enumerate(a)]
 
     def split_at_values(self, lst, val):
         return [i for i, x in enumerate(lst) if x != val]
             
-    def grouper(self, iterable,dist):
+    def grouper(self, iterable, dist):
         prev = None
         group = []
         for item in iterable:
@@ -109,11 +108,8 @@ class Utils:
         s_gr = np.array(list(tokens))*np.array(list(corpus[skill_id]))
         def condition(x): return x == 1
         s_gr_ind = [idx for idx, element in enumerate(s_gr) if condition(element)][0]
-        #print('len',len_,real_id,s_gr_ind )
         if len_condition >=0.5 : 
-            #print('debug',debug[real_id] ,corpus[skill_id] ,tokens , len_condition  )
             if len_>2   :
-                    #print('ngram', True , real_id)
                     score = len_condition
                     return (True , {'skill_id':real_id,
                                     'doc_node_id':  [i for i,val in enumerate(s_gr) if val==1],
@@ -121,7 +117,6 @@ class Utils:
                                 })
                 
             if  self.is_low_frequency(text[s_gr_ind],real_id)   :
-                    #print('2gram', look_up_ngram[real_id],"/", text[s_gr_ind] ,"/",' '.join(text))
                     score = self.get_sim(self.skills_db[real_id]['skill_lemmed'], text[s_gr_ind] ,' '.join(text))
 
                     return (True , {'skill_id':real_id,
@@ -149,15 +144,15 @@ class Utils:
         return np.array(corpus) , look_up
         
     ## main functions
-    def process_n_gram(self, matches,text_obj):
+    def process_n_gram(self, matches, text_obj: Text):
                     if len(matches)==0:
                         return matches
                     
                     # get text spans with  conflict 
-                    text_tokens = text_obj.lemmed().split(' ')
+                    text_tokens = text_obj.lemmed(as_list=True)
                     len_ = len(text_tokens)
                     ## create corpus matrix  
-                    corpus,look_up = self.get_corpus(text_tokens,matches)
+                    corpus,look_up = self.get_corpus(text_tokens, matches)
                     ## generate spans 
                     co_occ = np.matmul(corpus.T, corpus) # co-occurence of tokens aij : co-occurence of token i with token j
                     clusters = self.get_clusters(co_occ)
@@ -182,7 +177,7 @@ class Utils:
                     
                     return new_spans
                 
-    def process_unigram(self, matches, text_obj):
+    def process_unigram(self, matches, text_obj: Text):
                     original_text = text_obj.transformed_text.split(' ')                
                     res = []
                     for match in matches :

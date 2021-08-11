@@ -213,4 +213,4 @@ s_gram_redundant = [
     'offer you',
     'is plus',
     'a good',
-    ]
+]

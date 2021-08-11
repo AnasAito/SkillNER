@@ -3,6 +3,7 @@ from typing import List
 # installed packs
 # 
 # my packs
+from skillNer.text_class import Text
 
 
 class Matchers:
@@ -128,7 +129,7 @@ class SkillsGetter:
         self.nlp = nlp
         return
 
-    def get_full_match_skills(self, text_obj, matcher):
+    def get_full_match_skills(self, text_obj: Text, matcher):
         skills = []
         doc = self.nlp(text_obj.transformed_text)
 
@@ -142,9 +143,9 @@ class SkillsGetter:
             for token in text_obj[start:end] :
                 token.is_matchable = False
 
-        return skills,text_obj
+        return skills, text_obj
 
-    def get_sub_match_skills(self, text_obj, matcher):
+    def get_sub_match_skills(self, text_obj: Text, matcher):
         skills_full = []
         skills = []
         sub_matches= []
@@ -185,7 +186,7 @@ class SkillsGetter:
 
         return skills_full,skills,text_obj
 
-    def get_single_match_skills(self, text_obj, matcher):
+    def get_single_match_skills(self, text_obj: Text, matcher):
         skills = []
     
         doc = self.nlp(text_obj.stemmed())
