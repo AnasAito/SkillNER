@@ -1,11 +1,9 @@
 # SkillNER project 
-
-
-
-
 ## Project overview : 
 - The goal of this project is to build a named entity extraction solution for skill extraction from job posting text .
-- Our solution merge a rulebased matcher that label data and feed it. to aBERT model that we will fine tune for skills rcognition
+- Our solution merge a rulebased matcher that label data and feed it. to aBERT model that we will fine tune for skills rcognition .
+
+![image](https://user-images.githubusercontent.com/56308112/128958594-79813e72-b688-4a9a-9267-324f098d4b0c.png)
 
 ## Documentation : 
 Visit this [notion link](https://sudsy-dill-008.notion.site/f6596c10b49545d5a740e0ecc21a5a46?v=801ba1af94a0484d8af732347c211fb0) for updated documentation about the project 
