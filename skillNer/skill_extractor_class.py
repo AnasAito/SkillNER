@@ -16,7 +16,7 @@ class SkillExtractor:
         skills_db,
         phraseMatcher,
         stop_words,
-        ):
+    ):
 
         # params
         self.nlp = nlp
@@ -41,8 +41,8 @@ class SkillExtractor:
 
     def annotate(
         self,
-        text: str
-        ):
+        text: str, tresh: float = 0.5,
+    ):
 
         # create text object
         text_obj = Text(text, self.nlp)
@@ -56,8 +56,10 @@ class SkillExtractor:
             text_obj, self.matchers['uni_gram_matcher'])
 
         # process filter
-        n_gram_pro = self.utils.process_n_gram(skills_ngram, text_obj)
-        uni_gram_pro = self.utils.process_unigram(skills_uni, text_obj)
+        n_gram_pro = [skill_match for skill_match in self.utils.process_n_gram(
+            skills_ngram, text_obj) if skill_match['score'] >= tresh]
+        uni_gram_pro = [skill_match for skill_match in self.utils.process_unigram(
+            skills_uni, text_obj)if skill_match['score'] >= tresh]
 
         return {
             'text': text_obj.transformed_text,
@@ -70,12 +72,12 @@ class SkillExtractor:
         }
 
     def display(
-        self, 
+        self,
         results
-        ):
+    ):
 
         # explode result object
-        text = results["text"] 
+        text = results["text"]
         skill_extractor_results = results['results']
 
         # words and their positions
@@ -109,7 +111,8 @@ class SkillExtractor:
             entities.append(entity)
 
             # highlight matched skills
-            colors[entity['label']] = SKILL_TO_COLOR[self.skills_db[skill_id]['skill_type']]
+            colors[entity['label']
+                   ] = SKILL_TO_COLOR[self.skills_db[skill_id]['skill_type']]
             colors_id.append(entity['label'])
 
         # prepare params
