@@ -54,6 +54,8 @@ class SkillExtractor:
             text_obj, self.matchers['ngram_matcher'])
         skills_uni = self.skill_getters.get_single_match_skills(
             text_obj, self.matchers['uni_gram_matcher'])
+        skills_abv = self.skill_getters.get_abv_match_skills(
+            text_obj, self.matchers['abv_matcher'])
 
         # process filter
         n_gram_pro = [skill_match for skill_match in self.utils.process_n_gram(
@@ -67,7 +69,8 @@ class SkillExtractor:
                 'full_match': skills_full,
                 'ngram_full_match': skills_sub_full,
                 'ngram_scored': n_gram_pro,
-                'unigram_scored': uni_gram_pro
+                'unigram_scored': uni_gram_pro,
+                'skills_abv': skills_abv
             }
         }
 

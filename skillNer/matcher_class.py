@@ -26,17 +26,14 @@ class Matchers:
             'full_matcher': self.get_full_matcher,
             'ngram_matcher': self.get_ngram_matcher,
             'uni_gram_matcher': self.get_uni_gram__matcher,
-        }
+            'abv_matcher': self.get_abv_matcher}
+
         return
 
     # load specified matchers
-    def load_matchers(
-            self,
-            include: List[str] = ['full_matcher',
-                                  'ngram_matcher', 'uni_gram_matcher'],
-            exclude: List[str] = []):
+    def load_matchers(self, include=['full_matcher', 'ngram_matcher', 'uni_gram_matcher', 'abv_matcher'], exclude=[]):
 
-        # where to store loaded matchers
+        # #where to store loaded matchers
         loaded_matchers = {}
 
         # load matchers in if exclude is not empty
@@ -120,22 +117,39 @@ class Matchers:
 
         return single_gram_matcher
 
+    def get_abv_matcher(self):
+        # params
+        nlp = self.nlp
+        skills_db = self.skills_db
+        abv_matcher = self.phraseMatcher(nlp.vocab, attr="LOWER")
+
+        # populate matcher
+        for key in skills_db:
+            # get skill info
+            skill_id = key
+            skill_abv = skills_db[key]['skill_abv']
+
+            skill_abv_spacy = nlp.make_doc(skill_abv)
+            abv_matcher.add(str(skill_id), [skill_abv_spacy])
+
+        return abv_matcher
+
 
 class SkillsGetter:
     def __init__(
         self,
         nlp
-        ):
+    ):
 
         # param
         self.nlp = nlp
         return
 
     def get_full_match_skills(
-        self, 
-        text_obj: Text, 
+        self,
+        text_obj: Text,
         matcher
-        ):
+    ):
 
         skills = []
         doc = self.nlp(text_obj.transformed_text)
@@ -154,10 +168,10 @@ class SkillsGetter:
         return skills, text_obj
 
     def get_sub_match_skills(
-        self, 
-        text_obj: Text, 
+        self,
+        text_obj: Text,
         matcher
-        ):
+    ):
 
         skills_full = []
         skills = []
@@ -200,11 +214,11 @@ class SkillsGetter:
         return skills_full, skills, text_obj
 
     def get_single_match_skills(
-        self, 
-        text_obj: Text, 
+        self,
+        text_obj: Text,
         matcher
-        ):
-        
+    ):
+
         skills = []
 
         doc = self.nlp(text_obj.stemmed())
@@ -216,3 +230,21 @@ class SkillsGetter:
                                'doc_node_id': start})
 
         return skills
+
+    def get_abv_match_skills(
+        self,
+        text_obj: Text,
+        matcher
+    ):
+        skills = []
+
+        doc = self.nlp(text_obj.transformed_text)
+        for match_id, start, end in matcher(doc):
+            id_ = matcher.vocab.strings[match_id]
+            if text_obj[start].is_matchable:
+                skills.append({'skill_id': id_,
+                               'doc_node_value': str(doc[start:end]),
+                               'doc_node_id': [start]})
+
+        return skills
+    )
