@@ -4,7 +4,7 @@ from typing import List
 # 
 # my packs
 from skillNer.cleaner import Cleaner, stem_text, find_index_phrase, nlp
-from skillNer.general_params import s_gram_redundant
+from skillNer.general_params import S_GRAM_REDUNDANT
 
 
 # building block of text
@@ -47,45 +47,6 @@ class Word:
         return len(self.word)
 
 
-class Text_beta:
-    def __init__(
-        self,
-        text: str
-        ):
-
-        # immutable text
-        self.text = text
-
-        # words in text
-        self.list_words = []
-
-        pointer = 0
-        for raw_word in self.text.split(" "):
-            # init object word
-            word = Word(raw_word)
-
-            # start and end of word
-            word.start = pointer
-            word.end = pointer + len(word)
-
-            # update pointer 
-            pointer += len(word) + 1
-
-            self.list_words.append(word)
-        pass
-
-    # return text when converting obj to str
-    def __str__(self):
-        return self.text
-    
-    # equip with the behavior of a list
-    def __getitem__(self, index) -> Word:
-        return self.list_words[index]
-
-    def __len__(self):
-        return len(self.list_words)
-
-
 class Text:
     def __init__(
         self, 
@@ -124,7 +85,7 @@ class Text:
             self.list_words.append(word)
 
         # detect unmatchable words
-        for redundant_word in s_gram_redundant:
+        for redundant_word in S_GRAM_REDUNDANT:
             list_index = find_index_phrase(phrase=redundant_word, text=self.transformed_text)
 
             for index in list_index:
@@ -160,3 +121,26 @@ class Text:
     # len of a text is the number of words in it
     def __len__(self):
         return len(self.list_words)
+
+    # result a list of word object
+    # each word contain the info of its start/end position
+    @staticmethod
+    def words_start_end_position(text: str):
+        # words in text
+        list_words = []
+
+        pointer = 0
+        for raw_word in text.split(" "):
+            # init object word
+            word = Word(raw_word)
+
+            # start and end of word
+            word.start = pointer
+            word.end = pointer + len(word)
+
+            # update pointer 
+            pointer += len(word) + 1
+
+            list_words.append(word)
+
+        return list_words

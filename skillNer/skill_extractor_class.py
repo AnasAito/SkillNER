@@ -3,7 +3,7 @@
 # installed packs
 from spacy import displacy
 # my packs
-from skillNer.text_class import Text, Text_beta
+from skillNer.text_class import Text
 from skillNer.matcher_class import Matchers, SkillsGetter
 from skillNer.utils import Utils
 from skillNer.general_params import SKILL_TO_COLOR
@@ -75,8 +75,11 @@ class SkillExtractor:
         ):
 
         # explode result object
-        text_obj = Text_beta(results['text'])
+        text = results["text"] 
         skill_extractor_results = results['results']
+
+        # words and their positions
+        words_position = Text.words_start_end_position(text)
 
         # get matches
         matches = []
@@ -99,8 +102,8 @@ class SkillExtractor:
 
             # build/append entity
             entity = {
-                "start": text_obj[index_start_word].start,
-                "end": text_obj[index_end_word].end,
+                "start": words_position[index_start_word].start,
+                "end": words_position[index_end_word].end,
                 "label": self.skills_db[skill_id]['skill_name']
             }
             entities.append(entity)
@@ -113,52 +116,10 @@ class SkillExtractor:
         entities.sort(key=lambda x: x['start'], reverse=False)
         options = {"ents": colors_id, "colors": colors}
         ex = {
-            "text": str(text_obj),
+            "text": text,
             "ents": entities,
             "title": None
         }
 
         # render
         html = displacy.render(ex, style="ent", manual=True, options=options)
-
-    # def display(
-    #     self, 
-    #     results
-    #     ):
-
-    #     text = results['text']
-    #     skill_extractor_results = results['results']
-    #     ents = []
-    #     matches = []
-    #     colors_id = []
-    #     colors = {}
-    #     tokens = text.split(' ')
-
-    #     for match_type in skill_extractor_results.keys():
-    #         for match in skill_extractor_results[match_type]:
-    #             matches.append(match)
-
-    #     for match in matches:
-    #         entity = {}
-    #         start = sum(
-    #             [len(token)+1 for token in tokens[:match['doc_node_id'][0]]])
-
-    #         entity['start'] = start
-
-    #         end = start+sum(
-    #             [len(token)+1 for token in tokens[match['doc_node_id'][0]:1+match['doc_node_id'][-1]]])
-
-    #         entity['end'] = end
-    #         entity['label'] = self.skills_db[match['skill_id']]['skill_name']
-    #         colors[entity['label']
-    #                ] = SKILL_TO_COLOR[self.skills_db[match['skill_id']]['skill_type']]
-    #         colors_id.append(entity['label'])
-    #         ents.append(entity)
-        
-    #     ents.sort(key=lambda x: x['start'], reverse=False)
-    #     ex = [{"text": text,
-    #            "ents": ents,
-    #            "title": None}]
-
-    #     options = {"ents": colors_id, "colors": colors}
-    #     html = displacy.render(ex, style="ent", manual=True, options=options)
