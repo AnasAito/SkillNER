@@ -4,7 +4,7 @@ import en_core_web_lg
 # native packs
 from typing import List
 # my pack
-from skillNer.general_params import s_gram_redundant, list_punctuations
+from skillNer.general_params import S_GRAM_REDUNDANT, LIST_PUNCTUATIONS
 
 
 # load nlp
@@ -19,7 +19,7 @@ def remove_punctuation(
     *args, **kwargs
     ) -> str:
 
-    for punc in list_punctuations:
+    for punc in LIST_PUNCTUATIONS:
         text = text.replace(punc, "")
     
     return text.strip()
@@ -27,7 +27,7 @@ def remove_punctuation(
 # remove redundant words
 def remove_redundant(
     text: str,
-    list_redundant_words: List[str] = s_gram_redundant,
+    list_redundant_words: List[str] = S_GRAM_REDUNDANT,
     *args, **kwargs
     ) -> str:
 
@@ -75,12 +75,11 @@ dict_cleaning_functions = dict_cleaning_functions = {
 
 
 # find index of words of a phrase in a text
-# list_words is the list of words that are whitin text
 # return an empty list if phrase not in text
 def find_index_phrase(
     phrase: str,
     text: str,
-    ) -> List[int] or bool:
+    ) -> List[int]:
 
     if phrase in text:
         # words in text

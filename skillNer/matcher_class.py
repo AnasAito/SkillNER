@@ -8,11 +8,12 @@ from skillNer.text_class import Text
 
 class Matchers:
     def __init__(
-            self,
-            nlp,
-            skills_db: dict,
-            phraseMatcher,
-            stop_words: List[str]):
+        self,
+        nlp,
+        skills_db: dict,
+        phraseMatcher,
+        stop_words: List[str]
+    ):
 
         # params
         self.nlp = nlp
@@ -122,14 +123,20 @@ class Matchers:
 
 class SkillsGetter:
     def __init__(
-            self,
-            nlp):
+        self,
+        nlp
+        ):
 
         # param
         self.nlp = nlp
         return
 
-    def get_full_match_skills(self, text_obj: Text, matcher):
+    def get_full_match_skills(
+        self, 
+        text_obj: Text, 
+        matcher
+        ):
+
         skills = []
         doc = self.nlp(text_obj.transformed_text)
 
@@ -146,7 +153,12 @@ class SkillsGetter:
 
         return skills, text_obj
 
-    def get_sub_match_skills(self, text_obj: Text, matcher):
+    def get_sub_match_skills(
+        self, 
+        text_obj: Text, 
+        matcher
+        ):
+
         skills_full = []
         skills = []
         sub_matches = []
@@ -187,7 +199,12 @@ class SkillsGetter:
 
         return skills_full, skills, text_obj
 
-    def get_single_match_skills(self, text_obj: Text, matcher):
+    def get_single_match_skills(
+        self, 
+        text_obj: Text, 
+        matcher
+        ):
+        
         skills = []
 
         doc = self.nlp(text_obj.stemmed())

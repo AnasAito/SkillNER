@@ -9,7 +9,11 @@ from skillNer.general_params import s_gram_redundant
 
 # building block of text
 class Word:
-    def __init__(self, word: str):
+    def __init__(
+        self,
+        word: str
+        ):
+        
         # immutable version of word
         self.word = word
 
@@ -19,6 +23,10 @@ class Word:
 
         self.is_stop_word = None
         self.is_matchable = True
+
+        # position in sentence
+        self.start: int
+        self.end: int
         pass
     
     # get metadata of word
@@ -34,9 +42,57 @@ class Word:
     def __str__(self):
         return self.word
 
+    # give the len of the word
+    def __len__(self):
+        return len(self.word)
+
+
+class Text_beta:
+    def __init__(
+        self,
+        text: str
+        ):
+
+        # immutable text
+        self.text = text
+
+        # words in text
+        self.list_words = []
+
+        pointer = 0
+        for raw_word in self.text.split(" "):
+            # init object word
+            word = Word(raw_word)
+
+            # start and end of word
+            word.start = pointer
+            word.end = pointer + len(word)
+
+            # update pointer 
+            pointer += len(word) + 1
+
+            self.list_words.append(word)
+        pass
+
+    # return text when converting obj to str
+    def __str__(self):
+        return self.text
+    
+    # equip with the behavior of a list
+    def __getitem__(self, index) -> Word:
+        return self.list_words[index]
+
+    def __len__(self):
+        return len(self.list_words)
+
 
 class Text:
-    def __init__(self, text: str, nlp=nlp):
+    def __init__(
+        self, 
+        text: str, 
+        nlp=nlp
+        ):
+        
         # immutable version of text
         self.immutable_text = text
 

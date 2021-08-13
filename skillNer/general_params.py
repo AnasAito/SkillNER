@@ -1,9 +1,12 @@
 
+# mapping skill and color
+SKILL_TO_COLOR = { 'Hard Skill': '#818CF8', 'Soft Skill': '#F472B6' }
+
 # list of punctuation
-list_punctuations = ['/', '·', ',', '.', '-', '(', ')', ',', ':']
+LIST_PUNCTUATIONS = ['/', '·', ',', '.', '-', '(', ')', ',', ':']
 
 # list of redundant words to remove from text
-s_gram_redundant = [
+S_GRAM_REDUNDANT = [
     'no no',
     'of the',
     'you have',
