@@ -186,7 +186,7 @@ class Utils:
 
     def process_unigram(self, matches, text_obj: Text):
         original_text = text_obj.transformed_text.split(' ')
-        res = []
+        res = {}
         for match in matches:
             id_ = match['skill_id']
             match_id = match['doc_node_id']
@@ -196,9 +196,19 @@ class Utils:
             text_str = original_text[match_id]
             sim = self.one_gram_sim(skill_str, text_str)
             # match['doc_node_id'] = [match['doc_node_id']] # for normalisation purpose
+            if match_id in res.keys():
+                if sim >= res[match_id]['score']:
+                    res[match_id] = {'skill_id': id_,
+                                     'doc_node_id': [match_id],
+                                     'doc_node_value': match['doc_node_value'],
+                                     'score': round(sim, 2)}
+                else:
+                    pass
+            else:
 
-            res.append({'skill_id': id_,
-                        'doc_node_id': [match_id],
-                        'doc_node_value': match['doc_node_value'],
-                        'score': round(sim, 2)})
-        return res
+                res[match_id] = {'skill_id': id_,
+                                 'doc_node_id': [match_id],
+                                 'doc_node_value': match['doc_node_value'],
+                                 'score': round(sim, 2)}
+
+        return list(res.values())
