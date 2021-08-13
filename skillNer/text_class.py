@@ -1,7 +1,7 @@
 # native packs
 from typing import List
 # installed packs
-# 
+#
 # my packs
 from skillNer.cleaner import Cleaner, stem_text, find_index_phrase, nlp
 from skillNer.general_params import S_GRAM_REDUNDANT
@@ -12,8 +12,8 @@ class Word:
     def __init__(
         self,
         word: str
-        ):
-        
+    ):
+
         # immutable version of word
         self.word = word
 
@@ -28,7 +28,7 @@ class Word:
         self.start: int
         self.end: int
         pass
-    
+
     # get metadata of word
     def metadata(self):
         return {
@@ -49,18 +49,22 @@ class Word:
 
 class Text:
     def __init__(
-        self, 
-        text: str, 
+        self,
+        text: str,
         nlp=nlp
-        ):
-        
+    ):
+
         # immutable version of text
         self.immutable_text = text
 
         # transformed text: lower + punctuation + extra space
         # this is the version of text that we will be working with
-        cleaner = Cleaner(include_cleaning_functions=["remove_punctuation", "remove_extra_space"])
-        self.transformed_text = cleaner(text)
+        cleaner = Cleaner(include_cleaning_functions=[
+                          "remove_punctuation", "remove_extra_space"], to_lowercase=False,)
+
+        self.transformed_text = cleaner(text).lower()
+        # abv version
+        self.abv_text = cleaner(text)
 
         # list that holds all words within text
         self.list_words = []
@@ -86,11 +90,12 @@ class Text:
 
         # detect unmatchable words
         for redundant_word in S_GRAM_REDUNDANT:
-            list_index = find_index_phrase(phrase=redundant_word, text=self.transformed_text)
+            list_index = find_index_phrase(
+                phrase=redundant_word, text=self.transformed_text)
 
             for index in list_index:
                 self[index].is_matchable = False
-    
+
     # return stemmed form of text either as str or list of words
     def stemmed(self, as_list: bool = False):
         list_stems = [word.stemmed for word in self.list_words]
@@ -138,7 +143,7 @@ class Text:
             word.start = pointer
             word.end = pointer + len(word)
 
-            # update pointer 
+            # update pointer
             pointer += len(word) + 1
 
             list_words.append(word)

@@ -121,13 +121,13 @@ class Matchers:
         # params
         nlp = self.nlp
         skills_db = self.skills_db
-        abv_matcher = self.phraseMatcher(nlp.vocab, attr="LOWER")
+        abv_matcher = self.phraseMatcher(nlp.vocab)
 
         # populate matcher
         for key in skills_db:
             # get skill info
             skill_id = key
-            skill_abv = skills_db[key]['skill_abv']
+            skill_abv = skills_db[key]['abbreviation']
 
             skill_abv_spacy = nlp.make_doc(skill_abv)
             abv_matcher.add(str(skill_id), [skill_abv_spacy])
@@ -217,7 +217,7 @@ class SkillsGetter:
         self,
         text_obj: Text,
         matcher
-        ):
+    ):
 
         skills = []
 
@@ -235,10 +235,10 @@ class SkillsGetter:
         self,
         text_obj: Text,
         matcher
-        ):
+    ):
         skills = []
 
-        doc = self.nlp(text_obj.transformed_text)
+        doc = self.nlp(text_obj.abv_text)
         for match_id, start, end in matcher(doc):
             id_ = matcher.vocab.strings[match_id]
             if text_obj[start].is_matchable:

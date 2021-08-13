@@ -10,26 +10,29 @@ from skillNer.general_params import S_GRAM_REDUNDANT, LIST_PUNCTUATIONS
 # load nlp
 nlp = en_core_web_lg.load()
 # list of cleaning functions names
-all_cleaning = ["remove_punctuation" ,"remove_redundant" ,"stem_text", "lem_text", "remove_extra_space"]
+all_cleaning = ["remove_punctuation", "remove_redundant",
+                "stem_text", "lem_text", "remove_extra_space"]
 
 
 # remove punctuation from text
 def remove_punctuation(
-    text: str, 
+    text: str,
     *args, **kwargs
-    ) -> str:
+) -> str:
 
     for punc in LIST_PUNCTUATIONS:
-        text = text.replace(punc, "")
-    
+        text = text.replace(punc, " ")
+
     return text.strip()
 
 # remove redundant words
+
+
 def remove_redundant(
     text: str,
     list_redundant_words: List[str] = S_GRAM_REDUNDANT,
     *args, **kwargs
-    ) -> str:
+) -> str:
 
     for phrase in list_redundant_words:
         text = text.replace(phrase, "")
@@ -37,29 +40,35 @@ def remove_redundant(
     return text
 
 # stem using a predefined stemer
+
+
 def stem_text(
     text: str,
-    stemmer = PorterStemmer(),
+    stemmer=PorterStemmer(),
     *args, **kwargs
-    ) -> str:
+) -> str:
 
-    return " ".join([stemmer.stem(word) for word in text.split(" ")]) 
+    return " ".join([stemmer.stem(word) for word in text.split(" ")])
 
 # lem text using nlp loaded from scapy
+
+
 def lem_text(
     text: str,
-    nlp = nlp,
+    nlp=nlp,
     *args, **kwargs
-    ) -> str:
+) -> str:
 
     doc = nlp(text)
     return ' '.join([token.lemma_ for token in doc])
 
 # remove extra space
+
+
 def remove_extra_space(
     text: str,
     *args, **kwargs
-    ) -> str:
+) -> str:
 
     return " ".join(text.split())
 
@@ -79,7 +88,7 @@ dict_cleaning_functions = dict_cleaning_functions = {
 def find_index_phrase(
     phrase: str,
     text: str,
-    ) -> List[int]:
+) -> List[int]:
 
     if phrase in text:
         # words in text
@@ -96,23 +105,23 @@ def find_index_phrase(
     return []
 
 
-class Cleaner:   
+class Cleaner:
     def __init__(
-        self, 
-        to_lowercase: bool = True, 
+        self,
+        to_lowercase: bool = True,
         include_cleaning_functions: list = all_cleaning,
         exclude_cleaning_function: list = []
-        ) -> None:
-        
+    ) -> None:
+
         # store params
         self.include_cleaning_functions = include_cleaning_functions
         self.exclude_cleaning_functions = exclude_cleaning_function
         self.to_lowercase = to_lowercase
-    
+
     def __call__(
-        self, 
+        self,
         text: str
-        ) -> str:
+    ) -> str:
 
         # lower the provided text
         if(self.to_lowercase):
