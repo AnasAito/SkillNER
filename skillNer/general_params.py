@@ -1,6 +1,10 @@
 
 # mapping skill and color
-SKILL_TO_COLOR = { 'Hard Skill': '#818CF8', 'Soft Skill': '#F472B6' }
+SKILL_TO_COLOR = { 
+    'Hard Skill': '#818CF8', 
+    'Soft Skill': '#F472B6', 
+    'Certification': "#552448" 
+}
 
 # list of punctuation
 LIST_PUNCTUATIONS = ['/', '·', ',', '.', '-', '(', ')', ',', ':']

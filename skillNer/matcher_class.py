@@ -217,7 +217,7 @@ class SkillsGetter:
         self,
         text_obj: Text,
         matcher
-    ):
+        ):
 
         skills = []
 
@@ -235,7 +235,7 @@ class SkillsGetter:
         self,
         text_obj: Text,
         matcher
-    ):
+        ):
         skills = []
 
         doc = self.nlp(text_obj.transformed_text)
@@ -247,4 +247,3 @@ class SkillsGetter:
                                'doc_node_id': [start]})
 
         return skills
-    )
