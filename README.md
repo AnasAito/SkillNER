@@ -15,7 +15,7 @@ Visit this [notion link](https://sudsy-dill-008.notion.site/f6596c10b49545d5a740
 - I add weekly new issues regarding skill extractor, choose an issue and lest start a conversation to fix it 
 - If you wanna jump to code open notebooks/skills-extractor that contain all modules used to extract skills 
 
-## intall SkillNER
+## install SkillNER
 Since **SkillNER** is still a private project, only the contributors are allowed to pip install it. To install **SkillNER** in your project and use it, here are capstone steps to follow:
 
 1. You need to generate a **personal token**. You can achieve that by following [these steps](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
@@ -31,7 +31,7 @@ Only tick **repo** to give reading / writing access to your repos
 in my case this command looks like that:
 
 
-`!pip install git+https://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@github.com/AnasAito/SkillNER.git`
+`pip install git+https://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@github.com/AnasAito/SkillNER.git`
 
 
 **Note** that for privacy and security reasons, I re-updated this token. Hence, it is no longer valid to pip install **SkillNER**.
@@ -96,7 +96,7 @@ skill_extractor.display(annotations)
 # text annotated using scapcy displacy (see screenshot below)
 ```
 
-<img src="screenshots/displacy_result.png" >
+<img src="screenshots/displacy_result.png" alt="output of skill_extractor.display(annotations)">
 
 
 ## Big Todos :
