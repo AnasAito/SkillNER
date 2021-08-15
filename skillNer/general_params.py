@@ -1,5 +1,6 @@
 # native packs
 import json
+from posixpath import dirname
 # installed packs
 #
 # my packs
@@ -12,8 +13,10 @@ SKILL_TO_COLOR = {
     'Certification': "#552448"
 }
 
+# get absolute path of directory
+skill_db_pathname = dirname(__file__)
 # load skill data base
-with open('skillNer/skills_processed.json') as json_file:
+with open(f'{skill_db_pathname}/skills_processed.json') as json_file:
     SKILL_DB = json.load(json_file)
 
 # list of punctuation

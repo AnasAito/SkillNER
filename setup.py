@@ -16,7 +16,7 @@ additional_files = {
 
 setuptools.setup(
     name="skillNer",
-    version="0.0.4",
+    version="0.0.5",
     author="Anas Ait AOMAR & Badr MOUFAD",
     author_email="pedroslashs@gmail.com",
     description="A first deployed version of skillNer",
