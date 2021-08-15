@@ -20,7 +20,7 @@ setuptools.setup(
     url="https://github.com/AnasAito/SkillNER",
     packages=setuptools.find_packages(),
     install_requires=dependencies,
-    package_data={'': ['skills_processed.json']},
+    package_data={'': ['skillNer/skills_processed.json']},
     include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
