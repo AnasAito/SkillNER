@@ -1,6 +1,6 @@
 # installed packs
 from nltk.stem import PorterStemmer
-import en_core_web_lg
+# import en_core_web_lg
 # native packs
 from typing import List
 # my pack
@@ -8,7 +8,7 @@ from skillNer.general_params import S_GRAM_REDUNDANT, LIST_PUNCTUATIONS
 
 
 # load nlp
-nlp = en_core_web_lg.load()
+# nlp = en_core_web_lg.load()
 # list of cleaning functions names
 all_cleaning = ["remove_punctuation", "remove_redundant",
                 "stem_text", "lem_text", "remove_extra_space"]
@@ -55,7 +55,7 @@ def stem_text(
 
 def lem_text(
     text: str,
-    nlp=nlp,
+    nlp,
     *args, **kwargs
 ) -> str:
 

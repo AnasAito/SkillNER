@@ -41,7 +41,8 @@ class SkillExtractor:
 
     def annotate(
         self,
-        text: str, tresh: float = 0.5,
+        text: str,
+        tresh: float = 0.5,
     ):
 
         # create text object
