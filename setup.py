@@ -11,7 +11,7 @@ dependencies = [
 ]
 
 additional_files = {
-    'default_skill_db': ['skills_processed.json']
+    'default_db': ['data/']
 }
 
 setuptools.setup(
