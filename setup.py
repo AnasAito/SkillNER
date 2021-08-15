@@ -10,6 +10,10 @@ dependencies = [
     "spacy",
 ]
 
+additional_files = {
+    'default_skill_db': ['skills_processed.json']
+}
+
 setuptools.setup(
     name="skillNer",
     version="0.0.2",
@@ -20,8 +24,7 @@ setuptools.setup(
     url="https://github.com/AnasAito/SkillNER",
     packages=setuptools.find_packages(),
     install_requires=dependencies,
-    package_data={'': ['skills_processed.json']},
-    include_package_data=True,
+    package_data=additional_files,
     classifiers=[
         "Programming Language :: Python :: 3",
         "License ::  :: No license",

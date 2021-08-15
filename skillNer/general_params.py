@@ -13,7 +13,7 @@ SKILL_TO_COLOR = {
 }
 
 # load skill data base
-with open('skills_processed.json') as json_file:
+with open('skillNer/skills_processed.json') as json_file:
     SKILL_DB = json.load(json_file)
 
 # list of punctuation
