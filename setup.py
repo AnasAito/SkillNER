@@ -8,7 +8,6 @@ dependencies = [
     "pandas",
     "nltk",
     "spacy",
-    "en_core_web_lg",
 ]
 
 setuptools.setup(
