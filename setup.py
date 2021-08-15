@@ -12,7 +12,7 @@ dependencies = [
 
 setuptools.setup(
     name="skillNer",
-    version="0.0.1",
+    version="0.0.2",
     author="Anas Ait AOMAR / Badr MOUFAD",
     author_email="pedroslashs@gmail.com",
     description="A first deployed version of skillNer",

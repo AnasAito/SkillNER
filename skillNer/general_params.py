@@ -1,10 +1,20 @@
+# native packs
+import json
+# installed packs
+#
+# my packs
+#
 
 # mapping skill and color
-SKILL_TO_COLOR = { 
-    'Hard Skill': '#818CF8', 
-    'Soft Skill': '#F472B6', 
-    'Certification': "#552448" 
+SKILL_TO_COLOR = {
+    'Hard Skill': '#818CF8',
+    'Soft Skill': '#F472B6',
+    'Certification': "#552448"
 }
+
+# load skill data base
+with open('skillNer/skills_processed.json') as json_file:
+    SKILL_DB = json.load(json_file)
 
 # list of punctuation
 LIST_PUNCTUATIONS = ['/', '·', ',', '.', '-', '(', ')', ',', ':']
