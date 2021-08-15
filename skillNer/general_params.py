@@ -14,10 +14,16 @@ SKILL_TO_COLOR = {
 }
 
 # get absolute path of directory
-skill_db_pathname = dirname(__file__)
-# load skill data base
-with open(f'{skill_db_pathname}/skills_processed.json') as json_file:
+# skill_db_pathname = dirname(__file__)
+
+# load default skill data base
+with open('skillNer/data/skills_processed.json') as json_file:
     SKILL_DB = json.load(json_file)
+
+# load s_gram_tools_links
+with open('skillNer/data/skills_processed.json') as json_file:
+    S_GRAM_TOOLS_LINKS = json.load(json_file)
+
 
 # list of punctuation
 LIST_PUNCTUATIONS = ['/', '·', ',', '.', '-', '(', ')', ',', ':']
