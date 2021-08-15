@@ -121,7 +121,7 @@ class Matchers:
         # params
         nlp = self.nlp
         skills_db = self.skills_db
-        abv_matcher = self.phraseMatcher(nlp.vocab)
+        abv_matcher = self.phraseMatcher(nlp.vocab, attr="LOWER")
 
         # populate matcher
         for key in skills_db:

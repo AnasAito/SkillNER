@@ -6,7 +6,7 @@ import collections
 import numpy as np
 # my packs
 from skillNer.text_class import Text
-
+from skillNer.general_params import  S_GRAM_TOOLS_LINKS
 
 class Utils:
     def __init__(self, nlp, skills_db):
@@ -53,10 +53,14 @@ class Utils:
 
         return doc1.similarity(doc2)
 
-    def get_sim(self, skill_name, f, input_text):
-        text = skill_name.lower().replace(f, '').strip()
-
-        return self.similarity([text, input_text])
+    def get_s_gram_score(self,skill_id, skill_name, f, input_text,is_tool,full_matches_ids):
+        if is_tool : 
+            inter =  list(set(S_GRAM_TOOLS_LINKS[skill_id])&set(full_matches_ids))
+            #print(skill_id,S_GRAM_TOOLS_LINKS[skill_id],full_matches_ids)
+            return len(inter)
+        else :
+            text = skill_name.lower().replace(f, '').strip()
+            return self.similarity([text, input_text])
 
     def make_one(self, cluster, len_):
         a = [1] * len_
@@ -99,7 +103,7 @@ class Utils:
         else:
             return skill_name[1] == match_str
 
-    def retain(self, text, tokens, skill_id, sk_look, corpus):
+    def retain(self, text, tokens, skill_id, sk_look, corpus,full_matches_ids):
         # get id
         real_id = sk_look[skill_id].split('_1w')[0]
         # get len
@@ -118,9 +122,14 @@ class Utils:
                                'score': round(score, 2)
                                })
 
-            if self.is_low_frequency(text[s_gr_ind], real_id):
-                score = self.get_sim(
-                    self.skills_db[real_id]['skill_lemmed'], text[s_gr_ind], ' '.join(text))
+            if self.is_low_frequency(text[s_gr_ind], real_id) or (real_id in S_GRAM_TOOLS_LINKS):
+                is_tool = real_id in S_GRAM_TOOLS_LINKS
+                score = self.get_s_gram_score(real_id,
+                                              self.skills_db[real_id]['skill_lemmed'],
+                                              text[s_gr_ind],
+                                              ' '.join(text) ,
+                                              is_tool,
+                                             full_matches_ids)
 
                 return (True, {'skill_id': real_id,
                                'score': round(score, 2),
@@ -149,7 +158,7 @@ class Utils:
         return np.array(corpus), look_up
 
     # main functions
-    def process_n_gram(self, matches, text_obj: Text):
+    def process_n_gram(self, matches, text_obj: Text , full_matches_ids):
         if len(matches) == 0:
             return matches
 
@@ -172,7 +181,7 @@ class Utils:
             new_skill_obj = []
             for sk_id in skill_ids:
                 retain_, r_sk_id = self.retain(
-                    text_tokens, tokens, sk_id, look_up, corpus)
+                    text_tokens, tokens, sk_id, look_up, corpus,full_matches_ids)
                 if retain_:
                     new_skill_obj.append(r_sk_id)
             # get max for each span

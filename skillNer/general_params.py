@@ -21,12 +21,12 @@ with open('skillNer/data/skills_processed.json') as json_file:
     SKILL_DB = json.load(json_file)
 
 # load s_gram_tools_links
-with open('skillNer/data/skills_processed.json') as json_file:
+with open('skillNer/data/s_gram_tools_links.json') as json_file:
     S_GRAM_TOOLS_LINKS = json.load(json_file)
 
 
 # list of punctuation
-LIST_PUNCTUATIONS = ['/', '·', ',', '.', '-', '(', ')', ',', ':']
+LIST_PUNCTUATIONS = ['/', '·', ',', '.', '-', '(', ')', ',', ':','!']
 
 # list of redundant words to remove from text
 S_GRAM_REDUNDANT = [

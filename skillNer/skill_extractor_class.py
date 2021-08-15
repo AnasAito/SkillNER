@@ -57,20 +57,33 @@ class SkillExtractor:
             text_obj, self.matchers['uni_gram_matcher'])
         skills_abv = self.skill_getters.get_abv_match_skills(
             text_obj, self.matchers['abv_matcher'])
-
-        # process filter
+        
+        # process uni_match
+        uni_gram_pro =  self.utils.process_unigram(skills_uni, text_obj)
+        unigram_full = [match for match in uni_gram_pro if match['score']==1]
+        unigram_sub = [match for match in uni_gram_pro if (match['score']>=tresh and match['score']<1) ]
+        ## prepare full matches ids  for submatch context scoring 
+        # get full match ids 
+        full_matches_ids = [match['skill_id'] for match in skills_full+skills_sub_full+skills_abv]
+        # get high confid unigram ids 
+        uni_matches_ids = [match['skill_id'] for match in unigram_full ]
+        
+        # process ngram
+        # full_ids 
+        full_ids = full_matches_ids + uni_matches_ids 
+        
         n_gram_pro = [skill_match for skill_match in self.utils.process_n_gram(
-            skills_ngram, text_obj) if skill_match['score'] >= tresh]
-        uni_gram_pro = [skill_match for skill_match in self.utils.process_unigram(
-            skills_uni, text_obj)if skill_match['score'] >= tresh]
+            skills_ngram, text_obj , full_matches_ids =full_ids ) if skill_match['score'] >= tresh]
+
 
         return {
             'text': text_obj.transformed_text,
             'results': {
                 'full_match': skills_full,
                 'ngram_full_match': skills_sub_full,
+                'unigram_full_match':unigram_full,
                 'ngram_scored': n_gram_pro,
-                'unigram_scored': uni_gram_pro,
+                'unigram_scored': unigram_sub,
                 'skills_abv': skills_abv
             }
         }
