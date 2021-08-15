@@ -12,9 +12,9 @@ SKILL_TO_COLOR = {
     'Certification': "#552448"
 }
 
-# load skill data base
-with open('skillNer/skills_processed.json') as json_file:
-    SKILL_DB = json.load(json_file)
+# # load skill data base
+# with open('skillNer/skills_processed.json') as json_file:
+#     SKILL_DB = json.load(json_file)
 
 # list of punctuation
 LIST_PUNCTUATIONS = ['/', '·', ',', '.', '-', '(', ')', ',', ':']
