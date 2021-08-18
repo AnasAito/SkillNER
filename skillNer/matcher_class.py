@@ -26,7 +26,9 @@ class Matchers:
             'full_matcher': self.get_full_matcher,
             'ngram_matcher': self.get_ngram_matcher,
             'uni_gram_matcher': self.get_uni_gram__matcher,
-            'abv_matcher': self.get_abv_matcher}
+            'abv_matcher': self.get_abv_matcher,
+            'ut_matcher':self.get_unique_token_matcher  
+                            }
 
         return
 
@@ -116,7 +118,23 @@ class Matchers:
                 single_gram_matcher.add(str(skill_id), [skill_stemmed_spacy])
 
         return single_gram_matcher
+    
+    def get_unique_token_matcher(self):
+        # params
+        nlp = self.nlp
+        skills_db = self.skills_db
+        ut_matcher = self.phraseMatcher(nlp.vocab, attr="LOWER")
 
+        # populate matcher
+        for key in skills_db:
+            # get skill info
+            skill_id = key
+            skill_ut = skills_db[key]['unique_token']
+            if skill_ut!="":
+                skill_abv_spacy = nlp.make_doc(skill_ut)
+                ut_matcher.add(str(skill_id), [skill_abv_spacy])
+
+        return ut_matcher
     def get_abv_matcher(self):
         # params
         nlp = self.nlp
@@ -128,9 +146,9 @@ class Matchers:
             # get skill info
             skill_id = key
             skill_abv = skills_db[key]['abbreviation']
-
-            skill_abv_spacy = nlp.make_doc(skill_abv)
-            abv_matcher.add(str(skill_id), [skill_abv_spacy])
+            if skill_abv!="":
+                skill_abv_spacy = nlp.make_doc(skill_abv)
+                abv_matcher.add(str(skill_id), [skill_abv_spacy])
 
         return abv_matcher
 
@@ -230,7 +248,27 @@ class SkillsGetter:
                                'doc_node_id': start})
 
         return skills
+    
+    def get_ut_match_skills(
+        self,
+        text_obj: Text,
+        matcher
+    ):
+        skills = []
 
+        doc = self.nlp(text_obj.lemmed())
+        for match_id, start, end in matcher(doc):
+            id_ = matcher.vocab.strings[match_id]
+            if text_obj[start].is_matchable:
+                skills.append({'skill_id': id_,
+                               'score': 1,
+                               'doc_node_value': str(doc[start:end]),
+                               'doc_node_id': [start]})
+                ## mutate matched tokens
+                for token in text_obj[start:end]:
+                    token.is_matchable = False
+
+        return skills
     def get_abv_match_skills(
         self,
         text_obj: Text,
@@ -243,7 +281,11 @@ class SkillsGetter:
             id_ = matcher.vocab.strings[match_id]
             if text_obj[start].is_matchable:
                 skills.append({'skill_id': id_,
+                               'score': 1,
                                'doc_node_value': str(doc[start:end]),
                                'doc_node_id': [start]})
+                ## mutate matched tokens
+                for token in text_obj[start:end]:
+                    token.is_matchable = False
 
         return skills

@@ -103,7 +103,7 @@ class Utils:
         else:
             return skill_name[1] == match_str
 
-    def retain(self, text, tokens, skill_id, sk_look, corpus,full_matches_ids):
+    def retain(self, text_obj , text, tokens, skill_id, sk_look, corpus,full_matches_ids):
         # get id
         real_id = sk_look[skill_id].split('_1w')[0]
         # get len
@@ -119,6 +119,7 @@ class Utils:
                 score = len_condition
                 return (True, {'skill_id': real_id,
                                'doc_node_id':  [i for i, val in enumerate(s_gr) if val == 1],
+                               'doc_node_value' : ' '.join([str(text_obj[i]) for i, val in enumerate(s_gr) if val == 1]) ,
                                'score': round(score, 2)
                                })
 
@@ -133,7 +134,8 @@ class Utils:
 
                 return (True, {'skill_id': real_id,
                                'score': round(score, 2),
-                               'doc_node_id': [i for i, val in enumerate(s_gr) if val == 1]
+                               'doc_node_id': [i for i, val in enumerate(s_gr) if val == 1] , 
+                               'doc_node_value' : ' '.join([str(text_obj[i]) for i, val in enumerate(s_gr) if val == 1]) 
                                })
             return (False, '')
 
@@ -180,7 +182,7 @@ class Utils:
             tokens, skill_ids = span
             new_skill_obj = []
             for sk_id in skill_ids:
-                retain_, r_sk_id = self.retain(
+                retain_, r_sk_id = self.retain(text_obj,
                     text_tokens, tokens, sk_id, look_up, corpus,full_matches_ids)
                 if retain_:
                     new_skill_obj.append(r_sk_id)

@@ -42,7 +42,7 @@ class SkillExtractor:
     def annotate(
         self,
         text: str,
-        tresh: float = 0.5,
+        tresh: float = 0.5,debug=False
     ):
 
         # create text object
@@ -57,6 +57,8 @@ class SkillExtractor:
             text_obj, self.matchers['uni_gram_matcher'])
         skills_abv = self.skill_getters.get_abv_match_skills(
             text_obj, self.matchers['abv_matcher'])
+        #skills_ut = self.skill_getters.get_abv_match_skills(
+        #    text_obj, self.matchers['ut_matcher'])    
         
         # process uni_match
         uni_gram_pro =  self.utils.process_unigram(skills_uni, text_obj)
@@ -64,29 +66,42 @@ class SkillExtractor:
         unigram_sub = [match for match in uni_gram_pro if (match['score']>=tresh and match['score']<1) ]
         ## prepare full matches ids  for submatch context scoring 
         # get full match ids 
-        full_matches_ids = [match['skill_id'] for match in skills_full+skills_sub_full+skills_abv]
+        full_sk = skills_full+skills_sub_full+skills_abv+unigram_full#+skills_ut
+        full_matches_ids = [match['skill_id'] for match in full_sk ]
         # get high confid unigram ids 
         uni_matches_ids = [match['skill_id'] for match in unigram_full ]
         
         # process ngram
         # full_ids 
         full_ids = full_matches_ids + uni_matches_ids 
-        
-        n_gram_pro = [skill_match for skill_match in self.utils.process_n_gram(
-            skills_ngram, text_obj , full_matches_ids =full_ids ) if skill_match['score'] >= tresh]
+        n_gram_scored = self.utils.process_n_gram(skills_ngram, text_obj , full_matches_ids =full_ids )
+        n_gram_pro = [skill_match for skill_match in n_gram_scored if skill_match['score'] >= tresh]
 
-
-        return {
-            'text': text_obj.transformed_text,
-            'results': {
-                'full_match': skills_full,
-                'ngram_full_match': skills_sub_full,
-                'unigram_full_match':unigram_full,
-                'ngram_scored': n_gram_pro,
-                'unigram_scored': unigram_sub,
-                'skills_abv': skills_abv
-            }
-        }
+        if debug : 
+             return {
+                 'text': text_obj.transformed_text,
+                 'results': {
+                     'full_matches': full_sk ,
+                     'ngram_scored': n_gram_pro,
+                     'unigram_scored': unigram_sub,
+                 },
+                 'logs': {'full_match':skills_full ,
+                           'full_ngram':skills_sub_full,
+                           'abrv_match' :skills_abv,
+                           #'ut_full':skills_ut ,
+                           'unigrqm_full' : unigram_full , 
+                           'ngram_scored': n_gram_scored,
+                           'unigram_scored': [match for match in uni_gram_pro if  match['score']<1 ], 
+                         }
+             }
+        else : 
+             return {
+                 'text': text_obj.transformed_text,
+                 'results': {
+                     'full_matches': full_sk ,
+                     'ngram_scored': n_gram_pro,
+                     'unigram_scored': unigram_sub,
+                 }}
 
     def display(
         self,
