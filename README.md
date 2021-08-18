@@ -134,6 +134,6 @@ skill_extractor.display(annotations)
 <img src="screenshots/displacy_result.png" alt="output of skill_extractor.display(annotations)">
 
 
-## Big Todos :
-= prepare labeled data by natcher for verification 
-- configure NERDA package to fine-tune BERT model
+##  Todos :
+- create skill graph (using real data ) for new sub_matches scorer 
+- rewrite ngram and unigram scorer using ccontext scorer 
