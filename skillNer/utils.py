@@ -2,6 +2,9 @@
 
 # native packs
 import collections
+import functools
+import math
+
 # installed packs
 import numpy as np
 # my packs
@@ -19,7 +22,7 @@ class Utils:
                       for key in skills_db if skills_db[key]['skill_len'] >1]
         self.sgrams_skills_tokens_dist = self.get_dist(self.sgram)
         self.ngrams_skills_tokens_dist = self.get_dist_new(self.ngram)
-        
+        self.sign = functools.partial(math.copysign, 1)
         return
 
     def get_dist(self, array):
@@ -119,14 +122,25 @@ class Utils:
             return skill_name[0] == match_str
         else:
             return skill_name[1] == match_str
-    def compute_w_ratio(self,skill_id,matched_tokens):
-        
+    def compute_w_ratio(self,simple_ratio ,skill_id,matched_tokens):
+ 
+            
         skill_name = self.skills_db[skill_id]['skill_stemmed'].split(' ')
-       # print(skill_name, [self.ngrams_skills_tokens_dist[token] for token in skill_name ])
+        
         up = sum([1/self.ngrams_skills_tokens_dist[token] for token in matched_tokens ])
         
         down = sum([1/self.ngrams_skills_tokens_dist[token] for token in skill_name ])
-        return up/down
+        if self.skills_db[skill_id]['skill_len'] == 2 :
+            up_ = sum([self.ngrams_skills_tokens_dist[token] for token in matched_tokens ])
+            down_ =sum([self.ngrams_skills_tokens_dist[token] for token in skill_name ])
+            #print(skill_name , [self.ngrams_skills_tokens_dist[token] for token in skill_name ])
+            sign_ = self.sign(down_-(2*up_))
+            return simple_ratio+((up/down)*(simple_ratio**2)*sign_)
+        else :
+            up_ = [self.ngrams_skills_tokens_dist[token] for token in matched_tokens ]
+            down_ =[self.ngrams_skills_tokens_dist[token] for token in skill_name ]
+            sign_ = self.sign(min(down_)-min(up_))
+            return simple_ratio+((up/down)*(simple_ratio**1.5)*sign_)
         
     def retain(self, text_obj , text, tokens, skill_id, sk_look, corpus,full_matches_ids):
         # get id
@@ -142,7 +156,7 @@ class Utils:
             s_gr) if condition(element)][0]
         s_gr_n = [idx for idx, element in enumerate(
             s_gr) if condition(element)]
-        weighted_ratio = self.compute_w_ratio(real_id,[text_obj[ind].stemmed  for ind in s_gr_n ])
+        weighted_ratio = self.compute_w_ratio(len_condition , real_id,[text_obj[ind].stemmed  for ind in s_gr_n ])
 
 
         return (True, {'skill_id': real_id,
