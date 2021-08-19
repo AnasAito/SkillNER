@@ -112,7 +112,8 @@ class Matchers:
             skill_id = key
             skill_stemmed = skills_db[key]['skill_stemmed']
             skill_len = skills_db[key]['skill_len']
-            if skill_len == 1:
+            match_on_stemmed = skills_db[key]['match_on_stemmed']
+            if skill_len == 1 and match_on_stemmed:
                 # add to matcher
                 skill_stemmed_spacy = nlp.make_doc(skill_stemmed)
                 single_gram_matcher.add(str(skill_id), [skill_stemmed_spacy])

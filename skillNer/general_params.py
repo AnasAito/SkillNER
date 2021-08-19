@@ -26,7 +26,7 @@ with open('skillNer/data/s_gram_tools_links.json') as json_file:
 
 
 # list of punctuation
-LIST_PUNCTUATIONS = ['/', '·', ',', '.', '-', '(', ')', ',', ':','!']
+LIST_PUNCTUATIONS = ['/', '·', ',', '.', '-', '(', ')', ',', ':','!',"'"]
 
 # list of redundant words to remove from text
 S_GRAM_REDUNDANT = [
@@ -239,4 +239,5 @@ S_GRAM_REDUNDANT = [
     'offer you',
     'is plus',
     'a good',
+    'fluency in'
 ]
