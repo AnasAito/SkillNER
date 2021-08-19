@@ -110,13 +110,19 @@ class Matchers:
         for key in skills_db:
             # get skill info
             skill_id = key
+            skill_name = skills_db[key]['skill_cleaned']
             skill_stemmed = skills_db[key]['skill_stemmed']
             skill_len = skills_db[key]['skill_len']
             match_on_stemmed = skills_db[key]['match_on_stemmed']
-            if skill_len == 1 and match_on_stemmed:
-                # add to matcher
-                skill_stemmed_spacy = nlp.make_doc(skill_stemmed)
-                single_gram_matcher.add(str(skill_id), [skill_stemmed_spacy])
+            if skill_len == 1 :
+                if match_on_stemmed : 
+                    # add to matcher
+                    skill_stemmed_spacy = nlp.make_doc(skill_stemmed)
+                    single_gram_matcher.add(str(skill_id), [skill_stemmed_spacy])
+                else : 
+                    # add to matcher
+                    skill_name_spacy = nlp.make_doc(skill_name)
+                    single_gram_matcher.add(str(skill_id), [skill_name_spacy])
 
         return single_gram_matcher
     

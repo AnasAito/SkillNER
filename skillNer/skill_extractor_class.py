@@ -57,13 +57,17 @@ class SkillExtractor:
             text_obj, self.matchers['uni_gram_matcher'])
         skills_abv = self.skill_getters.get_abv_match_skills(
             text_obj, self.matchers['abv_matcher'])
-        #skills_ut = self.skill_getters.get_abv_match_skills(
-        #    text_obj, self.matchers['ut_matcher'])    
+ 
         
         # process uni_match
         uni_gram_pro =  self.utils.process_unigram(skills_uni, text_obj)
         unigram_full = [match for match in uni_gram_pro if match['score']==1]
+        unigram_full_id_matches = set([match['doc_node_id'][0] for match in unigram_full ])
+        #print('unique match' , unigram_full_id_matches ,skills_ngram)
         unigram_sub = [match for match in uni_gram_pro if (match['score']>=tresh and match['score']<1) ]
+        ## filter ngram_matches 
+        skills_ngram = [match for match in skills_ngram 
+                        if list(set([match['doc_node_id']])&unigram_full_id_matches)==[]]
         ## prepare full matches ids  for submatch context scoring 
         # get full match ids 
         full_sk = skills_full+skills_sub_full+skills_abv+unigram_full#+skills_ut
