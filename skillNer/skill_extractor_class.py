@@ -5,7 +5,7 @@ from spacy import displacy
 # my packs
 from skillNer.text_class import Text
 from skillNer.matcher_class import Matchers, SkillsGetter
-from skillNer.utils import Utils
+#from skillNer.utils import Utils
 from skillNer.general_params import SKILL_TO_COLOR
 
 
@@ -36,9 +36,48 @@ class SkillExtractor:
         self.skill_getters = SkillsGetter(self.nlp)
 
         # init utils
-        self.utils = Utils(self.nlp, self.skills_db)
+        #self.utils = Utils(self.nlp, self.skills_db)
         return
+    
+    
+    
+    
+    
+    def debug(
+        self,
+        text: str,
+     
+    ):
+                # create text object
+        text_obj = Text(text, self.nlp)
+                # match text
+        skills_full, text_obj = self.skill_getters.get_full_match_skills(
+            text_obj, self.matchers['full_matcher'])
+        
+        skills_abv , text_obj = self.skill_getters.get_abv_match_skills(
+            text_obj, self.matchers['abv_matcher'])
+        
+        skills_uni_full, text_obj = self.skill_getters.get_full_uni_match_skills(
+            text_obj, self.matchers['full_uni_matcher'])
+        
+        skills_low_form,text_obj =self.skill_getters.get_low_match_skills(
+            text_obj, self.matchers['low_form_matcher'])
+        
+        skills_on_token =self.skill_getters.get_token_match_skills(
+            text_obj, self.matchers['token_matcher'])
 
+
+        
+        
+        
+        
+        
+        return {'results':{'full_matcher':skills_full,
+                 'abv_matcher':skills_abv,
+                 'full_uni_matcher':skills_uni_full,
+                'low_form_matcher':skills_low_form,
+               'token_matcher':skills_on_token}}
+    
     def annotate(
         self,
         text: str,

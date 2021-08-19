@@ -24,16 +24,23 @@ class Matchers:
         # save matchers in a dict
         self.dict_matcher = {
             'full_matcher': self.get_full_matcher,
-            'ngram_matcher': self.get_ngram_matcher,
-            'uni_gram_matcher': self.get_uni_gram__matcher,
             'abv_matcher': self.get_abv_matcher,
-            'ut_matcher':self.get_unique_token_matcher  
+            'full_uni_matcher': self.get_full_uni_matcher,
+            'low_form_matcher': self.get_low_form_matcher,
+            'token_matcher': self.get_token_matcher,
                             }
 
         return
 
     # load specified matchers
-    def load_matchers(self, include=['full_matcher', 'ngram_matcher', 'uni_gram_matcher', 'abv_matcher'], exclude=[]):
+    def load_matchers(self, 
+                      include=['full_matcher', 
+                               'abv_matcher',
+                               'full_uni_matcher', 
+                               'low_form_matcher',
+                               'token_matcher' ,  
+                               ],
+                      exclude=[]):
 
         # #where to store loaded matchers
         loaded_matchers = {}
@@ -54,6 +61,7 @@ class Matchers:
         return loaded_matchers
 
     # matchers
+    ## high confident matchers 
     def get_full_matcher(self):
         # params
         nlp = self.nlp
@@ -64,84 +72,16 @@ class Matchers:
         for key in skills_db:
             # get skill info
             skill_id = key
-            skill_full_name = skills_db[key]['skill_cleaned']
+            
             skill_len = skills_db[key]['skill_len']
             if skill_len > 1:
+                skill_full_name = skills_db[key]['high_surfce_forms'][0]
                 # add to matcher
                 skill_full_name_spacy = nlp.make_doc(skill_full_name)
                 full_matcher.add(str(skill_id), [skill_full_name_spacy])
 
         return full_matcher
-
-    def get_ngram_matcher(self):
-        # params
-        nlp = self.nlp
-        skills_db = self.skills_db
-        ngram_matcher = self.phraseMatcher(nlp.vocab, attr="LOWER")
-
-        # populate matcher
-        for key in skills_db:
-            # get skill info
-            skill_id = key
-            skill_lemmed = skills_db[key]['skill_lemmed']
-            skill_lemmed_tokens = [w for w in skill_lemmed.split(' ')
-                                   if not(w in self.stop_words or w.isdigit())]
-
-            skill_len = skills_db[key]['skill_len']
-            if skill_len > 1:  # add only ngram skills
-                # add full_stemed to matcher
-                skill_lemmed_spacy = nlp.make_doc(skill_lemmed)
-                ngram_matcher.add(str(skill_id), [skill_lemmed_spacy])
-                # add tokens to matcher
-                for token in skill_lemmed_tokens:
-                    # give id that ref 1_gram matching
-                    id_ = skill_id+'_1w'
-                    ngram_matcher.add(str(id_), [nlp.make_doc(token)])
-
-        return ngram_matcher
-
-    def get_uni_gram__matcher(self):
-        # params
-        nlp = self.nlp
-        skills_db = self.skills_db
-        single_gram_matcher = self.phraseMatcher(nlp.vocab, attr="LOWER")
-
-        # populate matcher
-        for key in skills_db:
-            # get skill info
-            skill_id = key
-            skill_name = skills_db[key]['skill_cleaned']
-            skill_stemmed = skills_db[key]['skill_stemmed']
-            skill_len = skills_db[key]['skill_len']
-            match_on_stemmed = skills_db[key]['match_on_stemmed']
-            if skill_len == 1 :
-                if match_on_stemmed : 
-                    # add to matcher
-                    skill_stemmed_spacy = nlp.make_doc(skill_stemmed)
-                    single_gram_matcher.add(str(skill_id), [skill_stemmed_spacy])
-                else : 
-                    # add to matcher
-                    skill_name_spacy = nlp.make_doc(skill_name)
-                    single_gram_matcher.add(str(skill_id), [skill_name_spacy])
-
-        return single_gram_matcher
     
-    def get_unique_token_matcher(self):
-        # params
-        nlp = self.nlp
-        skills_db = self.skills_db
-        ut_matcher = self.phraseMatcher(nlp.vocab, attr="LOWER")
-
-        # populate matcher
-        for key in skills_db:
-            # get skill info
-            skill_id = key
-            skill_ut = skills_db[key]['unique_token']
-            if skill_ut!="":
-                skill_abv_spacy = nlp.make_doc(skill_ut)
-                ut_matcher.add(str(skill_id), [skill_abv_spacy])
-
-        return ut_matcher
     def get_abv_matcher(self):
         # params
         nlp = self.nlp
@@ -152,12 +92,82 @@ class Matchers:
         for key in skills_db:
             # get skill info
             skill_id = key
-            skill_abv = skills_db[key]['abbreviation']
-            if skill_abv!="":
+            if len(skills_db[key]['high_surfce_forms'])==2 : # check if there is a skill abrv 
+                skill_abv = skills_db[key]['high_surfce_forms'][1]
                 skill_abv_spacy = nlp.make_doc(skill_abv)
                 abv_matcher.add(str(skill_id), [skill_abv_spacy])
 
         return abv_matcher
+    def get_full_uni_matcher(self):
+        # params
+        nlp = self.nlp
+        skills_db = self.skills_db
+        full_uni_matcher = self.phraseMatcher(nlp.vocab, attr="LOWER")
+
+        # populate matcher
+        for key in skills_db:
+            # get skill info
+            skill_id = key
+            
+            skill_len = skills_db[key]['skill_len']
+            if skill_len == 1:
+                skill_full_name = skills_db[key]['high_surfce_forms'][0]
+                # add to matcher
+                skill_full_name_spacy = nlp.make_doc(skill_full_name)
+                full_uni_matcher.add(str(skill_id), [skill_full_name_spacy])
+
+        return full_uni_matcher
+    
+    ## low confident matchers 
+    def get_low_form_matcher(self):
+        # params
+        nlp = self.nlp
+        skills_db = self.skills_db
+        low_form_matcher = self.phraseMatcher(nlp.vocab, attr="LOWER")
+        
+        # populate matcher
+        for key in skills_db:
+            
+            # get skill info
+            skill_id = key
+            skill_len = skills_db[key]['skill_len']
+            
+           
+            low_surface_forms = skills_db[key]['low_surface_forms']
+            for form in low_surface_forms : 
+                    skill_form_spacy = nlp.make_doc(form)
+                    low_form_matcher.add(str(skill_id), [skill_form_spacy])
+        return low_form_matcher
+   
+    
+    def get_token_matcher(self):
+        # params
+        nlp = self.nlp
+        skills_db = self.skills_db
+        token_matcher = self.phraseMatcher(nlp.vocab, attr="LOWER")
+
+        # populate matcher
+        for key in skills_db:
+            # get skill info
+            skill_id = key
+            match_on_tokens = skills_db[key]['match_on_tokens']
+  
+
+            if match_on_tokens:  # check if skill accept matches on its unique tokens
+                skill_lemmed = skills_db[key]['high_surfce_forms'][0]
+                skill_lemmed_tokens = skill_lemmed.split(' ')
+                
+                # add tokens to matcher
+                for token in skill_lemmed_tokens:
+                    # give id that ref 1_gram matching
+                    if token.isdigit():
+                        pass
+                    else : 
+                        id_ = skill_id+'_1w'
+                        token_matcher.add(str(id_), [nlp.make_doc(token)])
+
+        return token_matcher
+    
 
 
 class SkillsGetter:
@@ -177,13 +187,13 @@ class SkillsGetter:
     ):
 
         skills = []
-        doc = self.nlp(text_obj.transformed_text)
+        doc = self.nlp(text_obj.lemmed())
 
         for match_id, start, end in matcher(doc):
             id_ = matcher.vocab.strings[match_id]
             # add full_match to store
             skills.append({'skill_id': id_,
-                           # 'doc_node_value': str(doc[start:end]),
+                           'doc_node_value': str(doc[start:end]),
                            'score': 1,
                            'doc_node_id': list(range(start, end))})
             # mutate text tokens metadata (unmatch attr)
@@ -191,91 +201,7 @@ class SkillsGetter:
                 token.is_matchable = False
 
         return skills, text_obj
-
-    def get_sub_match_skills(
-        self,
-        text_obj: Text,
-        matcher
-    ):
-
-        skills_full = []
-        skills = []
-        sub_matches = []
-        full_matches = []
-
-        doc = self.nlp(text_obj.lemmed())
-        for match_id, start, end in matcher(doc):
-            id_ = matcher.vocab.strings[match_id]
-            if '_1w' in id_:
-                sub_matches.append((id_, match_id, start, end))
-            else:
-                full_matches.append((id_, match_id, start, end))
-
-        for match in full_matches:
-            id_, match_id, start, end = match
-            # full matches no need for scoring
-            # check if any intersection betwenn full matcher and sub matcher (priority to full)
-            is_matchable = [1 for token in text_obj[start:end]
-                            if token.is_matchable]
-            if len(is_matchable) != 0:
-
-                skills_full.append({'skill_id': id_,
-                                    'score': 1,
-                                    # 'doc_node_value': str(doc[start:end]),
-                                    'doc_node_id': list(range(start, end))})
-
-                # mutate text tokens metadata (unmatch attr) - only in full match stemmed (100% confident )
-                for token in text_obj[start:end]:
-                    token.is_matchable = False
-
-        for match in sub_matches:
-            id_, match_id, start, end = match
-            # add unigram macthes only if not matched in parent modules or not stop word
-            if text_obj[start].is_matchable and (not text_obj[start].is_stop_word):
-                skills.append({'skill_id': id_,
-                               'doc_node_value': str(doc[start:end]),
-                               'doc_node_id': start})
-
-        return skills_full, skills, text_obj
-
-    def get_single_match_skills(
-        self,
-        text_obj: Text,
-        matcher
-    ):
-
-        skills = []
-
-        doc = self.nlp(text_obj.stemmed())
-        for match_id, start, end in matcher(doc):
-            id_ = matcher.vocab.strings[match_id]
-            if text_obj[start].is_matchable:
-                skills.append({'skill_id': id_,
-                               'doc_node_value': str(doc[start:end]),
-                               'doc_node_id': start})
-
-        return skills
     
-    def get_ut_match_skills(
-        self,
-        text_obj: Text,
-        matcher
-    ):
-        skills = []
-
-        doc = self.nlp(text_obj.lemmed())
-        for match_id, start, end in matcher(doc):
-            id_ = matcher.vocab.strings[match_id]
-            if text_obj[start].is_matchable:
-                skills.append({'skill_id': id_,
-                               'score': 1,
-                               'doc_node_value': str(doc[start:end]),
-                               'doc_node_id': [start]})
-                ## mutate matched tokens
-                for token in text_obj[start:end]:
-                    token.is_matchable = False
-
-        return skills
     def get_abv_match_skills(
         self,
         text_obj: Text,
@@ -295,4 +221,69 @@ class SkillsGetter:
                 for token in text_obj[start:end]:
                     token.is_matchable = False
 
-        return skills
+        return skills, text_obj
+    def get_full_uni_match_skills(
+        self,
+        text_obj: Text,
+        matcher
+    ):
+
+        skills = []
+
+        doc = self.nlp(text_obj.transformed_text)
+        for match_id, start, end in matcher(doc):
+            id_ = matcher.vocab.strings[match_id]
+            if text_obj[start].is_matchable:
+                skills.append({'skill_id': id_,
+                                'score': 1,
+                               'doc_node_value': str(doc[start:end]),
+                               'doc_node_id': start})
+
+        return skills,text_obj
+
+    def get_token_match_skills(
+        self,
+        text_obj: Text,
+        matcher
+    ):
+
+        skills_full = []
+        skills = []
+        sub_matches = []
+        full_matches = []
+
+        doc = self.nlp(text_obj.lemmed())
+        for match_id, start, end in matcher(doc):
+            id_ = matcher.vocab.strings[match_id]
+          
+            # add 
+            if text_obj[start].is_matchable :
+                skills.append({'skill_id': id_,
+                               'doc_node_value': str(doc[start:end]),
+                               'doc_node_id': start})
+                
+        return  skills
+
+    def get_low_match_skills(
+        self,
+        text_obj: Text,
+        matcher
+    ):
+
+        skills = []
+        doc = self.nlp(text_obj.stemmed())
+
+        for match_id, start, end in matcher(doc):
+            id_ = matcher.vocab.strings[match_id]
+            
+            if text_obj[start].is_matchable  :
+                skills.append({'skill_id': id_,
+                               'doc_node_value': str(doc[start:end]),
+                               'doc_node_id': list(range(start, end))})
+
+
+        return skills , text_obj  
+
+    
+
+

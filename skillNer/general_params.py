@@ -17,7 +17,7 @@ SKILL_TO_COLOR = {
 # skill_db_pathname = dirname(__file__)
 
 # load default skill data base
-with open('skillNer/data/skills_processed.json') as json_file:
+with open('skillNer/data/skill_db_relax_20.json') as json_file:
     SKILL_DB = json.load(json_file)
 
 # load s_gram_tools_links
