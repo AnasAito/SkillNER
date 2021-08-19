@@ -41,7 +41,7 @@ in my case this command looks like that:
 
 ```python
 # imports
-import scapcy
+import spacy
 from spacy.matcher import PhraseMatcher
 from nltk.corpus import stopwords
 
@@ -52,7 +52,7 @@ from skillNer.skill_extractor_class import SkillExtractor
 
 
 # init params of skill extractor
-nlp = en_core_web_lg.load()
+nlp = spacy.load("en_core_web_lg")
 stop_words = set(stopwords.words('english'))
 
 # init skill extractor
@@ -63,33 +63,68 @@ job_description = "We need an expert in esport management. Fluency in both engli
 
 annotations = skill_extractor.annotate(input_)
 # # output:
-# {
-#     'text': 'we need an expert in esport management fluency in both english and french are mandatory!',
-#     'results': {
-#         'full_match': [],
-#         'ngram_full_match': [
-#             {
-#                 'skill_id': 'ES8AAD06BE8119038221',
-#                 'score': 1,
-#                 'doc_node_id': [5, 6]
-#             }
-#         ],
-#         'ngram_scored': [
-#             {
-#                 'skill_id': 'KS123K75YYK8VGH90NCS',
-#                 'score': 0.59,
-#                 'doc_node_id': [10]
-#             },
-#             {
-#                 'skill_id': 'KS1243976G466GV63ZBY', 
-#                 'score': 0.59, 
-#                 'doc_node_id': [12]
-#             }
-#         ],
-#         'unigram_scored': [],
-#         'skills_abv': []
-#     }
-# }
+{'logs': {'abrv_match': [{'doc_node_id': [10],
+                          'doc_node_value': 'css',
+                          'score': 1,
+                          'skill_id': 'KS121F45VPV8C9W3QFYH'}],
+          'full_match': [],
+          'full_ngram': [{'doc_node_id': [5, 6],
+                          'score': 1,
+                          'skill_id': 'ES8AAD06BE8119038221'}],
+          'ngram_scored': [{'doc_node_id': [1],
+                            'doc_node_value': 'need',
+                            'score': 0.49,
+                            'skill_id': 'ESEE2FE3695A215DC6DC'},
+                           {'doc_node_id': [3],
+                            'doc_node_value': 'expert',
+                            'score': 0.5,
+                            'skill_id': 'KS123RD5VV5WNJLMNH3J'},
+                           {'doc_node_id': [10],
+                            'doc_node_value': 'css',
+                            'score': 0.46,
+                            'skill_id': 'KS122KN6KY17NGPWFDVB'},
+                           {'doc_node_id': [11],
+                            'doc_node_value': 'node',
+                            'score': 0.3,
+                            'skill_id': 'KS1272978ZVDGYKBS082'},
+                           {'doc_node_id': [12],
+                            'doc_node_value': 'english',
+                            'score': 0.6,
+                            'skill_id': 'KS123K75YYK8VGH90NCS'},
+                           {'doc_node_id': [14],
+                            'doc_node_value': 'french',
+                            'score': 0.6,
+                            'skill_id': 'KS1243976G466GV63ZBY'}],
+          'unigram_scored': [{'doc_node_id': [11],
+                              'doc_node_value': 'node',
+                              'score': 0.9,
+                              'skill_id': 'KS126ZK60X10ZQ7DRFLR'}],
+          'unigrqm_full': []},
+ 'results': {'full_matches': [{'doc_node_id': [5, 6],
+                               'score': 1,
+                               'skill_id': 'ES8AAD06BE8119038221'},
+                              {'doc_node_id': [10],
+                               'doc_node_value': 'css',
+                               'score': 1,
+                               'skill_id': 'KS121F45VPV8C9W3QFYH'}],
+             'ngram_scored': [{'doc_node_id': [3],
+                               'doc_node_value': 'expert',
+                               'score': 0.5,
+                               'skill_id': 'KS123RD5VV5WNJLMNH3J'},
+                              {'doc_node_id': [12],
+                               'doc_node_value': 'english',
+                               'score': 0.6,
+                               'skill_id': 'KS123K75YYK8VGH90NCS'},
+                              {'doc_node_id': [14],
+                               'doc_node_value': 'french',
+                               'score': 0.6,
+                               'skill_id': 'KS1243976G466GV63ZBY'}],
+             'unigram_scored': [{'doc_node_id': [11],
+                                 'doc_node_value': 'node',
+                                 'score': 0.9,
+                                 'skill_id': 'KS126ZK60X10ZQ7DRFLR'}]},
+ 'text': 'we need an expert in esport management fluency in both css node '
+         'english and french is mandatory'}
 
 skill_extractor.display(annotations)
 # ouput:
@@ -99,6 +134,6 @@ skill_extractor.display(annotations)
 <img src="screenshots/displacy_result.png" alt="output of skill_extractor.display(annotations)">
 
 
-## Big Todos :
-= prepare labeled data by natcher for verification 
-- configure NERDA package to fine-tune BERT model
+##  Todos :
+- create skill graph (using real data ) for new sub_matches scorer 
+- rewrite ngram and unigram scorer using ccontext scorer 
