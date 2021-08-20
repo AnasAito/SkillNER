@@ -123,12 +123,13 @@ class Utils:
        
 
         if type_ == 'oneToken':
-            score = self.compute_w_ratio(len_condition/len_ , real_id,[text_obj[ind].lemmed  for ind in s_gr_n ])
+           # score = self.compute_w_ratio(len_condition/len_ , real_id,[text_obj[ind].lemmed  for ind in s_gr_n ])
+            score = len_condition/len_
         if type_ == 'fullUni':
             score = 1
      
         if type_ == 'lowSurf':
-            if len_ == 2 : 
+            if len_ > 2 : 
                 score =1
            
             else : 
