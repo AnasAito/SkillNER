@@ -16,71 +16,16 @@ class Utils:
         self.nlp = nlp
         self.skills_db = skills_db
 
-        self.sgram = [skills_db[key]['skill_stemmed']
-                      for key in skills_db if skills_db[key]['skill_len'] ==2]
-        self.ngram = [skills_db[key]['skill_stemmed']
-                      for key in skills_db if skills_db[key]['skill_len'] >1]
-        self.sgrams_skills_tokens_dist = self.get_dist(self.sgram)
-        self.ngrams_skills_tokens_dist = self.get_dist_new(self.ngram)
-        self.sign = functools.partial(math.copysign, 1)
+
         return
 
-    def get_dist(self, array):
-        words = []
-        for val in array:
-            vals = val.split(' ')
-            for v in vals:
 
-                words.append(v)
-
-        a = words
-        counter = collections.Counter(a)
-        counter = dict(counter)
-        # print(counter)
-        max_ = max(list(counter.values()))
-        min_ = min(list(counter.values()))
-
-        if max_ == min_:
-            ret = counter
-        else:
-            ret = {k: 1-((v-min_)/(max_-min_)) for k, v in counter.items()}
-        return ret
     
-    def get_dist_new(self, array):
-        words = []
-        for val in array:
-            vals = val.split(' ')
-            for v in vals:
 
-                words.append(v)
-
-        a = words
-        counter = collections.Counter(a)
-        counter = dict(counter)
-        return counter
     
-    def one_gram_sim(self, text_str, skill_str):
-        # transform into sentence
-        text = text_str + ' ' + skill_str
-        tokens = self.nlp(text)
-        token1, token2 = tokens[0], tokens[1]
 
-        return token1.similarity(token2)
 
-    def similarity(self, texts):
-        doc1 = self.nlp(texts[0])
-        doc2 = self.nlp(texts[1])
 
-        return doc1.similarity(doc2)
-
-    def get_s_gram_score(self,skill_id, skill_name, f, input_text,is_tool,full_matches_ids):
-        if is_tool : 
-            inter =  list(set(S_GRAM_TOOLS_LINKS[skill_id])&set(full_matches_ids))
-            #print(skill_id,S_GRAM_TOOLS_LINKS[skill_id],full_matches_ids)
-            return len(inter)
-        else :
-            text = skill_name.lower().replace(f, '').strip()
-            return self.similarity([text, input_text])
 
     def make_one(self, cluster, len_):
         a = [1] * len_
@@ -114,41 +59,16 @@ class Utils:
                     clusters.append(a)
         return clusters
 
-    def is_low_frequency(self, match_str, skill_id):
-        skill_name = self.skills_db[skill_id]['skill_stemmed'].split(' ')
 
-        if self.sgrams_skills_tokens_dist[skill_name[0]] >= self.sgrams_skills_tokens_dist[skill_name[1]]:
 
-            return skill_name[0] == match_str
-        else:
-            return skill_name[1] == match_str
-    def compute_w_ratio(self,simple_ratio ,skill_id,matched_tokens):
- 
-            
-        skill_name = self.skills_db[skill_id]['skill_stemmed'].split(' ')
         
-        up = sum([1/self.ngrams_skills_tokens_dist[token] for token in matched_tokens ])
-        
-        down = sum([1/self.ngrams_skills_tokens_dist[token] for token in skill_name ])
-        if self.skills_db[skill_id]['skill_len'] == 2 :
-            up_ = sum([self.ngrams_skills_tokens_dist[token] for token in matched_tokens ])
-            down_ =sum([self.ngrams_skills_tokens_dist[token] for token in skill_name ])
-            #print(skill_name , [self.ngrams_skills_tokens_dist[token] for token in skill_name ])
-            sign_ = self.sign(down_-(2*up_))
-            return simple_ratio+((up/down)*(simple_ratio**2)*sign_)
-        else :
-            up_ = [self.ngrams_skills_tokens_dist[token] for token in matched_tokens ]
-            down_ =[self.ngrams_skills_tokens_dist[token] for token in skill_name ]
-            sign_ = self.sign(min(down_)-min(up_))
-            return simple_ratio+((up/down)*(simple_ratio**1.5)*sign_)
-        
-    def retain(self, text_obj , text, tokens, skill_id, sk_look, corpus,full_matches_ids):
+    def retain(self, text_obj , text, tokens, skill_id, sk_look, corpus):
         # get id
         real_id = sk_look[skill_id].split('_1w')[0]
         # get len
         len_ = self.skills_db[real_id]['skill_len']
         ## get tokens ratio (over skill tokens lingth)  that matched with skill within span tokens !
-        len_condition = corpus[skill_id].dot(tokens)/len_ 
+        len_condition = corpus[skill_id].dot(tokens)
 
         s_gr = np.array(list(tokens))*np.array(list(corpus[skill_id]))
         def condition(x): return x == 1
@@ -156,13 +76,14 @@ class Utils:
             s_gr) if condition(element)][0]
         s_gr_n = [idx for idx, element in enumerate(
             s_gr) if condition(element)]
-        weighted_ratio = self.compute_w_ratio(len_condition , real_id,[text_obj[ind].stemmed  for ind in s_gr_n ])
+       
 
 
         return (True, {'skill_id': real_id,
                                'doc_node_id':  [i for i, val in enumerate(s_gr) if val == 1],
                                'doc_node_value' : ' '.join([str(text_obj[i]) for i, val in enumerate(s_gr) if val == 1]) ,
-                               'score': round(weighted_ratio, 2)
+                               'len': len_condition,
+                               'score': len_condition / len_
                                })
 
 
@@ -175,8 +96,9 @@ class Utils:
         skill_text_match_bin = [0]*len_
         for index, skill_id in enumerate(unique_skills):
 
-            on_inds = [match['doc_node_id']
+            on_inds_ = [match['doc_node_id']
                        for match in matches if match['skill_id'] == skill_id]
+            on_inds = [j for sub in on_inds_ for j in sub]
             skill_text_match_bin_updated = [
                 (i in on_inds)*1 for i, _ in enumerate(skill_text_match_bin)]
             corpus.append(skill_text_match_bin_updated)
@@ -185,7 +107,7 @@ class Utils:
         return np.array(corpus), look_up
 
     # main functions
-    def process_n_gram(self, matches, text_obj: Text , full_matches_ids):
+    def process_n_gram(self, matches, text_obj: Text ):
         if len(matches) == 0:
             return matches
 
@@ -208,43 +130,32 @@ class Utils:
             new_skill_obj = []
             for sk_id in skill_ids:
                 retain_, r_sk_id = self.retain(text_obj,
-                    text_tokens, tokens, sk_id, look_up, corpus,full_matches_ids)
+                    text_tokens, tokens, sk_id, look_up, corpus)
                 if retain_:
                     new_skill_obj.append(r_sk_id)
             # get max scoring candidate for each span
-            scores = [sk['score'] for sk in new_skill_obj]
+            scores = [sk['len'] for sk in new_skill_obj]
+            
             if scores != []:
-                max_score_index = np.array(scores).argmax()
-
-                new_spans.append(new_skill_obj[max_score_index])
+                max_score = max(scores)
+                
+                max_score_indexs =[i for i,sk in enumerate(scores) if sk==max_score]
+                if len(max_score_indexs)>1 :
+                    for max_id in max_score_indexs : 
+                        skill_id = new_skill_obj[max_id]['skill_id']
+                        ## for 1,2 priority to uni and 2_gram
+                        if max_score in [1,2] :
+                            
+                            if self.skills_db[skill_id]['skill_len']==2 or self.skills_db[skill_id]['skill_len']==1 :
+                                new_skill_obj[max_id]['score']=1
+                                new_spans.append(new_skill_obj[max_id])
+                
+                else : 
+                    max_ind = max_score_indexs[0]
+                    
+                    new_spans.append(new_skill_obj[max_ind])
+                        
 
         return new_spans
 
-    def process_unigram(self, matches, text_obj: Text):
-        original_text = text_obj.transformed_text.split(' ')
-        res = {}
-        for match in matches:
-            id_ = match['skill_id']
-            match_id = match['doc_node_id']
 
-            skill_str = self.skills_db[id_]['skill_cleaned']
-            # print(match_id)
-            text_str = original_text[match_id]
-            sim = self.one_gram_sim(skill_str, text_str)
-            # match['doc_node_id'] = [match['doc_node_id']] # for normalisation purpose
-            if match_id in res.keys():
-                if sim >= res[match_id]['score']:
-                    res[match_id] = {'skill_id': id_,
-                                     'doc_node_id': [match_id],
-                                     'doc_node_value': match['doc_node_value'],
-                                     'score': round(sim, 2)}
-                else:
-                    pass
-            else:
-
-                res[match_id] = {'skill_id': id_,
-                                 'doc_node_id': [match_id],
-                                 'doc_node_value': match['doc_node_value'],
-                                 'score': round(sim, 2)}
-
-        return list(res.values())

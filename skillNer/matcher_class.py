@@ -237,7 +237,8 @@ class SkillsGetter:
                 skills.append({'skill_id': id_,
                                 'score': 1,
                                'doc_node_value': str(doc[start:end]),
-                               'doc_node_id': start})
+                               'doc_node_id': [start] , 
+                               'type':'full_uni'})
 
         return skills,text_obj
 
@@ -260,7 +261,8 @@ class SkillsGetter:
             if text_obj[start].is_matchable :
                 skills.append({'skill_id': id_,
                                'doc_node_value': str(doc[start:end]),
-                               'doc_node_id': start})
+                               'doc_node_id': [start],
+                              'type':'one_token'})
                 
         return  skills
 
@@ -279,7 +281,9 @@ class SkillsGetter:
             if text_obj[start].is_matchable  :
                 skills.append({'skill_id': id_,
                                'doc_node_value': str(doc[start:end]),
-                               'doc_node_id': list(range(start, end))})
+                               'doc_node_id': list(range(start, end)),
+                               'type':'lw_surf' })
+                
 
 
         return skills , text_obj  
