@@ -9,7 +9,7 @@ import math
 import numpy as np
 # my packs
 from skillNer.text_class import Text
-from skillNer.general_params import  S_GRAM_TOOLS_LINKS
+from skillNer.general_params import  TOKEN_DIST
 
 class Utils:
     def __init__(self, nlp, skills_db):
@@ -62,29 +62,7 @@ class Utils:
 
 
         
-    def retain(self, text_obj , text, tokens, skill_id, sk_look, corpus):
-        # get id
-        real_id = sk_look[skill_id].split('_1w')[0]
-        # get len
-        len_ = self.skills_db[real_id]['skill_len']
-        ## get tokens ratio (over skill tokens lingth)  that matched with skill within span tokens !
-        len_condition = corpus[skill_id].dot(tokens)
 
-        s_gr = np.array(list(tokens))*np.array(list(corpus[skill_id]))
-        def condition(x): return x == 1
-        s_gr_ind = [idx for idx, element in enumerate(
-            s_gr) if condition(element)][0]
-        s_gr_n = [idx for idx, element in enumerate(
-            s_gr) if condition(element)]
-       
-
-
-        return (True, {'skill_id': real_id,
-                               'doc_node_id':  [i for i, val in enumerate(s_gr) if val == 1],
-                               'doc_node_value' : ' '.join([str(text_obj[i]) for i, val in enumerate(s_gr) if val == 1]) ,
-                               'len': len_condition,
-                               'score': len_condition / len_
-                               })
 
 
 
@@ -105,7 +83,48 @@ class Utils:
             look_up[index] = skill_id
 
         return np.array(corpus), look_up
+    def compute_w_ratio(self,simple_ratio ,skill_id,matched_tokens):
+ 
+            
+        skill_name = self.skills_db[key]['high_surfce_forms']['full'].split(' ')
+        
+        up = sum([1/self.ngrams_skills_tokens_dist[token] for token in matched_tokens ])
+        down = sum([1/self.ngrams_skills_tokens_dist[token] for token in skill_name ])
 
+        up_ = [self.ngrams_skills_tokens_dist[token] for token in matched_tokens ]
+        down_ =[self.ngrams_skills_tokens_dist[token] for token in skill_name ]
+        sign_ = self.sign(min(down_)-min(up_))
+        return simple_ratio+((up/down)*(simple_ratio**1.5)*sign_)
+        
+        
+        
+    
+    def retain(self, text_obj , text, tokens, skill_id, sk_look, corpus):
+        # get id
+        #print(sk_look[skill_id])
+        real_id,type_ = sk_look[skill_id].split('_')
+        print(real_id,type_ , TOKEN_DIST['certifi'])
+        print('----')
+        # get len
+        len_ = self.skills_db[real_id]['skill_len']
+        ## get tokens ratio (over skill tokens lingth)  that matched with skill within span tokens !
+        len_condition = corpus[skill_id].dot(tokens)
+
+        s_gr = np.array(list(tokens))*np.array(list(corpus[skill_id]))
+        def condition(x): return x == 1
+        s_gr_ind = [idx for idx, element in enumerate(
+            s_gr) if condition(element)][0]
+        s_gr_n = [idx for idx, element in enumerate(
+            s_gr) if condition(element)]
+       
+
+
+        return (True, {'skill_id': real_id,
+                               'doc_node_id':  [i for i, val in enumerate(s_gr) if val == 1],
+                               'doc_node_value' : ' '.join([str(text_obj[i]) for i, val in enumerate(s_gr) if val == 1]) ,
+                               'len': len_condition,
+                               'score': len_condition / len_
+                               })
     # main functions
     def process_n_gram(self, matches, text_obj: Text ):
         if len(matches) == 0:

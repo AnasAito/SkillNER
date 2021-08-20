@@ -75,7 +75,7 @@ class Matchers:
             
             skill_len = skills_db[key]['skill_len']
             if skill_len > 1:
-                skill_full_name = skills_db[key]['high_surfce_forms'][0]
+                skill_full_name = skills_db[key]['high_surfce_forms']['full']
                 # add to matcher
                 skill_full_name_spacy = nlp.make_doc(skill_full_name)
                 full_matcher.add(str(skill_id), [skill_full_name_spacy])
@@ -92,8 +92,8 @@ class Matchers:
         for key in skills_db:
             # get skill info
             skill_id = key
-            if len(skills_db[key]['high_surfce_forms'])==2 : # check if there is a skill abrv 
-                skill_abv = skills_db[key]['high_surfce_forms'][1]
+            if  'abv' in skills_db[key]['high_surfce_forms'].keys() : # check if there is a skill abrv 
+                skill_abv = skills_db[key]['high_surfce_forms']['abv']
                 skill_abv_spacy = nlp.make_doc(skill_abv)
                 abv_matcher.add(str(skill_id), [skill_abv_spacy])
 
@@ -111,7 +111,7 @@ class Matchers:
             
             skill_len = skills_db[key]['skill_len']
             if skill_len == 1:
-                skill_full_name = skills_db[key]['high_surfce_forms'][0]
+                skill_full_name = skills_db[key]['high_surfce_forms']['full']
                 # add to matcher
                 skill_full_name_spacy = nlp.make_doc(skill_full_name)
                 full_uni_matcher.add(str(skill_id), [skill_full_name_spacy])
@@ -154,7 +154,7 @@ class Matchers:
   
 
             if match_on_tokens:  # check if skill accept matches on its unique tokens
-                skill_lemmed = skills_db[key]['high_surfce_forms'][0]
+                skill_lemmed = skills_db[key]['high_surfce_forms']['full']
                 skill_lemmed_tokens = skill_lemmed.split(' ')
                 
                 # add tokens to matcher
@@ -163,7 +163,7 @@ class Matchers:
                     if token.isdigit():
                         pass
                     else : 
-                        id_ = skill_id+'_1w'
+                        id_ = skill_id
                         token_matcher.add(str(id_), [nlp.make_doc(token)])
 
         return token_matcher
@@ -234,7 +234,7 @@ class SkillsGetter:
         for match_id, start, end in matcher(doc):
             id_ = matcher.vocab.strings[match_id]
             if text_obj[start].is_matchable:
-                skills.append({'skill_id': id_,
+                skills.append({'skill_id': id_+'_fullUni',
                                 'score': 1,
                                'doc_node_value': str(doc[start:end]),
                                'doc_node_id': [start] , 
@@ -259,7 +259,7 @@ class SkillsGetter:
           
             # add 
             if text_obj[start].is_matchable :
-                skills.append({'skill_id': id_,
+                skills.append({'skill_id': id_+'_oneToken',
                                'doc_node_value': str(doc[start:end]),
                                'doc_node_id': [start],
                               'type':'one_token'})
@@ -279,7 +279,7 @@ class SkillsGetter:
             id_ = matcher.vocab.strings[match_id]
             
             if text_obj[start].is_matchable  :
-                skills.append({'skill_id': id_,
+                skills.append({'skill_id': id_+'_lowSurf',
                                'doc_node_value': str(doc[start:end]),
                                'doc_node_id': list(range(start, end)),
                                'type':'lw_surf' })

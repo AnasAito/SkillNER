@@ -20,9 +20,9 @@ SKILL_TO_COLOR = {
 with open('skillNer/data/skill_db_relax_20.json') as json_file:
     SKILL_DB = json.load(json_file)
 
-# load s_gram_tools_links
-with open('skillNer/data/s_gram_tools_links.json') as json_file:
-    S_GRAM_TOOLS_LINKS = json.load(json_file)
+# load token distribution dict 
+with open('skillNer/data/token_dist.json') as json_file:
+    TOKEN_DIST = json.load(json_file)
 
 
 # list of punctuation
