@@ -9,7 +9,8 @@ import json
 
 with open('./skillNer/data/skills_processed.json', 'r+') as f:
     SKILL_DB = json.load(f)
-
+with open('./skillNer/data/token_dist.json', 'r+') as f:
+    dist = json.load(f)
 RELAX_PARAM = 0.2
 new_skill_db = {}
 for key in SKILL_DB:
