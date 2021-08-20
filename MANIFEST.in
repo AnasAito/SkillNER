@@ -1,2 +1,2 @@
 include MANIFEST.in
-include *.json
+include skillNer/data
