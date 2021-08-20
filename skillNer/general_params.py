@@ -1,4 +1,5 @@
 # native packs
+import os
 import json
 from posixpath import dirname
 # installed packs
@@ -13,20 +14,27 @@ SKILL_TO_COLOR = {
     'Certification': "#552448"
 }
 
-# get absolute path of directory
-# skill_db_pathname = dirname(__file__)
+
+def dev_mode(): return True if '.gitignore' in os.listdir() else False
+
+
+# get absolute path of directory according to mode: dev or production
+if dev_mode():
+    skill_db_pathname = "skillNer/data/"
+else:
+    skill_db_pathname = dirname(__file__) + "/data/"
 
 # load default skill data base
-with open('skillNer/data/skill_db_relax_20.json') as json_file:
+with open(skill_db_pathname + 'skill_db_relax_20.json') as json_file:
     SKILL_DB = json.load(json_file)
 
-# load token distribution dict 
-with open('skillNer/data/token_dist.json') as json_file:
+# load token distribution dict
+with open(skill_db_pathname + 'token_dist.json') as json_file:
     TOKEN_DIST = json.load(json_file)
 
 
 # list of punctuation
-LIST_PUNCTUATIONS = ['/', '·', ',', '.', '-', '(', ')', ',', ':','!',"'"]
+LIST_PUNCTUATIONS = ['/', '·', ',', '.', '-', '(', ')', ',', ':', '!', "'"]
 
 # list of redundant words to remove from text
 S_GRAM_REDUNDANT = [
