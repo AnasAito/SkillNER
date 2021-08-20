@@ -11,12 +11,12 @@ dependencies = [
 ]
 
 additional_files = {
-    'default_db': ['data/']
+    'default_db': ['skillNer/data/', 'data/']
 }
 
 setuptools.setup(
     name="skillNer",
-    version="0.0.5",
+    version="0.1.0",
     author="Anas Ait AOMAR & Badr MOUFAD",
     author_email="pedroslashs@gmail.com",
     description="A first deployed version of skillNer",
