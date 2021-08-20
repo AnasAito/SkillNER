@@ -15,8 +15,8 @@ class Utils:
     def __init__(self, nlp, skills_db):
         self.nlp = nlp
         self.skills_db = skills_db
-
-
+        self.token_dist = TOKEN_DIST
+        self.sign = functools.partial(math.copysign, 1)
         return
 
 
@@ -83,18 +83,22 @@ class Utils:
             look_up[index] = skill_id
 
         return np.array(corpus), look_up
+    
+    def one_gram_sim(self, text_str, skill_str):
+        # transform into sentence
+        text = text_str + ' ' + skill_str
+        tokens = self.nlp(text)
+        token1, token2 = tokens[0], tokens[1]
+
+        return token1.similarity(token2)
     def compute_w_ratio(self,simple_ratio ,skill_id,matched_tokens):
  
-            
-        skill_name = self.skills_db[key]['high_surfce_forms']['full'].split(' ')
-        
-        up = sum([1/self.ngrams_skills_tokens_dist[token] for token in matched_tokens ])
-        down = sum([1/self.ngrams_skills_tokens_dist[token] for token in skill_name ])
 
-        up_ = [self.ngrams_skills_tokens_dist[token] for token in matched_tokens ]
-        down_ =[self.ngrams_skills_tokens_dist[token] for token in skill_name ]
-        sign_ = self.sign(min(down_)-min(up_))
-        return simple_ratio+((up/down)*(simple_ratio**1.5)*sign_)
+
+        up_max = max([self.token_dist[token] for token in matched_tokens ])
+
+        scarsity = (1/up_max)
+        return simple_ratio*(1+scarsity)
         
         
         
@@ -103,8 +107,8 @@ class Utils:
         # get id
         #print(sk_look[skill_id])
         real_id,type_ = sk_look[skill_id].split('_')
-        print(real_id,type_ , TOKEN_DIST['certifi'])
-        print('----')
+        
+        #print('----')
         # get len
         len_ = self.skills_db[real_id]['skill_len']
         ## get tokens ratio (over skill tokens lingth)  that matched with skill within span tokens !
@@ -118,13 +122,30 @@ class Utils:
             s_gr) if condition(element)]
        
 
-
-        return (True, {'skill_id': real_id,
+        if type_ == 'oneToken':
+            score = self.compute_w_ratio(len_condition/len_ , real_id,[text_obj[ind].lemmed  for ind in s_gr_n ])
+        if type_ == 'fullUni':
+            score = 1
+     
+        if type_ == 'lowSurf':
+            if len_ == 2 : 
+                score =1
+           
+            else : 
+               
+                text_str = ' '.join([str(text_obj[i]) for i, val in enumerate(s_gr) if val == 1])
+                skill_str = self.skills_db[real_id]['high_surfce_forms']['full']
+                
+                score = self.one_gram_sim(text_str,skill_str)
+               # print('one_gram',text_str,skill_str,score)
+            
+        return  {'skill_id': real_id,
                                'doc_node_id':  [i for i, val in enumerate(s_gr) if val == 1],
                                'doc_node_value' : ' '.join([str(text_obj[i]) for i, val in enumerate(s_gr) if val == 1]) ,
-                               'len': len_condition,
-                               'score': len_condition / len_
-                               })
+                               'type': type_,
+                               'score': score,
+                               'len':len_condition
+                               }
     # main functions
     def process_n_gram(self, matches, text_obj: Text ):
         if len(matches) == 0:
@@ -146,33 +167,35 @@ class Utils:
         new_spans = []
         for span in spans:
             tokens, skill_ids = span
-            new_skill_obj = []
+            span_scored_skills = []
+            types = []
+            scores = []
+            lens = []
             for sk_id in skill_ids:
-                retain_, r_sk_id = self.retain(text_obj,
-                    text_tokens, tokens, sk_id, look_up, corpus)
-                if retain_:
-                    new_skill_obj.append(r_sk_id)
-            # get max scoring candidate for each span
-            scores = [sk['len'] for sk in new_skill_obj]
-            
-            if scores != []:
-                max_score = max(scores)
+                #score skill 
+                scored_sk_obj = self.retain(text_obj,text_tokens, tokens, sk_id, look_up, corpus)
+                span_scored_skills.append(scored_sk_obj)
+                types.append(scored_sk_obj['type'])
+                lens.append(scored_sk_obj['len']) 
+                scores.append(scored_sk_obj['score'])
+            # extract best candiate for a given span 
+            if 'oneToken' in types and len(set(types))>1 : 
+                ## having a ngram skill with other types in span condiates :
+                ## priotize skills with high match length if length >1
+                id_ = np.array(scores).argmax()
+                max_score = 0
+                for i,len_ in enumerate(lens):
+                    if len_>1 and types[i]=='oneToken'  :
+                        if scores[i]>=max_score:
+                            id_=i
                 
-                max_score_indexs =[i for i,sk in enumerate(scores) if sk==max_score]
-                if len(max_score_indexs)>1 :
-                    for max_id in max_score_indexs : 
-                        skill_id = new_skill_obj[max_id]['skill_id']
-                        ## for 1,2 priority to uni and 2_gram
-                        if max_score in [1,2] :
-                            
-                            if self.skills_db[skill_id]['skill_len']==2 or self.skills_db[skill_id]['skill_len']==1 :
-                                new_skill_obj[max_id]['score']=1
-                                new_spans.append(new_skill_obj[max_id])
+                        
+                new_spans.append(span_scored_skills[id_])
+                               
                 
-                else : 
-                    max_ind = max_score_indexs[0]
-                    
-                    new_spans.append(new_skill_obj[max_ind])
+            else :
+                max_score_index = np.array(scores).argmax()
+                new_spans.append(span_scored_skills[max_score_index])
                         
 
         return new_spans

@@ -83,7 +83,7 @@ class SkillExtractor:
                  'text': text_obj.transformed_text,
                  'results': {
                      'full_matches': full_sk ,
-                     'ngram_scored': process_n_gram,
+                     'ngram_scored': [match for match in process_n_gram if match['score']>=tresh],
                    
                              }
                }
