@@ -1,2 +1,3 @@
 include MANIFEST.in
-include skillNer/data
+recursive-include skillNer/data/*
+recursive-include data/*
