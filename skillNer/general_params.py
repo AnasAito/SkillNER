@@ -34,16 +34,6 @@ else:
     TOKEN_DIST = fetch_remote_json(json_name="TOKEN_DIST")
     pass
 
-
-# # load default skill data base
-with open(skill_db_pathname + 'skill_db_relax_20.json') as json_file:
-    SKILL_DB = json.load(json_file)
-
-# load token distribution dict
-with open(skill_db_pathname + 'token_dist.json') as json_file:
-    TOKEN_DIST = json.load(json_file)
-
-
 # list of punctuation
 LIST_PUNCTUATIONS = ['/', '·', ',', '.', '-', '(', ')', ',', ':', '!', "'"]
 
