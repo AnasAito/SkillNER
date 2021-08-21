@@ -5,7 +5,7 @@ from posixpath import dirname
 # installed packs
 #
 # my packs
-#
+from skillNer.network.remote_db import fetch_remote_json
 
 # mapping skill and color
 SKILL_TO_COLOR = {
@@ -18,13 +18,24 @@ SKILL_TO_COLOR = {
 def dev_mode(): return True if '.gitignore' in os.listdir() else False
 
 
-# get absolute path of directory according to mode: dev or production
+# if dev mode get local data
+# else fetch remote data
 if dev_mode():
     skill_db_pathname = "skillNer/data/"
-else:
-    skill_db_pathname = dirname(__file__) + "/data/"
 
-# load default skill data base
+    # load skill db
+    with open(skill_db_pathname + 'skill_db_relax_20.json') as json_file:
+        SKILL_DB = json.load(json_file)
+
+    # load token distribution dict
+    with open(skill_db_pathname + 'token_dist.json') as json_file:
+        TOKEN_DIST = json.load(json_file)
+else:
+    TOKEN_DIST = fetch_remote_json(json_name="TOKEN_DIST")
+    pass
+
+
+# # load default skill data base
 with open(skill_db_pathname + 'skill_db_relax_20.json') as json_file:
     SKILL_DB = json.load(json_file)
 

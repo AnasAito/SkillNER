@@ -9,7 +9,8 @@ import math
 import numpy as np
 # my packs
 from skillNer.text_class import Text
-from skillNer.general_params import  TOKEN_DIST
+from skillNer.general_params import TOKEN_DIST
+
 
 class Utils:
     def __init__(self, nlp, skills_db):
@@ -18,14 +19,6 @@ class Utils:
         self.token_dist = TOKEN_DIST
         self.sign = functools.partial(math.copysign, 1)
         return
-
-
-    
-
-    
-
-
-
 
     def make_one(self, cluster, len_):
         a = [1] * len_
@@ -59,13 +52,6 @@ class Utils:
                     clusters.append(a)
         return clusters
 
-
-
-        
-
-
-
-
     def get_corpus(self, text, matches):
         len_ = len(text)
         corpus = []
@@ -75,7 +61,7 @@ class Utils:
         for index, skill_id in enumerate(unique_skills):
 
             on_inds_ = [match['doc_node_id']
-                       for match in matches if match['skill_id'] == skill_id]
+                        for match in matches if match['skill_id'] == skill_id]
             on_inds = [j for sub in on_inds_ for j in sub]
             skill_text_match_bin_updated = [
                 (i in on_inds)*1 for i, _ in enumerate(skill_text_match_bin)]
@@ -83,7 +69,7 @@ class Utils:
             look_up[index] = skill_id
 
         return np.array(corpus), look_up
-    
+
     def one_gram_sim(self, text_str, skill_str):
         # transform into sentence
         text = text_str + ' ' + skill_str
@@ -91,27 +77,23 @@ class Utils:
         token1, token2 = tokens[0], tokens[1]
 
         return token1.similarity(token2)
-    def compute_w_ratio(self,simple_ratio ,skill_id,matched_tokens):
- 
 
+    def compute_w_ratio(self, simple_ratio, skill_id, matched_tokens):
 
-        up_max = max([self.token_dist[token] for token in matched_tokens ])
+        up_max = max([self.token_dist[token] for token in matched_tokens])
 
         scarsity = (1/up_max)
         return simple_ratio*(1+scarsity)
-        
-        
-        
-    
-    def retain(self, text_obj , text, tokens, skill_id, sk_look, corpus):
+
+    def retain(self, text_obj, text, tokens, skill_id, sk_look, corpus):
         # get id
-        #print(sk_look[skill_id])
-        real_id,type_ = sk_look[skill_id].split('_')
-        
-        #print('----')
+        # print(sk_look[skill_id])
+        real_id, type_ = sk_look[skill_id].split('_')
+
+        # print('----')
         # get len
         len_ = self.skills_db[real_id]['skill_len']
-        ## get tokens ratio (over skill tokens lingth)  that matched with skill within span tokens !
+        # get tokens ratio (over skill tokens lingth)  that matched with skill within span tokens !
         len_condition = corpus[skill_id].dot(tokens)
 
         s_gr = np.array(list(tokens))*np.array(list(corpus[skill_id]))
@@ -120,34 +102,36 @@ class Utils:
             s_gr) if condition(element)][0]
         s_gr_n = [idx for idx, element in enumerate(
             s_gr) if condition(element)]
-       
 
         if type_ == 'oneToken':
-            score = self.compute_w_ratio(len_condition/len_ , real_id,[text_obj[ind].lemmed  for ind in s_gr_n ])
+            score = self.compute_w_ratio(
+                len_condition/len_, real_id, [text_obj[ind].lemmed for ind in s_gr_n])
         if type_ == 'fullUni':
             score = 1
-     
+
         if type_ == 'lowSurf':
-            if len_ == 2 : 
-                score =1
-           
-            else : 
-               
-                text_str = ' '.join([str(text_obj[i]) for i, val in enumerate(s_gr) if val == 1])
+            if len_ == 2:
+                score = 1
+
+            else:
+
+                text_str = ' '.join([str(text_obj[i])
+                                     for i, val in enumerate(s_gr) if val == 1])
                 skill_str = self.skills_db[real_id]['high_surfce_forms']['full']
-                
-                score = self.one_gram_sim(text_str,skill_str)
+
+                score = self.one_gram_sim(text_str, skill_str)
                # print('one_gram',text_str,skill_str,score)
-            
-        return  {'skill_id': real_id,
-                               'doc_node_id':  [i for i, val in enumerate(s_gr) if val == 1],
-                               'doc_node_value' : ' '.join([str(text_obj[i]) for i, val in enumerate(s_gr) if val == 1]) ,
-                               'type': type_,
-                               'score': score,
-                               'len':len_condition
-                               }
+
+        return {'skill_id': real_id,
+                'doc_node_id':  [i for i, val in enumerate(s_gr) if val == 1],
+                'doc_node_value': ' '.join([str(text_obj[i]) for i, val in enumerate(s_gr) if val == 1]),
+                'type': type_,
+                'score': score,
+                'len': len_condition
+                }
     # main functions
-    def process_n_gram(self, matches, text_obj: Text ):
+
+    def process_n_gram(self, matches, text_obj: Text):
         if len(matches) == 0:
             return matches
 
@@ -172,32 +156,28 @@ class Utils:
             scores = []
             lens = []
             for sk_id in skill_ids:
-                #score skill 
-                scored_sk_obj = self.retain(text_obj,text_tokens, tokens, sk_id, look_up, corpus)
+                # score skill
+                scored_sk_obj = self.retain(
+                    text_obj, text_tokens, tokens, sk_id, look_up, corpus)
                 span_scored_skills.append(scored_sk_obj)
                 types.append(scored_sk_obj['type'])
-                lens.append(scored_sk_obj['len']) 
+                lens.append(scored_sk_obj['len'])
                 scores.append(scored_sk_obj['score'])
-            # extract best candiate for a given span 
-            if 'oneToken' in types and len(set(types))>1 : 
-                ## having a ngram skill with other types in span condiates :
-                ## priotize skills with high match length if length >1
+            # extract best candiate for a given span
+            if 'oneToken' in types and len(set(types)) > 1:
+                # having a ngram skill with other types in span condiates :
+                # priotize skills with high match length if length >1
                 id_ = np.array(scores).argmax()
                 max_score = 0
-                for i,len_ in enumerate(lens):
-                    if len_>1 and types[i]=='oneToken'  :
-                        if scores[i]>=max_score:
-                            id_=i
-                
-                        
+                for i, len_ in enumerate(lens):
+                    if len_ > 1 and types[i] == 'oneToken':
+                        if scores[i] >= max_score:
+                            id_ = i
+
                 new_spans.append(span_scored_skills[id_])
-                               
-                
-            else :
+
+            else:
                 max_score_index = np.array(scores).argmax()
                 new_spans.append(span_scored_skills[max_score_index])
-                        
 
         return new_spans
-
-

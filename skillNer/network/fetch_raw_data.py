@@ -35,32 +35,3 @@ def fetch_skills_list() -> pd.DataFrame:
 
     # all_skills_df = pd.DataFrame(json_normalize(response)); # Where response is a JSON object drilled down to the level of 'data' key
     return response
-
-
-# fetch / modify skills_db and tokens dist
-URL = "https://api.jsonstorage.net/v1/json"
-
-dict_ids_json = {
-    "SKILL_DB": "",
-    "TOEKN_DIST": ""
-}
-
-
-# json_name is "SKILL_DB" or "TOKEN_DIST"
-def fetch_remote_json(
-    json_name: str
-) -> dict:
-
-    id_json = dict_ids_json[json_name]
-
-    return requests.get(f"{URL}/{id_json}").json()
-
-
-def modify_remote_json(
-    json_name: str,
-    new_json: dict
-) -> None:
-
-    id_json = dict_ids_json[json_name]
-
-    return requests.put(f"{URL}/{id_json}", json=new_json)
