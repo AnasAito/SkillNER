@@ -4,6 +4,7 @@
 # the script use original emsi skill db can be downloaded using fetch.py
 # download input db and place it in path
 # ============
+import re
 import collections
 import json
 
@@ -89,6 +90,44 @@ for key in new_skill_db:
             else:
                 new_l.append(l)
         new_skill_db[key]['low_surface_forms'] = new_l
+
+
+# add n_gram skills surface forms
+n_grams = [SKILL_DB[key] for key in SKILL_DB if SKILL_DB[key]['skill_len'] > 1]
+rx = r"\b[A-Z](?=([&.]?))(?:\1[A-Z])+\b"
+
+
+def extract_sub_forms(skill_name):
+    return [x.group() for x in re.finditer(rx, skill_name)]
+
+
+def remove_btwn_par(str_):
+    return re.sub("[\(\[].*?[\)\]]", "", str_)
+
+
+subs = []
+for n_skill in n_grams:
+    skill_name = n_skill['skill_name']
+    new_skill_name = remove_btwn_par(skill_name)
+    sub_f = extract_sub_forms(new_skill_name)
+    if sub_f != []:
+        print(skill_name)
+        print(sub_f)
+        print('--------')
+        for s in sub_f:
+            subs.append(s)
+dist = collections.Counter(subs)
+for key in new_skill_db:
+    if new_skill_db[key]['skill_len'] > 2:
+
+        skill_name = new_skill_db[key]['skill_name']
+        new_skill_name = remove_btwn_par(skill_name)
+        skill_low = new_skill_db[key]['low_surface_forms']
+        sub_abv = extract_sub_forms(new_skill_name)
+        for abv in sub_abv:
+            if dist[abv] == 1:
+                skill_low.append(abv)
+        new_skill_db[key]['low_surface_forms'] = skill_low
 
 # save
 with open('./skillNer/data/skill_db_relax_20.json', 'w', encoding='utf-8') as f:
