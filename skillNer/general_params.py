@@ -15,24 +15,33 @@ SKILL_TO_COLOR = {
 }
 
 
-def dev_mode(): return True if '.gitignore' in os.listdir() else False
+#'''def dev_mode(): return True if '.gitignore' in os.listdir() else False'''
 
 
-# if dev mode get local data
+#  get local data
 # else fetch remote data
-if dev_mode():
-    skill_db_pathname = "skillNer/data/"
+#skill_db_pathname = "skillNer/data/"
+# load skill db
+try:
 
-    # load skill db
-    with open(skill_db_pathname + 'skill_db_relax_20.json') as json_file:
+    with open('skill_db_relax_20.json') as json_file:
         SKILL_DB = json.load(json_file)
+except:
+    SKILL_DB = fetch_remote_json(json_name="SKILL_DB")
+    # dump data
+    with open('skill_db_relax_20.json', 'w') as fp:
+        json.dump(SKILL_DB, fp)
+# load token distribution dict
+try:
 
-    # load token distribution dict
-    with open(skill_db_pathname + 'token_dist.json') as json_file:
+    with open('token_dist.json') as json_file:
         TOKEN_DIST = json.load(json_file)
-else:
+except:
     TOKEN_DIST = fetch_remote_json(json_name="TOKEN_DIST")
-    pass
+    # dump data
+    with open('token_dist.json', 'w') as fp:
+        json.dump(TOKEN_DIST, fp)
+
 
 # list of punctuation
 LIST_PUNCTUATIONS = ['/', '·', ',', '.', '-', '(', ')', ',', ':', '!', "'"]
