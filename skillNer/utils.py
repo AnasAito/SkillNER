@@ -129,8 +129,8 @@ class Utils:
             score = 1
      
         if type_ == 'lowSurf':
-            if len_ > 2 : 
-                score =1
+            if len_ > 1 : 
+                score =sum(s_gr)
            
             else : 
                
