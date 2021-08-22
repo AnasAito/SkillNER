@@ -5,6 +5,7 @@ import random
 from IPython.core.display import HTML
 # my packs
 from skillNer.visualizer.phrase_class import Phrase
+from skillNer.general_params import SKILL_TO_COLOR_TAILWIND
 
 
 def element(
@@ -32,11 +33,7 @@ def element(
 def render_phrase(phrase: Phrase) -> str:
     # case of non skill phrase
     if not phrase.is_skill:
-        return element(ele_type='div', className="relative", children=[
-            element(ele_type='span', className="flex items p-2 rounded-lg mx-2", children=[
-                phrase.raw_text
-            ])
-        ])
+        return "&nbsp" + phrase.raw_text + "&nbsp"
 
     # case of skill
     # give an id to identiify element
@@ -45,11 +42,11 @@ def render_phrase(phrase: Phrase) -> str:
     # script to show hide meta data
     src = """
         function mouseEnterHandler_%s() {
-            document.getElementById("%s").style.visibility = "visible";
+            document.getElementById("%s").style.display = "";
         }
 
         function mouseLeaveHandler_%s() {
-            document.getElementById("%s").style.visibility = "hidden";
+            document.getElementById("%s").style.display = "none";
         }
     """ % (id_element, id_element, id_element, id_element)
 
@@ -58,26 +55,28 @@ def render_phrase(phrase: Phrase) -> str:
     on_mouse_leave = f"mouseLeaveHandler_{id_element}()"
 
     # component for meta data
-    def meta_data_component(key, value): return element(ele_type="div", className="flex grid grid-cols-2 gap-4 my-1", children=[
+    def meta_data_component(key, value): return element(ele_type="div", className="flex grid-cols-2 gap-2 mb-4", children=[
         element(ele_type="span",
-                className="text-sm font-semibold", children=[key]),
-        element(ele_type="span", className="text-sm", children=[str(value)])
+                className="font-bold col-1", children=[key]),
+        element(ele_type="span", className="col-1", children=[str(value)])
     ])
 
-    return element(ele_type="span", className="relative", children=[
+    # color of element
+    color = SKILL_TO_COLOR_TAILWIND[phrase.skill_type]
+
+    return element(ele_type="span", onmouseleave=on_mouse_leave, onmouseenter=on_mouse_enter, className=f"relative p-1 text-white rounded-md border bg-{color}", children=[
         # phrase
-        element(ele_type="div", className='flex items border p-2 px-6 pb-6 rounded-lg mx-2 cursor-pointer', onmouseleave=on_mouse_leave, onmouseenter=on_mouse_enter, children=[
-            phrase.raw_text
-        ]),
+        phrase.raw_text,
 
         # type skill
-        element(ele_type="div", className='absolute right-4 bottom-1 text-xs font-bold', children=[
-            phrase.skill_type
+        element(ele_type="span", className='text-xs text-white font-bold', children=[
+            " (", phrase.skill_type, ")"
         ]),
 
         # meta data
         element(ele_type="div", id=id_element,
-                className='flex flex-col w-64 left-2 -bottom-17 invisible absolute bg-white opacity-90 text-black border p-2 rounded-lg z-40',
+                style="display: none;",
+                className='absolute shadow-lg z-40 bg-white flex-col text-sm text-black p-2 border left-0 -bottom-15',
                 children=[
                     meta_data_component(key, val)
                           for key, val in phrase.get_meta_data().items()
@@ -85,3 +84,25 @@ def render_phrase(phrase: Phrase) -> str:
 
         element(ele_type="script", children=[src])
     ])
+
+
+def DOM(children: List[str] = []):
+
+    content = f"""
+        <head>
+            <link
+                id="external-css"
+                rel="stylesheet"
+                type="text/css"
+                href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+                media="all"
+            />
+        </head>
+
+        <body>
+            <div id="root" class="px-4 leading-10 mb-24">
+                {" ".join(children)}
+            </div>
+        </body>
+    """
+    return HTML(content)
