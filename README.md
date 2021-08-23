@@ -59,7 +59,12 @@ stop_words = set(stopwords.words('english'))
 skill_extractor = SkillExtractor(nlp, SKILL_DB, PhraseMatcher, stop_words)
 
 # extract skills from job_description
-job_description = "We need an expert in esport management. Fluency in both english and french is mandatory!"
+job_description = """
+You are a Python Developer with a solid experience in Web development and  esx
+and have a thoughtful expatriation and manage project . You're passionate and powerful.
+You are recognized for your ability to evolve within a team and around common projects
+and you easily adapt in a new environment. javascript and node and french and english
+"""
 
 annotations = skill_extractor.annotate(job_description)
 # # output:
@@ -86,7 +91,7 @@ skill_extractor.display(annotations)
 # (see screenshot below)
 ```
 
-<img src="screenshots/displacy_result.png" alt="output of skill_extractor.display(annotations)">
+<img src="screenshots/annotated_text.png" alt="output of skill_extractor.display(annotations)">
 
 
 - Here is how to show more details about the annoation, also in compact way
@@ -97,7 +102,7 @@ skill_extractor.display_details(annotations)
 # see animation below
 ```
 
-<img src="screenshots/gif_visualizer.gif" >
+<img src="screenshots/gif_visualizer.gif" alt="animation of skill_extractor.display_details(annotations)">
 
 
 ##  Todos :
