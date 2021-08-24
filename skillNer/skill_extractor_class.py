@@ -15,21 +15,21 @@ class SkillExtractor:
         nlp,
         skills_db,
         phraseMatcher,
-        stop_words,
+        # stop_words,
     ):
 
         # params
         self.nlp = nlp
         self.skills_db = skills_db
         self.phraseMatcher = phraseMatcher
-        self.stop_words = stop_words
+        #self.stop_words = stop_words
 
         # load matchers: all
         self.matchers = Matchers(
             self.nlp,
             self.skills_db,
             self.phraseMatcher,
-            self.stop_words
+            # self.stop_words
         ).load_matchers()
 
         # init skill getters
@@ -38,58 +38,42 @@ class SkillExtractor:
         # init utils
         self.utils = Utils(self.nlp, self.skills_db)
         return
-    
-    
-    
-    
-    
+
     def annotate(
         self,
         text: str,
-        tresh: float = 0.5,debug=False
+        tresh: float = 0.5, debug=False
     ):
-                # create text object
+        # create text object
         text_obj = Text(text, self.nlp)
-                # get matches
+        # get matches
         skills_full, text_obj = self.skill_getters.get_full_match_skills(
             text_obj, self.matchers['full_matcher'])
-        
-        skills_abv , text_obj = self.skill_getters.get_abv_match_skills(
+
+        skills_abv, text_obj = self.skill_getters.get_abv_match_skills(
             text_obj, self.matchers['abv_matcher'])
-        
+
         skills_uni_full, text_obj = self.skill_getters.get_full_uni_match_skills(
             text_obj, self.matchers['full_uni_matcher'])
-        
-        skills_low_form,text_obj =self.skill_getters.get_low_match_skills(
+
+        skills_low_form, text_obj = self.skill_getters.get_low_match_skills(
             text_obj, self.matchers['low_form_matcher'])
-        
-        skills_on_token =self.skill_getters.get_token_match_skills(
+
+        skills_on_token = self.skill_getters.get_token_match_skills(
             text_obj, self.matchers['token_matcher'])
         full_sk = skills_full + skills_abv
-              ## process uni_token conflicts  
+        # process uni_token conflicts
         to_process = skills_on_token + skills_low_form + skills_uni_full
-        process_n_gram = self.utils.process_n_gram(to_process, text_obj  )
-        
-            
-        
+        process_n_gram = self.utils.process_n_gram(to_process, text_obj)
 
-
-        
-        
-        
-        
-        
         return {
-                 'text': text_obj.transformed_text,
-                 'results': {
-                     'full_matches': full_sk ,
-                     'ngram_scored': [match for match in process_n_gram if match['score']>=tresh],
-                   
-                             }
-               }
-    
+            'text': text_obj.transformed_text,
+            'results': {
+                'full_matches': full_sk,
+                'ngram_scored': [match for match in process_n_gram if match['score'] >= tresh],
 
-
+            }
+        }
 
     def display(
         self,
