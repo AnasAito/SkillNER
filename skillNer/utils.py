@@ -78,12 +78,14 @@ class Utils:
 
         return token1.similarity(token2)
 
-    def compute_w_ratio(self, simple_ratio, skill_id, matched_tokens):
+    def compute_w_ratio(self, skill_id, matched_tokens):
+        skill_name = self.skills_db[skill_id]['high_surfce_forms']['full'].split(
+            ' ')
+        skill_len = len(skill_name)
+        token_ids = sum([(1-0.1*skill_name.index(token))
+                         for token in matched_tokens])
 
-        up_max = max([self.token_dist[token] for token in matched_tokens])
-
-        scarsity = (1/up_max)
-        return simple_ratio*(1+scarsity)
+        return token_ids/skill_len
 
     def retain(self, text_obj, text, tokens, skill_id, sk_look, corpus):
         # get id
@@ -104,8 +106,9 @@ class Utils:
             s_gr) if condition(element)]
 
         if type_ == 'oneToken':
-           # score = self.compute_w_ratio(len_condition/len_ , real_id,[text_obj[ind].lemmed  for ind in s_gr_n ])
-            score = len_condition/len_
+            score = self.compute_w_ratio(
+                real_id, [text_obj[ind].lemmed for ind in s_gr_n])
+            #score = len_condition/len_
         if type_ == 'fullUni':
             score = 1
 
@@ -168,7 +171,7 @@ class Utils:
                 # having a ngram skill with other types in span condiates :
                 # priotize skills with high match length if length >1
                 id_ = np.array(scores).argmax()
-                max_score = 0
+                max_score = 0.5  # selection treshold
                 for i, len_ in enumerate(lens):
                     if len_ > 1 and types[i] == 'oneToken':
                         if scores[i] >= max_score:
