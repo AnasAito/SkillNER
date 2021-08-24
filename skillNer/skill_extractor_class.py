@@ -8,6 +8,9 @@ from skillNer.matcher_class import Matchers, SkillsGetter
 from skillNer.utils import Utils
 from skillNer.general_params import SKILL_TO_COLOR
 
+from skillNer.visualizer.html_elements import DOM, render_phrase
+from skillNer.visualizer.phrase_class import Phrase
+
 
 class SkillExtractor:
     def __init__(

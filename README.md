@@ -59,79 +59,50 @@ stop_words = set(stopwords.words('english'))
 skill_extractor = SkillExtractor(nlp, SKILL_DB, PhraseMatcher, stop_words)
 
 # extract skills from job_description
-job_description = "We need an expert in esport management. Fluency in both english and french is mandatory!"
+job_description = """
+You are a Python Developer with a solid experience in Web development and  esx
+and have a thoughtful expatriation and manage project . You're passionate and powerful.
+You are recognized for your ability to evolve within a team and around common projects
+and you easily adapt in a new environment. javascript and node and french and english
+"""
 
 annotations = skill_extractor.annotate(job_description)
 # # output:
-# {'logs': {'abrv_match': [{'doc_node_id': [10],
-#                           'doc_node_value': 'css',
-#                           'score': 1,
-#                           'skill_id': 'KS121F45VPV8C9W3QFYH'}],
-#           'full_match': [],
-#           'full_ngram': [{'doc_node_id': [5, 6],
-#                           'score': 1,
-#                           'skill_id': 'ES8AAD06BE8119038221'}],
-#           'ngram_scored': [{'doc_node_id': [1],
-#                             'doc_node_value': 'need',
-#                             'score': 0.49,
-#                             'skill_id': 'ESEE2FE3695A215DC6DC'},
-#                            {'doc_node_id': [3],
-#                             'doc_node_value': 'expert',
-#                             'score': 0.5,
-#                             'skill_id': 'KS123RD5VV5WNJLMNH3J'},
-#                            {'doc_node_id': [10],
-#                             'doc_node_value': 'css',
-#                             'score': 0.46,
-#                             'skill_id': 'KS122KN6KY17NGPWFDVB'},
-#                            {'doc_node_id': [11],
+# {
+#  'text': "original text"
+#  'results': {'full_matches': [
+#                         {
+#                             'doc_node_id': [11],
 #                             'doc_node_value': 'node',
-#                             'score': 0.3,
-#                             'skill_id': 'KS1272978ZVDGYKBS082'},
-#                            {'doc_node_id': [12],
-#                             'doc_node_value': 'english',
-#                             'score': 0.6,
-#                             'skill_id': 'KS123K75YYK8VGH90NCS'},
-#                            {'doc_node_id': [14],
-#                             'doc_node_value': 'french',
-#                             'score': 0.6,
-#                             'skill_id': 'KS1243976G466GV63ZBY'}],
-#           'unigram_scored': [{'doc_node_id': [11],
-#                               'doc_node_value': 'node',
-#                               'score': 0.9,
-#                               'skill_id': 'KS126ZK60X10ZQ7DRFLR'}],
-#           'unigrqm_full': []},
-#  'results': {'full_matches': [{'doc_node_id': [5, 6],
-#                                'score': 1,
-#                                'skill_id': 'ES8AAD06BE8119038221'},
-#                               {'doc_node_id': [10],
-#                                'doc_node_value': 'css',
-#                                'score': 1,
-#                                'skill_id': 'KS121F45VPV8C9W3QFYH'}],
-#              'ngram_scored': [{'doc_node_id': [3],
-#                                'doc_node_value': 'expert',
-#                                'score': 0.5,
-#                                'skill_id': 'KS123RD5VV5WNJLMNH3J'},
-#                               {'doc_node_id': [12],
-#                                'doc_node_value': 'english',
-#                                'score': 0.6,
-#                                'skill_id': 'KS123K75YYK8VGH90NCS'},
-#                               {'doc_node_id': [14],
-#                                'doc_node_value': 'french',
-#                                'score': 0.6,
-#                                'skill_id': 'KS1243976G466GV63ZBY'}],
-#              'unigram_scored': [{'doc_node_id': [11],
-#                                  'doc_node_value': 'node',
-#                                  'score': 0.9,
-#                                  'skill_id': 'KS126ZK60X10ZQ7DRFLR'}]},
-#  'text': 'we need an expert in esport management fluency in both css node '
-#          'english and french is mandatory'}
-
-skill_extractor.display(annotations)
-# ouput:
-# text annotated using scapcy displacy (see screenshot below)
+#                             'score': 0.9
+#                         }, ...
+#                 ],
+#              'ngram_scored': [...],
+#              'unigram_scored': [...]
+#         }
+# }
 ```
 
-<img src="screenshots/displacy_result.png" alt="output of skill_extractor.display(annotations)">
+- Here is how you can show the results of the annotation in a compact way
+```python
+skill_extractor.display(annotations)
+# ouput:
+# text annotated using scapcy displacy 
+# (see screenshot below)
+```
+
+<img src="screenshots/annotated_text.png" alt="output of skill_extractor.display(annotations)">
+
+
+- Here is how to show more details about the annoation, also in compact way
+
+```python
+skill_extractor.display_details(annotations)
+# text annoated using using pure HTML CSS and Javascript 
+# see animation below
+```
+
+<img src="screenshots/gif_visualizer.gif" alt="animation of skill_extractor.display_details(annotations)">
 
 
 ##  Todos :

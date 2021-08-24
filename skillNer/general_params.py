@@ -14,6 +14,13 @@ SKILL_TO_COLOR = {
     'Certification': "#552448"
 }
 
+# mapping skill and color tail
+SKILL_TO_COLOR_TAILWIND = {
+    'Hard Skill': 'red-500',
+    'Soft Skill': 'blue-500',
+    'Certification': "green-500"
+}
+
 
 #'''def dev_mode(): return True if '.gitignore' in os.listdir() else False'''
 
@@ -24,7 +31,7 @@ SKILL_TO_COLOR = {
 # load skill db
 try:
 
-    with open('skill_db_relax_20.json') as json_file:
+    with open('skillNer/data/skill_db_relax_20.json') as json_file:
         SKILL_DB = json.load(json_file)
 except:
     SKILL_DB = fetch_remote_json(json_name="SKILL_DB")
@@ -34,7 +41,7 @@ except:
 # load token distribution dict
 try:
 
-    with open('token_dist.json') as json_file:
+    with open('skillNer/data/token_dist.json') as json_file:
         TOKEN_DIST = json.load(json_file)
 except:
     TOKEN_DIST = fetch_remote_json(json_name="TOKEN_DIST")
