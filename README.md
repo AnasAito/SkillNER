@@ -3,11 +3,11 @@
 ## Project overview : 
 - The goal of this project is to build a named entity extraction solution for skill extraction from job posting text.
 - Our solution merges a rule-based matcher that labels data and feeds it. to aBERT model that we will fine-tune for skills recognition.
-
+## [Demo](https://share.streamlit.io/anasaito/skillner_demo/index.py)
 ![image](https://user-images.githubusercontent.com/56308112/128958594-79813e72-b688-4a9a-9267-324f098d4b0c.png)
 
  
-[## Demo](https://share.streamlit.io/anasaito/skillner_demo/index.py)
+
 
 ## Documentation : 
 Visit this [notion link](https://sudsy-dill-008.notion.site/f6596c10b49545d5a740e0ecc21a5a46?v=801ba1af94a0484d8af732347c211fb0) for updated documentation about the project 
