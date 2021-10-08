@@ -133,3 +133,22 @@ class SkillExtractor:
 
         # render
         html = displacy.render(ex, style="ent", manual=True, options=options)
+
+    def display_details(
+        self,
+        annotations: dict
+    ):
+        # build phrases to display from annotations
+        arr_phrases = Phrase.split_text_to_phare(
+            annotations,
+            self.skills_db
+        )
+
+        # create DOM
+        document = DOM(children=[
+            render_phrase(phrase)
+            for phrase in arr_phrases
+        ])
+
+        # render
+        return document
