@@ -51,7 +51,8 @@ except:
 
 
 # list of punctuation
-LIST_PUNCTUATIONS = ['/', '·', ',', '.', '-', '(', ')', ',', ':', '!', "'"]
+LIST_PUNCTUATIONS = ['/', '·', ',', '.',
+                     '-', '(', ')', ',', ':', '!', "'", '?']
 
 # list of redundant words to remove from text
 S_GRAM_REDUNDANT = [
