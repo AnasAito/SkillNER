@@ -122,7 +122,7 @@ class SkillExtractor:
         skills_on_token = self.skill_getters.get_token_match_skills(
             text_obj, self.matchers['token_matcher'])
         full_sk = skills_full + skills_abv
-        # process uni_token conflicts
+        # process pseudi submatchers output conflicts
         to_process = skills_on_token + skills_low_form + skills_uni_full
         process_n_gram = self.utils.process_n_gram(to_process, text_obj)
 
