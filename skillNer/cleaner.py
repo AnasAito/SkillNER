@@ -240,10 +240,8 @@ class Cleaner:
     def __init__(
         self,
         to_lowercase: bool = True,
-        include_cleaning_functions: Literal["remove_punctuation", "remove_redundant",
-                                            "stem_text", "lem_text", "remove_extra_space"] = all_cleaning,
-        exclude_cleaning_function: Literal["remove_punctuation",
-                                           "remove_redundant", "stem_text", "lem_text", "remove_extra_space"] = [],
+        include_cleaning_functions: List[str] = all_cleaning,
+        exclude_cleaning_function: List[str] = [],
     ):
         """the constructor of the class.
 

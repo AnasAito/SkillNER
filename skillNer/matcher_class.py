@@ -7,13 +7,26 @@ from skillNer.text_class import Text
 
 
 class Matchers:
+    """class to instanciate a matcher pipeline used to annotate text.
+    """
+
     def __init__(
         self,
         nlp,
         skills_db: dict,
-        phraseMatcher,
-        # stop_words: List[str]
+        phraseMatcher
     ):
+        """Constructor of the class
+
+        Parameters
+        ----------
+        nlp : [type]
+            NLP object loaded from spacy
+        skills_db : dict
+            A skill database that serves as a lookup table to annotate text
+        phraseMatcher : [type]
+            a phraseMatcher loaded using spacy
+        """
 
         # params
         self.nlp = nlp
@@ -33,14 +46,50 @@ class Matchers:
         return
 
     # load specified matchers
-    def load_matchers(self,
-                      include=['full_matcher',
-                               'abv_matcher',
-                               'full_uni_matcher',
-                               'low_form_matcher',
-                               'token_matcher',
-                               ],
-                      exclude=[]):
+    def load_matchers(
+            self,
+            include: List[str] = ['full_matcher',
+                                  'abv_matcher',
+                                  'full_uni_matcher',
+                                  'low_form_matcher',
+                                  'token_matcher',
+                                  ],
+            exclude: List[str] = []) -> dict:
+        """To load matchers. The order of matchers define a pipeline.
+
+        Parameters
+        ----------
+        include : List[str], optional
+            List of matchers to include in the pipeline, by default ['full_matcher', 'abv_matcher', 'full_uni_matcher', 'low_form_matcher', 'token_matcher', ]
+        exclude : List[str], optional
+            List of matchers to exclude from the pipeline, by default []
+
+        Returns
+        -------
+        dict
+            returns a dictionnary where the keys are the name of matchers and the values are the matchers
+
+        Examples
+        --------
+        >>> from skillNer.matcher_class import Matchers
+        >>> from skillNer.general_params import SKILL_DB
+        >>> import spacy
+        >>> from spacy.matcher import PhraseMatcher
+        >>> nlp = spacy.load('en_core_web_sm')
+        >>> matcher_pipeline = Matchers(nlp, SKILL_DB, PhraseMatcher)
+        >>> matcher_pipeline.load_matchers()
+        loading full_matcher ...
+        loading abv_matcher ...
+        loading full_uni_matcher ...
+        loading low_form_matcher ...
+        loading token_matcher ...
+
+        {'full_matcher': <spacy.matcher.phrasematcher.PhraseMatcher at 0x1c9680b8ac0>,
+         'abv_matcher': <spacy.matcher.phrasematcher.PhraseMatcher at 0x1c96c90a6d0>,
+         'full_uni_matcher': <spacy.matcher.phrasematcher.PhraseMatcher at 0x1c96c90a7b0>,
+         'low_form_matcher': <spacy.matcher.phrasematcher.PhraseMatcher at 0x1c96c90a900>,
+         'token_matcher': <spacy.matcher.phrasematcher.PhraseMatcher at 0x1c96c90a820>}
+        """
 
         # #where to store loaded matchers
         loaded_matchers = {}
@@ -169,6 +218,9 @@ class Matchers:
 
 
 class SkillsGetter:
+    """Class that gather functions to get the matched skills.
+    """
+
     def __init__(
         self,
         nlp
