@@ -13,19 +13,31 @@ from skillNer.visualizer.phrase_class import Phrase
 
 
 class SkillExtractor:
+    """Main class to annotate skills in a given text and visualize them.
+    """
+
     def __init__(
         self,
         nlp,
         skills_db,
         phraseMatcher,
-        # stop_words,
     ):
+        """Constructor of the class.
+
+        Parameters
+        ----------
+        nlp : [type]
+            NLP object loaded from spacy.
+        skills_db : [type]
+            A skill database used as a lookup table to annotate skills.
+        phraseMatcher : [type]
+            A phrasematcher loaded from spacy.
+        """
 
         # params
         self.nlp = nlp
         self.skills_db = skills_db
         self.phraseMatcher = phraseMatcher
-        #self.stop_words = stop_words
 
         # load matchers: all
         self.matchers = Matchers(
@@ -45,8 +57,53 @@ class SkillExtractor:
     def annotate(
         self,
         text: str,
-        tresh: float = 0.5, debug=False
-    ):
+        tresh: float = 0.5
+    ) -> dict:
+        """To annotate a given text and thereby extract skills from it.
+
+        Parameters
+        ----------
+        text : str
+            The target text.
+        tresh : float, optional
+            A treshold used to select skills in case of confusion, by default 0.5
+
+        Returns
+        -------
+        dict
+            returns a dictionnary with the text that was used and the annotated skills (see example).
+
+        Examples
+        --------
+        >>> import spacy
+        >>> from spacy.matcher import PhraseMatcher
+        >>> from skillNer.skill_extractor_class import SkillExtractor
+        >>> from skillNer.general_params import SKILL_DB
+        >>> nlp = spacy.load('en_core_web_sm')
+        >>> skill_extractor = SkillExtractor(nlp, SKILL_DB, PhraseMatcher)
+        loading full_matcher ...
+        loading abv_matcher ...
+        loading full_uni_matcher ...
+        loading low_form_matcher ...
+        loading token_matcher ...
+        >>> text = "Fluency in both english and french is mandatory"
+        >>> skill_extractor.annotate(text)
+        {'text': 'fluency in both english and french is mandatory',
+        'results': {'full_matches': [],
+        'ngram_scored': [{'skill_id': 'KS123K75YYK8VGH90NCS',
+            'doc_node_id': [3],
+            'doc_node_value': 'english',
+            'type': 'lowSurf',
+            'score': 1,
+            'len': 1},
+        {'skill_id': 'KS1243976G466GV63ZBY',
+            'doc_node_id': [5],
+            'doc_node_value': 'french',
+            'type': 'lowSurf',
+            'score': 1,
+            'len': 1}]}}
+        """
+
         # create text object
         text_obj = Text(text, self.nlp)
         # get matches
@@ -80,8 +137,21 @@ class SkillExtractor:
 
     def display(
         self,
-        results
+        results: dict
     ):
+        """To display the annotated skills. 
+        This method uses built-in classes of spacy to render annotated text, namely `displacy`.
+
+        Parameters
+        ----------
+        results : dict
+            results is the dictionnary resulting from applying `.annotate()` to a text.
+
+        Results
+        -------
+        None 
+            render the text with annotated skills.
+        """
 
         # explode result object
         text = results["text"]
@@ -138,6 +208,20 @@ class SkillExtractor:
         self,
         annotations: dict
     ):
+        """To display more details about the annotated skills.
+        This method uses HTML, CSS, JavaScript combined with IPython to render the annotated skills.
+
+        Parameters
+        ----------
+        annotations : dict
+            annotations is the dictionnary resulting from applying `.annotate()` to a text.
+
+        Returns
+        -------
+        [type]
+            render text with annotated skills.
+        """
+
         # build phrases to display from annotations
         arr_phrases = Phrase.split_text_to_phare(
             annotations,
