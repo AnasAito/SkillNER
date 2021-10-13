@@ -46,7 +46,7 @@ in my case this command looks like that:
 # imports
 import spacy
 from spacy.matcher import PhraseMatcher
-from nltk.corpus import stopwords
+
 
 # load default skills data base
 from skillNer.general_params import SKILL_DB
@@ -59,7 +59,7 @@ nlp = spacy.load("en_core_web_lg")
 stop_words = set(stopwords.words('english'))
 
 # init skill extractor
-skill_extractor = SkillExtractor(nlp, SKILL_DB, PhraseMatcher, stop_words)
+skill_extractor = SkillExtractor(nlp, SKILL_DB, PhraseMatcher)
 
 # extract skills from job_description
 job_description = """
