@@ -44,6 +44,15 @@ extensions = [
     'sphinx.ext.napoleon'
 ]
 
+autosummary_generate = True
+autoclass_content = "both"
+
+autodoc_default_options = {
+    'members': "annotate, display, display_details, lemmed, stemmed, words_start_end_position",
+    'special-members': '__call__',
+    'exclude-members': '__init__'
+}
+
 # setups for docstrings
 napoleon_numpy_docstring = True
 napoleon_use_param = True

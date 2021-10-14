@@ -1,2 +1,41 @@
 Contribute
 ==========
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem. 
+Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt. 
+Mauris at neque nunc. 
+
+
+Setup project
+-------------
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem. 
+Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt. 
+Mauris at neque nunc. 
+
+
+
+Guidelines
+----------
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem. 
+Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt. 
+Mauris at neque nunc.
+
+Report an issue
+~~~~~~~~~~~~~~~
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem. 
+Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt. 
+Mauris at neque nunc.
+
+
+Pull request
+~~~~~~~~~~~~
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem. 
+Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt. 
+Mauris at neque nunc.
+
+

@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Low API references" href="../low_api_refs.html" /><link rel="prev" title="skillNer.cleaner" href="skillNer.cleaner.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Low API references" href="../low_api_refs.html" /><link rel="prev" title="skillNer.cleaner.Cleaner" href="skillNer.cleaner.Cleaner.html" />
 
     <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
         <title>skillNer.text_class.Text - skillNer 1.0.0 documentation</title>
@@ -158,12 +158,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../get_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../api_refs.html">API references</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="skillNer.general_params.html">skillNer.general_params</a></li>
-<li class="toctree-l2"><a class="reference internal" href="skillNer.cleaner.html">skillNer.cleaner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skillNer.skill_extractor_class.SkillExtractor.html">skillNer.skill_extractor_class.SkillExtractor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skillNer.cleaner.Cleaner.html">skillNer.cleaner.Cleaner</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">skillNer.text_class.Text</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../low_api_refs.html">Low API references</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../low_api_refs.html">Low API references</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="skillNer.matcher_class.SkillsGetter.html">skillNer.matcher_class.SkillsGetter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skillNer.utils.Utils.html">skillNer.utils.Utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skillNer.visualizer.html_elements.html">skillNer.visualizer.html_elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skillNer.visualizer.phrase_class.html">skillNer.visualizer.phrase_class</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
 </ul>
 
@@ -198,6 +204,24 @@
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skillNer.text_class.</span></span><span class="sig-name descname"><span class="pre">Text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nlp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillNer.text_class.Text" title="Permalink to this definition">¶</a></dt>
 <dd><p>The main object to store/preprocess a raw text.
 The object behaviour is like a list according to words.</p>
+<p>Constructor of the class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em>) – The raw text. It might be for instance a job description.</p></li>
+<li><p><strong>nlp</strong> (<em>[</em><em>type</em><em>]</em>) – An NLP object instanciated from Spacy.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition-examples admonition">
+<p class="admonition-title">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">'en_core_web_sm'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skillNer.text_class</span> <span class="kn">import</span> <span class="n">Text</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">text_obj</span> <span class="o">=</span> <span class="n">Text</span><span class="p">(</span><span class="s2">"Fluency in both English and French is mandatory"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="skillNer.text_class.Text.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nlp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillNer.text_class.Text.__init__" title="Permalink to this definition">¶</a></dt>
@@ -230,17 +254,104 @@ The object behaviour is like a list according to words.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#skillNer.text_class.Text.__init__" title="skillNer.text_class.Text.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(text, nlp)</p></td>
 <td><p>Constructor of the class</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">lemmed</span></code>([as_list])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#skillNer.text_class.Text.lemmed" title="skillNer.text_class.Text.lemmed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lemmed</span></code></a>([as_list])</p></td>
 <td><p>To get the lemmed version of text</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">stemmed</span></code>([as_list])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skillNer.text_class.Text.stemmed" title="skillNer.text_class.Text.stemmed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stemmed</span></code></a>([as_list])</p></td>
 <td><p>To get the stemmed version of text</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">words_start_end_position</span></code>(text)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#skillNer.text_class.Text.words_start_end_position" title="skillNer.text_class.Text.words_start_end_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">words_start_end_position</span></code></a>(text)</p></td>
 <td><p>To get the starting and ending index of each word in text</p></td>
 </tr>
 </tbody>
 </table></div>
+<dl class="py method">
+<dt class="sig sig-object py" id="skillNer.text_class.Text.lemmed">
+<span class="sig-name descname"><span class="pre">lemmed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">as_list</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillNer.text_class.Text.lemmed" title="Permalink to this definition">¶</a></dt>
+<dd><p>To get the lemmed version of text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>as_list</strong> (<em>bool</em>) – True to get a list of lemmed words within text. False, to get lemmed text in a form of string.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return the lemmed text in the specified form by the argument <cite>as_list</cite></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str | List[str]</p>
+</dd>
+</dl>
+<div class="admonition-examples admonition">
+<p class="admonition-title">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">'en_core_web_sm'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skillNer.text_class</span> <span class="kn">import</span> <span class="n">Text</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">text_obj</span> <span class="o">=</span> <span class="n">Text</span><span class="p">(</span><span class="s2">"Fluency in both English and French is mandatory"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">text_obj</span><span class="o">.</span><span class="n">lemmed</span><span class="p">()</span>
+<span class="go">'fluency in both english and french be mandatory'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">text_obj</span><span class="o">.</span><span class="n">lemmed</span><span class="p">(</span><span class="n">as_list</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">['fluency', 'in', 'both', 'english', 'and', 'french', 'be', 'mandatory']</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="skillNer.text_class.Text.stemmed">
+<span class="sig-name descname"><span class="pre">stemmed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">as_list</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillNer.text_class.Text.stemmed" title="Permalink to this definition">¶</a></dt>
+<dd><p>To get the stemmed version of text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>as_list</strong> (<em>bool</em><em> (</em><em>default False</em><em>)</em>) – True to get a list of stemmed words within text. False, to get stemmed text in a form of string.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return the stemmed text in the specified form by the argument <cite>as_list</cite>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str | List[str]</p>
+</dd>
+</dl>
+<div class="admonition-examples admonition">
+<p class="admonition-title">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">'en_core_web_sm'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skillNer.text_class</span> <span class="kn">import</span> <span class="n">Text</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">text_obj</span> <span class="o">=</span> <span class="n">Text</span><span class="p">(</span><span class="s2">"Fluency in both English and French is mandatory"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">text_obj</span><span class="o">.</span><span class="n">stemmed</span><span class="p">()</span>
+<span class="go">'fluenci in both english and french is mandatori'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">text_obj</span><span class="o">.</span><span class="n">stemmed</span><span class="p">(</span><span class="n">as_list</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">['fluenci', 'in', 'both', 'english', 'and', 'french', 'is', 'mandatori']</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="skillNer.text_class.Text.words_start_end_position">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">words_start_end_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">skillNer.text_class.Word</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#skillNer.text_class.Text.words_start_end_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>To get the starting and ending index of each word in text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – The input text</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns a list of words where in each word the <cite>start</cite> and <cite>end</cite>
+properties were filled by the starting and ending position of the word.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List[Word]</p>
+</dd>
+</dl>
+<div class="admonition-examples admonition">
+<p class="admonition-title">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">'en_core_web_sm'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skillNer.text_class</span> <span class="kn">import</span> <span class="n">Text</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">list_words</span> <span class="o">=</span> <span class="n">Text</span><span class="o">.</span><span class="n">words_start_end_position</span><span class="p">(</span><span class="s2">"Hello World I am SkillNer"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word_1</span> <span class="o">=</span> <span class="n">list_words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">word_1</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">word_1</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
+<span class="go">0 5</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
 </dd></dl>
 </section>
 
@@ -258,14 +369,14 @@ The object behaviour is like a list according to words.</p>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="skillNer.cleaner.html">
+          <a class="prev-page" href="skillNer.cleaner.Cleaner.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">skillNer.cleaner</div>
+                <div class="title">skillNer.cleaner.Cleaner</div>
                 
               </div>
             </a>
