@@ -44,12 +44,17 @@ class Utils:
     def get_clusters(self, co_oc):
         clusters = []
         for i, row in enumerate(co_oc):
+            # divide row into clusters deivided by 0 : 0 occurence where clusters refer to token id
+            # example [2,3,0,5,0,0] -> [0,1,3] -> [[0,1],[3]]
             clusts = list(self.grouper(self.split_at_values(row, 0), 1))
             if clusts != []:
+                # select token relative cluster via its idx
+               # example i==0 => [[0,1],[3]] => a = [0,1]
                 a = [c for c in clusts if i in c][0]
                 if a not in clusters:
 
                     clusters.append(a)
+        # return unique clusters [token id]
         return clusters
 
     def get_corpus(self, text, matches):
@@ -66,7 +71,7 @@ class Utils:
                corpus : return binary matrix   => (n :skills matched )* (m : tokens in text )  
                                                 1 : skill contains token
                                                 0 : otherwise
-               look_up : return a mapper from skill id to its index in corpus
+               look_up : return a mapper from skill_ids to its equivalent row index in corpus
         """
         len_ = len(text)
         corpus = []
@@ -102,49 +107,51 @@ class Utils:
     def compute_w_ratio(self, skill_id, matched_tokens):
         skill_name = self.skills_db[skill_id]['high_surfce_forms']['full'].split(
             ' ')
-        skill_len = len(skill_name)
-        token_ids = sum([(1-0.1*skill_name.index(token))
+        skill_len = self.skills_db[skill_id]['skill_len']
+        # favorize the matched tokens uphead
+        late_match_penalty_coef = 0.1
+        token_ids = sum([(1-late_match_penalty_coef*skill_name.index(token))
                          for token in matched_tokens])
 
         return token_ids/skill_len
 
-    def retain(self, text_obj, text, tokens, skill_id, sk_look, corpus):
-        # get id
-        # print(sk_look[skill_id])
+    def retain(self, text_obj, span, skill_id, sk_look, corpus):
+        """ add doc here  """
         real_id, type_ = sk_look[skill_id].split('_')
 
-        # print('----')
-        # get len
+        # get skill len
         len_ = self.skills_db[real_id]['skill_len']
-        # get tokens ratio (over skill tokens lingth)  that matched with skill within span tokens !
-        len_condition = corpus[skill_id].dot(tokens)
+        # get intersection length of full  skill name  and span tokens
+        len_condition = corpus[skill_id].dot(span)
 
-        s_gr = np.array(list(tokens))*np.array(list(corpus[skill_id]))
+        # start :to be deleted
+        s_gr = np.array(list(span))*np.array(list(corpus[skill_id]))
         def condition(x): return x == 1
-        s_gr_ind = [idx for idx, element in enumerate(
-            s_gr) if condition(element)][0]
+
         s_gr_n = [idx for idx, element in enumerate(
             s_gr) if condition(element)]
+        # end
 
         if type_ == 'oneToken':
+            # if skill is n_gram (n>2)
             score = self.compute_w_ratio(
                 real_id, [text_obj[ind].lemmed for ind in s_gr_n])
-            # score = len_condition/len_
+
         if type_ == 'fullUni':
             score = 1
 
         if type_ == 'lowSurf':
             if len_ > 1:
+
                 score = sum(s_gr)
 
             else:
-
+                # if skill is uni_gram (n=1)
                 text_str = ' '.join([str(text_obj[i])
                                      for i, val in enumerate(s_gr) if val == 1])
                 skill_str = self.skills_db[real_id]['high_surfce_forms']['full']
 
                 score = self.one_gram_sim(text_str, skill_str)
-               # print('one_gram',text_str,skill_str,score)
 
         return {'skill_id': real_id,
                 'doc_node_id':  [i for i, val in enumerate(s_gr) if val == 1],
@@ -177,25 +184,33 @@ class Utils:
 
         corpus, look_up = self.get_corpus(text_tokens, matches)
 
-        # generate spans
+        # generate spans (a span is a list of tokens where one or more skills are matched)
+
         # co-occurence of tokens aij : co-occurence count of token i with token j
         co_occ = np.matmul(corpus.T, corpus)
+
+        # create spans of tokens that co-occured
         clusters = self.get_clusters(co_occ)
+
+        # one hot encoding of clusters
+        # example [0,1,2] => [1,1,1,0,0,0] , encoding length  = text length
         ones = [self.make_one(cluster, len_) for cluster in clusters]
-        spans = [(np.array(one), np.array([a_[0] for a_ in np.argwhere(corpus.dot(one) != 0)]))
-                 for one in ones]
+        # generate list of span and list of skills that have conflict on spans [(span,[skill_id])]
+        spans_conflicts = [(np.array(one), np.array([a_[0] for a_ in np.argwhere(corpus.dot(one) != 0)]))
+                           for one in ones]
+
         # filter and score
         new_spans = []
-        for span in spans:
-            tokens, skill_ids = span
+        for span_conflict in spans_conflicts:
+            span, skill_ids = span_conflict
             span_scored_skills = []
             types = []
             scores = []
             lens = []
             for sk_id in skill_ids:
-                # score skill
+                # score skill given span
                 scored_sk_obj = self.retain(
-                    text_obj, text_tokens, tokens, sk_id, look_up, corpus)
+                    text_obj, span, sk_id, look_up, corpus)
                 span_scored_skills.append(scored_sk_obj)
                 types.append(scored_sk_obj['type'])
                 lens.append(scored_sk_obj['len'])
