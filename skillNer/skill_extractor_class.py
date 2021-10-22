@@ -21,6 +21,7 @@ class SkillExtractor:
         nlp,
         skills_db,
         phraseMatcher,
+        tranlsator_func=False
     ):
         """Constructor of the class.
 
@@ -32,9 +33,12 @@ class SkillExtractor:
             A skill database used as a lookup table to annotate skills.
         phraseMatcher : [type]
             A phrasematcher loaded from spacy.
+        tranlsator_func :Callable
+            A fucntion to translate text from source language to english def tranlsator_func(text_input: str) -> text_input:str
         """
 
         # params
+        self.tranlsator_func = tranlsator_func
         self.nlp = nlp
         self.skills_db = skills_db
         self.phraseMatcher = phraseMatcher
@@ -103,7 +107,8 @@ class SkillExtractor:
             'score': 1,
             'len': 1}]}}
         """
-
+        if self.tranlsator_func:
+            text = self.tranlsator_func(text)
         # create text object
         text_obj = Text(text, self.nlp)
         # get matches
@@ -122,7 +127,7 @@ class SkillExtractor:
         skills_on_token = self.skill_getters.get_token_match_skills(
             text_obj, self.matchers['token_matcher'])
         full_sk = skills_full + skills_abv
-        # process pseudi submatchers output conflicts
+        # process pseudo submatchers output conflicts
         to_process = skills_on_token + skills_low_form + skills_uni_full
         process_n_gram = self.utils.process_n_gram(to_process, text_obj)
 
