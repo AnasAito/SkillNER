@@ -7,6 +7,7 @@ import math
 
 # installed packs
 import numpy as np
+import jellyfish
 # my packs
 from skillNer.text_class import Text
 from skillNer.general_params import TOKEN_DIST
@@ -89,8 +90,14 @@ class Utils:
         text = text_str + ' ' + skill_str
         tokens = self.nlp(text)
         token1, token2 = tokens[0], tokens[1]
-
-        return token1.similarity(token2)
+        try:
+            vec_similarity = token1.similarity(token2)
+            return vec_similarity
+        except:
+            # try Levenshtein Distance  if words not found in spacy corpus
+            str_distance_similarity = jellyfish.jaro_distance(
+                text_str.lower(), skill_str.lower())
+            return str_distance_similarity
 
     def compute_w_ratio(self, skill_id, matched_tokens):
         skill_name = self.skills_db[skill_id]['high_surfce_forms']['full'].split(

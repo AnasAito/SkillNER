@@ -8,6 +8,7 @@ dependencies = [
     "pandas",
     "nltk",
     "spacy",
+    "jellyfish"
 ]
 
 additional_files = {

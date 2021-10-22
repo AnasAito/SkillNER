@@ -115,6 +115,9 @@ class SkillExtractor:
         skills_full, text_obj = self.skill_getters.get_full_match_skills(
             text_obj, self.matchers['full_matcher'])
 
+
+            #tests
+
         skills_abv, text_obj = self.skill_getters.get_abv_match_skills(
             text_obj, self.matchers['abv_matcher'])
 
