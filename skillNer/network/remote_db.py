@@ -1,5 +1,4 @@
 # native packs
-from typing import Literal
 import requests
 
 
@@ -38,13 +37,13 @@ class RemoteBucket:
 
     def fetch_remote(
         self,
-        db_name: Literal["SKILL_DB", "TOKEN_DIST"]
+        db_name: str
     ) -> dict:
         """Function to fetch db
 
         Parameters
         ----------
-        db_name : Literal[
+        db_name : str in ["SKILL_DB", "TOKEN_DIST"]
             Name of the db to fetch
 
         Returns
