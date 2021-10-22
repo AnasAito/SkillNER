@@ -27,10 +27,9 @@ SKILL_TO_COLOR_TAILWIND = {
 
 #  get local data
 # else fetch remote data
-#skill_db_pathname = "skillNer/data/"
+# skill_db_pathname = "skillNer/data/"
 # load skill db
 try:
-
     with open('skill_db_relax_20.json') as json_file:
         SKILL_DB = json.load(json_file)
 except:
