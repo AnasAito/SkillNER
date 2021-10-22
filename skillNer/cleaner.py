@@ -2,7 +2,7 @@
 from nltk.stem import PorterStemmer
 # import en_core_web_lg
 # native packs
-from typing import List, Literal
+from typing import List
 # my pack
 from skillNer.general_params import S_GRAM_REDUNDANT, LIST_PUNCTUATIONS
 
