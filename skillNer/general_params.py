@@ -5,7 +5,7 @@ from posixpath import dirname
 # installed packs
 #
 # my packs
-from skillNer.network.remote_db import fetch_remote_json
+from skillNer.network.remote_db import RemoteBucket
 
 # mapping skill and color
 SKILL_TO_COLOR = {
@@ -22,28 +22,29 @@ SKILL_TO_COLOR_TAILWIND = {
 }
 
 
-#'''def dev_mode(): return True if '.gitignore' in os.listdir() else False'''
+# init remote bucket to fetch db in case they don't exist locally
+bucket = RemoteBucket(
+    token="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",
+    branch="first_release"
+)
 
-
-#  get local data
-# else fetch remote data
-# skill_db_pathname = "skillNer/data/"
-# load skill db
+# load local data
+# else fetch remote data and save it
 try:
     with open('skill_db_relax_20.json') as json_file:
         SKILL_DB = json.load(json_file)
 except:
-    SKILL_DB = fetch_remote_json(json_name="SKILL_DB")
+    SKILL_DB = bucket.fetch_remote("SKILL_DB")
     # dump data
     with open('skill_db_relax_20.json', 'w') as fp:
         json.dump(SKILL_DB, fp)
+
 # load token distribution dict
 try:
-
     with open('token_dist.json') as json_file:
         TOKEN_DIST = json.load(json_file)
 except:
-    TOKEN_DIST = fetch_remote_json(json_name="TOKEN_DIST")
+    TOKEN_DIST = bucket.fetch_remote("TOKEN_DIST")
     # dump data
     with open('token_dist.json', 'w') as fp:
         json.dump(TOKEN_DIST, fp)
