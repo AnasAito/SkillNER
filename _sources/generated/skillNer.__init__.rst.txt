@@ -1,0 +1,6 @@
+﻿skillNer.\_\_init\_\_
+=====================
+
+.. currentmodule:: skillNer
+
+.. autodata:: __init__

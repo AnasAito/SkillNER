@@ -1,7 +1,0 @@
-.DS_Store
-.ipynb_checkpoints
-*/.ipynb_checkpoints/*
-__pycache__/
-draft_notebooks/
-venv
-docs/built

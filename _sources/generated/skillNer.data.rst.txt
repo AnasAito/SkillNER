@@ -1,0 +1,23 @@
+﻿skillNer.data
+=============
+
+.. automodule:: skillNer.data
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
