@@ -2,9 +2,19 @@ Low API references
 ==================
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem. 
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt. 
-Mauris at neque nunc. 
+This section is meant for those who are interested in contributing to skillNer.
+It comprises functions that are under the hood of skillNer.
+
+
+Aside from that, we highly recommand those intersed in contributing to the skillNer 
+to check directly the `GitHub repository <https://github.com/AnasAito/SkillNER>`_ 
+and go through the code. Their we added docstrings to provide as much code
+explanation as possible.
+
+
+.. note::
+      For a friendly explanation of how skillNer was built,
+      check the section `How it works <https://skillner.vercel.app/>`_ of our website.
 
 
 .. autosummary::
@@ -14,21 +24,10 @@ Mauris at neque nunc.
     skillNer.matcher_class.SkillsGetter
 
 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem. 
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt. 
-Mauris at neque nunc. 
-
-
 .. autosummary::
    :toctree: generated
 
     skillNer.utils.Utils
-
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem. 
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt. 
-Mauris at neque nunc. 
 
 
 .. autosummary::

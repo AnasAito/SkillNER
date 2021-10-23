@@ -107,16 +107,18 @@ class SkillExtractor:
             'score': 1,
             'len': 1}]}}
         """
+
+        # check translator
         if self.tranlsator_func:
             text = self.tranlsator_func(text)
+
         # create text object
         text_obj = Text(text, self.nlp)
         # get matches
         skills_full, text_obj = self.skill_getters.get_full_match_skills(
             text_obj, self.matchers['full_matcher'])
 
-
-            #tests
+        # tests
 
         skills_abv, text_obj = self.skill_getters.get_abv_match_skills(
             text_obj, self.matchers['abv_matcher'])
@@ -212,7 +214,7 @@ class SkillExtractor:
         # render
         html = displacy.render(ex, style="ent", manual=True, options=options)
 
-    def display_details(
+    def describe(
         self,
         annotations: dict
     ):

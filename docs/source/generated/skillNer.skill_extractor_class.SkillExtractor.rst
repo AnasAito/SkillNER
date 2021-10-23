@@ -15,8 +15,8 @@
    
       ~SkillExtractor.__init__
       ~SkillExtractor.annotate
+      ~SkillExtractor.describe
       ~SkillExtractor.display
-      ~SkillExtractor.display_details
    
    
 

@@ -163,7 +163,13 @@
 <li class="toctree-l2"><a class="reference internal" href="generated/skillNer.text_class.Text.html">skillNer.text_class.Text</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="low_api_refs.html">Low API references</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="low_api_refs.html">Low API references</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/skillNer.matcher_class.SkillsGetter.html">skillNer.matcher_class.SkillsGetter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/skillNer.utils.Utils.html">skillNer.utils.Utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/skillNer.visualizer.html_elements.html">skillNer.visualizer.html_elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/skillNer.visualizer.phrase_class.html">skillNer.visualizer.phrase_class</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute</a></li>
 </ul>
 
@@ -193,21 +199,36 @@
         <article role="main">
           <section id="getting-started">
 <h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem.
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt.
-Mauris at neque nunc.</p>
+<p>It is easy to get started with <strong>skillNer</strong> and take advantage of its features.
+This starter guide will walk you through the steps to follow
+and will provide you with small snippets to get started.</p>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>skillNer can be installed through the <em>python package-manager</em> pip by runing the command</p>
+<p>skillNer can be installed through the <em>python package-manager</em> pip by running the command</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install skillNer
 </pre></div>
+</div>
+<p>Also, you need to install <a class="reference external" href="https://spacy.io/">spacy</a> so that to use some of its modules.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install spacy
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Thanks to its modular nature, you can customize the behavior of skillNer just
+by tuning | pluging | unpluging modules. Don’t worry about that, we will get into it later!</p>
 </div>
 </section>
 <section id="quickstart">
 <h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem.
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt.
-Mauris at neque nunc.</p>
+<p>With these initial steps being accomplished,
+let’s dive a bit deeper into skillNer through a worked example.</p>
+<p>Let’s say you want to extract skills from the following job posting:
+<em>“You are a Python developer with a solid experience in web development
+and can manage projects. You quickly adapt to a new environment
+and speak fluently English and French”</em></p>
+<p>1. We start first by importing modules, particularly spacy and SkillExtractor.
+Note that if you are using skillNer for the first time, it might take a while to download <strong>SKILL_DB</strong>.</p>
+<p><strong>SKILL_DB</strong> is skillNer default skills database. It was built upon EMSI skills database (link).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports</span>
 <span class="kn">import</span> <span class="nn">spacy</span>
 <span class="kn">from</span> <span class="nn">spacy.matcher</span> <span class="kn">import</span> <span class="n">PhraseMatcher</span>
@@ -216,28 +237,39 @@ Mauris at neque nunc.</p>
 <span class="kn">from</span> <span class="nn">skillNer.general_params</span> <span class="kn">import</span> <span class="n">SKILL_DB</span>
 <span class="c1"># import skill extractor</span>
 <span class="kn">from</span> <span class="nn">skillNer.skill_extractor_class</span> <span class="kn">import</span> <span class="n">SkillExtractor</span>
-
-<span class="c1"># init params of skill extractor</span>
-<span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">"en_core_web_lg"</span><span class="p">)</span>
-<span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">'english'</span><span class="p">))</span>
-
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Next, we load NLP object from spacy. Afterward, we initialize an instance of SkillExtractor.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># init params of skill extractor</span>
+<span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">"en_core_web_sm"</span><span class="p">)</span>
 <span class="c1"># init skill extractor</span>
 <span class="n">skill_extractor</span> <span class="o">=</span> <span class="n">SkillExtractor</span><span class="p">(</span><span class="n">nlp</span><span class="p">,</span> <span class="n">SKILL_DB</span><span class="p">,</span> <span class="n">PhraseMatcher</span><span class="p">)</span>
-
-<span class="c1"># extract skills from job_description</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Lastly, we call the <cite>.annotate</cite> method of the instantiated object to annotate skill within the job description.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># extract skills from job_description</span>
 <span class="n">job_description</span> <span class="o">=</span> <span class="s2">"""</span>
-<span class="s2">You are a Python Developer with a solid experience in Web development and  esx</span>
-<span class="s2">and have a thoughtful expatriation and manage project . You're passionate and powerful.</span>
-<span class="s2">You are recognized for your ability to evolve within a team and around common projects</span>
-<span class="s2">and you easily adapt in a new environment. javascript and node and french and english</span>
+<span class="s2">You are a Python developer with a solid experience in web development</span>
+<span class="s2">and can manage projects. You quickly adapt to a new environment</span>
+<span class="s2">and speak fluently English and French</span>
 <span class="s2">"""</span>
 
 <span class="n">annotations</span> <span class="o">=</span> <span class="n">skill_extractor</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">job_description</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem.
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt.
-Mauris at neque nunc.</p>
+<p>Voilà! Now you can inspect skills by rendering the text with the annotated skills.
+This can be achieved by calling the method <cite>.describe</cite>.</p>
+</section>
+<section id="what-s-next">
+<h2>What’s next?<a class="headerlink" href="#what-s-next" title="Permalink to this headline">¶</a></h2>
+<p>The above snippets show a basic example of a skillNer use case.
+By simply being able to extract skills from text, skillNer opens thousands of other application
+from describing the market labor to constructing knowledge graphs.</p>
+<p>For further readings, check the <a class="reference internal" href="tutorials.html#tutorials"><span class="std std-ref">Tutorials</span></a> section.</p>
 </section>
 </section>
 
@@ -297,6 +329,7 @@ Mauris at neque nunc.</p>
 <li><a class="reference internal" href="#">Getting started</a><ul>
 <li><a class="reference internal" href="#installation">Installation</a></li>
 <li><a class="reference internal" href="#quickstart">Quickstart</a></li>
+<li><a class="reference internal" href="#what-s-next">What’s next?</a></li>
 </ul>
 </li>
 </ul>

@@ -1,9 +1,9 @@
 API references
 ==============
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem. 
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt. 
-Mauris at neque nunc. 
+Here is a detailed API description of skillNer and some of its main building blocks.
+
+The docs include a description of arguments as well as examples of usage.
 
 
 .. autosummary::

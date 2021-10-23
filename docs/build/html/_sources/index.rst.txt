@@ -7,25 +7,33 @@
 Welcome to skillNer's documentation!
 ====================================
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem. 
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt. 
-Mauris at neque nunc. 
+SkillNer is an NLP package that leverage Named Entity Recognition (NER) to automatically extract 
+skills and certifications from job postings and applicants' resumes.
 
-Nam sit amet neque varius libero varius fermentum. 
-Ut efficitur quam sed mauris vehicula feugiat.
+
+At the core, SkillNer is a skill extractor. Yet, it unlocks tons of features, 
+e.g. helps both recruiters to find the best matches for their needs and applicants learn more about the job market.
+
+
+Not convinced yet? Let's :ref:`Get started <getting started>`!
 
 
 Purpose
 -------
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem. 
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt. 
-Mauris at neque nunc. Nam sit amet neque varius libero varius fermentum.
+
+The goal of this project is to build a named entity extraction solution for skill extraction from job posting text as well as candidates' resumé.
+This brings together the market labor, recruiters, and job seekers.
+
+We aim to build a solution that merges a rule-based matcher that labels data and feeds it
+to a BERT model to fine-tune it for skills recognition.
+
 
 
 Team
 ----
-We started small with a team of two members, `Anas AIT AOMAR`_ and `Badr MOUFAD`_ . Yet, with **skillNer** being open
-sourced, the team will surely grow bigger and bigger.
+We started small with a team of two members, `Anas AIT AOMAR`_ and `Badr MOUFAD`_ . 
+Yet, with **skillNer** being open
+sourced, the team will surely get bigger and bigger.
 
 .. _Anas AIT AOMAR: https://github.com/AnasAito
 .. _Badr MOUFAD: https://github.com/Badr-MOUFAD

@@ -201,7 +201,7 @@
 <h1>skillNer.skill_extractor_class.SkillExtractor<a class="headerlink" href="#skillner-skill-extractor-class-skillextractor" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="skillNer.skill_extractor_class.SkillExtractor">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skillNer.skill_extractor_class.</span></span><span class="sig-name descname"><span class="pre">SkillExtractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nlp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skills_db</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phraseMatcher</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillNer.skill_extractor_class.SkillExtractor" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skillNer.skill_extractor_class.</span></span><span class="sig-name descname"><span class="pre">SkillExtractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nlp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skills_db</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phraseMatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tranlsator_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillNer.skill_extractor_class.SkillExtractor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Main class to annotate skills in a given text and visualize them.</p>
 <p>Constructor of the class.</p>
 <dl class="field-list simple">
@@ -210,12 +210,13 @@
 <li><p><strong>nlp</strong> (<em>[</em><em>type</em><em>]</em>) – NLP object loaded from spacy.</p></li>
 <li><p><strong>skills_db</strong> (<em>[</em><em>type</em><em>]</em>) – A skill database used as a lookup table to annotate skills.</p></li>
 <li><p><strong>phraseMatcher</strong> (<em>[</em><em>type</em><em>]</em>) – A phrasematcher loaded from spacy.</p></li>
+<li><p><strong>tranlsator_func</strong> (<em>Callable</em>) – A fucntion to translate text from source language to english def tranlsator_func(text_input: str) -&gt; text_input:str</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="skillNer.skill_extractor_class.SkillExtractor.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nlp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skills_db</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phraseMatcher</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillNer.skill_extractor_class.SkillExtractor.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nlp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skills_db</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phraseMatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tranlsator_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillNer.skill_extractor_class.SkillExtractor.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor of the class.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -223,6 +224,7 @@
 <li><p><strong>nlp</strong> (<em>[</em><em>type</em><em>]</em>) – NLP object loaded from spacy.</p></li>
 <li><p><strong>skills_db</strong> (<em>[</em><em>type</em><em>]</em>) – A skill database used as a lookup table to annotate skills.</p></li>
 <li><p><strong>phraseMatcher</strong> (<em>[</em><em>type</em><em>]</em>) – A phrasematcher loaded from spacy.</p></li>
+<li><p><strong>tranlsator_func</strong> (<em>Callable</em>) – A fucntion to translate text from source language to english def tranlsator_func(text_input: str) -&gt; text_input:str</p></li>
 </ul>
 </dd>
 </dl>
@@ -234,17 +236,17 @@
 <col style="width: 90%"/>
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#skillNer.skill_extractor_class.SkillExtractor.__init__" title="skillNer.skill_extractor_class.SkillExtractor.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(nlp, skills_db, phraseMatcher)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skillNer.skill_extractor_class.SkillExtractor.__init__" title="skillNer.skill_extractor_class.SkillExtractor.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(nlp, skills_db, phraseMatcher[, ...])</p></td>
 <td><p>Constructor of the class.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#skillNer.skill_extractor_class.SkillExtractor.annotate" title="skillNer.skill_extractor_class.SkillExtractor.annotate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">annotate</span></code></a>(text[, tresh])</p></td>
 <td><p>To annotate a given text and thereby extract skills from it.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#skillNer.skill_extractor_class.SkillExtractor.display" title="skillNer.skill_extractor_class.SkillExtractor.display"><code class="xref py py-obj docutils literal notranslate"><span class="pre">display</span></code></a>(results)</p></td>
-<td><p>To display the annotated skills.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#skillNer.skill_extractor_class.SkillExtractor.display_details" title="skillNer.skill_extractor_class.SkillExtractor.display_details"><code class="xref py py-obj docutils literal notranslate"><span class="pre">display_details</span></code></a>(annotations)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">describe</span></code>(annotations)</p></td>
 <td><p>To display more details about the annotated skills.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#skillNer.skill_extractor_class.SkillExtractor.display" title="skillNer.skill_extractor_class.SkillExtractor.display"><code class="xref py py-obj docutils literal notranslate"><span class="pre">display</span></code></a>(results)</p></td>
+<td><p>To display the annotated skills.</p></td>
 </tr>
 </tbody>
 </table></div>
@@ -312,23 +314,6 @@ This method uses built-in classes of spacy to render annotated text, namely <cit
 <li><p><strong>-------</strong> – </p></li>
 <li><p><strong>None</strong> – render the text with annotated skills.</p></li>
 </ul>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="skillNer.skill_extractor_class.SkillExtractor.display_details">
-<span class="sig-name descname"><span class="pre">display_details</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">annotations</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillNer.skill_extractor_class.SkillExtractor.display_details" title="Permalink to this definition">¶</a></dt>
-<dd><p>To display more details about the annotated skills.
-This method uses HTML, CSS, JavaScript combined with IPython to render the annotated skills.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>annotations</strong> (<em>dict</em>) – annotations is the dictionnary resulting from applying <cite>.annotate()</cite> to a text.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>render text with annotated skills.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>[type]</p>
 </dd>
 </dl>
 </dd></dl>
