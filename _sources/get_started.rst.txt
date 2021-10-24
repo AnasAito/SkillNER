@@ -86,6 +86,57 @@ Note that if you are using SkillNer for the first time, it might take a while to
     annotations = skill_extractor.annotate(job_description)
 
 
+.. code:: python
+
+    # output
+    {
+        'text': 'you are a python developer with a solid experience in web development and can manage projects you quickly adapt to new environments and speak fluently english and french',
+        'results': {
+            'full_matches': [
+                {
+                    'skill_id': 'KS122Z36QK3N5097B5JH', 
+                    'doc_node_value': 'web development', 
+                    'score': 1, 'doc_node_id': [10, 11]
+                }
+            ], '
+            ngram_scored': [
+                {
+                    'skill_id': 'KS125LS6N7WP4S6SFTCK', 
+                    'doc_node_id': [3], 
+                    'doc_node_value': 'python', 
+                    'type': 'fullUni', 
+                    'score': 1, 
+                    'len': 1
+                }, 
+                {
+                    'skill_id': 'KS1267F6MSPN366LX7ST', 
+                    'doc_node_id': [14, 15], 
+                    'doc_node_value': 'manage projects', 
+                    'type': 'lowSurf', 
+                    'score': 2, 
+                    'len': 2
+                }, 
+                {
+                    'skill_id': 'KS123K75YYK8VGH90NCS', 
+                    'doc_node_id': [25], 
+                    'doc_node_value': 'english', 
+                    'type': 'lowSurf', 
+                    'score': 1, 
+                    'len': 1
+                }, 
+                {
+                    'skill_id': 'KS1243976G466GV63ZBY', 
+                    'doc_node_id': [27], 
+                    'doc_node_value': 'french', 
+                    'type': 'lowSurf', 
+                    'score': 1, 
+                    'len': 1
+                }
+            ]
+        }
+    }
+
+
 Voilà! Now you can inspect skills by rendering the text with the annotated skills.
 This can be achieved by calling the method ``.describe``.
 

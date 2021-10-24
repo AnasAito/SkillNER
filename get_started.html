@@ -263,6 +263,55 @@ Note that if you are using SkillNer for the first time, it might take a while to
 <span class="n">annotations</span> <span class="o">=</span> <span class="n">skill_extractor</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">job_description</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># output</span>
+<span class="p">{</span>
+    <span class="s1">'text'</span><span class="p">:</span> <span class="s1">'you are a python developer with a solid experience in web development and can manage projects you quickly adapt to new environments and speak fluently english and french'</span><span class="p">,</span>
+    <span class="s1">'results'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">'full_matches'</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s1">'skill_id'</span><span class="p">:</span> <span class="s1">'KS122Z36QK3N5097B5JH'</span><span class="p">,</span>
+                <span class="s1">'doc_node_value'</span><span class="p">:</span> <span class="s1">'web development'</span><span class="p">,</span>
+                <span class="s1">'score'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">'doc_node_id'</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">],</span> <span class="s1">'</span>
+        <span class="n">ngram_scored</span><span class="s1">': [</span>
+            <span class="p">{</span>
+                <span class="s1">'skill_id'</span><span class="p">:</span> <span class="s1">'KS125LS6N7WP4S6SFTCK'</span><span class="p">,</span>
+                <span class="s1">'doc_node_id'</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+                <span class="s1">'doc_node_value'</span><span class="p">:</span> <span class="s1">'python'</span><span class="p">,</span>
+                <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'fullUni'</span><span class="p">,</span>
+                <span class="s1">'score'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s1">'len'</span><span class="p">:</span> <span class="mi">1</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s1">'skill_id'</span><span class="p">:</span> <span class="s1">'KS1267F6MSPN366LX7ST'</span><span class="p">,</span>
+                <span class="s1">'doc_node_id'</span><span class="p">:</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
+                <span class="s1">'doc_node_value'</span><span class="p">:</span> <span class="s1">'manage projects'</span><span class="p">,</span>
+                <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'lowSurf'</span><span class="p">,</span>
+                <span class="s1">'score'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s1">'len'</span><span class="p">:</span> <span class="mi">2</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s1">'skill_id'</span><span class="p">:</span> <span class="s1">'KS123K75YYK8VGH90NCS'</span><span class="p">,</span>
+                <span class="s1">'doc_node_id'</span><span class="p">:</span> <span class="p">[</span><span class="mi">25</span><span class="p">],</span>
+                <span class="s1">'doc_node_value'</span><span class="p">:</span> <span class="s1">'english'</span><span class="p">,</span>
+                <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'lowSurf'</span><span class="p">,</span>
+                <span class="s1">'score'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s1">'len'</span><span class="p">:</span> <span class="mi">1</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s1">'skill_id'</span><span class="p">:</span> <span class="s1">'KS1243976G466GV63ZBY'</span><span class="p">,</span>
+                <span class="s1">'doc_node_id'</span><span class="p">:</span> <span class="p">[</span><span class="mi">27</span><span class="p">],</span>
+                <span class="s1">'doc_node_value'</span><span class="p">:</span> <span class="s1">'french'</span><span class="p">,</span>
+                <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'lowSurf'</span><span class="p">,</span>
+                <span class="s1">'score'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s1">'len'</span><span class="p">:</span> <span class="mi">1</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p>Voilà! Now you can inspect skills by rendering the text with the annotated skills.
 This can be achieved by calling the method <code class="docutils literal notranslate"><span class="pre">.describe</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># to inspect annotations</span>
