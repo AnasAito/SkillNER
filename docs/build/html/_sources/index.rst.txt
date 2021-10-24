@@ -18,17 +18,6 @@ e.g. helps both recruiters to find the best matches for their needs and applican
 Not convinced yet? Let's :ref:`Get started <getting started>`!
 
 
-Purpose
--------
-
-The goal of this project is to build a named entity extraction solution for skill extraction from job posting text as well as candidates' resumé.
-This brings together the market labor, recruiters, and job seekers.
-
-We aim to build a solution that merges a rule-based matcher that labels data and feeds it
-to a BERT model to fine-tune it for skills recognition.
-
-
-
 Team
 ----
 We started small with a team of two members, `Anas AIT AOMAR`_ and `Badr MOUFAD`_ . 
