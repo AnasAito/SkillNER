@@ -40,7 +40,7 @@ and speak fluently English and French"*
 1. We start first by importing modules, particularly spacy and SkillExtractor. 
 Note that if you are using SkillNer for the first time, it might take a while to download **SKILL_DB**.
 
-**SKILL_DB** is SkillNer default skills database. It was built upon EMSI skills database (link).
+**SKILL_DB** is SkillNer default skills database. It was built upon `EMSI skills database <https://skills.emsidata.com/>`_.
 
 .. code:: python
 
@@ -54,7 +54,7 @@ Note that if you are using SkillNer for the first time, it might take a while to
     from skillNer.skill_extractor_class import SkillExtractor
 
 
-2. Next, we load NLP object from spacy. Afterward, we initialize an instance of SkillExtractor.
+2. Next, we load NLP object from `spacy <https://spacy.io/>`_. Afterward, we initialize an instance of SkillExtractor.
 
 .. code:: python
 
@@ -64,7 +64,7 @@ Note that if you are using SkillNer for the first time, it might take a while to
     skill_extractor = SkillExtractor(nlp, SKILL_DB, PhraseMatcher)
 
 
-3. Lastly, we call the `.annotate` method of the instantiated object to annotate skill within the job description.
+3. Lastly, we call the ``.annotate`` method of the instantiated object to annotate skill within the job description.
 
 .. code:: python
 
@@ -79,7 +79,7 @@ Note that if you are using SkillNer for the first time, it might take a while to
 
 
 Voilà! Now you can inspect skills by rendering the text with the annotated skills.
-This can be achieved by calling the method `.describe`.
+This can be achieved by calling the method ``.describe``.
 
 .. code:: python
 
@@ -93,7 +93,7 @@ This can be achieved by calling the method `.describe`.
 
 .. note::
 
-    The output of `.describe` method is literally an HTML document that is rendered in the notebook cell.
+    The output of ``.describe`` method is literally an HTML document that is rendered in the notebook cell.
 
 
 
