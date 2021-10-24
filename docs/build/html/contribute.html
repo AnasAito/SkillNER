@@ -201,7 +201,7 @@
           <section id="contribute">
 <h1>Contribute<a class="headerlink" href="#contribute" title="Permalink to this headline">¶</a></h1>
 <section id="why-and-how-to-contribute">
-<h2>Why and How to contribute ?<a class="headerlink" href="#why-and-how-to-contribute" title="Permalink to this headline">¶</a></h2>
+<h2>Why and How to contribute?<a class="headerlink" href="#why-and-how-to-contribute" title="Permalink to this headline">¶</a></h2>
 <p>SkillNer is the first <strong>Open Source</strong> skill extractor.
 Hence it is a tool dedicated to the community and thereby relies on its contribution to evolve.</p>
 <p>We did our best to adapt SkillNer for usage and fixed many of its bugs. Therefore, we believe its key features
@@ -222,26 +222,51 @@ By following them, we and others could get what you want to say.</p>
 </section>
 <section id="setup-the-project-on-your-local-machine">
 <h2>Setup the project on your local machine<a class="headerlink" href="#setup-the-project-on-your-local-machine" title="Permalink to this headline">¶</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem.
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt.
-Mauris at neque nunc.</p>
+<section id="cloning-the-repository">
+<h3>Cloning the repository<a class="headerlink" href="#cloning-the-repository" title="Permalink to this headline">¶</a></h3>
+<p>The first thing to do is to create a folder (name it whatever you want) <code class="docutils literal notranslate"><span class="pre">cd</span></code> to it.
+Within that folder, clone SkillNer repository by running</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/AnasAito/SkillNER.git
+</pre></div>
+</div>
+<p>Afterward, <code class="docutils literal notranslate"><span class="pre">cd</span></code> to SkillNer folder</p>
+</section>
+<section id="setup-the-environment">
+<h3>Setup the environment<a class="headerlink" href="#setup-the-environment" title="Permalink to this headline">¶</a></h3>
+<p>Here, we will create a <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">environment</span></code>. All the dependencies of the SkillNer are mentioned in <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file.
+Lauch you Anaconda prompt and cd to SkillNer folder that you have just cloned, then run the following command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda env create -f environment.yml
+</pre></div>
+</div>
+<p>We are almost done, in a notebook cell run the following command to install <code class="docutils literal notranslate"><span class="pre">spacy</span> <span class="pre">en_core_web_sm</span></code>
+or run the sandbox notebook (this notebook comes with SkillNer repo)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!python -m spacy download en_core_web_sm
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can set up the environment through the classic way by creating a <code class="docutils literal notranslate"><span class="pre">virtual</span> <span class="pre">environment</span></code> and running</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install -r requirements.txt
+</pre></div>
+</div>
+<p>However, you need to install additional packages to be able to use the python interpreter in a Jupyter notebook.</p>
+</div>
+</section>
 </section>
 <section id="some-general-guidelines">
 <h2>Some general guidelines<a class="headerlink" href="#some-general-guidelines" title="Permalink to this headline">¶</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem.
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt.
-Mauris at neque nunc.</p>
+<p>To contribute, make sure to follow these guidelines.</p>
 <section id="report-an-issue">
 <h3>Report an issue<a class="headerlink" href="#report-an-issue" title="Permalink to this headline">¶</a></h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem.
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt.
-Mauris at neque nunc.</p>
+<p>When reporting an issue, try to be as much clear as possible. Describe the issue and the expected behavior.
+Provide us with the (buggy) code snippets so that we can reproduce the issue.</p>
 </section>
 <section id="pull-request">
 <h3>Pull request<a class="headerlink" href="#pull-request" title="Permalink to this headline">¶</a></h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem.
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt.
-Mauris at neque nunc.</p>
+<p>In the description of the pull request, mention its purpose (fix bug, add features, code enhancement, …).</p>
+<p>If you are willing to push code to SkillNer, make sure to document it through docstrings.
+Also, add comments to your code to explain what it does.</p>
+<p>This will help us revue your contribution.</p>
 </section>
 </section>
 </section>
@@ -292,8 +317,12 @@ Mauris at neque nunc.</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Contribute</a><ul>
-<li><a class="reference internal" href="#why-and-how-to-contribute">Why and How to contribute ?</a></li>
-<li><a class="reference internal" href="#setup-the-project-on-your-local-machine">Setup the project on your local machine</a></li>
+<li><a class="reference internal" href="#why-and-how-to-contribute">Why and How to contribute?</a></li>
+<li><a class="reference internal" href="#setup-the-project-on-your-local-machine">Setup the project on your local machine</a><ul>
+<li><a class="reference internal" href="#cloning-the-repository">Cloning the repository</a></li>
+<li><a class="reference internal" href="#setup-the-environment">Setup the environment</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#some-general-guidelines">Some general guidelines</a><ul>
 <li><a class="reference internal" href="#report-an-issue">Report an issue</a></li>
 <li><a class="reference internal" href="#pull-request">Pull request</a></li>

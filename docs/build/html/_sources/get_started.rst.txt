@@ -16,6 +16,14 @@ SkillNer can be installed through the *python package-manager* pip by running th
   $ pip install skillNer
 
 
+Also, you need to download ``spacy en_core_web_sm``. We will need it to initialize an NLP object that will
+be plugged into SkillNer. To do so, run the following command:   
+
+::
+
+  $ python -m spacy download en_core_web_sm
+
+
 .. note::
 
     Thanks to its modular nature, you can customize the behavior of SkillNer just 

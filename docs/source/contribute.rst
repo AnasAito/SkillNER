@@ -2,7 +2,7 @@ Contribute
 ==========
 
 
-Why and How to contribute ?
+Why and How to contribute?
 -----------------------------------------
 
 SkillNer is the first **Open Source** skill extractor. 
@@ -33,33 +33,69 @@ A third (friendly) option to contribute to SkillNer will be soon released. *So, 
 Setup the project on your local machine
 ---------------------------------------
 
+Cloning the repository
+~~~~~~~~~~~~~~~~~~~~~~
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem. 
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt. 
-Mauris at neque nunc. 
+The first thing to do is to create a folder (name it whatever you want) ``cd`` to it.
+Within that folder, clone SkillNer repository by running
+
+::
+
+  $ git clone https://github.com/AnasAito/SkillNER.git
+
+
+Afterward, ``cd`` to SkillNer folder
+
+
+Setup the environment
+~~~~~~~~~~~~~~~~~~~~~
+
+Here, we will create a ``conda environment``. All the dependencies of the SkillNer are mentioned in ``environment.yml`` file. 
+Lauch you Anaconda prompt and cd to SkillNer folder that you have just cloned, then run the following command
+
+::
+
+  $ conda env create -f environment.yml
+
+
+We are almost done, in a notebook cell run the following command to install ``spacy en_core_web_sm`` 
+or run the sandbox notebook (this notebook comes with SkillNer repo)
+
+
+::
+
+  !python -m spacy download en_core_web_sm
+
+
+.. note::
+    You can set up the environment through the classic way by creating a ``virtual environment`` and running 
+    ::
+
+      $ pip install -r requirements.txt
+    
+    However, you need to install additional packages to be able to use the python interpreter in a Jupyter notebook.
 
 
 
 Some general guidelines
 -----------------------
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem. 
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt. 
-Mauris at neque nunc.
+To contribute, make sure to follow these guidelines.
+
 
 Report an issue
 ~~~~~~~~~~~~~~~
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem. 
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt. 
-Mauris at neque nunc.
+When reporting an issue, try to be as much clear as possible. Describe the issue and the expected behavior. 
+Provide us with the (buggy) code snippets so that we can reproduce the issue.
 
 
 Pull request
 ~~~~~~~~~~~~
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem. 
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt. 
-Mauris at neque nunc.
+In the description of the pull request, mention its purpose (fix bug, add features, code enhancement, ...).
 
+If you are willing to push code to SkillNer, make sure to document it through docstrings. 
+Also, add comments to your code to explain what it does.
 
+This will help us revue your contribution.
