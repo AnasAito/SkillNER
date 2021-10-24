@@ -14,7 +14,6 @@ an entity span detection model. Separately, there are also NER models for more s
 Installing scispacy requires two steps: installing spacy and one of its models  then  install the library, run:
 ```bash
 pip install spacy 
-
 ```
 
 to install a model (see our full selection of available models below), run a command like the following:
@@ -25,7 +24,6 @@ python -m spacy download en_core_web_sm
 Finalluy install skillNer
 ```bash
 pip install skillner 
-
 ```
 
 ## Example Usage
