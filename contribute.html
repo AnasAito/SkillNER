@@ -9,6 +9,7 @@
         <title>Contribute - skillNer 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     
     
@@ -199,31 +200,73 @@
         <article role="main">
           <section id="contribute">
 <h1>Contribute<a class="headerlink" href="#contribute" title="Permalink to this headline">¶</a></h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem.
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt.
-Mauris at neque nunc.</p>
-<section id="setup-project">
-<h2>Setup project<a class="headerlink" href="#setup-project" title="Permalink to this headline">¶</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem.
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt.
-Mauris at neque nunc.</p>
+<section id="why-and-how-to-contribute">
+<h2>Why and How to contribute?<a class="headerlink" href="#why-and-how-to-contribute" title="Permalink to this headline">¶</a></h2>
+<p>SkillNer is the first <strong>Open Source</strong> skill extractor.
+Hence it is a tool dedicated to the community and thereby relies on its contribution to evolve.</p>
+<p>We did our best to adapt SkillNer for usage and fixed many of its bugs. Therefore, we believe its key features
+make it ready for a diversity of use cases.
+However, it still has not reached 100% stability. SkillNer need the assistance of the community to be adapted further
+and broaden its usage.</p>
+<p>You can contribute to SkillNer either by</p>
+<ul class="simple">
+<li><p>Reporting issues. Indeed, you may encounter one while you are using SkillNer. So do not hesitate to mention them in the <a class="reference external" href="https://github.com/AnasAito/SkillNER/issues">issue section of our GitHub repository</a>. Also, you can use the issue as a way to suggest new features to be added.</p></li>
+<li><p>Pushing code to our repository through pull requests. In case you fixed an issue or wanted to extend SkillNer features.</p></li>
+</ul>
+<p>A third (friendly) option to contribute to SkillNer will be soon released. <em>So, stay tuned…</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure to follow the guidelines below when contributing. This is in order to ensure commune standards of contribution.
+By following them, we and others could get what you want to say.</p>
+</div>
 </section>
-<section id="guidelines">
-<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">¶</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem.
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt.
-Mauris at neque nunc.</p>
+<section id="setup-the-project-on-your-local-machine">
+<h2>Setup the project on your local machine<a class="headerlink" href="#setup-the-project-on-your-local-machine" title="Permalink to this headline">¶</a></h2>
+<section id="cloning-the-repository">
+<h3>Cloning the repository<a class="headerlink" href="#cloning-the-repository" title="Permalink to this headline">¶</a></h3>
+<p>The first thing to do is to create a folder (name it whatever you want) <code class="docutils literal notranslate"><span class="pre">cd</span></code> to it.
+Within that folder, clone SkillNer repository by running</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/AnasAito/SkillNER.git
+</pre></div>
+</div>
+<p>Afterward, <code class="docutils literal notranslate"><span class="pre">cd</span></code> to SkillNer folder</p>
+</section>
+<section id="setup-the-environment">
+<h3>Setup the environment<a class="headerlink" href="#setup-the-environment" title="Permalink to this headline">¶</a></h3>
+<p>Here, we will create a <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">environment</span></code>. All the dependencies of the SkillNer are mentioned in <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file.
+Lauch you Anaconda prompt and cd to SkillNer folder that you have just cloned, then run the following command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda env create -f environment.yml
+</pre></div>
+</div>
+<p>We are almost done, in a notebook cell run the following command to install <code class="docutils literal notranslate"><span class="pre">spacy</span> <span class="pre">en_core_web_sm</span></code>
+or run the sandbox notebook (this notebook comes with SkillNer repo)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!python -m spacy download en_core_web_sm
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can set up the environment through the classic way by creating a <code class="docutils literal notranslate"><span class="pre">virtual</span> <span class="pre">environment</span></code> and running</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install -r requirements.txt
+</pre></div>
+</div>
+<p>However, you need to install additional packages to be able to use the python interpreter in a Jupyter notebook.</p>
+</div>
+</section>
+</section>
+<section id="some-general-guidelines">
+<h2>Some general guidelines<a class="headerlink" href="#some-general-guidelines" title="Permalink to this headline">¶</a></h2>
+<p>To contribute, make sure to follow these guidelines.</p>
 <section id="report-an-issue">
 <h3>Report an issue<a class="headerlink" href="#report-an-issue" title="Permalink to this headline">¶</a></h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem.
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt.
-Mauris at neque nunc.</p>
+<p>When reporting an issue, try to be as much clear as possible. Describe the issue and the expected behavior.
+Provide us with the (buggy) code snippets so that we can reproduce the issue.</p>
 </section>
 <section id="pull-request">
 <h3>Pull request<a class="headerlink" href="#pull-request" title="Permalink to this headline">¶</a></h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id molestie lorem.
-Aliquam dignissim felis id dolor bibendum, et viverra nisl tincidunt.
-Mauris at neque nunc.</p>
+<p>In the description of the pull request, mention its purpose (fix bug, add features, code enhancement, …).</p>
+<p>If you are willing to push code to SkillNer, make sure to document it through docstrings.
+Also, add comments to your code to explain what it does.</p>
+<p>This will help us revue your contribution.</p>
 </section>
 </section>
 </section>
@@ -274,8 +317,13 @@ Mauris at neque nunc.</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Contribute</a><ul>
-<li><a class="reference internal" href="#setup-project">Setup project</a></li>
-<li><a class="reference internal" href="#guidelines">Guidelines</a><ul>
+<li><a class="reference internal" href="#why-and-how-to-contribute">Why and How to contribute?</a></li>
+<li><a class="reference internal" href="#setup-the-project-on-your-local-machine">Setup the project on your local machine</a><ul>
+<li><a class="reference internal" href="#cloning-the-repository">Cloning the repository</a></li>
+<li><a class="reference internal" href="#setup-the-environment">Setup the environment</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#some-general-guidelines">Some general guidelines</a><ul>
 <li><a class="reference internal" href="#report-an-issue">Report an issue</a></li>
 <li><a class="reference internal" href="#pull-request">Pull request</a></li>
 </ul>
@@ -296,5 +344,7 @@ Mauris at neque nunc.</p>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/scripts/main.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
     </body>
 </html>

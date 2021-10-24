@@ -1,7 +1,7 @@
 API references
 ==============
 
-Here is a detailed API description of skillNer and some of its main building blocks.
+Here is a detailed API description of SkillNer and some of its main building blocks.
 
 The docs include a description of arguments as well as examples of usage.
 
