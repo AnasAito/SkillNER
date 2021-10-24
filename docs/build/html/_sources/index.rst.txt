@@ -1,10 +1,10 @@
-.. skillNer documentation master file, created by
+.. SkillNer documentation master file, created by
    sphinx-quickstart on Wed Oct 13 18:07:05 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
 
-Welcome to skillNer's documentation!
+Welcome to SkillNer's documentation!
 ====================================
 
 SkillNer is an NLP package that leverage Named Entity Recognition (NER) to automatically extract 
@@ -32,7 +32,7 @@ to a BERT model to fine-tune it for skills recognition.
 Team
 ----
 We started small with a team of two members, `Anas AIT AOMAR`_ and `Badr MOUFAD`_ . 
-Yet, with **skillNer** being open
+Yet, with **SkillNer** being open
 sourced, the team will surely get bigger and bigger.
 
 .. _Anas AIT AOMAR: https://github.com/AnasAito

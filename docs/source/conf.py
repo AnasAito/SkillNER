@@ -42,8 +42,13 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.autosectionlabel',
-    'sphinx.ext.napoleon'
+    'sphinx.ext.napoleon',
+    'sphinx_copybutton'
 ]
+
+# step up the copy button in code snippets
+copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
+copybutton_prompt_is_regexp = True
 
 autosummary_generate = True
 autoclass_content = "both"

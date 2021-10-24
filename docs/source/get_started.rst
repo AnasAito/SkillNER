@@ -1,7 +1,7 @@
 Getting started
 ===============
 
-It is easy to get started with **skillNer** and take advantage of its features. 
+It is easy to get started with **SkillNer** and take advantage of its features. 
 This starter guide will walk you through the steps to follow 
 and will provide you with small snippets to get started.
 
@@ -10,44 +10,37 @@ and will provide you with small snippets to get started.
 Installation
 ------------
 
-skillNer can be installed through the *python package-manager* pip by running the command
+SkillNer can be installed through the *python package-manager* pip by running the command
 ::
 
   $ pip install skillNer
 
 
-Also, you need to install `spacy <https://spacy.io/>`_ so that to use some of its modules.
-
-::
-
-  $ pip install spacy
-
-
 .. note::
 
-    Thanks to its modular nature, you can customize the behavior of skillNer just 
+    Thanks to its modular nature, you can customize the behavior of SkillNer just 
     by tuning | pluging | unpluging modules. Don't worry about that, we will get into it later! 
 
 
 
 Quickstart
-----------
+---------
 
 With these initial steps being accomplished, 
-let's dive a bit deeper into skillNer through a worked example.
+let's dive a bit deeper into SkillNer through a worked example.
 
 
 Let's say you want to extract skills from the following job posting:
 *"You are a Python developer with a solid experience in web development
-and can manage projects. You quickly adapt to a new environment 
+and can manage projects. You quickly adapt to new environments 
 and speak fluently English and French"*
 
 
  
 1. We start first by importing modules, particularly spacy and SkillExtractor. 
-Note that if you are using skillNer for the first time, it might take a while to download **SKILL_DB**.
+Note that if you are using SkillNer for the first time, it might take a while to download **SKILL_DB**.
 
-**SKILL_DB** is skillNer default skills database. It was built upon EMSI skills database (link).
+**SKILL_DB** is SkillNer default skills database. It was built upon EMSI skills database (link).
 
 .. code:: python
 
@@ -78,7 +71,7 @@ Note that if you are using skillNer for the first time, it might take a while to
     # extract skills from job_description
     job_description = """
     You are a Python developer with a solid experience in web development
-    and can manage projects. You quickly adapt to a new environment 
+    and can manage projects. You quickly adapt to new environments 
     and speak fluently English and French
     """
 
@@ -88,13 +81,27 @@ Note that if you are using skillNer for the first time, it might take a while to
 Voilà! Now you can inspect skills by rendering the text with the annotated skills.
 This can be achieved by calling the method `.describe`.
 
+.. code:: python
+
+    # to inspect annotations
+    skill_extractor.describe(annotations)
+
+
+.. raw:: html
+   :file: describe.html
+
+
+.. note::
+
+    The output of `.describe` method is literally an HTML document that is rendered in the notebook cell.
+
 
 
 What's next?
 -----------
 
-The above snippets show a basic example of a skillNer use case.
-By simply being able to extract skills from text, skillNer opens thousands of other application
+The above snippets show a basic example of a SkillNer use case.
+By simply being able to extract skills from text, SkillNer opens thousands of other application
 from describing the market labor to constructing knowledge graphs.
 
 For further readings, check the :ref:`tutorials` section. 
