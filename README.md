@@ -1,14 +1,17 @@
 <p align="center"><img width="50%" src="https://user-images.githubusercontent.com/56308112/128958594-79813e72-b688-4a9a-9267-324f098d4b0c.png" /></p>
 
 
+**Just looking to test out SkillNer? Check out our [demo](https://share.streamlit.io/anasaito/skillner_demo/index.py)**.
 
 SkillNer is an NLP module to automatically Extract skills and certifications from unstructured job postings, texts, and applicant's resumes.
 
+Skillner uses [EMSI](https://skills.emsidata.com/) databse (an open source skill database) as a knowldge base linker to prevent skill duplications.
 
 
 
+<p align="center"><img width="50%" src="https://user-images.githubusercontent.com/56308112/138768792-a25d25e7-1e43-4a44-aa46-8de9895ffe88.png" /></p>
 
-**Just looking to test out SkillNer? Check out our [demo](https://share.streamlit.io/anasaito/skillner_demo/index.py)**.
+
 
 
 
