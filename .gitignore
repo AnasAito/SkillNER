@@ -3,4 +3,5 @@
 */.ipynb_checkpoints/*
 __pycache__/
 venv
-sdist
+dist
+skillNer.egg-info
