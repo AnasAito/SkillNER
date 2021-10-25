@@ -10,7 +10,7 @@ Hence it is a tool dedicated to the community and thereby relies on its contribu
 
 We did our best to adapt SkillNer for usage and fixed many of its bugs. Therefore, we believe its key features 
 make it ready for a diversity of use cases.
-However, it still has not reached 100% stability. SkillNer need the assistance of the community to be adapted further
+However, it still has not reached 100% stability. SkillNer needs the assistance of the community to be adapted further
 and broaden its usage. 
 
 
@@ -21,7 +21,7 @@ You can contribute to SkillNer either by
 - Pushing code to our repository through pull requests. In case you fixed an issue or wanted to extend SkillNer features.
 
 
-A third (friendly) option to contribute to SkillNer will be soon released. *So, stay tuned...*
+A third (friendly and not technical) option to contribute to SkillNer will be soon released. *So, stay tuned...*
 
 
 .. note::

@@ -39,9 +39,10 @@ let's dive a bit deeper into SkillNer through a worked example.
 
 
 Let's say you want to extract skills from the following job posting:
-*"You are a Python developer with a solid experience in web development
-and can manage projects. You quickly adapt to new environments 
-and speak fluently English and French"*
+
+    *"You are a Python developer with a solid experience in web development
+    and can manage projects. You quickly adapt to new environments 
+    and speak fluently English and French"*
 
 
  
