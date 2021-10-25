@@ -6,9 +6,7 @@ SkillNer is an NLP module to automatically Extract skills and certifications fro
 
 
 
-In particular, there is a custom tokenizer that adds tokenization rules on top of spaCy's
-rule-based tokenizer, a POS tagger and syntactic parser trained on biomedical data and
-an entity span detection model. Separately, there are also NER models for more specific tasks.
+
 
 **Just looking to test out SkillNer? Check out our [demo](https://share.streamlit.io/anasaito/skillner_demo/index.py)**.
 
