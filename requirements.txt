@@ -6,3 +6,4 @@ jellyfish
 sphinx
 furo
 sphinx-copybutton
+twine

@@ -22,3 +22,5 @@ dependencies:
   - sphinx
   - furo
   - sphinx-copybutton
+  # deploy to pip
+  - twine

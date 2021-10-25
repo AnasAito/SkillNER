@@ -11,25 +11,22 @@ dependencies = [
     "jellyfish"
 ]
 
-additional_files = {
-    'default_db': ['skillNer/data/', 'data/']
-}
-
 setuptools.setup(
     name="skillNer",
-    version="0.1.7",
+    version="1.0.0",
     author="Anas Ait AOMAR & Badr MOUFAD",
-    author_email="pedroslashs@gmail.com",
-    description="A first deployed version of skillNer",
+    author_email="Badr.MOUFAD@emines.um6p.ma",
+    description="An NLP module to automatically Extract skills and certifications from unstructured job postings, texts, and applicant's resumes",
     long_description=long_description,
     url="https://github.com/AnasAito/SkillNER",
+    keywords=['python', 'NLP', "NER", "skills-extraction", "job-description"],
+    # download_url = 'https://github.com/Badr-MOUFAD/test_package_badr_moufad/archive/refs/tags/v0.2.tar.gz',
     packages=setuptools.find_packages(),
     install_requires=dependencies,
-    package_data=additional_files,
-    include_package_data=True,
     classifiers=[
-        "Programming Language :: Python :: 3",
-        "License ::  :: No license",
+        "Programming Language :: Python :: 3.8",
+        'Intended Audience :: Data science community',
+        'License :: OSI Approved :: MIT License',
         "Operating System :: OS Independent",
     ],
 )
