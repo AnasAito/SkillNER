@@ -1,0 +1,9 @@
+ipython
+pandas
+nltk
+spacy
+jellyfish
+sphinx
+furo
+sphinx-copybutton
+twine

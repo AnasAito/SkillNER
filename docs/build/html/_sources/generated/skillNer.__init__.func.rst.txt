@@ -1,0 +1,6 @@
+﻿skillNer.\_\_init\_\_.func
+==========================
+
+.. currentmodule:: skillNer.__init__
+
+.. autofunction:: func

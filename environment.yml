@@ -1,0 +1,26 @@
+name: skillNer-dev-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pip
+  - jupyter
+  - jupytext
+  # data
+  - pandas
+  - numpy
+  # ML
+  - scikit-learn
+  - nltk
+  - spacy
+  - scipy
+  - jellyfish
+  # graphics
+  - matplotlib
+  - plotly
+  # docs
+  - sphinx
+  - furo
+  - sphinx-copybutton
+  # deploy to pip
+  - twine
