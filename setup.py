@@ -17,7 +17,7 @@ setuptools.setup(
     description="An NLP module to automatically Extract skills and certifications from unstructured job postings, texts, and applicant's resumes",
     url="https://github.com/AnasAito/SkillNER",
     keywords=['python', 'NLP', "NER", "skills-extraction", "job-description"],
-    download_url='https://github.com/AnasAito/SkillNER/archive/refs/tags/v1.0.1.tar.gz',
+    download_url='https://github.com/AnasAito/SkillNER/archive/refs/tags/v1.0.2.tar.gz',
     packages=setuptools.find_packages(),
     install_requires=dependencies,
     classifiers=[
