@@ -1,10 +1,17 @@
 <p align="center"><img width="50%" src="https://user-images.githubusercontent.com/56308112/128958594-79813e72-b688-4a9a-9267-324f098d4b0c.png" /></p>
 
 
+
 SkillNer is an NLP module to automatically Extract skills and certifications from unstructured job postings, texts, and applicant's resumes.
 
 
+
+In particular, there is a custom tokenizer that adds tokenization rules on top of spaCy's
+rule-based tokenizer, a POS tagger and syntactic parser trained on biomedical data and
+an entity span detection model. Separately, there are also NER models for more specific tasks.
+
 **Just looking to test out SkillNer? Check out our [demo](https://share.streamlit.io/anasaito/skillner_demo/index.py)**.
+
 
 
 ## Useful links
@@ -48,6 +55,7 @@ We start first by importing modules, particularly spacy and SkillExtractor. Note
 **SKILL_DB** is SkillNer default skills database. It was built upon [EMSI skills database ](https://skills.emsidata.com/).
 
 
+
 ```python
 # imports
 import spacy
@@ -71,6 +79,7 @@ and speak fluently English and French
 """
 
 annotations = skill_extractor.annotate(job_description)
+
 ```
 
 
@@ -139,6 +148,9 @@ You can contribute to SkillNer either by
 3. A third (friendly and not technical) option to contribute to SkillNer will be soon released. *So, stay tuned...*
 
 
+
 Finally, make sure to read carefully [our guidelines](https://skillner-docs.herokuapp.com/contribute.html) before contributing. It will specifies standards to follow so that we can understand what you want to say.
 
+
 Besides, it will help you setup SkillNer on your local machine, in case you are willing to push code.
+
