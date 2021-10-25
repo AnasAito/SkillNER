@@ -18,14 +18,14 @@ an entity span detection model. Separately, there are also NER models for more s
 
 - [Visit our website](https://skillner.vercel.app/) to learn about SkillNer feature, how it works, and particularly explore our roadmap
 - Get started with SkillNer and get to know its API through by visiting the [Documentation](https://skillner-docs.herokuapp.com/)
-- [test our Demo]((https://share.streamlit.io/anasaito/skillner_demo/index.py)) to see some of SkillNer capabilities
+- [Test our Demo](https://share.streamlit.io/anasaito/skillner_demo/index.py) to see some of SkillNer capabilities
 
 
 ## Installation
 
 It is easy to get started with **SkillNer** and take advantage of its features.
 
-1. first, install **SkillNer** through the ``pip``
+1. First, install **SkillNer** through the ``pip``
 
 ```bash
 pip install skillNer
