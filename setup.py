@@ -11,7 +11,7 @@ dependencies = [
 
 setuptools.setup(
     name="skillNer",
-    version="1.0.1",
+    version="1.0.2",
     author="Anas Ait AOMAR & Badr MOUFAD",
     author_email="Badr.MOUFAD@emines.um6p.ma",
     description="An NLP module to automatically Extract skills and certifications from unstructured job postings, texts, and applicant's resumes",

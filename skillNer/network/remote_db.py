@@ -55,8 +55,7 @@ class RemoteBucket:
         --------
         >>> from skillNer.network.remote_db import RemoteBucket
         >>> buckets = RemoteBucket(
-            token="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",
-            branch="first_release"
+            branch="master"
         )
         >>> buckets.fetch_remote("SKILL_DB")
         ...
