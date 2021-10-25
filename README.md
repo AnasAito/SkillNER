@@ -17,8 +17,8 @@ Skillner uses [EMSI](https://skills.emsidata.com/) databse (an open source skill
 
 ## Useful links
 
-- [Visit our website](https://skillner.vercel.app/) to learn about SkillNer feature, how it works, and particularly explore our roadmap
-- Get started with SkillNer and get to know its API through by visiting the [Documentation](https://skillner-docs.herokuapp.com/)
+- [Visit our website](https://skillner.vercel.app/) to learn about SkillNer features, how it works, and particularly explore our roadmap
+- Get started with SkillNer and get to know its API by visiting the [Documentation](https://skillner-docs.herokuapp.com/)
 - [Test our Demo](https://share.streamlit.io/anasaito/skillner_demo/index.py) to see some of SkillNer capabilities
 
 
@@ -47,7 +47,8 @@ With these initial steps being accomplished, let’s dive a bit deeper into skil
 
 Let’s say you want to extract skills from the following job posting:
 
-    “You are a Python developer with a solid experience in web development and can manage projects. You quickly adapt to new environments and speak fluently English and French”
+    “You are a Python developer with a solid experience in web development and can manage projects. 
+    You quickly adapt to new environments and speak fluently English and French”
 
 ### Annotating skills
 
