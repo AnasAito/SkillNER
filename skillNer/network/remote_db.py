@@ -63,9 +63,14 @@ class RemoteBucket:
         """
         # request props
         url = f"{self.end_point}/{MAPPING_NAME_URL[db_name]}"
-        headers = {
-            'Authorization': f'token {self.token}'
-        }
+
+        # check if repo is private
+        if self.token:
+            headers = {
+                'Authorization': f'token {self.token}'
+            }
+        else:
+            headers = {}
 
         # fetch
         response = requests.get(

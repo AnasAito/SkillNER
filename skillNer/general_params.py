@@ -24,7 +24,6 @@ SKILL_TO_COLOR_TAILWIND = {
 
 # init remote bucket to fetch db in case they don't exist locally
 bucket = RemoteBucket(
-    token="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",
     branch="first_release"
 )
 
