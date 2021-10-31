@@ -1,5 +1,6 @@
 <p align="center"><img width="50%" src="https://user-images.githubusercontent.com/56308112/128958594-79813e72-b688-4a9a-9267-324f098d4b0c.png" /></p>
 
+[![Downloads](https://static.pepy.tech/personalized-badge/skillner?period=total&units=international_system&left_color=blue&right_color=orange&left_text=PyPi%20downloads)](https://pepy.tech/project/skillner)
 
 **Just looking to test out SkillNer? Check out our [demo](https://share.streamlit.io/anasaito/skillner_demo/index.py)**.
 
