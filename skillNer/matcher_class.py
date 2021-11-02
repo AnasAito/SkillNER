@@ -1,5 +1,6 @@
 # native packs
 from typing import List
+
 # installed packs
 #
 # my packs
@@ -322,17 +323,32 @@ class SkillsGetter:
         text_obj: Text,
         matcher
     ):
-
+  
         skills = []
-        doc = self.nlp(text_obj.stemmed())
-
-        for match_id, start, end in matcher(doc):
+        original_doc =text_obj.stemmed(as_list=True)
+        doc_without_stop = self.nlp(text_obj.stemmed(ignore_stop_words=True))
+        
+        for match_id, start, end in matcher(doc_without_stop):
             id_ = matcher.vocab.strings[match_id]
+            start_ = original_doc.index(str(doc_without_stop[start]))
+            if text_obj[start_].is_matchable:
+                # get token index in original text 
+ 
 
-            if text_obj[start].is_matchable:
+                start_token_idx = original_doc.index(str(doc_without_stop[start]))
+                end_token_idx = original_doc.index(str(doc_without_stop[end-1]))
+                
                 skills.append({'skill_id': id_+'_lowSurf',
-                               'doc_node_value': str(doc[start:end]),
-                               'doc_node_id': list(range(start, end)),
+                               'doc_node_value': " ".join(original_doc[start_token_idx:end_token_idx+1]) ,
+                               'doc_node_id': list(range(start_token_idx, end_token_idx+1)),
                                'type': 'lw_surf'})
+                      
+            
+                             
+
+
+                
+
+
 
         return skills, text_obj
