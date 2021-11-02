@@ -33,7 +33,7 @@ It is easy to get started with **SkillNer** and take advantage of its features.
 pip install skillNer
 ```
 
-2. Next, run the following command to install ``spacy en_core_web_sm ``
+2. Next, run the following command to install ``spacy en_core_web_lg ``
 which is one of the main plugins of SkillNer. Thanks its modular nature, you can 
 customize SkillNer behavior just by adjusting  | plugin | unplugin modules. Don't worry about these details, we will discuss them in details in the an **upcomming Tutorial section**.
 
@@ -70,7 +70,7 @@ from skillNer.general_params import SKILL_DB
 from skillNer.skill_extractor_class import SkillExtractor
 
 # init params of skill extractor
-nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("en_core_web_lg")
 # init skill extractor
 skill_extractor = SkillExtractor(nlp, SKILL_DB, PhraseMatcher)
 
