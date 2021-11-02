@@ -224,7 +224,8 @@ class SkillsGetter:
 
     def __init__(
         self,
-        nlp
+        nlp,
+      
     ):
 
         # param
@@ -321,12 +322,13 @@ class SkillsGetter:
     def get_low_match_skills(
         self,
         text_obj: Text,
-        matcher
+        matcher,
+        ignore_stop_words
     ):
   
         skills = []
         original_doc =text_obj.stemmed(as_list=True)
-        doc_without_stop = self.nlp(text_obj.stemmed(ignore_stop_words=True))
+        doc_without_stop = self.nlp(text_obj.stemmed(ignore_stop_words=ignore_stop_words))
         
         for match_id, start, end in matcher(doc_without_stop):
             id_ = matcher.vocab.strings[match_id]
