@@ -182,7 +182,8 @@ class Text:
     # return stemmed form of text either as str or list of words
     def stemmed(
         self,
-        as_list: bool = False
+        as_list: bool = False,
+        ignore_stop_words: bool = False
     ):
         """To get the stemmed version of text
 
@@ -208,7 +209,11 @@ class Text:
         ['fluenci', 'in', 'both', 'english', 'and', 'french', 'is', 'mandatori']
         """
 
-        list_stems = [word.stemmed for word in self.list_words]
+
+        if ignore_stop_words :
+            list_stems =[word.stemmed for word in self.list_words if not word.is_stop_word]
+        else:
+            list_stems = [word.stemmed for word in self.list_words]
 
         if as_list:
             return list_stems
@@ -218,7 +223,8 @@ class Text:
     # return lemmed form of text either as str or list of words
     def lemmed(
         self,
-        as_list: bool = False
+        as_list: bool = False,
+        ignore_stop_words: bool = False
     ):
         """To get the lemmed version of text
 
@@ -243,9 +249,12 @@ class Text:
         >>> text_obj.lemmed(as_list=True)
         ['fluency', 'in', 'both', 'english', 'and', 'french', 'be', 'mandatory']
         """
-
-        list_lems = [word.lemmed for word in self.list_words]
-
+        if ignore_stop_words :
+            list_lems = [word.lemmed for word in self.list_words if not word.is_stop_word]
+        else:
+            list_lems = [word.lemmed for word in self.list_words]
+        
+    
         if as_list:
             return list_lems
 

@@ -21,7 +21,8 @@ class SkillExtractor:
         nlp,
         skills_db,
         phraseMatcher,
-        tranlsator_func=False
+        tranlsator_func=False,
+        ignore_stop_words=False
     ):
         """Constructor of the class.
 
@@ -38,6 +39,7 @@ class SkillExtractor:
         """
 
         # params
+        self.ignore_stop_words=ignore_stop_words
         self.tranlsator_func = tranlsator_func
         self.nlp = nlp
         self.skills_db = skills_db
@@ -127,7 +129,7 @@ class SkillExtractor:
             text_obj, self.matchers['full_uni_matcher'])
 
         skills_low_form, text_obj = self.skill_getters.get_low_match_skills(
-            text_obj, self.matchers['low_form_matcher'])
+            text_obj, self.matchers['low_form_matcher'],ignore_stop_words=self.ignore_stop_words)
 
         skills_on_token = self.skill_getters.get_token_match_skills(
             text_obj, self.matchers['token_matcher'])
