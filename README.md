@@ -38,8 +38,10 @@ which is one of the main plugins of SkillNer. Thanks its modular nature, you can
 customize SkillNer behavior just by adjusting  | plugin | unplugin modules. Don't worry about these details, we will discuss them in details in the an **upcomming Tutorial section**.
 
 ```bash
-python -m spacy download en_core_web_sm
+python -m spacy download en_core_web_lg
 ```
+
+**Note:** The later installation will take few seconds before it get done since ``spacy en_core_web_lg `` is a bit too large (800 MB). Yet, you need to wait only one time.
 
 
 ## Example of usage
