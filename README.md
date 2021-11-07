@@ -1,6 +1,6 @@
 <p align="center"><img width="50%" src="https://user-images.githubusercontent.com/56308112/128958594-79813e72-b688-4a9a-9267-324f098d4b0c.png" /></p>
 
-[![Downloads](https://static.pepy.tech/personalized-badge/skillner?period=total&units=international_system&left_color=blue&right_color=orange&left_text=PyPi%20downloads)](https://pepy.tech/project/skillner)
+[![Number of SkillNer downloads](https://static.pepy.tech/personalized-badge/skillner?period=total&units=international_system&left_color=blue&right_color=orange&left_text=PyPi%20downloads)](https://pepy.tech/project/skillner)
 
 **Just looking to test out SkillNer? Check out our [demo](https://share.streamlit.io/anasaito/skillner_demo/index.py)**.
 
@@ -38,8 +38,10 @@ which is one of the main plugins of SkillNer. Thanks its modular nature, you can
 customize SkillNer behavior just by adjusting  | plugin | unplugin modules. Don't worry about these details, we will discuss them in details in the an **upcomming Tutorial section**.
 
 ```bash
-python -m spacy download en_core_web_sm
+python -m spacy download en_core_web_lg
 ```
+
+**Note:** The later installation will take few seconds before it get done since ``spacy en_core_web_lg `` is a bit too large (800 MB). Yet, you need to wait only one time.
 
 
 ## Example of usage
