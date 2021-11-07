@@ -3,6 +3,10 @@ from typing import List
 
 
 class Phrase:
+    """Data structure to build html visualization of the annotated text.
+    The input text is split into skill phrase and non skill phrase
+    """
+
     def __init__(
         self,
         text: str
@@ -38,7 +42,20 @@ class Phrase:
         annotation: dict,  # result of skill extractor
         SKILL_DB: dict
     ) -> List:
+        """Main function to distinguish skill and non skill phrases
 
+        Parameters
+        ----------
+        annotation : dict
+            The output of the ``SkillExtractor.annotate``
+        SKILL_DB: dict
+            Data base of skills
+
+        Returns
+        -------
+        List
+            returns a list of phrases
+        """
         # params
         list_words = annotation["text"].split(" ")
 
@@ -67,6 +84,12 @@ class Phrase:
 
                 # append phrase
                 arr_skill_phrases.append(phrase)
+
+        # handle case where no skill was annotated in text
+        if not len(arr_skill_phrases):
+            phrase = Phrase(text=annotation["text"])
+
+            return [phrase]
 
         # order phrases
         arr_skill_phrases.sort(key=lambda item: item.start)
