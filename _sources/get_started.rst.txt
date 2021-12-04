@@ -23,6 +23,7 @@ be plugged into SkillNer. To do so, run the following command:
 
   $ python -m spacy download en_core_web_lg
 
+
 The last installation might take a while to be accomplished since ``en_core_web_lg`` is a bit large (almost 800 MB)
 
 

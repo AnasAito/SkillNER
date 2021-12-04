@@ -7,7 +7,7 @@
 Welcome to SkillNer's documentation!
 ====================================
 
-SkillNer is an NLP package that leverage Named Entity Recognition (NER) to automatically extract 
+SkillNer is an NLP package that leverage **Named Entity Recognition** (NER) to automatically extract 
 skills and certifications from job postings and applicants' resumes.
 
 
