@@ -5,12 +5,12 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Tutorials" href="tutorials.html" /><link rel="prev" title="Welcome to SkillNer’s documentation!" href="index.html" />
 
-    <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+    <meta name="generator" content="sphinx-4.3.1, furo 2021.11.23"/>
         <title>Getting started - skillNer 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=7f0192ddeb2adecfbaa87ffbcf67d16358b30bc1" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=0af69da206d614734f649b27d4cdc2dd6c31f41d" />
     
     
 
@@ -211,9 +211,10 @@ and will provide you with small snippets to get started.</p>
 </div>
 <p>Also, you need to download <code class="docutils literal notranslate"><span class="pre">spacy</span> <span class="pre">en_core_web_sm</span></code>. We will need it to initialize an NLP object that will
 be plugged into SkillNer. To do so, run the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m spacy download en_core_web_sm
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m spacy download en_core_web_lg
 </pre></div>
 </div>
+<p>The last installation might take a while to be accomplished since <code class="docutils literal notranslate"><span class="pre">en_core_web_lg</span></code> is a bit large (almost 800 MB)</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Thanks to its modular nature, you can customize the behavior of SkillNer just
@@ -235,6 +236,7 @@ Note that if you are using SkillNer for the first time, it might take a while to
 <p><strong>SKILL_DB</strong> is SkillNer default skills database. It was built upon <a class="reference external" href="https://skills.emsidata.com/">EMSI skills database</a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports</span>
 <span class="kn">import</span> <span class="nn">spacy</span>
+<span class="kn">import</span> <span class="nn">en_core_web_lg</span>
 <span class="kn">from</span> <span class="nn">spacy.matcher</span> <span class="kn">import</span> <span class="n">PhraseMatcher</span>
 
 <span class="c1"># load default skills data base</span>
@@ -247,7 +249,7 @@ Note that if you are using SkillNer for the first time, it might take a while to
 <li><p>Next, we load NLP object from <a class="reference external" href="https://spacy.io/">spacy</a>. Afterward, we initialize an instance of SkillExtractor.</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># init params of skill extractor</span>
-<span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">"en_core_web_sm"</span><span class="p">)</span>
+<span class="n">nlp</span> <span class="o">=</span> <span class="n">en_core_web_lg</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
 <span class="c1"># init skill extractor</span>
 <span class="n">skill_extractor</span> <span class="o">=</span> <span class="n">SkillExtractor</span><span class="p">(</span><span class="n">nlp</span><span class="p">,</span> <span class="n">SKILL_DB</span><span class="p">,</span> <span class="n">PhraseMatcher</span><span class="p">)</span>
 </pre></div>
@@ -638,11 +640,9 @@ from describing the market labor to constructing knowledge graphs.</p>
 
         <div class="related-information">
               Copyright &#169; 2021, Anas AIT AOMAR &amp; Badr MOUFAD |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
-            <a class="muted-link" href="_sources/get_started.rst.txt"
+          Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            | <a class="muted-link" href="_sources/get_started.rst.txt"
                rel="nofollow">
               Show Source
             </a>
@@ -681,7 +681,7 @@ from describing the market labor to constructing knowledge graphs.</p>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/scripts/main.js"></script>
+    <script src="_static/scripts/furo.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     </body>

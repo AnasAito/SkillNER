@@ -21,7 +21,10 @@ be plugged into SkillNer. To do so, run the following command:
 
 ::
 
-  $ python -m spacy download en_core_web_sm
+  $ python -m spacy download en_core_web_lg
+
+
+The last installation might take a while to be accomplished since ``en_core_web_lg`` is a bit large (almost 800 MB)
 
 
 .. note::
@@ -55,6 +58,7 @@ Note that if you are using SkillNer for the first time, it might take a while to
 
     # imports
     import spacy
+    import en_core_web_lg
     from spacy.matcher import PhraseMatcher
 
     # load default skills data base
@@ -68,7 +72,7 @@ Note that if you are using SkillNer for the first time, it might take a while to
 .. code:: python
 
     # init params of skill extractor
-    nlp = spacy.load("en_core_web_sm")
+    nlp = en_core_web_lg.load()
     # init skill extractor
     skill_extractor = SkillExtractor(nlp, SKILL_DB, PhraseMatcher)
 

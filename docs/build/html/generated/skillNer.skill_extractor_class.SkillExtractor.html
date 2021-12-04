@@ -5,12 +5,12 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="skillNer.cleaner.Cleaner" href="skillNer.cleaner.Cleaner.html" /><link rel="prev" title="API references" href="../api_refs.html" />
 
-    <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+    <meta name="generator" content="sphinx-4.3.1, furo 2021.11.23"/>
         <title>skillNer.skill_extractor_class.SkillExtractor - skillNer 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=7f0192ddeb2adecfbaa87ffbcf67d16358b30bc1" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=0af69da206d614734f649b27d4cdc2dd6c31f41d" />
     
     
 
@@ -202,7 +202,7 @@
 <h1>skillNer.skill_extractor_class.SkillExtractor<a class="headerlink" href="#skillner-skill-extractor-class-skillextractor" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="skillNer.skill_extractor_class.SkillExtractor">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">skillNer.skill_extractor_class.</span></span><span class="sig-name descname"><span class="pre">SkillExtractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nlp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skills_db</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phraseMatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tranlsator_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillNer.skill_extractor_class.SkillExtractor" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">skillNer.skill_extractor_class.</span></span><span class="sig-name descname"><span class="pre">SkillExtractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nlp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skills_db</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phraseMatcher</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tranlsator_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillNer.skill_extractor_class.SkillExtractor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Main class to annotate skills in a given text and visualize them.</p>
 <p>Constructor of the class.</p>
 <dl class="field-list simple">
@@ -253,7 +253,7 @@
 </table></div>
 <dl class="py method">
 <dt class="sig sig-object py" id="skillNer.skill_extractor_class.SkillExtractor.annotate">
-<span class="sig-name descname"><span class="pre">annotate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tresh</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#skillNer.skill_extractor_class.SkillExtractor.annotate" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">annotate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tresh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#skillNer.skill_extractor_class.SkillExtractor.annotate" title="Permalink to this definition">¶</a></dt>
 <dd><p>To annotate a given text and thereby extract skills from it.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -304,7 +304,7 @@
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="skillNer.skill_extractor_class.SkillExtractor.display">
-<span class="sig-name descname"><span class="pre">display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillNer.skill_extractor_class.SkillExtractor.display" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillNer.skill_extractor_class.SkillExtractor.display" title="Permalink to this definition">¶</a></dt>
 <dd><p>To display the annotated skills.
 This method uses built-in classes of spacy to render annotated text, namely <cite>displacy</cite>.</p>
 <dl class="field-list simple">
@@ -350,11 +350,9 @@ This method uses built-in classes of spacy to render annotated text, namely <cit
 
         <div class="related-information">
               Copyright &#169; 2021, Anas AIT AOMAR &amp; Badr MOUFAD |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
-            <a class="muted-link" href="../_sources/generated/skillNer.skill_extractor_class.SkillExtractor.rst.txt"
+          Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            | <a class="muted-link" href="../_sources/generated/skillNer.skill_extractor_class.SkillExtractor.rst.txt"
                rel="nofollow">
               Show Source
             </a>
@@ -372,7 +370,7 @@ This method uses built-in classes of spacy to render annotated text, namely <cit
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     </body>
