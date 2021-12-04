@@ -1,4 +1,4 @@
-name: insert-text-file
+name: update-documentation
 on: [push]
 jobs:
   build:
