@@ -328,7 +328,8 @@ class SkillsGetter:
 
         for match_id, start, end in matcher(doc):
             id_ = matcher.vocab.strings[match_id]
-
+            # handle skill in the end of phrase
+            start = start if start < len(text_obj) else start - 1
             if text_obj[start].is_matchable:
                 skills.append({'skill_id': id_+'_lowSurf',
                                'doc_node_value': str(doc[start:end]),
