@@ -117,7 +117,9 @@ class Utils:
 
     def retain(self, text_obj, span, skill_id, sk_look, corpus):
         """ add doc here  """
-        real_id, type_ = sk_look[skill_id].split('_')
+        # assume last str to be type after splitting by '_' (e.g. skill_name_oneToken -> "skill_name" and "oneToken")
+        split_by_under = sk_look[skill_id].split('_')
+        real_id, type_ = "_".join(split_by_under[:-1]), split_by_under[-1]
 
         # get skill len
         len_ = self.skills_db[real_id]['skill_len']
