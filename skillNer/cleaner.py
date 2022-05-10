@@ -178,7 +178,7 @@ def remove_extra_space(
 
 
 # gather all cleaning functions in a dict
-dict_cleaning_functions = dict_cleaning_functions = {
+dict_cleaning_functions = {
     "remove_punctuation": remove_punctuation,
     "remove_redundant": remove_redundant,
     "stem_text": stem_text,
