@@ -33,34 +33,36 @@ In this tutorial, the skill list from EmPath Proficiency Library (EPL) will be u
    * `fetch_raw_skill_list()`: method to load and return the json skill list created in Step 1
    * `_get_abbr()`: method to extract abbreviation information from a skill dict in the json records; returns an empty string if such field is not provided
    * All other modularized methods can be overridden if needed; e.g. `EPLSkillProcessor` implements a slightly different version of `_add_initial_high_low_surfaces_forms`
-4. Once the subclass is created, test the code out with the following snippet (very similar to the [README.md](/README.md)):
-    ```python
-    import en_core_web_lg
+   * Once the subclass is created, test the code out with the following snippet (very similar to the [README.md](/README.md)):
+       ```python
+       import en_core_web_lg
     
-    from skills_processor.preprocess_skills import EPLSkillProcessor
-    from spacy.matcher import PhraseMatcher
-    from skillNer.skill_extractor_class import SkillExtractor
+       from skills_processor.preprocess_skills import EPLSkillProcessor
+       from spacy.matcher import PhraseMatcher
+       from skillNer.skill_extractor_class import SkillExtractor
 
-    # instantiate processor based on the skill list to use
-    esp = EPLSkillProcessor()
-    skill_processed = esp.generate_final_skill_list()
+       # instantiate processor based on the skill list to use
+       skill_processed = EPLSkillProcessor().generate_final_skill_list()
 
-    # init params of skill extractor
-    nlp = en_core_web_lg.load()
+       # init params of skill extractor
+       nlp = en_core_web_lg.load()
 
-    # init skill extractor
-    skill_extractor = SkillExtractor(nlp, skill_processed, PhraseMatcher)
+       # init skill extractor
+       skill_extractor = SkillExtractor(nlp, skill_processed, PhraseMatcher)
 
-    # extract skills from job_description
-    job_description = """
-     have experience with Python. and have the initiative to take ownership. 
-     familiarity with REST framework. experience implementing APIs. 
-     Familiar with Agile Development. Experience with Web Development. 
-     Comfortable working in a team.
-     """
+       # extract skills from job_description
+       job_description = """
+        have experience with Python. and have the initiative to take ownership. 
+        familiarity with REST framework. experience implementing APIs. 
+        Familiar with Agile Development. Experience with Web Development. 
+        Comfortable working in a team.
+        """
 
-    annotations = skill_extractor.annotate(job_description)
-    ```
+       annotations = skill_extractor.annotate(job_description)
+       ```
+      When `EPLSkillProcessor().generate_final_skill_list()` is called, it will
+      1. first attempts to load the final processed list from [/skill_data/EPL](/skill_data/EPL), and 
+      2. if the file or dir doesn't exist (or if `esp.generate_final_skill_list(regenerate=True)`), it will automatically retrieve the raw skill json and run the preprocessing pipeline to return a final processed list (EMSI takes 2-4 minutes and EPL less than 1 min). 
 
 # Directory Structures
 
