@@ -7,6 +7,7 @@ from posixpath import dirname
 # my packs
 from skillNer.network.remote_db import RemoteBucket
 
+# TODO needs to be updated to accommodate custom skill lists with different skill types
 # mapping skill and color
 SKILL_TO_COLOR = {
     'Hard Skill': '#818CF8',
@@ -14,6 +15,7 @@ SKILL_TO_COLOR = {
     'Certification': "#552448"
 }
 
+# TODO needs to be updated to accommodate custom skill lists with different skill types
 # mapping skill and color tail
 SKILL_TO_COLOR_TAILWIND = {
     'Hard Skill': 'red-500',
