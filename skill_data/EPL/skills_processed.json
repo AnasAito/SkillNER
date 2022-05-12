@@ -1,0 +1,2162 @@
+{
+    "tmwrkepl": {
+        "skill_name": "Working as a Team",
+        "skill_type": "Leadership",
+        "skill_cleaned": "working as a team",
+        "skill_len": 4,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "work as a team",
+        "skill_lemmed": "work as a team"
+    },
+    "designthepl": {
+        "skill_name": "Design Thinking Process",
+        "skill_type": "Leadership",
+        "skill_cleaned": "design thinking process",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "design think process",
+        "skill_lemmed": "design thinking process"
+    },
+    "Couchbaseepl": {
+        "skill_name": "Couchbase",
+        "skill_type": "Technology",
+        "skill_cleaned": "couchbase",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "couchbas",
+        "skill_lemmed": "couchbase"
+    },
+    "deeplepl": {
+        "skill_name": "DeepLearning",
+        "skill_type": "Technology",
+        "skill_cleaned": "deeplearning",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "deeplearn",
+        "skill_lemmed": "deeplearne"
+    },
+    "DecisionMakingepl": {
+        "skill_name": "Decision Making",
+        "skill_type": "Leadership",
+        "skill_cleaned": "decision making",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "decis make",
+        "skill_lemmed": "decision make"
+    },
+    "accountmanepl": {
+        "skill_name": "Accounts Management",
+        "skill_type": "Project Management",
+        "skill_cleaned": "accounts management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "account manag",
+        "skill_lemmed": "account management"
+    },
+    "Javaepl": {
+        "skill_name": "Java",
+        "skill_type": "Technology",
+        "skill_cleaned": "java",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "java",
+        "skill_lemmed": "java"
+    },
+    "doc_manepl": {
+        "skill_name": "Document Management",
+        "skill_type": "Business",
+        "skill_cleaned": "document management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "document manag",
+        "skill_lemmed": "document management"
+    },
+    "ContentManagementepl": {
+        "skill_name": "Content Management",
+        "skill_type": "Business",
+        "skill_cleaned": "content management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "content manag",
+        "skill_lemmed": "content management"
+    },
+    "ScaledAgileFrameworkepl": {
+        "skill_name": "Scaled Agile Framework",
+        "skill_type": "Product",
+        "skill_cleaned": "scaled agile framework",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "scale agil framework",
+        "skill_lemmed": "scale agile framework"
+    },
+    "HTML(HypertextMarkupLanguage)epl": {
+        "skill_name": "HTML (Hypertext Markup Language)",
+        "skill_type": "Technology",
+        "skill_cleaned": "html",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "html",
+        "skill_lemmed": "html"
+    },
+    "SonarQubeepl": {
+        "skill_name": "SonarQube",
+        "skill_type": "Technology",
+        "skill_cleaned": "sonarqube",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "sonarqub",
+        "skill_lemmed": "sonarqube"
+    },
+    "InformationManagementepl": {
+        "skill_name": "Information Management",
+        "skill_type": "Technology",
+        "skill_cleaned": "information management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "inform manag",
+        "skill_lemmed": "information management"
+    },
+    "presentationsepl": {
+        "skill_name": "Effective Presentations",
+        "skill_type": "Business",
+        "skill_cleaned": "effective presentations",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "effect present",
+        "skill_lemmed": "effective presentation"
+    },
+    "sales_channelsepl": {
+        "skill_name": "Sales Channels",
+        "skill_type": "Sales",
+        "skill_cleaned": "sales channels",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "sale channel",
+        "skill_lemmed": "sale channel"
+    },
+    "microsepl": {
+        "skill_name": "MIcroservices Development",
+        "skill_type": "Technology",
+        "skill_cleaned": "microservices development",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "microservic develop",
+        "skill_lemmed": "microservice development"
+    },
+    "legalepl": {
+        "skill_name": "Legal Function",
+        "skill_type": "Business",
+        "skill_cleaned": "legal function",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "legal function",
+        "skill_lemmed": "legal function"
+    },
+    "kubernetepl": {
+        "skill_name": "Kubernetes Platform",
+        "skill_type": "Technology",
+        "skill_cleaned": "kubernetes platform",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "kubernet platform",
+        "skill_lemmed": "kubernete platform"
+    },
+    "ELKepl": {
+        "skill_name": "ELK",
+        "skill_type": "Technology",
+        "skill_cleaned": "elk",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "elk",
+        "skill_lemmed": "elk"
+    },
+    "neg_managementepl": {
+        "skill_name": "Negotiation Management",
+        "skill_type": "Sales",
+        "skill_cleaned": "negotiation management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "negoti manag",
+        "skill_lemmed": "negotiation management"
+    },
+    "DataArchitectureepl": {
+        "skill_name": "Data Architecture",
+        "skill_type": "Data Analysis",
+        "skill_cleaned": "data architecture",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "data architectur",
+        "skill_lemmed": "datum architecture"
+    },
+    "tableauepl": {
+        "skill_name": "tableau desktop",
+        "skill_type": "Technology",
+        "skill_cleaned": "tableau desktop",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "tableau desktop",
+        "skill_lemmed": "tableau desktop"
+    },
+    "finreportepl": {
+        "skill_name": "Financial Reporting",
+        "skill_type": "Business",
+        "skill_cleaned": "financial reporting",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "financi report",
+        "skill_lemmed": "financial reporting"
+    },
+    "IoTConnectivity(InternetofThings)epl": {
+        "skill_name": "IoT Connectivity (Internet of Things)",
+        "skill_type": "Technology",
+        "skill_cleaned": "iot connectivity",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "iot connect",
+        "skill_lemmed": "iot connectivity"
+    },
+    "gitepl": {
+        "skill_name": "Git and Github",
+        "skill_type": "Technology",
+        "skill_cleaned": "git and github",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "git and github",
+        "skill_lemmed": "git and github"
+    },
+    "Zookeeperepl": {
+        "skill_name": "Zookeeper",
+        "skill_type": "Technology",
+        "skill_cleaned": "zookeeper",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "zookeep",
+        "skill_lemmed": "zookeeper"
+    },
+    "TechnologyArchitectureepl": {
+        "skill_name": "Technology Architecture",
+        "skill_type": "Technology",
+        "skill_cleaned": "technology architecture",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "technolog architectur",
+        "skill_lemmed": "technology architecture"
+    },
+    "retaining_customersepl": {
+        "skill_name": "Retaining Customers",
+        "skill_type": "Sales",
+        "skill_cleaned": "retaining customers",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "retain custom",
+        "skill_lemmed": "retain customer"
+    },
+    "DatabaseStructuresepl": {
+        "skill_name": "Database Structures",
+        "skill_type": "Data Analysis",
+        "skill_cleaned": "database structures",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "databas structur",
+        "skill_lemmed": "database structure"
+    },
+    "outsourcing_empathepl": {
+        "skill_name": "Outsourcing",
+        "skill_type": "project Management",
+        "skill_cleaned": "outsourcing",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "outsourc",
+        "skill_lemmed": "outsource"
+    },
+    "Alignmentepl": {
+        "skill_name": "Alignment",
+        "skill_type": "Leadership",
+        "skill_cleaned": "alignment",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "align",
+        "skill_lemmed": "alignment"
+    },
+    "nodeepl": {
+        "skill_name": "Node.JS development",
+        "skill_type": "Technology",
+        "skill_cleaned": "node js development",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "node js develop",
+        "skill_lemmed": "node js development"
+    },
+    "busprocmodelingepl": {
+        "skill_name": "Business Process Modeling",
+        "skill_type": "Business",
+        "skill_cleaned": "business process modeling",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "busi process model",
+        "skill_lemmed": "business process model"
+    },
+    "agileepl": {
+        "skill_name": "Agile Development Practices",
+        "skill_type": "Product",
+        "skill_cleaned": "agile development practices",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "agil develop practic",
+        "skill_lemmed": "agile development practice"
+    },
+    "xmlepl": {
+        "skill_name": "XML development",
+        "skill_type": "Technology",
+        "skill_cleaned": "xml development",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "xml develop",
+        "skill_lemmed": "xml development"
+    },
+    "rca_empathepl": {
+        "skill_name": "Root Cause Analysis",
+        "skill_type": "Leadership",
+        "skill_cleaned": "root cause analysis",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "root caus analysi",
+        "skill_lemmed": "root cause analysis"
+    },
+    "client_managementepl": {
+        "skill_name": "Client Management",
+        "skill_type": "Sales",
+        "skill_cleaned": "client management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "client manag",
+        "skill_lemmed": "client management"
+    },
+    "busrelateepl": {
+        "skill_name": "Business Relationships",
+        "skill_type": "Sales",
+        "skill_cleaned": "business relationships",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "busi relationship",
+        "skill_lemmed": "business relationship"
+    },
+    "DHTMLepl": {
+        "skill_name": "DHTML",
+        "skill_type": "Technology",
+        "skill_cleaned": "dhtml",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "dhtml",
+        "skill_lemmed": "dhtml"
+    },
+    "linuxepl": {
+        "skill_name": "Linux OS",
+        "skill_type": "Technology",
+        "skill_cleaned": "linux os",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "linux os",
+        "skill_lemmed": "linux os"
+    },
+    "sales_proposalsepl": {
+        "skill_name": "Sales Proposals and Presentations",
+        "skill_type": "Business",
+        "skill_cleaned": "sales proposals and presentations",
+        "skill_len": 4,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "sale propos and present",
+        "skill_lemmed": "sale proposal and presentation"
+    },
+    "compdifepl": {
+        "skill_name": "Competitive Differentiation",
+        "skill_type": "Marketing",
+        "skill_cleaned": "competitive differentiation",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "competit differenti",
+        "skill_lemmed": "competitive differentiation"
+    },
+    "OPENSTACKepl": {
+        "skill_name": "OPENSTACK",
+        "skill_type": "Technology",
+        "skill_cleaned": "openstack",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "openstack",
+        "skill_lemmed": "openstack"
+    },
+    "buscaseepl": {
+        "skill_name": "Business Case Management",
+        "skill_type": "Business",
+        "skill_cleaned": "business case management",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "busi case manag",
+        "skill_lemmed": "business case management"
+    },
+    "RESTepl": {
+        "skill_name": "REST",
+        "skill_type": "Technology",
+        "skill_cleaned": "rest",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "rest",
+        "skill_lemmed": "rest"
+    },
+    "logistics_empathepl": {
+        "skill_name": "Logistics",
+        "skill_type": "Business",
+        "skill_cleaned": "logistics",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "logist",
+        "skill_lemmed": "logistic"
+    },
+    "JSONepl": {
+        "skill_name": "JSON",
+        "skill_type": "Technology",
+        "skill_cleaned": "json",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "json",
+        "skill_lemmed": "json"
+    },
+    "PostreSQLepl": {
+        "skill_name": "PostreSQL",
+        "skill_type": "Technology",
+        "skill_cleaned": "postresql",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "postresql",
+        "skill_lemmed": "postresql"
+    },
+    "dockerepl": {
+        "skill_name": "Docker Development",
+        "skill_type": "Technology",
+        "skill_cleaned": "docker development",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "docker develop",
+        "skill_lemmed": "docker development"
+    },
+    "Kafkaepl": {
+        "skill_name": "Kafka",
+        "skill_type": "Technology",
+        "skill_cleaned": "kafka",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "kafka",
+        "skill_lemmed": "kafka"
+    },
+    "Cucumberepl": {
+        "skill_name": "Cucumber",
+        "skill_type": "Technology",
+        "skill_cleaned": "cucumber",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "cucumb",
+        "skill_lemmed": "cucumber"
+    },
+    "business_intelligenceepl": {
+        "skill_name": "Business Intelligence",
+        "skill_type": "Business",
+        "skill_cleaned": "business intelligence",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "busi intellig",
+        "skill_lemmed": "business intelligence"
+    },
+    "CascadingStyleSheets(CSS)epl": {
+        "skill_name": "Cascading Style Sheets (CSS)",
+        "skill_type": "Technology",
+        "skill_cleaned": "cascading style sheets",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "CSS",
+        "skill_stemmed": "cascad style sheet",
+        "skill_lemmed": "cascade style sheet"
+    },
+    "WebServicesepl": {
+        "skill_name": "Web Services",
+        "skill_type": "Technology",
+        "skill_cleaned": "web services",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "web servic",
+        "skill_lemmed": "web service"
+    },
+    "jiraepl": {
+        "skill_name": "Jira Software",
+        "skill_type": "Technology",
+        "skill_cleaned": "jira software",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "jira softwar",
+        "skill_lemmed": "jira software"
+    },
+    "cloudepl": {
+        "skill_name": "Cloud Computing Management",
+        "skill_type": "Technology",
+        "skill_cleaned": "cloud computing management",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "cloud comput manag",
+        "skill_lemmed": "cloud computing management"
+    },
+    "EquityinTalentepl": {
+        "skill_name": "Equity in Talent",
+        "skill_type": "Leadership",
+        "skill_cleaned": "equity in talent",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "equiti in talent",
+        "skill_lemmed": "equity in talent"
+    },
+    "OracleDatabaseManagementepl": {
+        "skill_name": "Oracle Database Management",
+        "skill_type": "Technology",
+        "skill_cleaned": "oracle database management",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "oracl databas manag",
+        "skill_lemmed": "oracle database management"
+    },
+    "NetworkTopologyepl": {
+        "skill_name": "Network Topology",
+        "skill_type": "\n ",
+        "skill_cleaned": "network topology",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "network topolog",
+        "skill_lemmed": "network topology"
+    },
+    "NetworkServiceOperationsepl": {
+        "skill_name": "Network Service Operations",
+        "skill_type": "Technology",
+        "skill_cleaned": "network service operations",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "network servic oper",
+        "skill_lemmed": "network service operation"
+    },
+    "leadepl": {
+        "skill_name": "Leadership",
+        "skill_type": "Leadership",
+        "skill_cleaned": "leadership",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "leadership",
+        "skill_lemmed": "leadership"
+    },
+    "cybersec1epl": {
+        "skill_name": "CyberSecurity Analysis",
+        "skill_type": "Technology",
+        "skill_cleaned": "cybersecurity analysis",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "cybersecur analysi",
+        "skill_lemmed": "cybersecurity analysis"
+    },
+    "account_methodsepl": {
+        "skill_name": "Accounting Methods",
+        "skill_type": "Accounting",
+        "skill_cleaned": "accounting methods",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "account method",
+        "skill_lemmed": "accounting method"
+    },
+    "taking_ownershipepl": {
+        "skill_name": "Taking Ownership",
+        "skill_type": "Business",
+        "skill_cleaned": "taking ownership",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "take ownership",
+        "skill_lemmed": "take ownership"
+    },
+    "jenkinsepl": {
+        "skill_name": "Jenkins implementation",
+        "skill_type": "Technology",
+        "skill_cleaned": "jenkins implementation",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "jenkin implement",
+        "skill_lemmed": "jenkins implementation"
+    },
+    "ApacheCXFepl": {
+        "skill_name": "Apache CXF",
+        "skill_type": "Technology",
+        "skill_cleaned": "apache cxf",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "apach cxf",
+        "skill_lemmed": "apache cxf"
+    },
+    "PC/WorkstationHardwareepl": {
+        "skill_name": "PC/Workstation Hardware",
+        "skill_type": "Technology",
+        "skill_cleaned": "pc workstation hardware",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "pc workstat hardwar",
+        "skill_lemmed": "pc workstation hardware"
+    },
+    "techarcdesignepl": {
+        "skill_name": "Technology Architecture Design and Implementation",
+        "skill_type": "Technology",
+        "skill_cleaned": "technology architecture design and implementation",
+        "skill_len": 5,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "technolog architectur design and implement",
+        "skill_lemmed": "technology architecture design and implementation"
+    },
+    "infsecepl": {
+        "skill_name": "Information Security Practices",
+        "skill_type": "Data Analysis",
+        "skill_cleaned": "information security practices",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "inform secur practic",
+        "skill_lemmed": "information security practice"
+    },
+    "Gerritepl": {
+        "skill_name": "Gerritpl",
+        "skill_type": "Technology",
+        "skill_cleaned": "gerritpl",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "gerritpl",
+        "skill_lemmed": "gerritpl"
+    },
+    "investepl": {
+        "skill_name": "Investment Management",
+        "skill_type": "Business",
+        "skill_cleaned": "investment management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "invest manag",
+        "skill_lemmed": "investment management"
+    },
+    "accounts_receivableepl": {
+        "skill_name": "Accounts Receivable",
+        "skill_type": "Accounting",
+        "skill_cleaned": "accounts receivable",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "account receiv",
+        "skill_lemmed": "account receivable"
+    },
+    "angularepl": {
+        "skill_name": "Angular Framework",
+        "skill_type": "Technology",
+        "skill_cleaned": "angular framework",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "angular framework",
+        "skill_lemmed": "angular framework"
+    },
+    "networkepl": {
+        "skill_name": "Internet Security",
+        "skill_type": "Technology",
+        "skill_cleaned": "internet security",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "internet secur",
+        "skill_lemmed": "internet security"
+    },
+    "custfocusepl": {
+        "skill_name": "Focus on the Customer",
+        "skill_type": "Leadership",
+        "skill_cleaned": "focus on the customer",
+        "skill_len": 4,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "focu on the custom",
+        "skill_lemmed": "focus on the customer"
+    },
+    "sdlc_empathepl": {
+        "skill_name": "Software Development Life Cycle (SDLC)",
+        "skill_type": "Technology",
+        "skill_cleaned": "software development life cycle",
+        "skill_len": 4,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "softwar develop life cycl",
+        "skill_lemmed": "software development life cycle"
+    },
+    "sales_forceastingepl": {
+        "skill_name": "Sales Forecasting",
+        "skill_type": "Sales",
+        "skill_cleaned": "sales forecasting",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "sale forecast",
+        "skill_lemmed": "sale forecasting"
+    },
+    "aiepl": {
+        "skill_name": "Artificial Intelligence implementation",
+        "skill_type": "Technology",
+        "skill_cleaned": "artificial intelligence implementation",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "artifici intellig implement",
+        "skill_lemmed": "artificial intelligence implementation"
+    },
+    "Seleniumepl": {
+        "skill_name": "Selenium",
+        "skill_type": "Technology",
+        "skill_cleaned": "selenium",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "selenium",
+        "skill_lemmed": "selenium"
+    },
+    "AutomaticCallDistributionepl": {
+        "skill_name": "Automatic Call Distribution",
+        "skill_type": "Telephony",
+        "skill_cleaned": "automatic call distribution",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "automat call distribut",
+        "skill_lemmed": "automatic call distribution"
+    },
+    "FraudManagementepl": {
+        "skill_name": "Fraud Management",
+        "skill_type": "Technology",
+        "skill_cleaned": "fraud management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "fraud manag",
+        "skill_lemmed": "fraud management"
+    },
+    "employee_relationsepl": {
+        "skill_name": "Employee Relations",
+        "skill_type": "Business",
+        "skill_cleaned": "employee relations",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "employe relat",
+        "skill_lemmed": "employee relation"
+    },
+    "CapacityPlanningepl": {
+        "skill_name": "Capacity Planning",
+        "skill_type": "\n Business",
+        "skill_cleaned": "capacity planning",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "capac plan",
+        "skill_lemmed": "capacity planning"
+    },
+    "IBMCloudepl": {
+        "skill_name": "IBM Cloud",
+        "skill_type": "Technology",
+        "skill_cleaned": "ibm cloud",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "ibm cloud",
+        "skill_lemmed": "ibm cloud"
+    },
+    "DOTNETepl": {
+        "skill_name": "DOT NET",
+        "skill_type": "Technology",
+        "skill_cleaned": "dot net",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "dot net",
+        "skill_lemmed": "dot net"
+    },
+    "softwareqaepl": {
+        "skill_name": "Software Quality Assurance Tools",
+        "skill_type": "Technology",
+        "skill_cleaned": "software quality assurance tools",
+        "skill_len": 4,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "softwar qualiti assur tool",
+        "skill_lemmed": "software quality assurance tool"
+    },
+    "fin_account_systemsepl": {
+        "skill_name": "Financial and Accounting Systems",
+        "skill_type": "Business",
+        "skill_cleaned": "financial and accounting systems",
+        "skill_len": 4,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "financi and account system",
+        "skill_lemmed": "financial and accounting system"
+    },
+    "emergtechepl": {
+        "skill_name": "Technology Trends",
+        "skill_type": "Leadership",
+        "skill_cleaned": "technology trends",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "technolog trend",
+        "skill_lemmed": "technology trend"
+    },
+    "javascriptepl": {
+        "skill_name": "Javascript development",
+        "skill_type": "Technology",
+        "skill_cleaned": "javascript development",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "javascript develop",
+        "skill_lemmed": "javascript development"
+    },
+    "cust_servepl": {
+        "skill_name": "Customer Service",
+        "skill_type": "Sales",
+        "skill_cleaned": "customer service",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "custom servic",
+        "skill_lemmed": "customer service"
+    },
+    "sales_prospectingepl": {
+        "skill_name": "Sales Prospecting",
+        "skill_type": "Sales",
+        "skill_cleaned": "sales prospecting",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "sale prospect",
+        "skill_lemmed": "sale prospecting"
+    },
+    "data_govepl": {
+        "skill_name": "Data Governance",
+        "skill_type": "Data Analysis",
+        "skill_cleaned": "data governance",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "data govern",
+        "skill_lemmed": "datum governance"
+    },
+    "DataScienceepl": {
+        "skill_name": "Data Science",
+        "skill_type": "Technology",
+        "skill_cleaned": "data science",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "data scienc",
+        "skill_lemmed": "data science"
+    },
+    "detailepl": {
+        "skill_name": "Attention to Detail",
+        "skill_type": "Project Management",
+        "skill_cleaned": "attention to detail",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "attent to detail",
+        "skill_lemmed": "attention to detail"
+    },
+    "pythonepl": {
+        "skill_name": "Python Development",
+        "skill_type": "Technology",
+        "skill_cleaned": "python development",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "python develop",
+        "skill_lemmed": "python development"
+    },
+    "sdnepl": {
+        "skill_name": "SDN (Software Defined Networking)",
+        "skill_type": "Technology",
+        "skill_cleaned": "sdn",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "sdn",
+        "skill_lemmed": "sdn"
+    },
+    "InternationalFinancialReportingStandardsepl": {
+        "skill_name": "International Financial Reporting Standards",
+        "skill_type": "Technology",
+        "skill_cleaned": "international financial reporting standards",
+        "skill_len": 4,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "intern financi report standard",
+        "skill_lemmed": "international financial reporting standard"
+    },
+    "graphic_vizepl": {
+        "skill_name": "Graphic Visualization",
+        "skill_type": "Business",
+        "skill_cleaned": "graphic visualization",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "graphic visual",
+        "skill_lemmed": "graphic visualization"
+    },
+    "MECepl": {
+        "skill_name": "MEC",
+        "skill_type": "Technology",
+        "skill_cleaned": "mec",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "mec",
+        "skill_lemmed": "mec"
+    },
+    "ITSystemsManagementepl": {
+        "skill_name": "IT Systems Management",
+        "skill_type": "Technology",
+        "skill_cleaned": "it systems management",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "it system manag",
+        "skill_lemmed": "it system management"
+    },
+    "bus_statisticsepl": {
+        "skill_name": "Business Statistics",
+        "skill_type": "data analysis",
+        "skill_cleaned": "business statistics",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "busi statist",
+        "skill_lemmed": "business statistic"
+    },
+    "GovernmentAffairsRegulatoryEnvironmentepl": {
+        "skill_name": "Government Affairs Regulatory Environment",
+        "skill_type": "Technology",
+        "skill_cleaned": "government affairs regulatory environment",
+        "skill_len": 4,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "govern affair regulatori environ",
+        "skill_lemmed": "government affair regulatory environment"
+    },
+    "infosecarchepl": {
+        "skill_name": "Information Security Architecture and Design",
+        "skill_type": "Technology",
+        "skill_cleaned": "information security architecture and design",
+        "skill_len": 5,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "inform secur architectur and design",
+        "skill_lemmed": "information security architecture and design"
+    },
+    "platarchepl": {
+        "skill_name": "Platform and Solution Architecture",
+        "skill_type": "Technology",
+        "skill_cleaned": "platform and solution architecture",
+        "skill_len": 4,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "platform and solut architectur",
+        "skill_lemmed": "platform and solution architecture"
+    },
+    "mongoepl": {
+        "skill_name": "MongDB development",
+        "skill_type": "Technology",
+        "skill_cleaned": "mongdb development",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "mongdb develop",
+        "skill_lemmed": "mongdb development"
+    },
+    "CustomerSegmentationepl": {
+        "skill_name": "Customer Segmentation",
+        "skill_type": "Technology",
+        "skill_cleaned": "customer segmentation",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "custom segment",
+        "skill_lemmed": "customer segmentation"
+    },
+    "mlepl": {
+        "skill_name": "Machine Learning development",
+        "skill_type": "Technology",
+        "skill_cleaned": "machine learning development",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "machin learn develop",
+        "skill_lemmed": "machine learning development"
+    },
+    "decisionsepl": {
+        "skill_name": "Data Based Decision Making",
+        "skill_type": "SEL",
+        "skill_cleaned": "data based decision making",
+        "skill_len": 4,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "data base decis make",
+        "skill_lemmed": "datum base decision make"
+    },
+    "ProductDevelopmentStrategyepl": {
+        "skill_name": "Product Development Strategy",
+        "skill_type": "Product",
+        "skill_cleaned": "product development strategy",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "product develop strategi",
+        "skill_lemmed": "product development strategy"
+    },
+    "perlepl": {
+        "skill_name": "Perl Development",
+        "skill_type": "Technology",
+        "skill_cleaned": "perl development",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "perl develop",
+        "skill_lemmed": "perl development"
+    },
+    "AgileScoping(ProductOwner)epl": {
+        "skill_name": "Agile Scoping (Product Owner)",
+        "skill_type": "Product",
+        "skill_cleaned": "agile scoping",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "agil scope",
+        "skill_lemmed": "agile scoping"
+    },
+    "kerasepl": {
+        "skill_name": "keras",
+        "skill_type": "Technology",
+        "skill_cleaned": "keras",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "kera",
+        "skill_lemmed": "keras"
+    },
+    "Prometheusepl": {
+        "skill_name": "Prometheus",
+        "skill_type": "Technology",
+        "skill_cleaned": "prometheus",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "prometheu",
+        "skill_lemmed": "prometheus"
+    },
+    "azureepl": {
+        "skill_name": "Microsoft Azure Management",
+        "skill_type": "Technology",
+        "skill_cleaned": "microsoft azure management",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "microsoft azur manag",
+        "skill_lemmed": "microsoft azure management"
+    },
+    "Swaggerepl": {
+        "skill_name": "Swagger",
+        "skill_type": "Technology",
+        "skill_cleaned": "swagger",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "swagger",
+        "skill_lemmed": "swagger"
+    },
+    "customer_supportepl": {
+        "skill_name": "Customer Support",
+        "skill_type": "Sales",
+        "skill_cleaned": "customer support",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "custom support",
+        "skill_lemmed": "customer support"
+    },
+    "riskepl": {
+        "skill_name": "Exposure Management",
+        "skill_type": "Leadership",
+        "skill_cleaned": "exposure management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "exposur manag",
+        "skill_lemmed": "exposure management"
+    },
+    "Ethernetepl": {
+        "skill_name": "Ethernet",
+        "skill_type": "Technology",
+        "skill_cleaned": "ethernet",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "ethernet",
+        "skill_lemmed": "ethernet"
+    },
+    "SpringAOPepl": {
+        "skill_name": "Spring AOP",
+        "skill_type": "Technology",
+        "skill_cleaned": "spring aop",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "spring aop",
+        "skill_lemmed": "spring aop"
+    },
+    "SecurityManagementandDesignepl": {
+        "skill_name": "Security Management and Design",
+        "skill_type": "Technology",
+        "skill_cleaned": "security management and design",
+        "skill_len": 4,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "secur manag and design",
+        "skill_lemmed": "security management and design"
+    },
+    "dataprepepl": {
+        "skill_name": "Data Preparation and Presentation",
+        "skill_type": "Data analysis",
+        "skill_cleaned": "data preparation and presentation",
+        "skill_len": 4,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "data prepar and present",
+        "skill_lemmed": "data preparation and presentation"
+    },
+    "5Gepl": {
+        "skill_name": "5G",
+        "skill_type": "Technology",
+        "skill_cleaned": "5g",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "5g",
+        "skill_lemmed": "5 g"
+    },
+    "ContinuousIntegration/Deliveryepl": {
+        "skill_name": "Continuous Integration / Delivery",
+        "skill_type": "Technology",
+        "skill_cleaned": "continuous integration   delivery",
+        "skill_len": 5,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "continu integr   deliveri",
+        "skill_lemmed": "continuous integration    delivery"
+    },
+    "PMepl": {
+        "skill_name": "Project Management Capabilites",
+        "skill_type": "Project Management",
+        "skill_cleaned": "project management capabilites",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "project manag capabilit",
+        "skill_lemmed": "project management capabilite"
+    },
+    "Nexusepl": {
+        "skill_name": "Nexus",
+        "skill_type": "Technology",
+        "skill_cleaned": "nexus",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "nexu",
+        "skill_lemmed": "nexus"
+    },
+    "PowerBIepl": {
+        "skill_name": "Power BI",
+        "skill_type": "Technology",
+        "skill_cleaned": "power bi",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "power bi",
+        "skill_lemmed": "power bi"
+    },
+    "datavizepl": {
+        "skill_name": "Data Visualization Techniques",
+        "skill_type": "Technology",
+        "skill_cleaned": "data visualization techniques",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "data visual techniqu",
+        "skill_lemmed": "data visualization technique"
+    },
+    "influence_othersepl": {
+        "skill_name": "Influence Others",
+        "skill_type": "Leadership",
+        "skill_cleaned": "influence others",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "influenc other",
+        "skill_lemmed": "influence other"
+    },
+    "cost_accountingepl": {
+        "skill_name": "Cost Accounting",
+        "skill_type": "Business",
+        "skill_cleaned": "cost accounting",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "cost account",
+        "skill_lemmed": "cost accounting"
+    },
+    "TestAutomationFW-Lifecycles&PMepl": {
+        "skill_name": "Test Automation FW-Lifecycles & PM",
+        "skill_type": "Technology",
+        "skill_cleaned": "test automation fw lifecycles & pm",
+        "skill_len": 6,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "test autom fw lifecycl & pm",
+        "skill_lemmed": "test automation fw lifecycle & pm"
+    },
+    "HTTPepl": {
+        "skill_name": "HTTP",
+        "skill_type": "Technology",
+        "skill_cleaned": "http",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "http",
+        "skill_lemmed": "http"
+    },
+    "BitBucketepl": {
+        "skill_name": "BitBucket",
+        "skill_type": "Technology",
+        "skill_cleaned": "bitbucket",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "bitbucket",
+        "skill_lemmed": "bitbucket"
+    },
+    "EnvironmentalEngineering-RealEstateepl": {
+        "skill_name": "Environmental Engineering - Real Estate",
+        "skill_type": "Technology",
+        "skill_cleaned": "environmental engineering   real estate",
+        "skill_len": 6,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "environment engin   real estat",
+        "skill_lemmed": "environmental engineering    real estate"
+    },
+    "srvceexcelepl": {
+        "skill_name": "Customer Service Excellence",
+        "skill_type": "Sales",
+        "skill_cleaned": "customer service excellence",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "custom servic excel",
+        "skill_lemmed": "customer service excellence"
+    },
+    "business_ethicsepl": {
+        "skill_name": "Business Ethics",
+        "skill_type": "leadership",
+        "skill_cleaned": "business ethics",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "busi ethic",
+        "skill_lemmed": "business ethic"
+    },
+    "busdevepl": {
+        "skill_name": "Business Development",
+        "skill_type": "Business",
+        "skill_cleaned": "business development",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "busi develop",
+        "skill_lemmed": "business development"
+    },
+    "commandlineepl": {
+        "skill_name": "Command Line",
+        "skill_type": "Technology",
+        "skill_cleaned": "command line",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "command line",
+        "skill_lemmed": "command line"
+    },
+    "creativity_empathepl": {
+        "skill_name": "Creativity",
+        "skill_type": "Leadership",
+        "skill_cleaned": "creativity",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "creativ",
+        "skill_lemmed": "creativity"
+    },
+    "gaap_empathepl": {
+        "skill_name": "Generally Accepted Accounting Principles (GAAP)",
+        "skill_type": "Accounting",
+        "skill_cleaned": "generally accepted accounting principles",
+        "skill_len": 4,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "gener accept account principl",
+        "skill_lemmed": "generally accept accounting principle"
+    },
+    "op_functionsepl": {
+        "skill_name": "Operational Functions",
+        "skill_type": "Business",
+        "skill_cleaned": "operational functions",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "oper function",
+        "skill_lemmed": "operational function"
+    },
+    "Terraformepl": {
+        "skill_name": "Terraform",
+        "skill_type": "Technology",
+        "skill_cleaned": "terraform",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "terraform",
+        "skill_lemmed": "terraform"
+    },
+    "MicroservicesTechniquesepl": {
+        "skill_name": "Microservices Techniques",
+        "skill_type": "Technology",
+        "skill_cleaned": "microservices techniques",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "microservic techniqu",
+        "skill_lemmed": "microservice technique"
+    },
+    "devopsepl": {
+        "skill_name": "DevOps Management",
+        "skill_type": "Technology",
+        "skill_cleaned": "devops management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "devop manag",
+        "skill_lemmed": "devop management"
+    },
+    "rpaepl": {
+        "skill_name": "Robotic Process Automation",
+        "skill_type": "Technology",
+        "skill_cleaned": "robotic process automation",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "robot process autom",
+        "skill_lemmed": "robotic process automation"
+    },
+    "Estimationpracticesepl": {
+        "skill_name": "Estimation practices",
+        "skill_type": "Product",
+        "skill_cleaned": "estimation practices",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "estim practic",
+        "skill_lemmed": "estimation practice"
+    },
+    "csharpepl": {
+        "skill_name": "C# Development",
+        "skill_type": "Technology",
+        "skill_cleaned": "c# development",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "c# develop",
+        "skill_lemmed": "c # development"
+    },
+    "opmanepl": {
+        "skill_name": "Operations Management",
+        "skill_type": "Leadership",
+        "skill_cleaned": "operations management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "oper manag",
+        "skill_lemmed": "operation management"
+    },
+    "junitepl": {
+        "skill_name": "Junit implementation",
+        "skill_type": "Technology",
+        "skill_cleaned": "junit implementation",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "junit implement",
+        "skill_lemmed": "junit implementation"
+    },
+    "RestAssuredepl": {
+        "skill_name": "Rest Assured",
+        "skill_type": "Technology",
+        "skill_cleaned": "rest assured",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "rest assur",
+        "skill_lemmed": "rest assure"
+    },
+    "facmanepl": {
+        "skill_name": "Manage Facilities",
+        "skill_type": "Project Management",
+        "skill_cleaned": "manage facilities",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "manag facil",
+        "skill_lemmed": "manage facility"
+    },
+    "sparkepl": {
+        "skill_name": "Apache Spark development",
+        "skill_type": "Technology",
+        "skill_cleaned": "apache spark development",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "apach spark develop",
+        "skill_lemmed": "apache spark development"
+    },
+    "manage_processesepl": {
+        "skill_name": "Manage Processes",
+        "skill_type": "Project Management",
+        "skill_cleaned": "manage processes",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "manag process",
+        "skill_lemmed": "manage process"
+    },
+    "CloudComputingArchitectureepl": {
+        "skill_name": "Cloud Computing Architecture",
+        "skill_type": "Technology",
+        "skill_cleaned": "cloud computing architecture",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "cloud comput architectur",
+        "skill_lemmed": "cloud computing architecture"
+    },
+    "audit_empathepl": {
+        "skill_name": "Auditing",
+        "skill_type": "Accounting",
+        "skill_cleaned": "auditing",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "audit",
+        "skill_lemmed": "auditing"
+    },
+    "forecepl": {
+        "skill_name": "Data Forecasting",
+        "skill_type": "data analysis",
+        "skill_cleaned": "data forecasting",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "data forecast",
+        "skill_lemmed": "data forecasting"
+    },
+    "contractmanepl": {
+        "skill_name": "Contract Management",
+        "skill_type": "Accounting",
+        "skill_cleaned": "contract management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "contract manag",
+        "skill_lemmed": "contract management"
+    },
+    "CSS3epl": {
+        "skill_name": "CSS3",
+        "skill_type": "Technology",
+        "skill_cleaned": "css3",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "css3",
+        "skill_lemmed": "css3"
+    },
+    "Train-The-Trainerepl": {
+        "skill_name": "Train-The-Trainer",
+        "skill_type": "Business\n ",
+        "skill_cleaned": "train the trainer",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "train the trainer",
+        "skill_lemmed": "train the trainer"
+    },
+    "APIImplementationepl": {
+        "skill_name": "API Implementation",
+        "skill_type": "Technology",
+        "skill_cleaned": "api implementation",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "api implement",
+        "skill_lemmed": "api implementation"
+    },
+    "trainingdevepl": {
+        "skill_name": "Training Development",
+        "skill_type": "\n ",
+        "skill_cleaned": "training development",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "train develop",
+        "skill_lemmed": "training development"
+    },
+    "RecordRetentionPolicyepl": {
+        "skill_name": "Record Retention Policy",
+        "skill_type": "Technology",
+        "skill_cleaned": "record retention policy",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "record retent polici",
+        "skill_lemmed": "record retention policy"
+    },
+    "Rallyepl": {
+        "skill_name": "Rally",
+        "skill_type": "Technology",
+        "skill_cleaned": "rally",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "ralli",
+        "skill_lemmed": "rally"
+    },
+    "Cepl": {
+        "skill_name": "C",
+        "skill_type": "Technology",
+        "skill_cleaned": "c",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "c",
+        "skill_lemmed": "c"
+    },
+    "EaaSepl": {
+        "skill_name": "EaaS",
+        "skill_type": "Technology",
+        "skill_cleaned": "eaas",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "eaa",
+        "skill_lemmed": "eaas"
+    },
+    "networkinghardwareepl": {
+        "skill_name": "networking hardware",
+        "skill_type": "Technology",
+        "skill_cleaned": "networking hardware",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "network hardwar",
+        "skill_lemmed": "networking hardware"
+    },
+    "ComputerNetworkArchitectureepl": {
+        "skill_name": "Computer Network Architecture",
+        "skill_type": "Technology",
+        "skill_cleaned": "computer network architecture",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "comput network architectur",
+        "skill_lemmed": "computer network architecture"
+    },
+    "TechnologyExpertiseepl": {
+        "skill_name": "Technology Expertise",
+        "skill_type": "Technology",
+        "skill_cleaned": "technology expertise",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "technolog expertis",
+        "skill_lemmed": "technology expertise"
+    },
+    "qualmanagementepl": {
+        "skill_name": "Quality Management",
+        "skill_type": "Project Management",
+        "skill_cleaned": "quality management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "qualiti manag",
+        "skill_lemmed": "quality management"
+    },
+    "OpenShiftepl": {
+        "skill_name": "Open Shift",
+        "skill_type": "Technology",
+        "skill_cleaned": "open shift",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "open shift",
+        "skill_lemmed": "open shift"
+    },
+    "E-mailRoutingandResponseSoftwareepl": {
+        "skill_name": "E-mail Routing and Response Software",
+        "skill_type": "Technology",
+        "skill_cleaned": "e mail routing and response software",
+        "skill_len": 6,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "e mail rout and respons softwar",
+        "skill_lemmed": "e mail routing and response software"
+    },
+    "TrainingLeadership": {
+        "skill_name": "Training Leadership",
+        "skill_type": "Business",
+        "skill_cleaned": "training leadership",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "train leadership",
+        "skill_lemmed": "training leadership"
+    },
+    "DataMiningepl": {
+        "skill_name": "Data Mining",
+        "skill_type": "Technology",
+        "skill_cleaned": "data mining",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "data mine",
+        "skill_lemmed": "data mining"
+    },
+    "mysql1epl": {
+        "skill_name": "MySQL development",
+        "skill_type": "Technology",
+        "skill_cleaned": "mysql development",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "mysql develop",
+        "skill_lemmed": "mysql development"
+    },
+    "ContentStrategyepl": {
+        "skill_name": "Content Strategy",
+        "skill_type": "Technology",
+        "skill_cleaned": "content strategy",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "content strategi",
+        "skill_lemmed": "content strategy"
+    },
+    "Waterfallepl": {
+        "skill_name": "Waterfall",
+        "skill_type": "Technology",
+        "skill_cleaned": "waterfall",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "waterfal",
+        "skill_lemmed": "waterfall"
+    },
+    "ElasticSearch/Kibanaepl": {
+        "skill_name": "ElasticSearch/Kibana",
+        "skill_type": "Technology",
+        "skill_cleaned": "elasticsearch kibana",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "elasticsearch kibana",
+        "skill_lemmed": "elasticsearch kibana"
+    },
+    "devsecopsepl": {
+        "skill_name": "DevSecOps management",
+        "skill_type": "Technology",
+        "skill_cleaned": "devsecops management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "devsecop manag",
+        "skill_lemmed": "devsecop management"
+    },
+    "supplychainmanagementepl": {
+        "skill_name": "Supply Chain Management",
+        "skill_type": "Business",
+        "skill_cleaned": "supply chain management",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "suppli chain manag",
+        "skill_lemmed": "supply chain management"
+    },
+    "WIFIepl": {
+        "skill_name": "WIFI",
+        "skill_type": "Technology",
+        "skill_cleaned": "wifi",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "wifi",
+        "skill_lemmed": "wifi"
+    },
+    "prioritymanagementepl": {
+        "skill_name": "Priority Management",
+        "skill_type": "Project Management",
+        "skill_cleaned": "priority management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "prioriti manag",
+        "skill_lemmed": "priority management"
+    },
+    "Grafanaepl": {
+        "skill_name": "Grafana",
+        "skill_type": "Technology",
+        "skill_cleaned": "grafana",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "grafana",
+        "skill_lemmed": "grafana"
+    },
+    "budget_managementepl": {
+        "skill_name": "Manage a Budget",
+        "skill_type": "Accounting",
+        "skill_cleaned": "manage a budget",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "manag a budget",
+        "skill_lemmed": "manage a budget"
+    },
+    "SalaryPlanningepl": {
+        "skill_name": "Salary Planning",
+        "skill_type": "Technology",
+        "skill_cleaned": "salary planning",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "salari plan",
+        "skill_lemmed": "salary planning"
+    },
+    "ProblemManagementepl": {
+        "skill_name": "Problem Management",
+        "skill_type": "\n ",
+        "skill_cleaned": "problem management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "problem manag",
+        "skill_lemmed": "problem management"
+    },
+    "fin_forecast_modelingepl": {
+        "skill_name": "Financial Forecasting and Modeling",
+        "skill_type": "Business",
+        "skill_cleaned": "financial forecasting and modeling",
+        "skill_len": 4,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "financi forecast and model",
+        "skill_lemmed": "financial forecasting and modeling"
+    },
+    "cassandraepl": {
+        "skill_name": "Apache cassandra implementation",
+        "skill_type": "Technology",
+        "skill_cleaned": "apache cassandra implementation",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "apach cassandra implement",
+        "skill_lemmed": "apache cassandra implementation"
+    },
+    "Camundaepl": {
+        "skill_name": "Camunda",
+        "skill_type": "Technology",
+        "skill_cleaned": "camunda",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "camunda",
+        "skill_lemmed": "camunda"
+    },
+    "PL/SQLepl": {
+        "skill_name": "PL/SQL",
+        "skill_type": "Technology",
+        "skill_cleaned": "pl sql",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "pl sql",
+        "skill_lemmed": "pl sql"
+    },
+    "marketing_funcitonepl": {
+        "skill_name": "Marketing Function",
+        "skill_type": "Business",
+        "skill_cleaned": "marketing function",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "market function",
+        "skill_lemmed": "marketing function"
+    },
+    "VendororSupplierManagementepl": {
+        "skill_name": "Vendor or Supplier Management",
+        "skill_type": "Business",
+        "skill_cleaned": "vendor or supplier management",
+        "skill_len": 4,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "vendor or supplier manag",
+        "skill_lemmed": "vendor or supplier management"
+    },
+    "team_managementepl": {
+        "skill_name": "Team Management",
+        "skill_type": "Leadership",
+        "skill_cleaned": "team management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "team manag",
+        "skill_lemmed": "team management"
+    },
+    "cplusplusepl": {
+        "skill_name": "C++ development",
+        "skill_type": "Technology",
+        "skill_cleaned": "c++ development",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "c++ develop",
+        "skill_lemmed": "c++ development"
+    },
+    "collabglobalepl": {
+        "skill_name": "Collaborating Globally",
+        "skill_type": "Business",
+        "skill_cleaned": "collaborating globally",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "collabor global",
+        "skill_lemmed": "collaborate globally"
+    },
+    "SOLRepl": {
+        "skill_name": "SOLR",
+        "skill_type": "Technology",
+        "skill_cleaned": "solr",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "solr",
+        "skill_lemmed": "solr"
+    },
+    "reactjs": {
+        "skill_name": "ReactJS",
+        "skill_type": "Technology",
+        "skill_cleaned": "reactjs",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "reactj",
+        "skill_lemmed": "reactjs"
+    },
+    "NetworkPerformanceManagementepl": {
+        "skill_name": "Network Performance Management",
+        "skill_type": "\n ",
+        "skill_cleaned": "network performance management",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "network perform manag",
+        "skill_lemmed": "network performance management"
+    },
+    "sqlepl": {
+        "skill_name": "SQL development",
+        "skill_type": "Technology",
+        "skill_cleaned": "sql development",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "sql develop",
+        "skill_lemmed": "sql development"
+    },
+    "PlatformArchitectureepl": {
+        "skill_name": "Platform Architecture",
+        "skill_type": "Technology",
+        "skill_cleaned": "platform architecture",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "platform architectur",
+        "skill_lemmed": "platform architecture"
+    },
+    "org_changeepl": {
+        "skill_name": "Managing Organizational Change",
+        "skill_type": "Leadership",
+        "skill_cleaned": "managing organizational change",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "manag organiz chang",
+        "skill_lemmed": "manage organizational change"
+    },
+    "resourcemanagementepl": {
+        "skill_name": "Resource Management - External",
+        "skill_type": "Project Management",
+        "skill_cleaned": "resource management   external",
+        "skill_len": 5,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "resourc manag   extern",
+        "skill_lemmed": "resource management    external"
+    },
+    "strytellingepl": {
+        "skill_name": "Storytelling",
+        "skill_type": "Business",
+        "skill_cleaned": "storytelling",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "storytel",
+        "skill_lemmed": "storytelling"
+    },
+    "edgeepl": {
+        "skill_name": "Edge Computing Management",
+        "skill_type": "Technology",
+        "skill_cleaned": "edge computing management",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "edg comput manag",
+        "skill_lemmed": "edge computing management"
+    },
+    "Lv1-2 Ok, Lv3 Remove sentence \"They can also implement an action plan summary, kanban board, scrum board, and gantt charts.\", Lv4 OK": {
+        "skill_name": "Cross-Selling",
+        "skill_type": "Business",
+        "skill_cleaned": "cross selling",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "cross sell",
+        "skill_lemmed": "cross selling"
+    },
+    "AgileMethodology(SCRUM)epl": {
+        "skill_name": "Agile Methodology (SCRUM)",
+        "skill_type": "Project Management",
+        "skill_cleaned": "agile methodology",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "agil methodolog",
+        "skill_lemmed": "agile methodology"
+    },
+    "process_improvementepl": {
+        "skill_name": "Process Improvement",
+        "skill_type": "Business",
+        "skill_cleaned": "process improvement",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "process improv",
+        "skill_lemmed": "process improvement"
+    },
+    "teamintegrationepl": {
+        "skill_name": "Team Integration",
+        "skill_type": "Sales",
+        "skill_cleaned": "team integration",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "team integr",
+        "skill_lemmed": "team integration"
+    },
+    "StrategicSalesPlanningepl": {
+        "skill_name": "Strategic Sales Planning",
+        "skill_type": "Business",
+        "skill_cleaned": "strategic sales planning",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "strateg sale plan",
+        "skill_lemmed": "strategic sale planning"
+    },
+    "Ajax(ProgrammingLanguage)epl": {
+        "skill_name": "Ajax (Programming Language)",
+        "skill_type": "Technology",
+        "skill_cleaned": "ajax",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "ajax",
+        "skill_lemmed": "ajax"
+    },
+    "bus_senseepl": {
+        "skill_name": "Business Sense",
+        "skill_type": "Leadership",
+        "skill_cleaned": "business sense",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "busi sens",
+        "skill_lemmed": "business sense"
+    },
+    "WebLogicepl": {
+        "skill_name": "WebLogic",
+        "skill_type": "Technology",
+        "skill_cleaned": "weblogic",
+        "skill_len": 1,
+        "match_on_stemmed": true,
+        "abbreviation": "",
+        "skill_stemmed": "weblog",
+        "skill_lemmed": "weblogic"
+    },
+    "ProgramManagementepl": {
+        "skill_name": "Program Management",
+        "skill_type": "Technology",
+        "skill_cleaned": "program management",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "program manag",
+        "skill_lemmed": "program management"
+    },
+    "financial_analysisepl": {
+        "skill_name": "Financial Analysis",
+        "skill_type": "Data analysis",
+        "skill_cleaned": "financial analysis",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "financi analysi",
+        "skill_lemmed": "financial analysis"
+    },
+    "MobileWebDevelopmentepl": {
+        "skill_name": "Mobile Web Development",
+        "skill_type": "Technology",
+        "skill_cleaned": "mobile web development",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "mobil web develop",
+        "skill_lemmed": "mobile web development"
+    },
+    "MicrosoftExcelepl": {
+        "skill_name": "Microsoft Excel",
+        "skill_type": "Technology\n",
+        "skill_cleaned": "microsoft excel",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "microsoft excel",
+        "skill_lemmed": "microsoft excel"
+    },
+    "SpringBootepl": {
+        "skill_name": "Spring Boot",
+        "skill_type": "Technology",
+        "skill_cleaned": "spring boot",
+        "skill_len": 2,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "spring boot",
+        "skill_lemmed": "spring boot"
+    },
+    "awsepl": {
+        "skill_name": "Amazon Web Services",
+        "skill_type": "Technology",
+        "skill_cleaned": "amazon web services",
+        "skill_len": 3,
+        "match_on_stemmed": false,
+        "abbreviation": "",
+        "skill_stemmed": "amazon web servic",
+        "skill_lemmed": "amazon web service"
+    }
+}
