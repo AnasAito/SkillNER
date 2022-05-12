@@ -4,7 +4,8 @@ import requests
 
 MAPPING_NAME_URL = {
     "SKILL_DB": "buckets/skill_db_relax_20.json",
-    "TOKEN_DIST": "buckets/token_dist.json"
+    "TOKEN_DIST": "buckets/token_dist.json",
+    "EPL_SKILL_LIST": "buckets/epl_raw_skills.json"
 }
 
 
