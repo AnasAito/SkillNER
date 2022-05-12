@@ -1,5 +1,4 @@
 # native packs
-import os
 import json
 from posixpath import dirname
 # installed packs
