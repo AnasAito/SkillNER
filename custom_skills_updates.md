@@ -140,3 +140,8 @@ When the code was tested on EPL list, there have been some interesting mismatche
 This one seems harder to solve, but discussions are welcome!
 * In the sample code used in [How to Use Custom Skill List](#how-to-use-custom-skill-list), a skill named "mobile web development" was extracted from text "web development".. but being able to extract skill "Agile Development Practices" from "agile development" is a really nice feature. How can we prevent the code from extracting skills that are too narrow (mobile web dev), while still extracting skills with same meaning (agile dev practices)?
 
+
+
+
+
+
