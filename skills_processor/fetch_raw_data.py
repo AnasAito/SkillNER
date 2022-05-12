@@ -1,10 +1,12 @@
 # native packs
 import requests
 import json
+from typing import List
+
 # installed packs
 import pandas as pd
 from pandas import json_normalize
-
+# TODO this script is not used
 
 auth_endpoint = "https://auth.emsicloud.com/connect/token"  # auth endpoint
 
@@ -22,7 +24,7 @@ access_token = json.loads((requests.request("POST", auth_endpoint, data=payload,
     'access_token']  # grabs request's text and loads as JSON, then pulls the access token from that
 
 
-def fetch_skills_list() -> pd.DataFrame:
+def fetch_skills_list() -> List[dict]:
 
     # List of all skills endpoint
     all_skills_endpoint = "https://emsiservices.com/skills/versions/latest/skills"

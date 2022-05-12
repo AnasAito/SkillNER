@@ -1,0 +1,2637 @@
+{
+    "tmwrkepl": {
+        "skill_name": "Working as a Team",
+        "skill_type": "Leadership",
+        "skill_len": 4,
+        "high_surfce_forms": {
+            "full": "work as a team"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "designthepl": {
+        "skill_name": "Design Thinking Process",
+        "skill_type": "Leadership",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "design thinking process"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "Couchbaseepl": {
+        "skill_name": "Couchbase",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "couchbase"
+        },
+        "low_surface_forms": [
+            "couchbas"
+        ],
+        "match_on_tokens": false
+    },
+    "deeplepl": {
+        "skill_name": "DeepLearning",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "deeplearning"
+        },
+        "low_surface_forms": [
+            "deeplearn"
+        ],
+        "match_on_tokens": false
+    },
+    "DecisionMakingepl": {
+        "skill_name": "Decision Making",
+        "skill_type": "Leadership",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "decision make"
+        },
+        "low_surface_forms": [
+            "decis make",
+            "make decis"
+        ],
+        "match_on_tokens": false
+    },
+    "accountmanepl": {
+        "skill_name": "Accounts Management",
+        "skill_type": "Project Management",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "account management"
+        },
+        "low_surface_forms": [
+            "account manag",
+            "manag account"
+        ],
+        "match_on_tokens": false
+    },
+    "Javaepl": {
+        "skill_name": "Java",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "java"
+        },
+        "low_surface_forms": [
+            "java"
+        ],
+        "match_on_tokens": false
+    },
+    "doc_manepl": {
+        "skill_name": "Document Management",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "document management"
+        },
+        "low_surface_forms": [
+            "document manag",
+            "manag document",
+            "document"
+        ],
+        "match_on_tokens": false
+    },
+    "ContentManagementepl": {
+        "skill_name": "Content Management",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "content management"
+        },
+        "low_surface_forms": [
+            "content manag",
+            "manag content"
+        ],
+        "match_on_tokens": false
+    },
+    "ScaledAgileFrameworkepl": {
+        "skill_name": "Scaled Agile Framework",
+        "skill_type": "Product",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "scale agile framework"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "HTML(HypertextMarkupLanguage)epl": {
+        "skill_name": "HTML (Hypertext Markup Language)",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "html"
+        },
+        "low_surface_forms": [
+            "html"
+        ],
+        "match_on_tokens": false
+    },
+    "SonarQubeepl": {
+        "skill_name": "SonarQube",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "sonarqube"
+        },
+        "low_surface_forms": [
+            "sonarqub"
+        ],
+        "match_on_tokens": false
+    },
+    "InformationManagementepl": {
+        "skill_name": "Information Management",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "information management"
+        },
+        "low_surface_forms": [
+            "inform manag",
+            "manag inform"
+        ],
+        "match_on_tokens": false
+    },
+    "presentationsepl": {
+        "skill_name": "Effective Presentations",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "effective presentation"
+        },
+        "low_surface_forms": [
+            "effect present",
+            "present effect"
+        ],
+        "match_on_tokens": false
+    },
+    "sales_channelsepl": {
+        "skill_name": "Sales Channels",
+        "skill_type": "Sales",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "sale channel"
+        },
+        "low_surface_forms": [
+            "sale channel",
+            "channel sale"
+        ],
+        "match_on_tokens": false
+    },
+    "microsepl": {
+        "skill_name": "MIcroservices Development",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "microservice development"
+        },
+        "low_surface_forms": [
+            "microservic develop",
+            "develop microservic"
+        ],
+        "match_on_tokens": false
+    },
+    "legalepl": {
+        "skill_name": "Legal Function",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "legal function"
+        },
+        "low_surface_forms": [
+            "legal function",
+            "function legal",
+            "legal"
+        ],
+        "match_on_tokens": false
+    },
+    "kubernetepl": {
+        "skill_name": "Kubernetes Platform",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "kubernete platform"
+        },
+        "low_surface_forms": [
+            "kubernet platform",
+            "platform kubernet"
+        ],
+        "match_on_tokens": false
+    },
+    "ELKepl": {
+        "skill_name": "ELK",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "elk"
+        },
+        "low_surface_forms": [
+            "elk"
+        ],
+        "match_on_tokens": false
+    },
+    "neg_managementepl": {
+        "skill_name": "Negotiation Management",
+        "skill_type": "Sales",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "negotiation management"
+        },
+        "low_surface_forms": [
+            "negoti manag",
+            "manag negoti"
+        ],
+        "match_on_tokens": false
+    },
+    "DataArchitectureepl": {
+        "skill_name": "Data Architecture",
+        "skill_type": "Data Analysis",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "datum architecture"
+        },
+        "low_surface_forms": [
+            "data architectur",
+            "architectur data"
+        ],
+        "match_on_tokens": false
+    },
+    "tableauepl": {
+        "skill_name": "tableau desktop",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "tableau desktop"
+        },
+        "low_surface_forms": [
+            "tableau desktop",
+            "desktop tableau",
+            "desktop",
+            "tableau"
+        ],
+        "match_on_tokens": false
+    },
+    "finreportepl": {
+        "skill_name": "Financial Reporting",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "financial reporting"
+        },
+        "low_surface_forms": [
+            "financi report",
+            "report financi"
+        ],
+        "match_on_tokens": false
+    },
+    "IoTConnectivity(InternetofThings)epl": {
+        "skill_name": "IoT Connectivity (Internet of Things)",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "iot connectivity"
+        },
+        "low_surface_forms": [
+            "iot connect",
+            "connect iot",
+            "iot"
+        ],
+        "match_on_tokens": false
+    },
+    "gitepl": {
+        "skill_name": "Git and Github",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "git and github"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "Zookeeperepl": {
+        "skill_name": "Zookeeper",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "zookeeper"
+        },
+        "low_surface_forms": [
+            "zookeep"
+        ],
+        "match_on_tokens": false
+    },
+    "TechnologyArchitectureepl": {
+        "skill_name": "Technology Architecture",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "technology architecture"
+        },
+        "low_surface_forms": [
+            "technolog architectur",
+            "architectur technolog"
+        ],
+        "match_on_tokens": false
+    },
+    "retaining_customersepl": {
+        "skill_name": "Retaining Customers",
+        "skill_type": "Sales",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "retain customer"
+        },
+        "low_surface_forms": [
+            "retain custom",
+            "custom retain"
+        ],
+        "match_on_tokens": false
+    },
+    "DatabaseStructuresepl": {
+        "skill_name": "Database Structures",
+        "skill_type": "Data Analysis",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "database structure"
+        },
+        "low_surface_forms": [
+            "databas structur",
+            "structur databas"
+        ],
+        "match_on_tokens": false
+    },
+    "outsourcing_empathepl": {
+        "skill_name": "Outsourcing",
+        "skill_type": "project Management",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "outsourcing"
+        },
+        "low_surface_forms": [
+            "outsourc"
+        ],
+        "match_on_tokens": false
+    },
+    "Alignmentepl": {
+        "skill_name": "Alignment",
+        "skill_type": "Leadership",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "alignment"
+        },
+        "low_surface_forms": [
+            "align"
+        ],
+        "match_on_tokens": false
+    },
+    "nodeepl": {
+        "skill_name": "Node.JS development",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "node js development"
+        },
+        "low_surface_forms": [
+            "JS"
+        ],
+        "match_on_tokens": true
+    },
+    "busprocmodelingepl": {
+        "skill_name": "Business Process Modeling",
+        "skill_type": "Business",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "business process model"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "agileepl": {
+        "skill_name": "Agile Development Practices",
+        "skill_type": "Product",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "agile development practice"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "xmlepl": {
+        "skill_name": "XML development",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "xml development"
+        },
+        "low_surface_forms": [
+            "xml develop",
+            "develop xml",
+            "xml"
+        ],
+        "match_on_tokens": false
+    },
+    "rca_empathepl": {
+        "skill_name": "Root Cause Analysis",
+        "skill_type": "Leadership",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "root cause analysis"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "client_managementepl": {
+        "skill_name": "Client Management",
+        "skill_type": "Sales",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "client management"
+        },
+        "low_surface_forms": [
+            "client manag",
+            "manag client",
+            "client"
+        ],
+        "match_on_tokens": false
+    },
+    "busrelateepl": {
+        "skill_name": "Business Relationships",
+        "skill_type": "Sales",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "business relationship"
+        },
+        "low_surface_forms": [
+            "busi relationship",
+            "relationship busi"
+        ],
+        "match_on_tokens": false
+    },
+    "DHTMLepl": {
+        "skill_name": "DHTML",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "dhtml"
+        },
+        "low_surface_forms": [
+            "dhtml"
+        ],
+        "match_on_tokens": false
+    },
+    "linuxepl": {
+        "skill_name": "Linux OS",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "linux os"
+        },
+        "low_surface_forms": [
+            "linux os",
+            "os linux",
+            "os",
+            "linux"
+        ],
+        "match_on_tokens": false
+    },
+    "sales_proposalsepl": {
+        "skill_name": "Sales Proposals and Presentations",
+        "skill_type": "Business",
+        "skill_len": 4,
+        "high_surfce_forms": {
+            "full": "sale proposal and presentation"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "compdifepl": {
+        "skill_name": "Competitive Differentiation",
+        "skill_type": "Marketing",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "competitive differentiation"
+        },
+        "low_surface_forms": [
+            "competit differenti",
+            "differenti competit"
+        ],
+        "match_on_tokens": false
+    },
+    "OPENSTACKepl": {
+        "skill_name": "OPENSTACK",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "openstack"
+        },
+        "low_surface_forms": [
+            "openstack"
+        ],
+        "match_on_tokens": false
+    },
+    "buscaseepl": {
+        "skill_name": "Business Case Management",
+        "skill_type": "Business",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "business case management"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "RESTepl": {
+        "skill_name": "REST",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "rest"
+        },
+        "low_surface_forms": [
+            "rest"
+        ],
+        "match_on_tokens": false
+    },
+    "logistics_empathepl": {
+        "skill_name": "Logistics",
+        "skill_type": "Business",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "logistics"
+        },
+        "low_surface_forms": [
+            "logist"
+        ],
+        "match_on_tokens": false
+    },
+    "JSONepl": {
+        "skill_name": "JSON",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "json"
+        },
+        "low_surface_forms": [
+            "json"
+        ],
+        "match_on_tokens": false
+    },
+    "PostreSQLepl": {
+        "skill_name": "PostreSQL",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "postresql"
+        },
+        "low_surface_forms": [
+            "postresql"
+        ],
+        "match_on_tokens": false
+    },
+    "dockerepl": {
+        "skill_name": "Docker Development",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "docker development"
+        },
+        "low_surface_forms": [
+            "docker develop",
+            "develop docker",
+            "docker"
+        ],
+        "match_on_tokens": false
+    },
+    "Kafkaepl": {
+        "skill_name": "Kafka",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "kafka"
+        },
+        "low_surface_forms": [
+            "kafka"
+        ],
+        "match_on_tokens": false
+    },
+    "Cucumberepl": {
+        "skill_name": "Cucumber",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "cucumber"
+        },
+        "low_surface_forms": [
+            "cucumb"
+        ],
+        "match_on_tokens": false
+    },
+    "business_intelligenceepl": {
+        "skill_name": "Business Intelligence",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "business intelligence"
+        },
+        "low_surface_forms": [
+            "busi intellig",
+            "intellig busi"
+        ],
+        "match_on_tokens": false
+    },
+    "CascadingStyleSheets(CSS)epl": {
+        "skill_name": "Cascading Style Sheets (CSS)",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "abv": "CSS",
+            "full": "cascade style sheet"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "WebServicesepl": {
+        "skill_name": "Web Services",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "web service"
+        },
+        "low_surface_forms": [
+            "web servic",
+            "servic web"
+        ],
+        "match_on_tokens": false
+    },
+    "jiraepl": {
+        "skill_name": "Jira Software",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "jira software"
+        },
+        "low_surface_forms": [
+            "jira softwar",
+            "softwar jira",
+            "jira"
+        ],
+        "match_on_tokens": false
+    },
+    "cloudepl": {
+        "skill_name": "Cloud Computing Management",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "cloud computing management"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "EquityinTalentepl": {
+        "skill_name": "Equity in Talent",
+        "skill_type": "Leadership",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "equity in talent"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "OracleDatabaseManagementepl": {
+        "skill_name": "Oracle Database Management",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "oracle database management"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "NetworkTopologyepl": {
+        "skill_name": "Network Topology",
+        "skill_type": "\n ",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "network topology"
+        },
+        "low_surface_forms": [
+            "network topolog",
+            "topolog network"
+        ],
+        "match_on_tokens": false
+    },
+    "NetworkServiceOperationsepl": {
+        "skill_name": "Network Service Operations",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "network service operation"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "leadepl": {
+        "skill_name": "Leadership",
+        "skill_type": "Leadership",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "leadership"
+        },
+        "low_surface_forms": [
+            "leadership"
+        ],
+        "match_on_tokens": false
+    },
+    "cybersec1epl": {
+        "skill_name": "CyberSecurity Analysis",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "cybersecurity analysis"
+        },
+        "low_surface_forms": [
+            "cybersecur analysi",
+            "analysi cybersecur"
+        ],
+        "match_on_tokens": false
+    },
+    "account_methodsepl": {
+        "skill_name": "Accounting Methods",
+        "skill_type": "Accounting",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "accounting method"
+        },
+        "low_surface_forms": [
+            "account method",
+            "method account"
+        ],
+        "match_on_tokens": false
+    },
+    "taking_ownershipepl": {
+        "skill_name": "Taking Ownership",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "take ownership"
+        },
+        "low_surface_forms": [
+            "take ownership",
+            "ownership take",
+            "ownership"
+        ],
+        "match_on_tokens": false
+    },
+    "jenkinsepl": {
+        "skill_name": "Jenkins implementation",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "jenkins implementation"
+        },
+        "low_surface_forms": [
+            "jenkin implement",
+            "implement jenkin"
+        ],
+        "match_on_tokens": false
+    },
+    "ApacheCXFepl": {
+        "skill_name": "Apache CXF",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "apache cxf"
+        },
+        "low_surface_forms": [
+            "apach cxf",
+            "cxf apach",
+            "cxf"
+        ],
+        "match_on_tokens": false
+    },
+    "PC/WorkstationHardwareepl": {
+        "skill_name": "PC/Workstation Hardware",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "pc workstation hardware"
+        },
+        "low_surface_forms": [
+            "PC"
+        ],
+        "match_on_tokens": true
+    },
+    "techarcdesignepl": {
+        "skill_name": "Technology Architecture Design and Implementation",
+        "skill_type": "Technology",
+        "skill_len": 5,
+        "high_surfce_forms": {
+            "full": "technology architecture design and implementation"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "infsecepl": {
+        "skill_name": "Information Security Practices",
+        "skill_type": "Data Analysis",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "information security practice"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "Gerritepl": {
+        "skill_name": "Gerritpl",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "gerritpl"
+        },
+        "low_surface_forms": [
+            "gerritpl"
+        ],
+        "match_on_tokens": false
+    },
+    "investepl": {
+        "skill_name": "Investment Management",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "investment management"
+        },
+        "low_surface_forms": [
+            "invest manag",
+            "manag invest"
+        ],
+        "match_on_tokens": false
+    },
+    "accounts_receivableepl": {
+        "skill_name": "Accounts Receivable",
+        "skill_type": "Accounting",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "account receivable"
+        },
+        "low_surface_forms": [
+            "account receiv",
+            "receiv account"
+        ],
+        "match_on_tokens": false
+    },
+    "angularepl": {
+        "skill_name": "Angular Framework",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "angular framework"
+        },
+        "low_surface_forms": [
+            "angular framework",
+            "framework angular",
+            "angular"
+        ],
+        "match_on_tokens": false
+    },
+    "networkepl": {
+        "skill_name": "Internet Security",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "internet security"
+        },
+        "low_surface_forms": [
+            "internet secur",
+            "secur internet",
+            "internet"
+        ],
+        "match_on_tokens": false
+    },
+    "custfocusepl": {
+        "skill_name": "Focus on the Customer",
+        "skill_type": "Leadership",
+        "skill_len": 4,
+        "high_surfce_forms": {
+            "full": "focus on the customer"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "sdlc_empathepl": {
+        "skill_name": "Software Development Life Cycle (SDLC)",
+        "skill_type": "Technology",
+        "skill_len": 4,
+        "high_surfce_forms": {
+            "full": "software development life cycle"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "sales_forceastingepl": {
+        "skill_name": "Sales Forecasting",
+        "skill_type": "Sales",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "sale forecasting"
+        },
+        "low_surface_forms": [
+            "sale forecast",
+            "forecast sale"
+        ],
+        "match_on_tokens": false
+    },
+    "aiepl": {
+        "skill_name": "Artificial Intelligence implementation",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "artificial intelligence implementation"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "Seleniumepl": {
+        "skill_name": "Selenium",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "selenium"
+        },
+        "low_surface_forms": [
+            "selenium"
+        ],
+        "match_on_tokens": false
+    },
+    "AutomaticCallDistributionepl": {
+        "skill_name": "Automatic Call Distribution",
+        "skill_type": "Telephony",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "automatic call distribution"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "FraudManagementepl": {
+        "skill_name": "Fraud Management",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "fraud management"
+        },
+        "low_surface_forms": [
+            "fraud manag",
+            "manag fraud",
+            "fraud"
+        ],
+        "match_on_tokens": false
+    },
+    "employee_relationsepl": {
+        "skill_name": "Employee Relations",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "employee relation"
+        },
+        "low_surface_forms": [
+            "employe relat",
+            "relat employe"
+        ],
+        "match_on_tokens": false
+    },
+    "CapacityPlanningepl": {
+        "skill_name": "Capacity Planning",
+        "skill_type": "\n Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "capacity planning"
+        },
+        "low_surface_forms": [
+            "capac plan",
+            "plan capac"
+        ],
+        "match_on_tokens": false
+    },
+    "IBMCloudepl": {
+        "skill_name": "IBM Cloud",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "ibm cloud"
+        },
+        "low_surface_forms": [
+            "ibm cloud",
+            "cloud ibm",
+            "ibm"
+        ],
+        "match_on_tokens": false
+    },
+    "DOTNETepl": {
+        "skill_name": "DOT NET",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "dot net"
+        },
+        "low_surface_forms": [
+            "dot net",
+            "net dot",
+            "net",
+            "dot"
+        ],
+        "match_on_tokens": false
+    },
+    "softwareqaepl": {
+        "skill_name": "Software Quality Assurance Tools",
+        "skill_type": "Technology",
+        "skill_len": 4,
+        "high_surfce_forms": {
+            "full": "software quality assurance tool"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "fin_account_systemsepl": {
+        "skill_name": "Financial and Accounting Systems",
+        "skill_type": "Business",
+        "skill_len": 4,
+        "high_surfce_forms": {
+            "full": "financial and accounting system"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "emergtechepl": {
+        "skill_name": "Technology Trends",
+        "skill_type": "Leadership",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "technology trend"
+        },
+        "low_surface_forms": [
+            "technolog trend",
+            "trend technolog"
+        ],
+        "match_on_tokens": false
+    },
+    "javascriptepl": {
+        "skill_name": "Javascript development",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "javascript development"
+        },
+        "low_surface_forms": [
+            "javascript develop",
+            "develop javascript",
+            "javascript"
+        ],
+        "match_on_tokens": false
+    },
+    "cust_servepl": {
+        "skill_name": "Customer Service",
+        "skill_type": "Sales",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "customer service"
+        },
+        "low_surface_forms": [
+            "custom servic",
+            "servic custom"
+        ],
+        "match_on_tokens": false
+    },
+    "sales_prospectingepl": {
+        "skill_name": "Sales Prospecting",
+        "skill_type": "Sales",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "sale prospecting"
+        },
+        "low_surface_forms": [
+            "sale prospect",
+            "prospect sale"
+        ],
+        "match_on_tokens": false
+    },
+    "data_govepl": {
+        "skill_name": "Data Governance",
+        "skill_type": "Data Analysis",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "datum governance"
+        },
+        "low_surface_forms": [
+            "data govern",
+            "govern data"
+        ],
+        "match_on_tokens": false
+    },
+    "DataScienceepl": {
+        "skill_name": "Data Science",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "data science"
+        },
+        "low_surface_forms": [
+            "data scienc",
+            "scienc data"
+        ],
+        "match_on_tokens": false
+    },
+    "detailepl": {
+        "skill_name": "Attention to Detail",
+        "skill_type": "Project Management",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "attention to detail"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "pythonepl": {
+        "skill_name": "Python Development",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "python development"
+        },
+        "low_surface_forms": [
+            "python develop",
+            "develop python",
+            "python"
+        ],
+        "match_on_tokens": false
+    },
+    "sdnepl": {
+        "skill_name": "SDN (Software Defined Networking)",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "sdn"
+        },
+        "low_surface_forms": [
+            "sdn"
+        ],
+        "match_on_tokens": false
+    },
+    "InternationalFinancialReportingStandardsepl": {
+        "skill_name": "International Financial Reporting Standards",
+        "skill_type": "Technology",
+        "skill_len": 4,
+        "high_surfce_forms": {
+            "full": "international financial reporting standard"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "graphic_vizepl": {
+        "skill_name": "Graphic Visualization",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "graphic visualization"
+        },
+        "low_surface_forms": [
+            "graphic visual",
+            "visual graphic",
+            "graphic"
+        ],
+        "match_on_tokens": false
+    },
+    "MECepl": {
+        "skill_name": "MEC",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "mec"
+        },
+        "low_surface_forms": [
+            "mec"
+        ],
+        "match_on_tokens": false
+    },
+    "ITSystemsManagementepl": {
+        "skill_name": "IT Systems Management",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "it system management"
+        },
+        "low_surface_forms": [
+            "IT"
+        ],
+        "match_on_tokens": true
+    },
+    "bus_statisticsepl": {
+        "skill_name": "Business Statistics",
+        "skill_type": "data analysis",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "business statistic"
+        },
+        "low_surface_forms": [
+            "busi statist",
+            "statist busi"
+        ],
+        "match_on_tokens": false
+    },
+    "GovernmentAffairsRegulatoryEnvironmentepl": {
+        "skill_name": "Government Affairs Regulatory Environment",
+        "skill_type": "Technology",
+        "skill_len": 4,
+        "high_surfce_forms": {
+            "full": "government affair regulatory environment"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "infosecarchepl": {
+        "skill_name": "Information Security Architecture and Design",
+        "skill_type": "Technology",
+        "skill_len": 5,
+        "high_surfce_forms": {
+            "full": "information security architecture and design"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "platarchepl": {
+        "skill_name": "Platform and Solution Architecture",
+        "skill_type": "Technology",
+        "skill_len": 4,
+        "high_surfce_forms": {
+            "full": "platform and solution architecture"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "mongoepl": {
+        "skill_name": "MongDB development",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "mongdb development"
+        },
+        "low_surface_forms": [
+            "mongdb develop",
+            "develop mongdb",
+            "mongdb"
+        ],
+        "match_on_tokens": false
+    },
+    "CustomerSegmentationepl": {
+        "skill_name": "Customer Segmentation",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "customer segmentation"
+        },
+        "low_surface_forms": [
+            "custom segment",
+            "segment custom"
+        ],
+        "match_on_tokens": false
+    },
+    "mlepl": {
+        "skill_name": "Machine Learning development",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "machine learning development"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "decisionsepl": {
+        "skill_name": "Data Based Decision Making",
+        "skill_type": "SEL",
+        "skill_len": 4,
+        "high_surfce_forms": {
+            "full": "datum base decision make"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "ProductDevelopmentStrategyepl": {
+        "skill_name": "Product Development Strategy",
+        "skill_type": "Product",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "product development strategy"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "perlepl": {
+        "skill_name": "Perl Development",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "perl development"
+        },
+        "low_surface_forms": [
+            "perl develop",
+            "develop perl",
+            "perl"
+        ],
+        "match_on_tokens": false
+    },
+    "AgileScoping(ProductOwner)epl": {
+        "skill_name": "Agile Scoping (Product Owner)",
+        "skill_type": "Product",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "agile scoping"
+        },
+        "low_surface_forms": [
+            "agil scope",
+            "scope agil"
+        ],
+        "match_on_tokens": false
+    },
+    "kerasepl": {
+        "skill_name": "keras",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "keras"
+        },
+        "low_surface_forms": [
+            "kera"
+        ],
+        "match_on_tokens": false
+    },
+    "Prometheusepl": {
+        "skill_name": "Prometheus",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "prometheus"
+        },
+        "low_surface_forms": [
+            "prometheu"
+        ],
+        "match_on_tokens": false
+    },
+    "azureepl": {
+        "skill_name": "Microsoft Azure Management",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "microsoft azure management"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "Swaggerepl": {
+        "skill_name": "Swagger",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "swagger"
+        },
+        "low_surface_forms": [
+            "swagger"
+        ],
+        "match_on_tokens": false
+    },
+    "customer_supportepl": {
+        "skill_name": "Customer Support",
+        "skill_type": "Sales",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "customer support"
+        },
+        "low_surface_forms": [
+            "custom support",
+            "support custom",
+            "support"
+        ],
+        "match_on_tokens": false
+    },
+    "riskepl": {
+        "skill_name": "Exposure Management",
+        "skill_type": "Leadership",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "exposure management"
+        },
+        "low_surface_forms": [
+            "exposur manag",
+            "manag exposur"
+        ],
+        "match_on_tokens": false
+    },
+    "Ethernetepl": {
+        "skill_name": "Ethernet",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "ethernet"
+        },
+        "low_surface_forms": [
+            "ethernet"
+        ],
+        "match_on_tokens": false
+    },
+    "SpringAOPepl": {
+        "skill_name": "Spring AOP",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "spring aop"
+        },
+        "low_surface_forms": [
+            "spring aop",
+            "aop spring",
+            "aop"
+        ],
+        "match_on_tokens": false
+    },
+    "SecurityManagementandDesignepl": {
+        "skill_name": "Security Management and Design",
+        "skill_type": "Technology",
+        "skill_len": 4,
+        "high_surfce_forms": {
+            "full": "security management and design"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "dataprepepl": {
+        "skill_name": "Data Preparation and Presentation",
+        "skill_type": "Data analysis",
+        "skill_len": 4,
+        "high_surfce_forms": {
+            "full": "data preparation and presentation"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "5Gepl": {
+        "skill_name": "5G",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "5g"
+        },
+        "low_surface_forms": [
+            "5g"
+        ],
+        "match_on_tokens": false
+    },
+    "ContinuousIntegration/Deliveryepl": {
+        "skill_name": "Continuous Integration / Delivery",
+        "skill_type": "Technology",
+        "skill_len": 5,
+        "high_surfce_forms": {
+            "full": "continuous integration    delivery"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "PMepl": {
+        "skill_name": "Project Management Capabilites",
+        "skill_type": "Project Management",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "project management capabilite"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "Nexusepl": {
+        "skill_name": "Nexus",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "nexus"
+        },
+        "low_surface_forms": [
+            "nexu"
+        ],
+        "match_on_tokens": false
+    },
+    "PowerBIepl": {
+        "skill_name": "Power BI",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "power bi"
+        },
+        "low_surface_forms": [
+            "power bi",
+            "bi power",
+            "bi",
+            "power"
+        ],
+        "match_on_tokens": false
+    },
+    "datavizepl": {
+        "skill_name": "Data Visualization Techniques",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "data visualization technique"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "influence_othersepl": {
+        "skill_name": "Influence Others",
+        "skill_type": "Leadership",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "influence other"
+        },
+        "low_surface_forms": [
+            "influenc other",
+            "other influenc"
+        ],
+        "match_on_tokens": false
+    },
+    "cost_accountingepl": {
+        "skill_name": "Cost Accounting",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "cost accounting"
+        },
+        "low_surface_forms": [
+            "cost account",
+            "account cost",
+            "cost"
+        ],
+        "match_on_tokens": false
+    },
+    "TestAutomationFW-Lifecycles&PMepl": {
+        "skill_name": "Test Automation FW-Lifecycles & PM",
+        "skill_type": "Technology",
+        "skill_len": 6,
+        "high_surfce_forms": {
+            "full": "test automation fw lifecycle & pm"
+        },
+        "low_surface_forms": [
+            "FW",
+            "PM"
+        ],
+        "match_on_tokens": true
+    },
+    "HTTPepl": {
+        "skill_name": "HTTP",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "http"
+        },
+        "low_surface_forms": [
+            "http"
+        ],
+        "match_on_tokens": false
+    },
+    "BitBucketepl": {
+        "skill_name": "BitBucket",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "bitbucket"
+        },
+        "low_surface_forms": [
+            "bitbucket"
+        ],
+        "match_on_tokens": false
+    },
+    "EnvironmentalEngineering-RealEstateepl": {
+        "skill_name": "Environmental Engineering - Real Estate",
+        "skill_type": "Technology",
+        "skill_len": 6,
+        "high_surfce_forms": {
+            "full": "environmental engineering    real estate"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "srvceexcelepl": {
+        "skill_name": "Customer Service Excellence",
+        "skill_type": "Sales",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "customer service excellence"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "business_ethicsepl": {
+        "skill_name": "Business Ethics",
+        "skill_type": "leadership",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "business ethic"
+        },
+        "low_surface_forms": [
+            "busi ethic",
+            "ethic busi"
+        ],
+        "match_on_tokens": false
+    },
+    "busdevepl": {
+        "skill_name": "Business Development",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "business development"
+        },
+        "low_surface_forms": [
+            "busi develop",
+            "develop busi"
+        ],
+        "match_on_tokens": false
+    },
+    "commandlineepl": {
+        "skill_name": "Command Line",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "command line"
+        },
+        "low_surface_forms": [
+            "command line",
+            "line command",
+            "line",
+            "command"
+        ],
+        "match_on_tokens": false
+    },
+    "creativity_empathepl": {
+        "skill_name": "Creativity",
+        "skill_type": "Leadership",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "creativity"
+        },
+        "low_surface_forms": [
+            "creativ"
+        ],
+        "match_on_tokens": false
+    },
+    "gaap_empathepl": {
+        "skill_name": "Generally Accepted Accounting Principles (GAAP)",
+        "skill_type": "Accounting",
+        "skill_len": 4,
+        "high_surfce_forms": {
+            "full": "generally accept accounting principle"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "op_functionsepl": {
+        "skill_name": "Operational Functions",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "operational function"
+        },
+        "low_surface_forms": [
+            "oper function",
+            "function oper"
+        ],
+        "match_on_tokens": false
+    },
+    "Terraformepl": {
+        "skill_name": "Terraform",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "terraform"
+        },
+        "low_surface_forms": [
+            "terraform"
+        ],
+        "match_on_tokens": false
+    },
+    "MicroservicesTechniquesepl": {
+        "skill_name": "Microservices Techniques",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "microservice technique"
+        },
+        "low_surface_forms": [
+            "microservic techniqu",
+            "techniqu microservic"
+        ],
+        "match_on_tokens": false
+    },
+    "devopsepl": {
+        "skill_name": "DevOps Management",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "devop management"
+        },
+        "low_surface_forms": [
+            "devop manag",
+            "manag devop"
+        ],
+        "match_on_tokens": false
+    },
+    "rpaepl": {
+        "skill_name": "Robotic Process Automation",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "robotic process automation"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "Estimationpracticesepl": {
+        "skill_name": "Estimation practices",
+        "skill_type": "Product",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "estimation practice"
+        },
+        "low_surface_forms": [
+            "estim practic",
+            "practic estim"
+        ],
+        "match_on_tokens": false
+    },
+    "csharpepl": {
+        "skill_name": "C# Development",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "c # development"
+        },
+        "low_surface_forms": [
+            "c# develop",
+            "develop c#",
+            "c#"
+        ],
+        "match_on_tokens": false
+    },
+    "opmanepl": {
+        "skill_name": "Operations Management",
+        "skill_type": "Leadership",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "operation management"
+        },
+        "low_surface_forms": [
+            "oper manag",
+            "manag oper"
+        ],
+        "match_on_tokens": false
+    },
+    "junitepl": {
+        "skill_name": "Junit implementation",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "junit implementation"
+        },
+        "low_surface_forms": [
+            "junit implement",
+            "implement junit",
+            "junit"
+        ],
+        "match_on_tokens": false
+    },
+    "RestAssuredepl": {
+        "skill_name": "Rest Assured",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "rest assure"
+        },
+        "low_surface_forms": [
+            "rest assur",
+            "assur rest",
+            "rest"
+        ],
+        "match_on_tokens": false
+    },
+    "facmanepl": {
+        "skill_name": "Manage Facilities",
+        "skill_type": "Project Management",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "manage facility"
+        },
+        "low_surface_forms": [
+            "manag facil",
+            "facil manag"
+        ],
+        "match_on_tokens": false
+    },
+    "sparkepl": {
+        "skill_name": "Apache Spark development",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "apache spark development"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "manage_processesepl": {
+        "skill_name": "Manage Processes",
+        "skill_type": "Project Management",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "manage process"
+        },
+        "low_surface_forms": [
+            "manag process",
+            "process manag"
+        ],
+        "match_on_tokens": false
+    },
+    "CloudComputingArchitectureepl": {
+        "skill_name": "Cloud Computing Architecture",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "cloud computing architecture"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "audit_empathepl": {
+        "skill_name": "Auditing",
+        "skill_type": "Accounting",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "auditing"
+        },
+        "low_surface_forms": [
+            "audit"
+        ],
+        "match_on_tokens": false
+    },
+    "forecepl": {
+        "skill_name": "Data Forecasting",
+        "skill_type": "data analysis",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "data forecasting"
+        },
+        "low_surface_forms": [
+            "data forecast",
+            "forecast data"
+        ],
+        "match_on_tokens": false
+    },
+    "contractmanepl": {
+        "skill_name": "Contract Management",
+        "skill_type": "Accounting",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "contract management"
+        },
+        "low_surface_forms": [
+            "contract manag",
+            "manag contract",
+            "contract"
+        ],
+        "match_on_tokens": false
+    },
+    "CSS3epl": {
+        "skill_name": "CSS3",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "css3"
+        },
+        "low_surface_forms": [
+            "css3"
+        ],
+        "match_on_tokens": false
+    },
+    "Train-The-Trainerepl": {
+        "skill_name": "Train-The-Trainer",
+        "skill_type": "Business\n ",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "train the trainer"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "APIImplementationepl": {
+        "skill_name": "API Implementation",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "api implementation"
+        },
+        "low_surface_forms": [
+            "api implement",
+            "implement api",
+            "api"
+        ],
+        "match_on_tokens": false
+    },
+    "trainingdevepl": {
+        "skill_name": "Training Development",
+        "skill_type": "\n ",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "training development"
+        },
+        "low_surface_forms": [
+            "train develop",
+            "develop train"
+        ],
+        "match_on_tokens": false
+    },
+    "RecordRetentionPolicyepl": {
+        "skill_name": "Record Retention Policy",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "record retention policy"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "Rallyepl": {
+        "skill_name": "Rally",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "rally"
+        },
+        "low_surface_forms": [
+            "ralli"
+        ],
+        "match_on_tokens": false
+    },
+    "Cepl": {
+        "skill_name": "C",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "c"
+        },
+        "low_surface_forms": [
+            "c"
+        ],
+        "match_on_tokens": false
+    },
+    "EaaSepl": {
+        "skill_name": "EaaS",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "eaas"
+        },
+        "low_surface_forms": [
+            "eaa"
+        ],
+        "match_on_tokens": false
+    },
+    "networkinghardwareepl": {
+        "skill_name": "networking hardware",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "networking hardware"
+        },
+        "low_surface_forms": [
+            "network hardwar",
+            "hardwar network"
+        ],
+        "match_on_tokens": false
+    },
+    "ComputerNetworkArchitectureepl": {
+        "skill_name": "Computer Network Architecture",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "computer network architecture"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "TechnologyExpertiseepl": {
+        "skill_name": "Technology Expertise",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "technology expertise"
+        },
+        "low_surface_forms": [
+            "technolog expertis",
+            "expertis technolog"
+        ],
+        "match_on_tokens": false
+    },
+    "qualmanagementepl": {
+        "skill_name": "Quality Management",
+        "skill_type": "Project Management",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "quality management"
+        },
+        "low_surface_forms": [
+            "qualiti manag",
+            "manag qualiti"
+        ],
+        "match_on_tokens": false
+    },
+    "OpenShiftepl": {
+        "skill_name": "Open Shift",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "open shift"
+        },
+        "low_surface_forms": [
+            "open shift",
+            "shift open",
+            "shift",
+            "open"
+        ],
+        "match_on_tokens": false
+    },
+    "E-mailRoutingandResponseSoftwareepl": {
+        "skill_name": "E-mail Routing and Response Software",
+        "skill_type": "Technology",
+        "skill_len": 6,
+        "high_surfce_forms": {
+            "full": "e mail routing and response software"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "TrainingLeadership": {
+        "skill_name": "Training Leadership",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "training leadership"
+        },
+        "low_surface_forms": [
+            "train leadership",
+            "leadership train",
+            "leadership"
+        ],
+        "match_on_tokens": false
+    },
+    "DataMiningepl": {
+        "skill_name": "Data Mining",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "data mining"
+        },
+        "low_surface_forms": [
+            "data mine",
+            "mine data"
+        ],
+        "match_on_tokens": false
+    },
+    "mysql1epl": {
+        "skill_name": "MySQL development",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "mysql development"
+        },
+        "low_surface_forms": [
+            "mysql develop",
+            "develop mysql",
+            "mysql"
+        ],
+        "match_on_tokens": false
+    },
+    "ContentStrategyepl": {
+        "skill_name": "Content Strategy",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "content strategy"
+        },
+        "low_surface_forms": [
+            "content strategi",
+            "strategi content"
+        ],
+        "match_on_tokens": false
+    },
+    "Waterfallepl": {
+        "skill_name": "Waterfall",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "waterfall"
+        },
+        "low_surface_forms": [
+            "waterfal"
+        ],
+        "match_on_tokens": false
+    },
+    "ElasticSearch/Kibanaepl": {
+        "skill_name": "ElasticSearch/Kibana",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "elasticsearch kibana"
+        },
+        "low_surface_forms": [
+            "elasticsearch kibana",
+            "kibana elasticsearch",
+            "kibana",
+            "elasticsearch"
+        ],
+        "match_on_tokens": false
+    },
+    "devsecopsepl": {
+        "skill_name": "DevSecOps management",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "devsecop management"
+        },
+        "low_surface_forms": [
+            "devsecop manag",
+            "manag devsecop"
+        ],
+        "match_on_tokens": false
+    },
+    "supplychainmanagementepl": {
+        "skill_name": "Supply Chain Management",
+        "skill_type": "Business",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "supply chain management"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "WIFIepl": {
+        "skill_name": "WIFI",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "wifi"
+        },
+        "low_surface_forms": [
+            "wifi"
+        ],
+        "match_on_tokens": false
+    },
+    "prioritymanagementepl": {
+        "skill_name": "Priority Management",
+        "skill_type": "Project Management",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "priority management"
+        },
+        "low_surface_forms": [
+            "prioriti manag",
+            "manag prioriti"
+        ],
+        "match_on_tokens": false
+    },
+    "Grafanaepl": {
+        "skill_name": "Grafana",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "grafana"
+        },
+        "low_surface_forms": [
+            "grafana"
+        ],
+        "match_on_tokens": false
+    },
+    "budget_managementepl": {
+        "skill_name": "Manage a Budget",
+        "skill_type": "Accounting",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "manage a budget"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "SalaryPlanningepl": {
+        "skill_name": "Salary Planning",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "salary planning"
+        },
+        "low_surface_forms": [
+            "salari plan",
+            "plan salari"
+        ],
+        "match_on_tokens": false
+    },
+    "ProblemManagementepl": {
+        "skill_name": "Problem Management",
+        "skill_type": "\n ",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "problem management"
+        },
+        "low_surface_forms": [
+            "problem manag",
+            "manag problem",
+            "problem"
+        ],
+        "match_on_tokens": false
+    },
+    "fin_forecast_modelingepl": {
+        "skill_name": "Financial Forecasting and Modeling",
+        "skill_type": "Business",
+        "skill_len": 4,
+        "high_surfce_forms": {
+            "full": "financial forecasting and modeling"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "cassandraepl": {
+        "skill_name": "Apache cassandra implementation",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "apache cassandra implementation"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "Camundaepl": {
+        "skill_name": "Camunda",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "camunda"
+        },
+        "low_surface_forms": [
+            "camunda"
+        ],
+        "match_on_tokens": false
+    },
+    "PL/SQLepl": {
+        "skill_name": "PL/SQL",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "pl sql"
+        },
+        "low_surface_forms": [
+            "pl sql",
+            "sql pl",
+            "pl"
+        ],
+        "match_on_tokens": false
+    },
+    "marketing_funcitonepl": {
+        "skill_name": "Marketing Function",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "marketing function"
+        },
+        "low_surface_forms": [
+            "market function",
+            "function market"
+        ],
+        "match_on_tokens": false
+    },
+    "VendororSupplierManagementepl": {
+        "skill_name": "Vendor or Supplier Management",
+        "skill_type": "Business",
+        "skill_len": 4,
+        "high_surfce_forms": {
+            "full": "vendor or supplier management"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "team_managementepl": {
+        "skill_name": "Team Management",
+        "skill_type": "Leadership",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "team management"
+        },
+        "low_surface_forms": [
+            "team manag",
+            "manag team"
+        ],
+        "match_on_tokens": false
+    },
+    "cplusplusepl": {
+        "skill_name": "C++ development",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "c++ development"
+        },
+        "low_surface_forms": [
+            "c++ develop",
+            "develop c++",
+            "c++"
+        ],
+        "match_on_tokens": false
+    },
+    "collabglobalepl": {
+        "skill_name": "Collaborating Globally",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "collaborate globally"
+        },
+        "low_surface_forms": [
+            "collabor global",
+            "global collabor"
+        ],
+        "match_on_tokens": false
+    },
+    "SOLRepl": {
+        "skill_name": "SOLR",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "solr"
+        },
+        "low_surface_forms": [
+            "solr"
+        ],
+        "match_on_tokens": false
+    },
+    "reactjs": {
+        "skill_name": "ReactJS",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "reactjs"
+        },
+        "low_surface_forms": [
+            "reactj"
+        ],
+        "match_on_tokens": false
+    },
+    "NetworkPerformanceManagementepl": {
+        "skill_name": "Network Performance Management",
+        "skill_type": "\n ",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "network performance management"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "sqlepl": {
+        "skill_name": "SQL development",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "sql development"
+        },
+        "low_surface_forms": [
+            "sql develop",
+            "develop sql"
+        ],
+        "match_on_tokens": false
+    },
+    "PlatformArchitectureepl": {
+        "skill_name": "Platform Architecture",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "platform architecture"
+        },
+        "low_surface_forms": [
+            "platform architectur",
+            "architectur platform"
+        ],
+        "match_on_tokens": false
+    },
+    "org_changeepl": {
+        "skill_name": "Managing Organizational Change",
+        "skill_type": "Leadership",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "manage organizational change"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "resourcemanagementepl": {
+        "skill_name": "Resource Management - External",
+        "skill_type": "Project Management",
+        "skill_len": 5,
+        "high_surfce_forms": {
+            "full": "resource management    external"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "strytellingepl": {
+        "skill_name": "Storytelling",
+        "skill_type": "Business",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "storytelling"
+        },
+        "low_surface_forms": [
+            "storytel"
+        ],
+        "match_on_tokens": false
+    },
+    "edgeepl": {
+        "skill_name": "Edge Computing Management",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "edge computing management"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "Lv1-2 Ok, Lv3 Remove sentence \"They can also implement an action plan summary, kanban board, scrum board, and gantt charts.\", Lv4 OK": {
+        "skill_name": "Cross-Selling",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "cross selling"
+        },
+        "low_surface_forms": [
+            "cross sell",
+            "sell cross",
+            "cross"
+        ],
+        "match_on_tokens": false
+    },
+    "AgileMethodology(SCRUM)epl": {
+        "skill_name": "Agile Methodology (SCRUM)",
+        "skill_type": "Project Management",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "agile methodology"
+        },
+        "low_surface_forms": [
+            "agil methodolog",
+            "methodolog agil"
+        ],
+        "match_on_tokens": false
+    },
+    "process_improvementepl": {
+        "skill_name": "Process Improvement",
+        "skill_type": "Business",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "process improvement"
+        },
+        "low_surface_forms": [
+            "process improv",
+            "improv process"
+        ],
+        "match_on_tokens": false
+    },
+    "teamintegrationepl": {
+        "skill_name": "Team Integration",
+        "skill_type": "Sales",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "team integration"
+        },
+        "low_surface_forms": [
+            "team integr",
+            "integr team"
+        ],
+        "match_on_tokens": false
+    },
+    "StrategicSalesPlanningepl": {
+        "skill_name": "Strategic Sales Planning",
+        "skill_type": "Business",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "strategic sale planning"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "Ajax(ProgrammingLanguage)epl": {
+        "skill_name": "Ajax (Programming Language)",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "ajax"
+        },
+        "low_surface_forms": [
+            "ajax"
+        ],
+        "match_on_tokens": false
+    },
+    "bus_senseepl": {
+        "skill_name": "Business Sense",
+        "skill_type": "Leadership",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "business sense"
+        },
+        "low_surface_forms": [
+            "busi sens",
+            "sens busi"
+        ],
+        "match_on_tokens": false
+    },
+    "WebLogicepl": {
+        "skill_name": "WebLogic",
+        "skill_type": "Technology",
+        "skill_len": 1,
+        "high_surfce_forms": {
+            "full": "weblogic"
+        },
+        "low_surface_forms": [
+            "weblog"
+        ],
+        "match_on_tokens": false
+    },
+    "ProgramManagementepl": {
+        "skill_name": "Program Management",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "program management"
+        },
+        "low_surface_forms": [
+            "program manag",
+            "manag program",
+            "program"
+        ],
+        "match_on_tokens": false
+    },
+    "financial_analysisepl": {
+        "skill_name": "Financial Analysis",
+        "skill_type": "Data analysis",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "financial analysis"
+        },
+        "low_surface_forms": [
+            "financi analysi",
+            "analysi financi"
+        ],
+        "match_on_tokens": false
+    },
+    "MobileWebDevelopmentepl": {
+        "skill_name": "Mobile Web Development",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "mobile web development"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    },
+    "MicrosoftExcelepl": {
+        "skill_name": "Microsoft Excel",
+        "skill_type": "Technology\n",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "microsoft excel"
+        },
+        "low_surface_forms": [
+            "microsoft excel",
+            "excel microsoft",
+            "excel"
+        ],
+        "match_on_tokens": false
+    },
+    "SpringBootepl": {
+        "skill_name": "Spring Boot",
+        "skill_type": "Technology",
+        "skill_len": 2,
+        "high_surfce_forms": {
+            "full": "spring boot"
+        },
+        "low_surface_forms": [
+            "spring boot",
+            "boot spring",
+            "boot"
+        ],
+        "match_on_tokens": false
+    },
+    "awsepl": {
+        "skill_name": "Amazon Web Services",
+        "skill_type": "Technology",
+        "skill_len": 3,
+        "high_surfce_forms": {
+            "full": "amazon web service"
+        },
+        "low_surface_forms": [],
+        "match_on_tokens": true
+    }
+}

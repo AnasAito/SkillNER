@@ -1,0 +1,1087 @@
+[
+    {
+        "id":"tmwrkepl",
+        "name":"Working as a Team",
+        "type":"Leadership"
+    },
+    {
+        "id":"designthepl",
+        "name":"Design Thinking Process",
+        "type":"Leadership"
+    },
+    {
+        "id":"Couchbaseepl",
+        "name":"Couchbase",
+        "type":"Technology"
+    },
+    {
+        "id":"deeplepl",
+        "name":"DeepLearning",
+        "type":"Technology"
+    },
+    {
+        "id":"DecisionMakingepl",
+        "name":"Decision Making",
+        "type":"Leadership"
+    },
+    {
+        "id":"accountmanepl",
+        "name":"Accounts Management",
+        "type":"Project Management"
+    },
+    {
+        "id":"Javaepl",
+        "name":"Java",
+        "type":"Technology"
+    },
+    {
+        "id":"doc_manepl",
+        "name":"Document Management",
+        "type":"Business"
+    },
+    {
+        "id":"ContentManagementepl",
+        "name":"Content Management",
+        "type":"Business"
+    },
+    {
+        "id":"ScaledAgileFrameworkepl",
+        "name":"Scaled Agile Framework",
+        "type":"Product"
+    },
+    {
+        "id":"HTML(HypertextMarkupLanguage)epl",
+        "name":"HTML (Hypertext Markup Language)",
+        "type":"Technology"
+    },
+    {
+        "id":"SonarQubeepl",
+        "name":"SonarQube",
+        "type":"Technology"
+    },
+    {
+        "id":"InformationManagementepl",
+        "name":"Information Management",
+        "type":"Technology"
+    },
+    {
+        "id":"presentationsepl",
+        "name":"Effective Presentations",
+        "type":"Business"
+    },
+    {
+        "id":"sales_channelsepl",
+        "name":"Sales Channels",
+        "type":"Sales"
+    },
+    {
+        "id":"microsepl",
+        "name":"MIcroservices Development",
+        "type":"Technology"
+    },
+    {
+        "id":"legalepl",
+        "name":"Legal Function",
+        "type":"Business"
+    },
+    {
+        "id":"kubernetepl",
+        "name":"Kubernetes Platform",
+        "type":"Technology"
+    },
+    {
+        "id":"ELKepl",
+        "name":"ELK",
+        "type":"Technology"
+    },
+    {
+        "id":"neg_managementepl",
+        "name":"Negotiation Management",
+        "type":"Sales"
+    },
+    {
+        "id":"DataArchitectureepl",
+        "name":"Data Architecture",
+        "type":"Data Analysis"
+    },
+    {
+        "id":"tableauepl",
+        "name":"tableau desktop",
+        "type":"Technology"
+    },
+    {
+        "id":"finreportepl",
+        "name":"Financial Reporting",
+        "type":"Business"
+    },
+    {
+        "id":"IoTConnectivity(InternetofThings)epl",
+        "name":"IoT Connectivity (Internet of Things)",
+        "type":"Technology"
+    },
+    {
+        "id":"gitepl",
+        "name":"Git and Github",
+        "type":"Technology"
+    },
+    {
+        "id":"Zookeeperepl",
+        "name":"Zookeeper",
+        "type":"Technology"
+    },
+    {
+        "id":"TechnologyArchitectureepl",
+        "name":"Technology Architecture",
+        "type":"Technology"
+    },
+    {
+        "id":"retaining_customersepl",
+        "name":"Retaining Customers",
+        "type":"Sales"
+    },
+    {
+        "id":"DatabaseStructuresepl",
+        "name":"Database Structures",
+        "type":"Data Analysis"
+    },
+    {
+        "id":"outsourcing_empathepl",
+        "name":"Outsourcing",
+        "type":"project Management"
+    },
+    {
+        "id":"Alignmentepl",
+        "name":"Alignment",
+        "type":"Leadership"
+    },
+    {
+        "id":"nodeepl",
+        "name":"Node.JS development",
+        "type":"Technology"
+    },
+    {
+        "id":"busprocmodelingepl",
+        "name":"Business Process Modeling",
+        "type":"Business"
+    },
+    {
+        "id":"agileepl",
+        "name":"Agile Development Practices",
+        "type":"Product"
+    },
+    {
+        "id":"xmlepl",
+        "name":"XML development",
+        "type":"Technology"
+    },
+    {
+        "id":"rca_empathepl",
+        "name":"Root Cause Analysis",
+        "type":"Leadership"
+    },
+    {
+        "id":"client_managementepl",
+        "name":"Client Management",
+        "type":"Sales"
+    },
+    {
+        "id":"busrelateepl",
+        "name":"Business Relationships",
+        "type":"Sales"
+    },
+    {
+        "id":"DHTMLepl",
+        "name":"DHTML",
+        "type":"Technology"
+    },
+    {
+        "id":"linuxepl",
+        "name":"Linux OS",
+        "type":"Technology"
+    },
+    {
+        "id":"sales_proposalsepl",
+        "name":"Sales Proposals and Presentations",
+        "type":"Business"
+    },
+    {
+        "id":"compdifepl",
+        "name":"Competitive Differentiation",
+        "type":"Marketing"
+    },
+    {
+        "id":"OPENSTACKepl",
+        "name":"OPENSTACK",
+        "type":"Technology"
+    },
+    {
+        "id":"buscaseepl",
+        "name":"Business Case Management",
+        "type":"Business"
+    },
+    {
+        "id":"RESTepl",
+        "name":"REST",
+        "type":"Technology"
+    },
+    {
+        "id":"logistics_empathepl",
+        "name":"Logistics",
+        "type":"Business"
+    },
+    {
+        "id":"JSONepl",
+        "name":"JSON",
+        "type":"Technology"
+    },
+    {
+        "id":"PostreSQLepl",
+        "name":"PostreSQL",
+        "type":"Technology"
+    },
+    {
+        "id":"dockerepl",
+        "name":"Docker Development",
+        "type":"Technology"
+    },
+    {
+        "id":"Kafkaepl",
+        "name":"Kafka",
+        "type":"Technology"
+    },
+    {
+        "id":"Cucumberepl",
+        "name":"Cucumber",
+        "type":"Technology"
+    },
+    {
+        "id":"business_intelligenceepl",
+        "name":"Business Intelligence",
+        "type":"Business"
+    },
+    {
+        "id":"CascadingStyleSheets(CSS)epl",
+        "name":"Cascading Style Sheets (CSS)",
+        "type":"Technology"
+    },
+    {
+        "id":"WebServicesepl",
+        "name":"Web Services",
+        "type":"Technology"
+    },
+    {
+        "id":"jiraepl",
+        "name":"Jira Software",
+        "type":"Technology"
+    },
+    {
+        "id":"cloudepl",
+        "name":"Cloud Computing Management",
+        "type":"Technology"
+    },
+    {
+        "id":"EquityinTalentepl",
+        "name":"Equity in Talent",
+        "type":"Leadership"
+    },
+    {
+        "id":"OracleDatabaseManagementepl",
+        "name":"Oracle Database Management",
+        "type":"Technology"
+    },
+    {
+        "id":"NetworkTopologyepl",
+        "name":"Network Topology",
+        "type":"\n "
+    },
+    {
+        "id":"NetworkServiceOperationsepl",
+        "name":"Network Service Operations",
+        "type":"Technology"
+    },
+    {
+        "id":"leadepl",
+        "name":"Leadership",
+        "type":"Leadership"
+    },
+    {
+        "id":"cybersec1epl",
+        "name":"CyberSecurity Analysis",
+        "type":"Technology"
+    },
+    {
+        "id":"account_methodsepl",
+        "name":"Accounting Methods",
+        "type":"Accounting"
+    },
+    {
+        "id":"taking_ownershipepl",
+        "name":"Taking Ownership",
+        "type":"Business"
+    },
+    {
+        "id":"jenkinsepl",
+        "name":"Jenkins implementation",
+        "type":"Technology"
+    },
+    {
+        "id":"ApacheCXFepl",
+        "name":"Apache CXF",
+        "type":"Technology"
+    },
+    {
+        "id":"PC\/WorkstationHardwareepl",
+        "name":"PC\/Workstation Hardware",
+        "type":"Technology"
+    },
+    {
+        "id":"techarcdesignepl",
+        "name":"Technology Architecture Design and Implementation",
+        "type":"Technology"
+    },
+    {
+        "id":"infsecepl",
+        "name":"Information Security Practices",
+        "type":"Data Analysis"
+    },
+    {
+        "id":"Gerritepl",
+        "name":"Gerrit",
+        "type":"Technology"
+    },
+    {
+        "id":"investepl",
+        "name":"Investment Management",
+        "type":"Business"
+    },
+    {
+        "id":"accounts_receivableepl",
+        "name":"Accounts Receivable",
+        "type":"Accounting"
+    },
+    {
+        "id":"angularepl",
+        "name":"Angular Framework",
+        "type":"Technology"
+    },
+    {
+        "id":"networkepl",
+        "name":"Internet Security",
+        "type":"Technology"
+    },
+    {
+        "id":"custfocusepl",
+        "name":"Focus on the Customer",
+        "type":"Leadership"
+    },
+    {
+        "id":"sdlc_empathepl",
+        "name":"Software Development Life Cycle (SDLC)",
+        "type":"Technology"
+    },
+    {
+        "id":"sales_forceastingepl",
+        "name":"Sales Forecasting",
+        "type":"Sales"
+    },
+    {
+        "id":"aiepl",
+        "name":"Artificial Intelligence implementation",
+        "type":"Technology"
+    },
+    {
+        "id":"Seleniumepl",
+        "name":"Selenium",
+        "type":"Technology"
+    },
+    {
+        "id":"AutomaticCallDistributionepl",
+        "name":"Automatic Call Distribution",
+        "type":"Telephony"
+    },
+    {
+        "id":"FraudManagementepl",
+        "name":"Fraud Management",
+        "type":"Technology"
+    },
+    {
+        "id":"employee_relationsepl",
+        "name":"Employee Relations",
+        "type":"Business"
+    },
+    {
+        "id":"CapacityPlanningepl",
+        "name":"Capacity Planning",
+        "type":"\n Business"
+    },
+    {
+        "id":"IBMCloudepl",
+        "name":"IBM Cloud",
+        "type":"Technology"
+    },
+    {
+        "id":"DOTNETepl",
+        "name":"DOT NET",
+        "type":"Technology"
+    },
+    {
+        "id":"softwareqaepl",
+        "name":"Software Quality Assurance Tools",
+        "type":"Technology"
+    },
+    {
+        "id":"fin_account_systemsepl",
+        "name":"Financial and Accounting Systems",
+        "type":"Business"
+    },
+    {
+        "id":"emergtechepl",
+        "name":"Technology Trends",
+        "type":"Leadership"
+    },
+    {
+        "id":"javascriptepl",
+        "name":"Javascript development",
+        "type":"Technology"
+    },
+    {
+        "id":"cust_servepl",
+        "name":"Customer Service",
+        "type":"Sales"
+    },
+    {
+        "id":"sales_prospectingepl",
+        "name":"Sales Prospecting",
+        "type":"Sales"
+    },
+    {
+        "id":"data_govepl",
+        "name":"Data Governance",
+        "type":"Data Analysis"
+    },
+    {
+        "id":"DataScienceepl",
+        "name":"Data Science",
+        "type":"Technology"
+    },
+    {
+        "id":"detailepl",
+        "name":"Attention to Detail",
+        "type":"Project Management"
+    },
+    {
+        "id":"pythonepl",
+        "name":"Python Development",
+        "type":"Technology"
+    },
+    {
+        "id":"sdnepl",
+        "name":"SDN (Software Defined Networking)",
+        "type":"Technology"
+    },
+    {
+        "id":"InternationalFinancialReportingStandardsepl",
+        "name":"International Financial Reporting Standards",
+        "type":"Technology"
+    },
+    {
+        "id":"graphic_vizepl",
+        "name":"Graphic Visualization",
+        "type":"Business"
+    },
+    {
+        "id":"Gerritepl",
+        "name":"Gerritpl",
+        "type":"Technology"
+    },
+    {
+        "id":"MECepl",
+        "name":"MEC",
+        "type":"Technology"
+    },
+    {
+        "id":"ITSystemsManagementepl",
+        "name":"IT Systems Management",
+        "type":"Technology"
+    },
+    {
+        "id":"bus_statisticsepl",
+        "name":"Business Statistics",
+        "type":"data analysis"
+    },
+    {
+        "id":"GovernmentAffairsRegulatoryEnvironmentepl",
+        "name":"Government Affairs Regulatory Environment",
+        "type":"Technology"
+    },
+    {
+        "id":"infosecarchepl",
+        "name":"Information Security Architecture and Design",
+        "type":"Technology"
+    },
+    {
+        "id":"platarchepl",
+        "name":"Platform and Solution Architecture",
+        "type":"Technology"
+    },
+    {
+        "id":"mongoepl",
+        "name":"MongDB development",
+        "type":"Technology"
+    },
+    {
+        "id":"CustomerSegmentationepl",
+        "name":"Customer Segmentation",
+        "type":"Technology"
+    },
+    {
+        "id":"mlepl",
+        "name":"Machine Learning development",
+        "type":"Technology"
+    },
+    {
+        "id":"decisionsepl",
+        "name":"Data Based Decision Making",
+        "type":"SEL"
+    },
+    {
+        "id":"ProductDevelopmentStrategyepl",
+        "name":"Product Development Strategy",
+        "type":"Product"
+    },
+    {
+        "id":"perlepl",
+        "name":"Perl Development",
+        "type":"Technology"
+    },
+    {
+        "id":"AgileScoping(ProductOwner)epl",
+        "name":"Agile Scoping (Product Owner)",
+        "type":"Product"
+    },
+    {
+        "id":"kerasepl",
+        "name":"keras",
+        "type":"Technology"
+    },
+    {
+        "id":"Prometheusepl",
+        "name":"Prometheus",
+        "type":"Technology"
+    },
+    {
+        "id":"azureepl",
+        "name":"Microsoft Azure Management",
+        "type":"Technology"
+    },
+    {
+        "id":"Swaggerepl",
+        "name":"Swagger",
+        "type":"Technology"
+    },
+    {
+        "id":"customer_supportepl",
+        "name":"Customer Support",
+        "type":"Sales"
+    },
+    {
+        "id":"riskepl",
+        "name":"Exposure Management",
+        "type":"Leadership"
+    },
+    {
+        "id":"Ethernetepl",
+        "name":"Ethernet",
+        "type":"Technology"
+    },
+    {
+        "id":"SpringAOPepl",
+        "name":"Spring AOP",
+        "type":"Technology"
+    },
+    {
+        "id":"SecurityManagementandDesignepl",
+        "name":"Security Management and Design",
+        "type":"Technology"
+    },
+    {
+        "id":"dataprepepl",
+        "name":"Data Preparation and Presentation",
+        "type":"Data analysis"
+    },
+    {
+        "id":"5Gepl",
+        "name":"5G",
+        "type":"Technology"
+    },
+    {
+        "id":"ContinuousIntegration\/Deliveryepl",
+        "name":"Continuous Integration \/ Delivery",
+        "type":"Technology"
+    },
+    {
+        "id":"PMepl",
+        "name":"Project Management Capabilites",
+        "type":"Project Management"
+    },
+    {
+        "id":"Nexusepl",
+        "name":"Nexus",
+        "type":"Technology"
+    },
+    {
+        "id":"PowerBIepl",
+        "name":"Power BI",
+        "type":"Technology"
+    },
+    {
+        "id":"datavizepl",
+        "name":"Data Visualization Techniques",
+        "type":"Technology"
+    },
+    {
+        "id":"influence_othersepl",
+        "name":"Influence Others",
+        "type":"Leadership"
+    },
+    {
+        "id":"cost_accountingepl",
+        "name":"Cost Accounting",
+        "type":"Business"
+    },
+    {
+        "id":"TestAutomationFW-Lifecycles&PMepl",
+        "name":"Test Automation FW-Lifecycles & PM",
+        "type":"Technology"
+    },
+    {
+        "id":"HTTPepl",
+        "name":"HTTP",
+        "type":"Technology"
+    },
+    {
+        "id":"BitBucketepl",
+        "name":"BitBucket",
+        "type":"Technology"
+    },
+    {
+        "id":"EnvironmentalEngineering-RealEstateepl",
+        "name":"Environmental Engineering - Real Estate",
+        "type":"Technology"
+    },
+    {
+        "id":"srvceexcelepl",
+        "name":"Customer Service Excellence",
+        "type":"Sales"
+    },
+    {
+        "id":"business_ethicsepl",
+        "name":"Business Ethics",
+        "type":"leadership"
+    },
+    {
+        "id":"busdevepl",
+        "name":"Business Development",
+        "type":"Business"
+    },
+    {
+        "id":"commandlineepl",
+        "name":"Command Line",
+        "type":"Technology"
+    },
+    {
+        "id":"creativity_empathepl",
+        "name":"Creativity",
+        "type":"Leadership"
+    },
+    {
+        "id":"gaap_empathepl",
+        "name":"Generally Accepted Accounting Principles (GAAP)",
+        "type":"Accounting"
+    },
+    {
+        "id":"op_functionsepl",
+        "name":"Operational Functions",
+        "type":"Business"
+    },
+    {
+        "id":"Terraformepl",
+        "name":"Terraform",
+        "type":"Technology"
+    },
+    {
+        "id":"MicroservicesTechniquesepl",
+        "name":"Microservices Techniques",
+        "type":"Technology"
+    },
+    {
+        "id":"devopsepl",
+        "name":"DevOps Management",
+        "type":"Technology"
+    },
+    {
+        "id":"rpaepl",
+        "name":"Robotic Process Automation",
+        "type":"Technology"
+    },
+    {
+        "id":"Estimationpracticesepl",
+        "name":"Estimation practices",
+        "type":"Product"
+    },
+    {
+        "id":"csharpepl",
+        "name":"C# Development",
+        "type":"Technology"
+    },
+    {
+        "id":"opmanepl",
+        "name":"Operations Management",
+        "type":"Leadership"
+    },
+    {
+        "id":"junitepl",
+        "name":"Junit implementation",
+        "type":"Technology"
+    },
+    {
+        "id":"RestAssuredepl",
+        "name":"Rest Assured",
+        "type":"Technology"
+    },
+    {
+        "id":"facmanepl",
+        "name":"Manage Facilities",
+        "type":"Project Management"
+    },
+    {
+        "id":"sparkepl",
+        "name":"Apache Spark development",
+        "type":"Technology"
+    },
+    {
+        "id":"manage_processesepl",
+        "name":"Manage Processes",
+        "type":"Project Management"
+    },
+    {
+        "id":"CloudComputingArchitectureepl",
+        "name":"Cloud Computing Architecture",
+        "type":"Technology"
+    },
+    {
+        "id":"audit_empathepl",
+        "name":"Auditing",
+        "type":"Accounting"
+    },
+    {
+        "id":"forecepl",
+        "name":"Data Forecasting",
+        "type":"data analysis"
+    },
+    {
+        "id":"contractmanepl",
+        "name":"Contract Management",
+        "type":"Accounting"
+    },
+    {
+        "id":"CSS3epl",
+        "name":"CSS3",
+        "type":"Technology"
+    },
+    {
+        "id":"Train-The-Trainerepl",
+        "name":"Train-The-Trainer",
+        "type":"Business\n "
+    },
+    {
+        "id":"APIImplementationepl",
+        "name":"API Implementation",
+        "type":"Technology"
+    },
+    {
+        "id":"trainingdevepl",
+        "name":"Training Development",
+        "type":"\n "
+    },
+    {
+        "id":"RecordRetentionPolicyepl",
+        "name":"Record Retention Policy",
+        "type":"Technology"
+    },
+    {
+        "id":"Rallyepl",
+        "name":"Rally",
+        "type":"Technology"
+    },
+    {
+        "id":"Cepl",
+        "name":"C",
+        "type":"Technology"
+    },
+    {
+        "id":"EaaSepl",
+        "name":"EaaS",
+        "type":"Technology"
+    },
+    {
+        "id":"networkinghardwareepl",
+        "name":"networking hardware",
+        "type":"Technology"
+    },
+    {
+        "id":"ComputerNetworkArchitectureepl",
+        "name":"Computer Network Architecture",
+        "type":"Technology"
+    },
+    {
+        "id":"TechnologyExpertiseepl",
+        "name":"Technology Expertise",
+        "type":"Technology"
+    },
+    {
+        "id":"qualmanagementepl",
+        "name":"Quality Management",
+        "type":"Project Management"
+    },
+    {
+        "id":"OpenShiftepl",
+        "name":"Open Shift",
+        "type":"Technology"
+    },
+    {
+        "id":"E-mailRoutingandResponseSoftwareepl",
+        "name":"E-mail Routing and Response Software",
+        "type":"Technology"
+    },
+    {
+        "id":"TrainingLeadership",
+        "name":"Training Leadership",
+        "type":"Business"
+    },
+    {
+        "id":"DataMiningepl",
+        "name":"Data Mining",
+        "type":"Technology"
+    },
+    {
+        "id":"mysql1epl",
+        "name":"MySQL development",
+        "type":"Technology"
+    },
+    {
+        "id":"ContentStrategyepl",
+        "name":"Content Strategy",
+        "type":"Technology"
+    },
+    {
+        "id":"Waterfallepl",
+        "name":"Waterfall",
+        "type":"Technology"
+    },
+    {
+        "id":"ElasticSearch\/Kibanaepl",
+        "name":"ElasticSearch\/Kibana",
+        "type":"Technology"
+    },
+    {
+        "id":"devsecopsepl",
+        "name":"DevSecOps management",
+        "type":"Technology"
+    },
+    {
+        "id":"supplychainmanagementepl",
+        "name":"Supply Chain Management",
+        "type":"Business"
+    },
+    {
+        "id":"WIFIepl",
+        "name":"WIFI",
+        "type":"Technology"
+    },
+    {
+        "id":"prioritymanagementepl",
+        "name":"Priority Management",
+        "type":"Project Management"
+    },
+    {
+        "id":"Grafanaepl",
+        "name":"Grafana",
+        "type":"Technology"
+    },
+    {
+        "id":"budget_managementepl",
+        "name":"Manage a Budget",
+        "type":"Accounting"
+    },
+    {
+        "id":"SalaryPlanningepl",
+        "name":"Salary Planning",
+        "type":"Technology"
+    },
+    {
+        "id":"ProblemManagementepl",
+        "name":"Problem Management",
+        "type":"\n "
+    },
+    {
+        "id":"fin_forecast_modelingepl",
+        "name":"Financial Forecasting and Modeling",
+        "type":"Business"
+    },
+    {
+        "id":"cassandraepl",
+        "name":"Apache cassandra implementation",
+        "type":"Technology"
+    },
+    {
+        "id":"Camundaepl",
+        "name":"Camunda",
+        "type":"Technology"
+    },
+    {
+        "id":"PL\/SQLepl",
+        "name":"PL\/SQL",
+        "type":"Technology"
+    },
+    {
+        "id":"marketing_funcitonepl",
+        "name":"Marketing Function",
+        "type":"Business"
+    },
+    {
+        "id":"VendororSupplierManagementepl",
+        "name":"Vendor or Supplier Management",
+        "type":"Business"
+    },
+    {
+        "id":"team_managementepl",
+        "name":"Team Management",
+        "type":"Leadership"
+    },
+    {
+        "id":"cplusplusepl",
+        "name":"C++ development",
+        "type":"Technology"
+    },
+    {
+        "id":"collabglobalepl",
+        "name":"Collaborating Globally",
+        "type":"Business"
+    },
+    {
+        "id":"SOLRepl",
+        "name":"SOLR",
+        "type":"Technology"
+    },
+    {
+        "id":"reactjs",
+        "name":"ReactJS",
+        "type":"Technology"
+    },
+    {
+        "id":"NetworkPerformanceManagementepl",
+        "name":"Network Performance Management",
+        "type":"\n "
+    },
+    {
+        "id":"sqlepl",
+        "name":"SQL development",
+        "type":"Technology"
+    },
+    {
+        "id":"PlatformArchitectureepl",
+        "name":"Platform Architecture",
+        "type":"Technology"
+    },
+    {
+        "id":"org_changeepl",
+        "name":"Managing Organizational Change",
+        "type":"Leadership"
+    },
+    {
+        "id":"resourcemanagementepl",
+        "name":"Resource Management - External",
+        "type":"Project Management"
+    },
+    {
+        "id":"strytellingepl",
+        "name":"Storytelling",
+        "type":"Business"
+    },
+    {
+        "id":"edgeepl",
+        "name":"Edge Computing Management",
+        "type":"Technology"
+    },
+    {
+        "id":"Lv1-2 Ok, Lv3 Remove sentence \"They can also implement an action plan summary, kanban board, scrum board, and gantt charts.\", Lv4 OK",
+        "name":"Cross-Selling",
+        "type":"Business"
+    },
+    {
+        "id":"AgileMethodology(SCRUM)epl",
+        "name":"Agile Methodology (SCRUM)",
+        "type":"Project Management"
+    },
+    {
+        "id":"process_improvementepl",
+        "name":"Process Improvement",
+        "type":"Business"
+    },
+    {
+        "id":"teamintegrationepl",
+        "name":"Team Integration",
+        "type":"Sales"
+    },
+    {
+        "id":"StrategicSalesPlanningepl",
+        "name":"Strategic Sales Planning",
+        "type":"Business"
+    },
+    {
+        "id":"Ajax(ProgrammingLanguage)epl",
+        "name":"Ajax (Programming Language)",
+        "type":"Technology"
+    },
+    {
+        "id":"bus_senseepl",
+        "name":"Business Sense",
+        "type":"Leadership"
+    },
+    {
+        "id":"WebLogicepl",
+        "name":"WebLogic",
+        "type":"Technology"
+    },
+    {
+        "id":"ProgramManagementepl",
+        "name":"Program Management",
+        "type":"Technology"
+    },
+    {
+        "id":"financial_analysisepl",
+        "name":"Financial Analysis",
+        "type":"Data analysis"
+    },
+    {
+        "id":"MobileWebDevelopmentepl",
+        "name":"Mobile Web Development",
+        "type":"Technology"
+    },
+    {
+        "id":"MicrosoftExcelepl",
+        "name":"Microsoft Excel",
+        "type":"Technology\n"
+    },
+    {
+        "id":"SpringBootepl",
+        "name":"Spring Boot",
+        "type":"Technology"
+    },
+    {
+        "id":"awsepl",
+        "name":"Amazon Web Services",
+        "type":"Technology"
+    }
+]
