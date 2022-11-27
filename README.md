@@ -2,7 +2,7 @@
 
 [![Number of SkillNer downloads](https://static.pepy.tech/personalized-badge/skillner?period=total&units=international_system&left_color=blue&right_color=orange&left_text=PyPi%20downloads)](https://pepy.tech/project/skillner)
 
-**Just looking to test out SkillNer? Check out our [demo](https://share.streamlit.io/anasaito/skillner_demo/index.py)**.
+**Just looking to test out SkillNer? Check out our [demo](https://anasaito-skillner-demo-index-4fiwi3.streamlit.app/)**.
 
 SkillNer is an NLP module to automatically Extract skills and certifications from unstructured job postings, texts, and applicant's resumes.
 
