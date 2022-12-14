@@ -1,6 +1,12 @@
 <p align="center"><img width="50%" src="https://user-images.githubusercontent.com/56308112/128958594-79813e72-b688-4a9a-9267-324f098d4b0c.png" /></p>
 
-[![Number of SkillNer downloads](https://static.pepy.tech/personalized-badge/skillner?period=total&units=international_system&left_color=blue&right_color=orange&left_text=PyPi%20downloads)](https://pepy.tech/project/skillner)
+[**Live demo**](https://share.streamlit.io/anasaito/skillner_demo/index.py) | [**Documentation**](https://badr-moufad.github.io/SkillNER/get_started.html) | [**Website**](https://skillner.vercel.app/)
+
+----------------------
+
+
+[![Downloads](https://static.pepy.tech/personalized-badge/skillner?period=month&units=international_system&left_color=blue&right_color=green&left_text=Downloads%20/%20months)](https://pepy.tech/project/skillner)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Just looking to test out SkillNer? Check out our [demo](https://anasaito-skillner-demo-index-4fiwi3.streamlit.app/)**.
 
@@ -11,16 +17,6 @@ Skillner uses [EMSI](https://skills.emsidata.com/) databse (an open source skill
 
 
 <p align="center"><img width="50%" src="https://user-images.githubusercontent.com/56308112/138768792-a25d25e7-1e43-4a44-aa46-8de9895ffe88.png" /></p>
-
-
-
-
-
-## Useful links
-
-- [Visit our website](https://skillner.vercel.app/) to learn about SkillNer features, how it works, and particularly explore our roadmap
-- Get started with SkillNer and get to know its API by visiting the [Documentation](https://skillner-docs.herokuapp.com/)
-- [Test our Demo](https://share.streamlit.io/anasaito/skillner_demo/index.py) to see some of SkillNer capabilities
 
 
 ## Installation
@@ -154,8 +150,14 @@ You can contribute to SkillNer either by
 
 
 
-Finally, make sure to read carefully [our guidelines](https://skillner-docs.herokuapp.com/contribute.html) before contributing. It will specifies standards to follow so that we can understand what you want to say.
+Finally, make sure to read carefully [our guidelines](https://badr-moufad.github.io/SkillNER/contribute.html) before contributing. It will specifies standards to follow so that we can understand what you want to say.
 
 
 Besides, it will help you setup SkillNer on your local machine, in case you are willing to push code.
 
+
+## Useful links
+
+- [Visit our website](https://skillner.vercel.app/) to learn about SkillNer features, how it works, and particularly explore our roadmap
+- Get started with SkillNer and get to know its API by visiting the [Documentation](https://badr-moufad.github.io/SkillNER/get_started.html)
+- [Test our Demo](https://share.streamlit.io/anasaito/skillner_demo/index.py) to see some of SkillNer capabilities
