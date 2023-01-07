@@ -11,7 +11,7 @@ import jellyfish
 # my packs
 from skillNer.text_class import Text
 from skillNer.general_params import TOKEN_DIST
-
+from scipy.sparse import csr_matrix
 
 class Utils:
     def __init__(self, nlp, skills_db):
@@ -43,17 +43,20 @@ class Utils:
 
     def get_clusters(self, co_oc):
         clusters = []
-        for i, row in enumerate(co_oc):
+        i=0
+        for row in co_oc.tolil().rows:
+            if row != []:
+
             # divide row into clusters deivided by 0 : 0 occurence where clusters refer to token id
             # example [2,3,0,5,0,0] -> [0,1,3] -> [[0,1],[3]]
-            clusts = list(self.grouper(self.split_at_values(row, 0), 1))
-            if clusts != []:
+            # clusts = list(self.grouper(self.split_at_values(row, 0), 1))
+                clusts = list(self.grouper(row, 1))
                 # select token relative cluster via its idx
                # example i==0 => [[0,1],[3]] => a = [0,1]
                 a = [c for c in clusts if i in c][0]
                 if a not in clusters:
-
                     clusters.append(a)
+            i+=1        
         # return unique clusters [token id]
         return clusters
 
@@ -73,22 +76,26 @@ class Utils:
                                                 0 : otherwise
                look_up : return a mapper from skill_ids to its equivalent row index in corpus
         """
-        len_ = len(text)
-        corpus = []
-        look_up = {}
-        unique_skills = list(set([match['skill_id'] for match in matches]))
-        skill_text_match_bin = [0]*len_
-        for index, skill_id in enumerate(unique_skills):
+        def get_corpus(text,matches):
+            len_ = len(text)
+            unique_skills = list(set([match['skill_id'] for match in matches]))
+            skill_text_match_bin = [0]*len_
+            match_df = pd.DataFrame(matches)
+            match_df_group = match_df.groupby('skill_id')['doc_node_id']
+            corpus=[]
+            look_up = {}
+            idx=0
+            on_inds =[]
+            for skill_id,g in match_df_group:
+                skill_text_match_bin = [0]*len_
+                look_up[idx]=skill_id
+                on_inds = [j for sub in g for j in sub]
+                skill_text_match_bin_updated = [(i in on_inds)*1 for i, _ in enumerate(skill_text_match_bin)]
 
-            on_inds_ = [match['doc_node_id']
-                        for match in matches if match['skill_id'] == skill_id]
-            on_inds = [j for sub in on_inds_ for j in sub]
-            skill_text_match_bin_updated = [
-                (i in on_inds)*1 for i, _ in enumerate(skill_text_match_bin)]
-            corpus.append(skill_text_match_bin_updated)
-            look_up[index] = skill_id
-
-        return np.array(corpus), look_up
+                corpus.append(skill_text_match_bin_updated)
+                idx+=1
+            # return csr_matrix(corpus), lookup
+            return np.array(corpus), look_up
 
     def one_gram_sim(self, text_str, skill_str):
         # transform into sentence
@@ -183,20 +190,20 @@ class Utils:
         len_ = len(text_tokens)
 
         corpus, look_up = self.get_corpus(text_tokens, matches)
-
+        corpus_csr = csr_matrix(corpus)
         # generate spans (a span is a list of tokens where one or more skills are matched)
 
         # co-occurence of tokens aij : co-occurence count of token i with token j
-        co_occ = np.matmul(corpus.T, corpus)
-
+        # co_occ = np.matmul(corpus.T, corpus)
+        co_occ_csr = corpus_csr.T.dot(corpus_csr)
         # create spans of tokens that co-occured
-        clusters = self.get_clusters(co_occ)
+        clusters = self.get_clusters(co_occ_csr)
 
         # one hot encoding of clusters
         # example [0,1,2] => [1,1,1,0,0,0] , encoding length  = text length
         ones = [self.make_one(cluster, len_) for cluster in clusters]
         # generate list of span and list of skills that have conflict on spans [(span,[skill_id])]
-        spans_conflicts = [(np.array(one), np.array([a_[0] for a_ in np.argwhere(corpus.dot(one) != 0)]))
+        spans_conflicts = [(np.array(one), np.array([a_[0] for a_ in np.argwhere(corpus_csr.dot(one) != 0)]))
                            for one in ones]
 
         # filter and score
