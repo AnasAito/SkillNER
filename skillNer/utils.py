@@ -76,26 +76,26 @@ class Utils:
                                                 0 : otherwise
                look_up : return a mapper from skill_ids to its equivalent row index in corpus
         """
-        def get_corpus(text,matches):
-            len_ = len(text)
-            unique_skills = list(set([match['skill_id'] for match in matches]))
+        
+        len_ = len(text)
+        unique_skills = list(set([match['skill_id'] for match in matches]))
+        skill_text_match_bin = [0]*len_
+        match_df = pd.DataFrame(matches)
+        match_df_group = match_df.groupby('skill_id')['doc_node_id']
+        corpus=[]
+        look_up = {}
+        idx=0
+        on_inds =[]
+        for skill_id,g in match_df_group:
             skill_text_match_bin = [0]*len_
-            match_df = pd.DataFrame(matches)
-            match_df_group = match_df.groupby('skill_id')['doc_node_id']
-            corpus=[]
-            look_up = {}
-            idx=0
-            on_inds =[]
-            for skill_id,g in match_df_group:
-                skill_text_match_bin = [0]*len_
-                look_up[idx]=skill_id
-                on_inds = [j for sub in g for j in sub]
-                skill_text_match_bin_updated = [(i in on_inds)*1 for i, _ in enumerate(skill_text_match_bin)]
+            look_up[idx]=skill_id
+            on_inds = [j for sub in g for j in sub]
+            skill_text_match_bin_updated = [(i in on_inds)*1 for i, _ in enumerate(skill_text_match_bin)]
 
-                corpus.append(skill_text_match_bin_updated)
-                idx+=1
-            # return csr_matrix(corpus), lookup
-            return np.array(corpus), look_up
+            corpus.append(skill_text_match_bin_updated)
+            idx+=1
+        # return csr_matrix(corpus), lookup
+        return np.array(corpus), look_up
 
     def one_gram_sim(self, text_str, skill_str):
         # transform into sentence
