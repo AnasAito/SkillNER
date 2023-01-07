@@ -12,6 +12,7 @@ import jellyfish
 from skillNer.text_class import Text
 from skillNer.general_params import TOKEN_DIST
 from scipy.sparse import csr_matrix
+import pandas as pd
 
 class Utils:
     def __init__(self, nlp, skills_db):
