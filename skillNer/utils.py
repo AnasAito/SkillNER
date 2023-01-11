@@ -44,20 +44,19 @@ class Utils:
 
     def get_clusters(self, co_oc):
         clusters = []
-        i=0
-        for row in co_oc.tolil().rows:
-            if row != []:
-
+        for i,row in enumerate(co_oc.tolil().rows):
+            if len(row)== 0:
+                continue
             # divide row into clusters deivided by 0 : 0 occurence where clusters refer to token id
             # example [2,3,0,5,0,0] -> [0,1,3] -> [[0,1],[3]]
             # clusts = list(self.grouper(self.split_at_values(row, 0), 1))
-                clusts = list(self.grouper(row, 1))
+            clusts = list(self.grouper(row, 1))
                 # select token relative cluster via its idx
                # example i==0 => [[0,1],[3]] => a = [0,1]
-                a = [c for c in clusts if i in c][0]
-                if a not in clusters:
-                    clusters.append(a)
-            i+=1        
+            a = [c for c in clusts if i in c][0]
+            if a not in clusters:
+                clusters.append(a)
+                    
         # return unique clusters [token id]
         return clusters
 
@@ -85,17 +84,16 @@ class Utils:
         match_df_group = match_df.groupby('skill_id')['doc_node_id']
         corpus=[]
         look_up = {}
-        idx=0
         on_inds =[]
-        for skill_id,g in match_df_group:
+        for idx,gr in enumerate(match_df_group):
+            skill_id =gr[0]
+            g=gr[1]
             skill_text_match_bin = [0]*len_
             look_up[idx]=skill_id
             on_inds = [j for sub in g for j in sub]
             skill_text_match_bin_updated = [(i in on_inds)*1 for i, _ in enumerate(skill_text_match_bin)]
 
             corpus.append(skill_text_match_bin_updated)
-            idx+=1
-        # return csr_matrix(corpus), lookup
         return np.array(corpus), look_up
 
     def one_gram_sim(self, text_str, skill_str):
