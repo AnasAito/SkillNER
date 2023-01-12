@@ -7,7 +7,8 @@ dependencies = [
     "nltk",
     "spacy",
     "jellyfish",
-    "ipython"
+    "ipython",
+    "scipy"
 ]
 
 setuptools.setup(
