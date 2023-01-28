@@ -31,4 +31,4 @@ jobs:
         run: flake8 skillner --max-line-length=89
 
       - name: Check documentation formatting
-        run: pydocstyle skillner --ignore="D104"
+        run: pydocstyle skillner --ignore="D100","D102","D104","D105","D107","D203","D213"

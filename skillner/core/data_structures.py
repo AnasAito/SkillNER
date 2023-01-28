@@ -18,6 +18,7 @@ class Word(str):
     >>> w = Word("skillner")
     >>> w
     'skillner'
+
     """
 
     def __init__(self, word: str) -> None:
@@ -41,6 +42,7 @@ class Sentence:
     5
     >>> s[2]
     'welcome'
+
     """
 
     def __init__(self) -> None:

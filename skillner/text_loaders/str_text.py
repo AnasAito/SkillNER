@@ -6,13 +6,30 @@ from skillner.core.base import Node
 
 
 class StrTextLoader(Node):
-    """"""
+    """Loader of text as string.
+
+    Used in a pipeline to create the sentences of document.
+
+    Parameters
+    ----------
+    text: str
+        text used to create the document sentences.
+
+    """
 
     def __init__(self, text: str) -> None:
         super().__init__()
         self.text = text
 
     def enrich_doc(self, doc: Document) -> None:
+        """Create document sentences.
+
+        Parameters
+        ----------
+        doc: Document
+            The document to enrich with sentences.
+
+        """
         # well format text by substituting \n, \t, space, \v with space
         escape_patterns = r"\s+"
         self.text = re.sub(escape_patterns, repl=" ", string=self.text)
@@ -35,6 +52,7 @@ class StrTextLoader(Node):
 
     @staticmethod
     def _sentence2words(raw_sentence: str) -> Sentence:
+        # private static method to create words in sentences
         word_pattern = r"[,|;|:| |(|)]+"
 
         li_words: List[Word] = []
