@@ -31,7 +31,7 @@ class Document:
     """"""
 
     def __init__(self) -> None:
-        self.li_sentences: List[Sentence]
+        self.li_sentences: List[Sentence] = []
 
     def __getitem__(self, i) -> Type[Sentence]:
         return self.li_sentences[i]
