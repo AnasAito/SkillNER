@@ -1,0 +1,8 @@
+# python cache
+__pycache__
+__cache__
+
+
+# build
+*.egg
+*.egg-info
