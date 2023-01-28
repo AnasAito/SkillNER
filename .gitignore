@@ -6,3 +6,7 @@ __cache__
 # build
 *.egg
 *.egg-info
+
+
+# pytest cache
+.pytest_cache
