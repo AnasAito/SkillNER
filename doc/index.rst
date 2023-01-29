@@ -14,3 +14,4 @@ Explore the documentation
     :maxdepth: 1
 
     api.rst
+    development.rst
