@@ -37,7 +37,7 @@ jobs:
       - name: clean ups
         run: |
           mkdir new-doc
-          cp -r ./doc/build/html/* ./new-doc
+          cp -r ./doc/_build/html/* ./new-doc
           find * -not -path "new-doc/*" -not -path "new-doc" -delete
           cp -r ./new-doc/* ./
           rm -r ./new-doc/
