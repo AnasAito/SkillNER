@@ -1,0 +1,54 @@
+name: build-deploy-doc
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  build-deploy:
+    name: Build and deploy documentation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python 3.9
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.9
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install .[doc]
+
+      - name: Build doc
+        run: |
+          cd doc
+          make html
+
+      - name: Checkout gh-pages
+        run: |
+          cd ..
+          git fetch origin gh-pages
+          git checkout gh-pages
+
+      - name: clean ups
+        run: |
+          mkdir new-doc
+          cp -r ./doc/build/html/* ./new-doc
+          find * -not -path "new-doc/*" -not -path "new-doc" -delete
+          cp -r ./new-doc/* ./
+          rm -r ./new-doc/
+
+      - name: commit changes
+        run: |
+          touch .nojekyll
+          git add .
+          git commit -m 'update documentation'
+
+      - name: push changes
+        run: |
+          git push origin gh-pages
