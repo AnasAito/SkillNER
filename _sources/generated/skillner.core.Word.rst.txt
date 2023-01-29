@@ -1,0 +1,69 @@
+﻿skillner.core.Word
+==================
+
+.. currentmodule:: skillner.core
+
+.. autoclass:: Word
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Word.__init__
+      ~Word.capitalize
+      ~Word.casefold
+      ~Word.center
+      ~Word.count
+      ~Word.encode
+      ~Word.endswith
+      ~Word.expandtabs
+      ~Word.find
+      ~Word.format
+      ~Word.format_map
+      ~Word.index
+      ~Word.isalnum
+      ~Word.isalpha
+      ~Word.isascii
+      ~Word.isdecimal
+      ~Word.isdigit
+      ~Word.isidentifier
+      ~Word.islower
+      ~Word.isnumeric
+      ~Word.isprintable
+      ~Word.isspace
+      ~Word.istitle
+      ~Word.isupper
+      ~Word.join
+      ~Word.ljust
+      ~Word.lower
+      ~Word.lstrip
+      ~Word.maketrans
+      ~Word.partition
+      ~Word.removeprefix
+      ~Word.removesuffix
+      ~Word.replace
+      ~Word.rfind
+      ~Word.rindex
+      ~Word.rjust
+      ~Word.rpartition
+      ~Word.rsplit
+      ~Word.rstrip
+      ~Word.split
+      ~Word.splitlines
+      ~Word.startswith
+      ~Word.strip
+      ~Word.swapcase
+      ~Word.title
+      ~Word.translate
+      ~Word.upper
+      ~Word.zfill
+   
+   
+
+   
+   
+   

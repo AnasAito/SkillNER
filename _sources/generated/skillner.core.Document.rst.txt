@@ -1,0 +1,22 @@
+﻿skillner.core.Document
+======================
+
+.. currentmodule:: skillner.core
+
+.. autoclass:: Document
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Document.__init__
+   
+   
+
+   
+   
+   

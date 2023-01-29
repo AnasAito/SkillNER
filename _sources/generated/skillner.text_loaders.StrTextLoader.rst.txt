@@ -1,0 +1,23 @@
+﻿skillner.text\_loaders.StrTextLoader
+====================================
+
+.. currentmodule:: skillner.text_loaders
+
+.. autoclass:: StrTextLoader
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~StrTextLoader.__init__
+      ~StrTextLoader.enrich_doc
+   
+   
+
+   
+   
+   

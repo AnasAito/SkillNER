@@ -1,0 +1,22 @@
+﻿skillner.core.Sentence
+======================
+
+.. currentmodule:: skillner.core
+
+.. autoclass:: Sentence
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Sentence.__init__
+   
+   
+
+   
+   
+   
