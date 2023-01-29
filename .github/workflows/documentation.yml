@@ -31,8 +31,6 @@ jobs:
 
       - name: Checkout gh-pages
         run: |
-          pwd
-          cd ..
           git fetch origin gh-pages
           git checkout gh-pages
 
