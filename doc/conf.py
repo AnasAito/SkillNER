@@ -145,14 +145,14 @@ html_theme = "furo"
 # documentation.
 html_theme_options = {
     "light_css_variables": {
-        "color-brand-primary": "#b91c1c",
-        "color-brand-content": "#b91c1c",
+        "color-brand-primary": "#8e88eb",
+        "color-brand-content": "#8e88eb",
         "font-stack": "ui-sans-serif, system-ui",
-        "color-background-secondary": "#fef2f2",
+        "color-background-secondary": "#eff1f3",
     },
     "dark_css_variables": {
-        "color-brand-primary": "#f87171",
-        "color-brand-content": "#f87171",
+        "color-brand-primary": "#8e88eb",
+        "color-brand-content": "#8e88eb",
     },
     "footer_icons": [
         {

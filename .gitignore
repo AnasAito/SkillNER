@@ -13,3 +13,4 @@ __cache__
 
 # doc build
 _build/
+generated/
