@@ -1,35 +1,16 @@
-========
+============
 ``skillner``
-========
+============
 *— A smart rule based NLP module to extract skills from text —*
 
 --------
 
 
 
-API
----
+Explore the documentation
+-------------------------
 
+.. toctree::
+    :maxdepth: 1
 
-Text loaders
-~~~~~~~~~~~~
-
-.. currentmodule:: skillner.text_loaders
-
-.. autosummary::
-   :toctree: generated/
-
-      StrTextLoader
-
-
-data structures
-~~~~~~~~~~~~~~~
-
-.. currentmodule:: skillner.core
-
-.. autosummary::
-   :toctree: generated/
-
-      Document
-      Sentence
-      Word
+    api.rst
