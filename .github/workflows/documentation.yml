@@ -13,6 +13,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          fetch-depth: 0
 
       - name: Setup Python 3.9
         uses: actions/setup-python@v3
@@ -42,12 +45,17 @@ jobs:
           cp -r ./new-doc/* ./
           rm -r ./new-doc/
 
-      - name: commit changes
-        run: |
-          touch .nojekyll
-          git add .
-          git commit -m 'update documentation'
+      - name: ensure nojekyll exist
+        run: touch .nojekyll
 
-      - name: push changes
+      - name: Commit files
         run: |
-          git push origin gh-pages
+          git config --local user.email "21233+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -a -m "update documentation"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
