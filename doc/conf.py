@@ -6,7 +6,9 @@ import os
 import sys
 
 from numpydoc import numpydoc, docscrape  # noqa
-from doc.custom_extensions.github_link import make_linkcode_resolve
+
+# TODO: link code docs with source code in github
+# from doc.custom_extensions.github_link import make_linkcode_resolve
 
 
 # parsing toml files is supported for python >= 3.11
@@ -16,7 +18,7 @@ from doc.custom_extensions.github_link import make_linkcode_resolve
 import re
 
 # read content of toml file
-with open("pyproject.toml", "r") as file:
+with open("../pyproject.toml", "r") as file:
     content = file.read()
 
 # parse version in content
@@ -51,8 +53,7 @@ extensions = [
     "sphinx.ext.autosectionlabel",
     "sphinx_copybutton",
     "numpydoc",
-    "sphinx.ext.linkcode",
-    "gh_substitutions",
+    # "sphinx.ext.linkcode",
 ]
 
 
@@ -349,9 +350,9 @@ texinfo_documents = [
 # texinfo_no_detailmenu = False
 
 # The following is used by sphinx.ext.linkcode to provide links to github
-linkcode_resolve = make_linkcode_resolve(
-    "skillner",
-    "https://github.com/AnasAito/"
-    "skillner/blob/{revision}/"
-    "{package}/{path}#L{lineno}",
-)
+# linkcode_resolve = make_linkcode_resolve(
+#     "skillner",
+#     "https://github.com/AnasAito/"
+#     "skillner/blob/{revision}/"
+#     "{package}/{path}#L{lineno}",
+# )

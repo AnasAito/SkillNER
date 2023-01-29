@@ -10,3 +10,6 @@ __cache__
 
 # pytest cache
 .pytest_cache
+
+# doc build
+_build/
