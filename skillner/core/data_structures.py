@@ -42,7 +42,6 @@ class Span:
     """"""
 
     def __init__(self) -> None:
-        # TODO: validate idx_start < idx_end
         self.idx_start: int = 0
         self.idx_stop: int = 0
 
@@ -53,7 +52,7 @@ class Span:
         if len(self.li_candidates) == 0:
             return True
 
-        if self.idx_start == self.idx_end:
+        if self.idx_start == self.idx_stop:
             return True
 
         return False

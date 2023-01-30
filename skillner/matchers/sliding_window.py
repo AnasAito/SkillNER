@@ -6,7 +6,27 @@ from skillner.core.data_structures import Document, Span, Candidate
 
 
 class SlidingWindowMatcher(Node):
-    """"""
+    """Sliding Window matcher class.
+
+    A matcher that uses sliding/shrinking window algorithm to find
+    spans in sentence.
+
+    Parameters
+    ----------
+    query_method: Callable[[str], dict]
+        A function that takes a string as entry, aka. the query,
+        and returns a response as dictionary if the query matches and ``None``
+        otherwise.
+
+    max_window_size: int, default 4
+        The maximum number of words to consider when constructing the query.
+
+    filters: List of Callable[[str], str]
+        A list of functions that take a string as input and return string or None.
+        The filters are applied sequentially on the words in the window before
+        building the query.
+
+    """
 
     def __init__(
         self,
@@ -19,7 +39,14 @@ class SlidingWindowMatcher(Node):
         self.combined_filters = SlidingWindowMatcher.combine_filters(filters)
 
     def enrich_doc(self, doc: Document) -> None:
-        """"""
+        """Find spans in ``doc``.
+
+        Parameters
+        ----------
+        doc: Document
+            The document in which to find spans.
+
+        """
         for sentence in doc:
 
             for idx_word in range(len(sentence)):
@@ -69,13 +96,29 @@ class SlidingWindowMatcher(Node):
         return span
 
     @staticmethod
-    def combine_filters(filters: List[Callable[[str], str]]):
-        """"""
+    def combine_filters(filters: List[Callable[[str], str]]) -> Callable[[str], str]:
+        """Combine sequentially ``filters`` into one filter.
 
+        Given ``filters = [filter_1, ..., filter_n]`` as input, combined
+        them sequentially and output ``filter_n(...filter_1)``.
+
+        Parameters
+        ----------
+        filters: List[Callable[[str], str]]
+            filters to combine sequentially.
+
+        Returns
+        -------
+        combined_filter: Callable[[str], str]
+            Return a function that takes word as input and outputs
+            filter_n(...(filter_1(words))).
+
+        """
         if len(filters) == 0:
             return lambda word: word
 
         def chain_two_filters(filter_1, filter_2):
             return lambda word: filter_2(filter_1(word))
 
-        return reduce(chain_two_filters, filters)
+        combined_filter = reduce(chain_two_filters, filters)
+        return combined_filter
