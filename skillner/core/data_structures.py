@@ -1,4 +1,4 @@
-from typing import List, Type
+from typing import List, Type, Dict
 
 
 class Word(str):
@@ -27,13 +27,36 @@ class Word(str):
         super().__init__()
 
 
-class Span:
-    def __init__(self, idx_start, idx_end) -> None:
-        # TODO: validate idx_start < idx_end
-        self.idx_start: int = idx_start
-        self.idx_end: int = idx_end
+class Candidate:
+    """"""
 
-        self.li_candidates: List[dict] = []
+    def __init__(self, position: slice) -> None:
+        self.position = position
+        self.metadata: Dict[str, str] = {}
+
+    def __len__(self) -> int:
+        return self.position.stop - self.position.start
+
+
+class Span:
+    """"""
+
+    def __init__(self) -> None:
+        # TODO: validate idx_start < idx_end
+        self.idx_start: int = 0
+        self.idx_stop: int = 0
+
+        self.li_candidates: List[Candidate] = []
+
+    def is_empty(self) -> bool:
+        """"""
+        if len(self.li_candidates) == 0:
+            return True
+
+        if self.idx_start == self.idx_end:
+            return True
+
+        return False
 
 
 class Sentence:
@@ -56,6 +79,7 @@ class Sentence:
 
     def __init__(self) -> None:
         self.li_words: List[Word] = []
+        self.li_spans: List[Span] = []
 
     def __getitem__(self, sl) -> Type[Word]:
         return self.li_words[sl]
