@@ -27,6 +27,15 @@ class Word(str):
         super().__init__()
 
 
+class Span:
+    def __init__(self, idx_start, idx_end) -> None:
+        # TODO: validate idx_start < idx_end
+        self.idx_start: int = idx_start
+        self.idx_end: int = idx_end
+
+        self.li_candidates: List[dict] = []
+
+
 class Sentence:
     """Sentence class with sequence-like behavior.
 
