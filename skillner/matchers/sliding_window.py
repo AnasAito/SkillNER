@@ -48,7 +48,10 @@ class SlidingWindowMatcher(Node):
 
             # construct query
             query = " ".join(
-                self.combined_filters(str(word)) for word in sentence[window]
+                filter(
+                    None,
+                    (self.combined_filters(str(word)) for word in sentence[window]),
+                )
             )
 
             # ask knowledge graph
@@ -73,6 +76,6 @@ class SlidingWindowMatcher(Node):
             return lambda word: word
 
         def chain_two_filters(filter_1, filter_2):
-            return lambda word: filter_1(filter_2(word))
+            return lambda word: filter_2(filter_1(word))
 
         return reduce(chain_two_filters, filters)
