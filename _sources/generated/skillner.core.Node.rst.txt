@@ -1,0 +1,23 @@
+﻿skillner.core.Node
+==================
+
+.. currentmodule:: skillner.core
+
+.. autoclass:: Node
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Node.__init__
+      ~Node.enrich_doc
+   
+   
+
+   
+   
+   

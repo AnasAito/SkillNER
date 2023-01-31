@@ -43,3 +43,15 @@ Data structures
     Word
     Span
     Candidate
+
+
+Abstraction
+===========
+
+.. currentmodule:: skillner.core
+
+.. autosummary::
+   :toctree: generated/
+
+    Pipeline
+    Node
