@@ -100,7 +100,7 @@ class SlidingWindowMatcher(Node):
         """Combine sequentially ``filters`` into one filter.
 
         Given ``filters = [filter_1, ..., filter_n]`` as input, combined
-        them sequentially and output ``filter_n(...filter_1)``.
+        them sequentially into ``filter_n(...filter_1)``.
 
         Parameters
         ----------
@@ -110,8 +110,8 @@ class SlidingWindowMatcher(Node):
         Returns
         -------
         combined_filter: Callable[[str], str]
-            Return a function that takes word as input and outputs
-            filter_n(...(filter_1(words))).
+            Return a function that takes a word as input and outputs
+            filter_n(...(filter_1(word))).
 
         """
         if len(filters) == 0:

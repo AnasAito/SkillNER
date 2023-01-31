@@ -7,6 +7,18 @@ API Documentation
 .. currentmodule:: skillner
 
 
+Matchers
+========
+
+.. currentmodule:: skillner.matchers
+
+.. autosummary::
+   :toctree: generated/
+
+    SlidingWindowMatcher
+
+
+
 Text loaders
 ============
 
