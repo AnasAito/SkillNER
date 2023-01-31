@@ -35,6 +35,17 @@ class Candidate:
     window: slice
         A slice the identifies candidate in Sentence.
 
+    Attributes
+    ----------
+    window: slice
+        A slice that identifies candidate in sentence.
+
+    start: int
+        The index of the first word in candidate.
+
+    end: int
+        The index of the last word in candidate.
+
     """
 
     def __init__(self, window: slice) -> None:
@@ -42,11 +53,11 @@ class Candidate:
         self.metadata: Dict[str, str] = {}
 
     @property
-    def start(self):
+    def start(self) -> int:
         return self.window.start
 
     @property
-    def stop(self):
+    def stop(self) -> int:
         return self.window.stop
 
     def __len__(self) -> int:
@@ -55,7 +66,22 @@ class Candidate:
 
 
 class Span:
-    """Span class that stores all candidates of matching."""
+    """Span class that stores all candidates of matching.
+
+    A span extends from the most-left to most-right candidates.
+
+    Attributes
+    ----------
+    window: slice
+        A slice that delimits the span from the most-left to most-right candidate.
+
+    start: int
+        The index of the first word in the most-left candidate.
+
+    end: int
+        The index of the last word in the most-right candidate.
+
+    """
 
     def __init__(self) -> None:
         self.start: int = None
@@ -105,6 +131,11 @@ class Sentence:
     A sentence is a list of words with additional metadata stored
     throughout the enrichment.
 
+    Attributes
+    ----------
+    li_spans: List[Span]
+        List that stores all spans.
+
     Examples
     --------
     >>> from skillner.core import Sentence, Word
@@ -138,6 +169,7 @@ class Document:
 
     A document is a list of sentences with additional metadata stored
     throughout the enrichment.
+
     """
 
     def __init__(self) -> None:
@@ -148,7 +180,7 @@ class Document:
 
     def __str__(self) -> str:
         """Return a string form of document."""
-        return ".\n".join(str(sentence) for sentence in self)
+        return ".\n".join(str(sentence) for sentence in self) + "."
 
     def __len__(self) -> int:
         """Return the number of sentences in document."""

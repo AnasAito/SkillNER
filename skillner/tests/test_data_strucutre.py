@@ -4,8 +4,11 @@ from skillner.core.data_structures import Sentence, Word, Document
 def test_to_str():
     greeting = "Hello and welcome to skillner".split()
     purpose = "you can easily extract skills".split()
-    text = ".\n".join(
-        s for s in (" ".join(splitted_s) for splitted_s in (greeting, purpose))
+    text = (
+        ".\n".join(
+            s for s in (" ".join(splitted_s) for splitted_s in (greeting, purpose))
+        )
+        + "."
     )
 
     doc = Document()
