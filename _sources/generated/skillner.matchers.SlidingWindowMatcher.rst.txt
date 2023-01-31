@@ -1,0 +1,25 @@
+﻿skillner.matchers.SlidingWindowMatcher
+======================================
+
+.. currentmodule:: skillner.matchers
+
+.. autoclass:: SlidingWindowMatcher
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SlidingWindowMatcher.__init__
+      ~SlidingWindowMatcher.combine_filters
+      ~SlidingWindowMatcher.enrich_doc
+      ~SlidingWindowMatcher.find_span
+   
+   
+
+   
+   
+   

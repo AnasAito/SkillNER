@@ -3,14 +3,14 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="skillner.matchers.SlidingWindowMatcher" href="generated/skillner.matchers.SlidingWindowMatcher.html" /><link rel="prev" title="skillner" href="index.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="skillner.text_loaders.StrTextLoader" href="skillner.text_loaders.StrTextLoader.html" /><link rel="prev" title="API Documentation" href="../api.html" />
 
     <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
-        <title>API Documentation - skillner 2.0.dev documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+        <title>skillner.matchers.SlidingWindowMatcher - skillner 2.0.dev documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
 
@@ -132,7 +132,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">skillner 2.0.dev documentation</div></a>
+      <a href="../index.html"><div class="brand">skillner 2.0.dev documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -152,27 +152,27 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   
   <span class="sidebar-brand-text">skillner 2.0.dev documentation</span>
   
-</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
-<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">API Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="generated/skillner.matchers.SlidingWindowMatcher.html">skillner.matchers.SlidingWindowMatcher</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/skillner.text_loaders.StrTextLoader.html">skillner.text_loaders.StrTextLoader</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/skillner.core.Document.html">skillner.core.Document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/skillner.core.Sentence.html">skillner.core.Sentence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/skillner.core.Word.html">skillner.core.Word</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../api.html">API Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">skillner.matchers.SlidingWindowMatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skillner.text_loaders.StrTextLoader.html">skillner.text_loaders.StrTextLoader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skillner.core.Document.html">skillner.core.Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skillner.core.Sentence.html">skillner.core.Sentence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skillner.core.Word.html">skillner.core.Word</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
 </ul>
 
 </div>
@@ -207,50 +207,56 @@
           </label>
         </div>
         <article role="main">
-          <section id="api-documentation">
-<span id="id1"></span><h1>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this heading">#</a></h1>
-<section id="matchers">
-<h2>Matchers<a class="headerlink" href="#matchers" title="Permalink to this heading">#</a></h2>
+          <section id="skillner-matchers-slidingwindowmatcher">
+<h1>skillner.matchers.SlidingWindowMatcher<a class="headerlink" href="#skillner-matchers-slidingwindowmatcher" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="skillner.matchers.SlidingWindowMatcher">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">skillner.matchers.</span></span><span class="sig-name descname"><span class="pre">SlidingWindowMatcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_window_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillner.matchers.SlidingWindowMatcher" title="Permalink to this definition">#</a></dt>
+<dd><p>Sliding Window matcher class.</p>
+<p>A matcher that uses sliding/shrinking window algorithm to find
+spans in sentence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>query_method: Callable[[str], dict]</strong></dt><dd><p>A function that takes a string as entry, aka. the query,
+and returns a response as dictionary if the query matches and <code class="docutils literal notranslate"><span class="pre">None</span></code>
+otherwise.</p>
+</dd>
+<dt><strong>max_window_size: int, default 4</strong></dt><dd><p>The maximum number of words to consider when constructing the query.</p>
+</dd>
+<dt><strong>filters: List of Callable[[str], str]</strong></dt><dd><p>A list of functions that take a string as input and return string or None.
+The filters are applied sequentially on the words in the window before
+building the query.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="skillner.matchers.SlidingWindowMatcher.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_window_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#skillner.matchers.SlidingWindowMatcher.__init__" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/skillner.matchers.SlidingWindowMatcher.html#skillner.matchers.SlidingWindowMatcher" title="skillner.matchers.SlidingWindowMatcher"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SlidingWindowMatcher</span></code></a>(query_method[, ...])</p></td>
-<td><p>Sliding Window matcher class.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skillner.matchers.SlidingWindowMatcher.__init__" title="skillner.matchers.SlidingWindowMatcher.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(query_method[, max_window_size, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">combine_filters</span></code>(filters)</p></td>
+<td><p>Combine sequentially <code class="docutils literal notranslate"><span class="pre">filters</span></code> into one filter.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">enrich_doc</span></code>(doc)</p></td>
+<td><p>Find spans in <code class="docutils literal notranslate"><span class="pre">doc</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_span</span></code>(sentence, idx_word)</p></td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
 </div>
-</section>
-<section id="text-loaders">
-<h2>Text loaders<a class="headerlink" href="#text-loaders" title="Permalink to this heading">#</a></h2>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/skillner.text_loaders.StrTextLoader.html#skillner.text_loaders.StrTextLoader" title="skillner.text_loaders.StrTextLoader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StrTextLoader</span></code></a>(text)</p></td>
-<td><p>Loader of text as string.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="data-structures">
-<h2>Data structures<a class="headerlink" href="#data-structures" title="Permalink to this heading">#</a></h2>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/skillner.core.Document.html#skillner.core.Document" title="skillner.core.Document"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Document</span></code></a>()</p></td>
-<td><p>Document class with sequence-like behavior.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/skillner.core.Sentence.html#skillner.core.Sentence" title="skillner.core.Sentence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Sentence</span></code></a>()</p></td>
-<td><p>Sentence class with sequence-like behavior.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/skillner.core.Word.html#skillner.core.Word" title="skillner.core.Word"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Word</span></code></a>(word)</p></td>
-<td><p>Word class.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
+</dd></dl>
+
 </section>
 
         </article>
@@ -258,23 +264,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="generated/skillner.matchers.SlidingWindowMatcher.html">
+          <a class="next-page" href="skillner.text_loaders.StrTextLoader.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">skillner.matchers.SlidingWindowMatcher</div>
+                <div class="title">skillner.text_loaders.StrTextLoader</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="index.html">
+          <a class="prev-page" href="../api.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Home</div>
+                <div class="title">API Documentation</div>
                 
               </div>
             </a>
@@ -320,10 +326,11 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">API Documentation</a><ul>
-<li><a class="reference internal" href="#matchers">Matchers</a></li>
-<li><a class="reference internal" href="#text-loaders">Text loaders</a></li>
-<li><a class="reference internal" href="#data-structures">Data structures</a></li>
+<li><a class="reference internal" href="#">skillner.matchers.SlidingWindowMatcher</a><ul>
+<li><a class="reference internal" href="#skillner.matchers.SlidingWindowMatcher"><code class="docutils literal notranslate"><span class="pre">SlidingWindowMatcher</span></code></a><ul>
+<li><a class="reference internal" href="#skillner.matchers.SlidingWindowMatcher.__init__"><code class="docutils literal notranslate"><span class="pre">SlidingWindowMatcher.__init__()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -335,11 +342,11 @@
       
     </aside>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/scripts/furo.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
     </body>
 </html>
