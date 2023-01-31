@@ -30,29 +30,58 @@ class Word(str):
 class Candidate:
     """"""
 
-    def __init__(self, position: slice) -> None:
-        self.position = position
+    def __init__(self, window: slice) -> None:
+        self.window = window
         self.metadata: Dict[str, str] = {}
 
+    @property
+    def start(self):
+        return self.window.start
+
+    @property
+    def stop(self):
+        return self.window.stop
+
     def __len__(self) -> int:
-        return self.position.stop - self.position.start
+        return self.window.stop - self.window.start
 
 
 class Span:
     """"""
 
     def __init__(self) -> None:
-        self.idx_start: int = 0
-        self.idx_stop: int = 0
+        self.start: int = None
+        self.stop: int = None
 
         self.li_candidates: List[Candidate] = []
+
+    @property
+    def window(self) -> slice:
+        """"""
+        return slice(self.start, self.stop)
+
+    def add_candidate(self, candidate: Candidate) -> None:
+        """"""
+        # append candidate
+        self.li_candidates.append(candidate)
+
+        # update start and stop of span
+        # handle case span freshly created
+        if self.is_empty():
+            start, stop = candidate.start, candidate.stop
+        else:
+            start = min(self.start, candidate.start)
+            stop = max(self.stop, candidate.stop)
+
+        self.start = start
+        self.stop = stop
 
     def is_empty(self) -> bool:
         """"""
         if len(self.li_candidates) == 0:
             return True
 
-        if self.idx_start == self.idx_stop:
+        if self.start == self.stop:
             return True
 
         return False
