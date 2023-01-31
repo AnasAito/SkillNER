@@ -1,0 +1,30 @@
+﻿skillner.core.Span
+==================
+
+.. currentmodule:: skillner.core
+
+.. autoclass:: Span
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Span.__init__
+      ~Span.add_candidate
+      ~Span.is_empty
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Span.window
+   
+   

@@ -41,3 +41,5 @@ Data structures
     Document
     Sentence
     Word
+    Span
+    Candidate

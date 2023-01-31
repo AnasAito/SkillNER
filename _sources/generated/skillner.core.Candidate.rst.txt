@@ -1,0 +1,29 @@
+﻿skillner.core.Candidate
+=======================
+
+.. currentmodule:: skillner.core
+
+.. autoclass:: Candidate
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Candidate.__init__
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Candidate.start
+      ~Candidate.stop
+   
+   
