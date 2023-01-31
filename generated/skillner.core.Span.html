@@ -217,6 +217,19 @@
 <dt class="sig sig-object py" id="skillner.core.Span">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">skillner.core.</span></span><span class="sig-name descname"><span class="pre">Span</span></span><a class="headerlink" href="#skillner.core.Span" title="Permalink to this definition">#</a></dt>
 <dd><p>Span class that stores all candidates of matching.</p>
+<p>A span extends from the most-left to most-right candidates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>window: slice</strong></dt><dd><p>A slice that delimits the span from the most-left to most-right candidate.</p>
+</dd>
+<dt><strong>start: int</strong></dt><dd><p>The index of the first word in the most-left candidate.</p>
+</dd>
+<dt><strong>end: int</strong></dt><dd><p>The index of the last word in the most-right candidate.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="skillner.core.Span.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#skillner.core.Span.__init__" title="Permalink to this definition">#</a></dt>
