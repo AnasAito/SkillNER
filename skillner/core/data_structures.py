@@ -28,7 +28,14 @@ class Word(str):
 
 
 class Candidate:
-    """"""
+    """Candidate class to store results of matching on a query.
+
+    Parameters
+    ----------
+    window: slice
+        A slice the identifies candidate in Sentence.
+
+    """
 
     def __init__(self, window: slice) -> None:
         self.window = window
@@ -43,11 +50,12 @@ class Candidate:
         return self.window.stop
 
     def __len__(self) -> int:
+        """Return the number of words that comprises the candidate."""
         return self.window.stop - self.window.start
 
 
 class Span:
-    """"""
+    """Span class that stores all candidates of matching."""
 
     def __init__(self) -> None:
         self.start: int = None
@@ -57,11 +65,10 @@ class Span:
 
     @property
     def window(self) -> slice:
-        """"""
         return slice(self.start, self.stop)
 
     def add_candidate(self, candidate: Candidate) -> None:
-        """"""
+        """Add candidate to existing candidates and update span window."""
         # append candidate
         self.li_candidates.append(candidate)
 
@@ -77,7 +84,12 @@ class Span:
         self.stop = stop
 
     def is_empty(self) -> bool:
-        """"""
+        """Return whether the span is empty.
+
+        A span is considered empty if it has no candidates or
+        has zero-size window.
+
+        """
         if len(self.li_candidates) == 0:
             return True
 

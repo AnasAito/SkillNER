@@ -62,7 +62,7 @@ class SlidingWindowMatcher(Node):
                 sentence.li_spans.append(span)
 
     def find_span(self, sentence: Sentence, idx_word: int) -> Span:
-        """Finds the span in ``sentence`` given starting index of ``Word``.
+        """Find the span in ``sentence`` given starting index of ``Word``.
 
         Parameters
         ----------
