@@ -46,8 +46,11 @@ class TestSlidingWindowMatching:
     def query_meth(s: str):
         return TestSlidingWindowMatching.knowledge_base.get(s, None)
 
-    def test_find_span(self):
-        text = "i was a student now i am an industrial management engineer graduated from EMINES"
+    def test_matcher(self):
+        text = (
+            "i was a student now i am an industrial management "
+            "engineer graduated from EMINES"
+        )
 
         # init doc with one sentence
         sentence = Sentence()

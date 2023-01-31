@@ -1,8 +1,7 @@
-from functools import reduce
-from typing import List, Callable
+from typing import Callable
 
 from skillner.core.base import Node
-from skillner.core.data_structures import Document, Span, Candidate
+from skillner.core.data_structures import Document, Sentence, Span, Candidate
 
 
 class SlidingWindowMatcher(Node):
@@ -18,10 +17,10 @@ class SlidingWindowMatcher(Node):
         and returns a response as dictionary if the query matches and ``None``
         otherwise.
 
-    max_window_size: int, default 4
+    max_window_size: int, default=4
         The maximum number of words to consider when constructing the query.
 
-    pre_filter: Callable[[Word], str], default None
+    pre_filter: Callable[[Word], str], default=None
         A function that takes a ``Word`` as input and return ``str`` or ``False``.
         The ``pre_filter`` function is applied to every ``Word`` in the window before
         building the query. If set to ``None``, the query is build using the string form
@@ -62,8 +61,23 @@ class SlidingWindowMatcher(Node):
 
                 sentence.li_spans.append(span)
 
-    def find_span(self, sentence, idx_word) -> Span:
-        """"""
+    def find_span(self, sentence: Sentence, idx_word: int) -> Span:
+        """Finds the span in ``sentence`` given starting index of ``Word``.
+
+        Parameters
+        ----------
+        sentence: Sentence
+            Sentence in which to find span.
+
+        idx_word: ind
+            The index of the word from which to start finding.
+
+        Return
+        ------
+        span: Span
+            Found span with candidates. Empty span otherwise.
+
+        """
         span = Span()
 
         # sanity check
