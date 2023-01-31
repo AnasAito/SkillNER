@@ -63,6 +63,10 @@ class SlidingWindowMatcher(Node):
         """"""
         span = Span()
 
+        # sanity check
+        if idx_word >= len(sentence):
+            return Span()
+
         for window_size in range(self.max_window_size, 0, -1):
 
             idx_end = idx_word + window_size
@@ -91,7 +95,7 @@ class SlidingWindowMatcher(Node):
             candidate = Candidate(window)
             candidate.metadata = response
 
-            span.li_candidates.append(candidate)
+            span.add_candidate(candidate)
 
         return span
 
