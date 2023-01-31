@@ -8,22 +8,22 @@ def test_combine_filters():
         "Born in summer 2021 SkillNER is THE next 2nd Gen of skill extractors"
     )
 
-    combined_filters = SlidingWindowMatcher.combine_filters(
-        filters=[
-            # lowercase_word
-            lambda word: word.lower(),
-            # filter_numbers
-            lambda word: word if word.isalpha() else None,
-            # filter_two_char
-            lambda word: None if word in ("in", "is", "of") else word,
-        ]
-    )
+    def pre_filter(w: Word):
+        lower_w = w.lower()
+
+        if not lower_w.isalpha():
+            return False
+
+        if lower_w in ("in", "is", "of"):
+            return False
+
+        return lower_w
 
     # the built query for the KG
     filtered_text = " ".join(
         filter(
             None,
-            (combined_filters(word) for word in text_to_filter.split()),
+            (pre_filter(word) for word in text_to_filter.split()),
         )
     )
 
@@ -60,7 +60,7 @@ class TestSlidingWindowMatching:
         matcher = SlidingWindowMatcher(
             TestSlidingWindowMatching.query_meth,
             max_window_size=4,
-            filters=[lambda word: word.lower()],
+            pre_filter=lambda word: word.lower(),
         )
 
         # match on KN

@@ -21,10 +21,11 @@ class SlidingWindowMatcher(Node):
     max_window_size: int, default 4
         The maximum number of words to consider when constructing the query.
 
-    filters: List of Callable[[str], str]
-        A list of functions that take a string as input and return string or None.
-        The filters are applied sequentially on the words in the window before
-        building the query.
+    pre_filter: Callable[[Word], str], default None
+        A function that takes a ``Word`` as input and return ``str`` or ``False``.
+        The ``pre_filter`` function is applied to every ``Word`` in the window before
+        building the query. If set to ``None``, the query is build using the string form
+        the words in window.
 
     """
 
@@ -32,11 +33,13 @@ class SlidingWindowMatcher(Node):
         self,
         query_method: Callable[[str], dict],
         max_window_size: int = 4,
-        filters: List[Callable[[str], str]] = [],
+        pre_filter: Callable[[str], str] = None,
     ) -> None:
         self.query_method = query_method
         self.max_window_size = max_window_size
-        self.combined_filters = SlidingWindowMatcher.combine_filters(filters)
+
+        # TODO: validate pre_filter
+        self.pre_filter = pre_filter if pre_filter is not None else lambda w: str(w)
 
     def enrich_doc(self, doc: Document) -> None:
         """Find spans in ``doc``.
@@ -81,7 +84,7 @@ class SlidingWindowMatcher(Node):
             query = " ".join(
                 filter(
                     None,
-                    (self.combined_filters(str(word)) for word in sentence[window]),
+                    (self.pre_filter(word) for word in sentence[window]),
                 )
             )
 
@@ -98,31 +101,3 @@ class SlidingWindowMatcher(Node):
             span.add_candidate(candidate)
 
         return span
-
-    @staticmethod
-    def combine_filters(filters: List[Callable[[str], str]]) -> Callable[[str], str]:
-        """Combine sequentially ``filters`` into one filter.
-
-        Given ``filters = [filter_1, ..., filter_n]`` as input, combined
-        them sequentially into ``filter_n(...filter_1)``.
-
-        Parameters
-        ----------
-        filters: List[Callable[[str], str]]
-            filters to combine sequentially.
-
-        Returns
-        -------
-        combined_filter: Callable[[str], str]
-            Return a function that takes a word as input and outputs
-            filter_n(...(filter_1(word))).
-
-        """
-        if len(filters) == 0:
-            return lambda word: word
-
-        def chain_two_filters(filter_1, filter_2):
-            return lambda word: filter_2(filter_1(word))
-
-        combined_filter = reduce(chain_two_filters, filters)
-        return combined_filter
