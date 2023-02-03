@@ -1,0 +1,4 @@
+corpus_id : esco_en
+loader_type : dict
+description : "a knowledge base of skills (lang : english)"
+
