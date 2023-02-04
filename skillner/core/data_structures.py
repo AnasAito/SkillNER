@@ -35,6 +35,10 @@ class Candidate:
     window: slice
         A slice the identifies candidate in Sentence.
 
+    concept_id: str
+        The id of the concept identified by candidate in the
+        knowledge base.
+
     Attributes
     ----------
     window: slice
@@ -48,9 +52,11 @@ class Candidate:
 
     """
 
-    def __init__(self, window: slice) -> None:
+    def __init__(self, window: slice, concept_id: str) -> None:
         self.window = window
         self.metadata: Dict[str, str] = {}
+
+        self.concept_id = concept_id
 
     @property
     def start(self) -> int:
