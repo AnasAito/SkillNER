@@ -32,19 +32,24 @@ def test_combine_filters():
 
 class TestSlidingWindowMatching:
     knowledge_base = {
-        "student": {"id": -2, "type": "academic (primary -> high school)"},
-        "engineer student": {"id": -1, "type": "academic (college)"},
-        "industrial management engineer": {"id": 0, "type": "profession"},
-        "industrial management": {"id": 1, "type": "field"},
-        "software": {"id": 2, "type": "stuff"},
-        "software engineer": {"id": 3, "type": "profession"},
-        "software engineer enthusiast": {"id": 4, "type": "hobby"},
-        "emines": {"id": 5, "type": "institution"},
+        "student": {"concept_id": -2, "type": "academic (primary -> high school)"},
+        "engineer student": {"concept_id": -1, "type": "academic (college)"},
+        "industrial management engineer": {"concept_id": 0, "type": "profession"},
+        "industrial management": {"concept_id": 1, "type": "field"},
+        "software": {"concept_id": 2, "type": "stuff"},
+        "software engineer": {"concept_id": 3, "type": "profession"},
+        "software engineer enthusiast": {"concept_id": 4, "type": "hobby"},
+        "emines": {"concept_id": 5, "type": "institution"},
     }
 
     @staticmethod
     def query_meth(s: str):
-        return TestSlidingWindowMatching.knowledge_base.get(s, None)
+        resp = TestSlidingWindowMatching.knowledge_base.get(s, None)
+
+        if resp is None:
+            return []
+
+        return [TestSlidingWindowMatching.knowledge_base.get(s, None)]
 
     def test_matcher(self):
         text = (

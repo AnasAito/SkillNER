@@ -48,9 +48,11 @@ class Candidate:
 
     """
 
-    def __init__(self, window: slice) -> None:
+    def __init__(self, window: slice, concept_id: str) -> None:
         self.window = window
         self.metadata: Dict[str, str] = {}
+
+        self.concept_id = concept_id
 
     @property
     def start(self) -> int:
