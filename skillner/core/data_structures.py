@@ -12,6 +12,11 @@ class Word(str):
     word: str
         a string to initialize word.
 
+    Attributes
+    ----------
+    metadata: Dict[str, str]
+        A dictionary that stores metadata throughout the enrichment of document.
+
     Examples
     --------
     >>> from skillner.core import Word

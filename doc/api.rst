@@ -15,6 +15,7 @@ Word processor
 .. autosummary::
    :toctree: generated/
 
+    WordProcessor
     PorterStemmer
 
 
