@@ -16,17 +16,8 @@ class PorterStemmer:
         Mode used to stem a word, see below for more details.
         default ``'NLTK_EXTENSIONS'``.
 
-    See original paper
-
-        Porter, M. "An algorithm for suffix stripping."
-        Program 14.3 (1980): 130-137.
-
-    and the link https://www.tartarus.org/~martin/PorterStemmer/ for the homepage
-    of the algorithm.
-
-    This class is a copy/past of NLTK ``PorterStemmer`` class. See
-    https://github.com/nltk/nltk/blob/develop/nltk/stem/porter.py
-
+    Notes
+    -----
     Martin Porter has endorsed several modifications to the Porter
     algorithm since writing his original paper, and those extensions are
     included in the implementations on his website. Additionally, others
@@ -35,8 +26,7 @@ class PorterStemmer:
     passing the appropriate constant to the class constructor's `mode`
     attribute:
 
-    - PorterStemmer.ORIGINAL_ALGORITHM
-
+    PorterStemmer.ORIGINAL_ALGORITHM
         An implementation that is faithful to the original paper.
 
         Note that Martin Porter has deprecated this version of the
@@ -50,15 +40,13 @@ class PorterStemmer:
         version of the algorithm; only use this mode if you clearly
         understand why you are choosing to do so.
 
-    - PorterStemmer.MARTIN_EXTENSIONS
-
+    PorterStemmer.MARTIN_EXTENSIONS
         An implementation that only uses the modifications to the
         algorithm that are included in the implementations on Martin
         Porter's website. He has declared Porter frozen, so the
         behavior of those implementations should never change.
 
-    - PorterStemmer.NLTK_EXTENSIONS (default)
-
+    PorterStemmer.NLTK_EXTENSIONS (default)
         An implementation that includes further improvements devised by
         NLTK contributors or taken from other modified implementations
         found on the web.
@@ -68,6 +56,19 @@ class PorterStemmer:
     original algorithm or one of Martin Porter's hosted versions for
     compatibility with an existing implementation or dataset, you can use
     one of the other modes instead.
+
+    References
+    ----------
+    This class is a copy/past of NLTK ``PorterStemmer`` class with slight modification
+    cf. https://github.com/nltk/nltk/blob/develop/nltk/stem/porter.py
+
+    Refer to original paper:
+
+        Porter, M. "An algorithm for suffix stripping."
+        Program 14.3 (1980): 130-137.
+
+    and the link https://www.tartarus.org/~martin/PorterStemmer/
+    for the homepage of the algorithm.
 
     """
 
