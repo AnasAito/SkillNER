@@ -122,7 +122,7 @@ class PorterStemmer:
         self.vowels = frozenset(["a", "e", "i", "o", "u"])
 
     def stem(self, word: Word):
-        """Stem the word.
+        """Stem ``word``.
 
         Parameters
         ----------
