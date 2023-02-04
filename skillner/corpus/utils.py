@@ -1,6 +1,15 @@
 import pickle
-def unpickle_dict(blob_path):
-    return pickle.load(blob_path)
+
+def unpickle_dict(corpus_path):
+    """
+    :param corpus_path: Specify the path to the corpus folder
+    :return: A dictionary of the form:
+    """
+    blob_path = f"{corpus_path}/blob.pkl"
+    with open(blob_path, 'rb') as handle:
+        data = pickle.load(handle)
+    return data 
+
+
 LOADERS = {
-        'loader_type' : lambda blob_path :unpickle_dict(loader_type)
-    }
+        'dict' : unpickle_dict}
