@@ -8,7 +8,9 @@ import sys
 from numpydoc import numpydoc, docscrape  # noqa
 
 # TODO: link code docs with source code in github
-# from doc.custom_extensions.github_link import make_linkcode_resolve
+sys.path.insert(0, os.path.abspath("sphinxext"))
+
+from github_link import make_linkcode_resolve
 
 
 # parsing toml files is supported for python >= 3.11
@@ -27,10 +29,6 @@ version_line = re.compile(r'version = ".+"').findall(content)[0]
 version = version_line.split("=")[-1]  # get version number
 version = version.strip()  # remove trilling spaces
 version = version[1:-1]  # remove double quotes
-
-
-curdir = os.path.dirname(__file__)
-sys.path.append(os.path.abspath(os.path.join(curdir, "sphinxext")))
 
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -53,11 +51,12 @@ extensions = [
     "sphinx.ext.autosectionlabel",
     "sphinx_copybutton",
     "numpydoc",
-    # "sphinx.ext.linkcode",
+    "sphinx.ext.linkcode",
 ]
 
 
 # generate autosummary even if no references
+autodoc_default_options = {"members": True}
 autosummary_generate = True
 
 # Add any paths that contain templates here, relative to this directory.
@@ -361,9 +360,9 @@ texinfo_documents = [
 # texinfo_no_detailmenu = False
 
 # The following is used by sphinx.ext.linkcode to provide links to github
-# linkcode_resolve = make_linkcode_resolve(
-#     "skillner",
-#     "https://github.com/AnasAito/"
-#     "skillner/blob/{revision}/"
-#     "{package}/{path}#L{lineno}",
-# )
+linkcode_resolve = make_linkcode_resolve(
+    "skillner",
+    "https://github.com/AnasAito/"
+    "skillner/blob/{revision}/"
+    "{package}/{path}#L{lineno}",
+)
