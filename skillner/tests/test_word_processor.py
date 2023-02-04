@@ -2,6 +2,7 @@ from skillner.core.data_structures import Word, Sentence, Document
 
 from skillner.word_processing.word_processor import WordProcessor
 from skillner.word_processing.porter_stemmer import PorterStemmer
+from skillner.word_processing.type_identifier import TypeIdentifier
 
 
 class TestWordPreprocessor:
@@ -32,18 +33,21 @@ class TestWordPreprocessor:
         doc.li_sentences.append(sentence)
 
         stemmer = PorterStemmer()
+        type_identifier = TypeIdentifier()
 
         word_processor = WordProcessor(
             dict_filters={
-                "stem": lambda word: stemmer(word),
+                "stem": stemmer,
                 "lowercase": lambda word: word.lower(),
+                "type": type_identifier,
             }
         )
         word_processor(doc)
 
-        assert len(doc[0][0].metadata) == 2
+        assert len(doc[0][0].metadata) == 3
         assert "stem" in doc[0][2].metadata
         assert "lowercase" in doc[0][2].metadata
+        assert doc[0][1].metadata["type"] == "STOP_WORD"
 
 
 if __name__ == "__main__":
