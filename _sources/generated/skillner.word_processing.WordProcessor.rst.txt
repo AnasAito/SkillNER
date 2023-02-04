@@ -1,0 +1,23 @@
+﻿skillner.word\_processing.WordProcessor
+=======================================
+
+.. currentmodule:: skillner.word_processing
+
+.. autoclass:: WordProcessor
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~WordProcessor.__init__
+      ~WordProcessor.enrich_doc
+   
+   
+
+   
+   
+   

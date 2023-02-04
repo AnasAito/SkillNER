@@ -1,0 +1,31 @@
+﻿skillner.word\_processing.PorterStemmer
+=======================================
+
+.. currentmodule:: skillner.word_processing
+
+.. autoclass:: PorterStemmer
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PorterStemmer.__init__
+      ~PorterStemmer.stem
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PorterStemmer.MARTIN_EXTENSIONS
+      ~PorterStemmer.NLTK_EXTENSIONS
+      ~PorterStemmer.ORIGINAL_ALGORITHM
+   
+   

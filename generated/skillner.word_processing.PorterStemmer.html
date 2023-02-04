@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="skillner.core.Pipeline" href="skillner.core.Pipeline.html" /><link rel="prev" title="skillner.core.Span" href="skillner.core.Span.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="skillner.matchers.SlidingWindowMatcher" href="skillner.matchers.SlidingWindowMatcher.html" /><link rel="prev" title="skillner.word_processing.WordProcessor" href="skillner.word_processing.WordProcessor.html" />
 
     <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
-        <title>skillner.core.Candidate - skillner 2.0.dev documentation</title>
+        <title>skillner.word_processing.PorterStemmer - skillner 2.0.dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -166,14 +166,14 @@
   <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../api.html">API Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="skillner.word_processing.WordProcessor.html">skillner.word_processing.WordProcessor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="skillner.word_processing.PorterStemmer.html">skillner.word_processing.PorterStemmer</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">skillner.word_processing.PorterStemmer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skillner.matchers.SlidingWindowMatcher.html">skillner.matchers.SlidingWindowMatcher</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skillner.text_loaders.StrTextLoader.html">skillner.text_loaders.StrTextLoader</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skillner.core.Document.html">skillner.core.Document</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skillner.core.Sentence.html">skillner.core.Sentence</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skillner.core.Word.html">skillner.core.Word</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skillner.core.Span.html">skillner.core.Span</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">skillner.core.Candidate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skillner.core.Candidate.html">skillner.core.Candidate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skillner.core.Pipeline.html">skillner.core.Pipeline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skillner.core.Node.html">skillner.core.Node</a></li>
 </ul>
@@ -213,44 +213,81 @@
           </label>
         </div>
         <article role="main">
-          <section id="skillner-core-candidate">
-<h1>skillner.core.Candidate<a class="headerlink" href="#skillner-core-candidate" title="Permalink to this heading">#</a></h1>
+          <section id="skillner-word-processing-porterstemmer">
+<h1>skillner.word_processing.PorterStemmer<a class="headerlink" href="#skillner-word-processing-porterstemmer" title="Permalink to this heading">#</a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="skillner.core.Candidate">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">skillner.core.</span></span><span class="sig-name descname"><span class="pre">Candidate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">slice</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concept_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillner.core.Candidate" title="Permalink to this definition">#</a></dt>
-<dd><p>Candidate class to store results of matching on a query.</p>
+<dt class="sig sig-object py" id="skillner.word_processing.PorterStemmer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">skillner.word_processing.</span></span><span class="sig-name descname"><span class="pre">PorterStemmer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_lowercase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NLTK_EXTENSIONS'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillner.word_processing.PorterStemmer" title="Permalink to this definition">#</a></dt>
+<dd><p>A word stemmer based on the Porter stemming algorithm.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>window: slice</strong></dt><dd><p>A slice the identifies candidate in Sentence.</p>
+<dt><strong>to_lowercase: bool, default=True</strong></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the word is lowercased before stemming.</p>
 </dd>
-<dt><strong>concept_id: str</strong></dt><dd><p>The id of the concept identified by candidate in the
-knowledge base.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Attributes<span class="colon">:</span></dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>window: slice</strong></dt><dd><p>A slice that identifies candidate in sentence.</p>
-</dd>
-<dt><strong>start: int</strong></dt><dd><p>The index of the first word in candidate.</p>
-</dd>
-<dt><strong>end: int</strong></dt><dd><p>The index of the last word in candidate.</p>
+<dt><strong>mode: ‘NLTK_EXTENSIONS’ or ‘MARTIN_EXTENSIONS’ or ‘ORIGINAL_ALGORITHM’</strong></dt><dd><p>Mode used to stem a word, see below for more details.
+default <code class="docutils literal notranslate"><span class="pre">'NLTK_EXTENSIONS'</span></code>.</p>
 </dd>
 </dl>
 </dd>
 </dl>
+<p class="rubric">Notes</p>
+<p>Martin Porter has endorsed several modifications to the Porter
+algorithm since writing his original paper, and those extensions are
+included in the implementations on his website. Additionally, others
+have proposed further improvements to the algorithm, including NLTK
+contributors. There are thus three modes that can be selected by
+passing the appropriate constant to the class constructor’s <cite>mode</cite>
+attribute:</p>
+<dl>
+<dt>PorterStemmer.ORIGINAL_ALGORITHM</dt><dd><p>An implementation that is faithful to the original paper.</p>
+<p>Note that Martin Porter has deprecated this version of the
+algorithm. Martin distributes implementations of the Porter
+Stemmer in many languages, hosted at:</p>
+<p><a class="reference external" href="https://www.tartarus.org/~martin/PorterStemmer/">https://www.tartarus.org/~martin/PorterStemmer/</a></p>
+<p>and all of these implementations include his extensions. He
+strongly recommends against using the original, published
+version of the algorithm; only use this mode if you clearly
+understand why you are choosing to do so.</p>
+</dd>
+<dt>PorterStemmer.MARTIN_EXTENSIONS</dt><dd><p>An implementation that only uses the modifications to the
+algorithm that are included in the implementations on Martin
+Porter’s website. He has declared Porter frozen, so the
+behavior of those implementations should never change.</p>
+</dd>
+<dt>PorterStemmer.NLTK_EXTENSIONS (default)</dt><dd><p>An implementation that includes further improvements devised by
+NLTK contributors or taken from other modified implementations
+found on the web.</p>
+</dd>
+</dl>
+<p>For the best stemming, you should use the default NLTK_EXTENSIONS
+version. However, if you need to get the same results as either the
+original algorithm or one of Martin Porter’s hosted versions for
+compatibility with an existing implementation or dataset, you can use
+one of the other modes instead.</p>
+<p class="rubric">References</p>
+<p>This class is a copy/past of NLTK <code class="docutils literal notranslate"><span class="pre">PorterStemmer</span></code> class with slight modification
+cf. <a class="reference external" href="https://github.com/nltk/nltk/blob/develop/nltk/stem/porter.py">https://github.com/nltk/nltk/blob/develop/nltk/stem/porter.py</a></p>
+<p>Refer to original paper:</p>
+<blockquote>
+<div><p>Porter, M. “An algorithm for suffix stripping.”
+Program 14.3 (1980): 130-137.</p>
+</div></blockquote>
+<p>and the link <a class="reference external" href="https://www.tartarus.org/~martin/PorterStemmer/">https://www.tartarus.org/~martin/PorterStemmer/</a>
+for the homepage of the algorithm.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="skillner.core.Candidate.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">slice</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concept_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#skillner.core.Candidate.__init__" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="skillner.word_processing.PorterStemmer.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_lowercase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NLTK_EXTENSIONS'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillner.word_processing.PorterStemmer.__init__" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <p class="rubric">Methods</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#skillner.core.Candidate.__init__" title="skillner.core.Candidate.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(window, concept_id)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skillner.word_processing.PorterStemmer.__init__" title="skillner.word_processing.PorterStemmer.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([to_lowercase, mode])</p></td>
 <td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">stem</span></code>(word)</p></td>
+<td><p>Stem the word.</p></td>
 </tr>
 </tbody>
 </table>
@@ -259,10 +296,13 @@ knowledge base.</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">MARTIN_EXTENSIONS</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">NLTK_EXTENSIONS</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ORIGINAL_ALGORITHM</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -277,23 +317,23 @@ knowledge base.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="skillner.core.Pipeline.html">
+          <a class="next-page" href="skillner.matchers.SlidingWindowMatcher.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">skillner.core.Pipeline</div>
+                <div class="title">skillner.matchers.SlidingWindowMatcher</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="skillner.core.Span.html">
+          <a class="prev-page" href="skillner.word_processing.WordProcessor.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">skillner.core.Span</div>
+                <div class="title">skillner.word_processing.WordProcessor</div>
                 
               </div>
             </a>
@@ -339,9 +379,9 @@ knowledge base.</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">skillner.core.Candidate</a><ul>
-<li><a class="reference internal" href="#skillner.core.Candidate"><code class="docutils literal notranslate"><span class="pre">Candidate</span></code></a><ul>
-<li><a class="reference internal" href="#skillner.core.Candidate.__init__"><code class="docutils literal notranslate"><span class="pre">Candidate.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#">skillner.word_processing.PorterStemmer</a><ul>
+<li><a class="reference internal" href="#skillner.word_processing.PorterStemmer"><code class="docutils literal notranslate"><span class="pre">PorterStemmer</span></code></a><ul>
+<li><a class="reference internal" href="#skillner.word_processing.PorterStemmer.__init__"><code class="docutils literal notranslate"><span class="pre">PorterStemmer.__init__()</span></code></a></li>
 </ul>
 </li>
 </ul>
