@@ -25,6 +25,7 @@ class Word(str):
         # word is passed in implicitly to the constructor of str
         # TODO: Validate word namely check it's a word not a phrase
         super().__init__()
+        self.metadata: Dict[str, str] = {}
 
 
 class Candidate:
