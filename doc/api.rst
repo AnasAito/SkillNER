@@ -13,6 +13,7 @@ Word processor
 .. currentmodule:: skillner.word_processing
 
 .. autosummary::
+   :nosignatures:
    :toctree: generated/
 
     WordProcessor
@@ -26,6 +27,7 @@ Matchers
 .. currentmodule:: skillner.matchers
 
 .. autosummary::
+   :nosignatures:
    :toctree: generated/
 
     SlidingWindowMatcher
@@ -38,6 +40,7 @@ Text loaders
 .. currentmodule:: skillner.text_loaders
 
 .. autosummary::
+   :nosignatures:
    :toctree: generated/
 
     StrTextLoader
@@ -49,6 +52,7 @@ Data structures
 .. currentmodule:: skillner.core
 
 .. autosummary::
+   :nosignatures:
    :toctree: generated/
 
     Document
@@ -58,12 +62,13 @@ Data structures
     Candidate
 
 
-Abstraction
-===========
+Abstractions
+============
 
 .. currentmodule:: skillner.core
 
 .. autosummary::
+   :nosignatures:
    :toctree: generated/
 
     Pipeline
