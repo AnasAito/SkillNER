@@ -35,6 +35,10 @@ class Candidate:
     window: slice
         A slice the identifies candidate in Sentence.
 
+    concept_id: str
+        The id of the concept identified by candidate in the
+        knowledge base.
+
     Attributes
     ----------
     window: slice
