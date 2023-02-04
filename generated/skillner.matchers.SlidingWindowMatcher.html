@@ -217,7 +217,7 @@
 <h1>skillner.matchers.SlidingWindowMatcher<a class="headerlink" href="#skillner-matchers-slidingwindowmatcher" title="Permalink to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="skillner.matchers.SlidingWindowMatcher">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">skillner.matchers.</span></span><span class="sig-name descname"><span class="pre">SlidingWindowMatcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_window_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillner.matchers.SlidingWindowMatcher" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">skillner.matchers.</span></span><span class="sig-name descname"><span class="pre">SlidingWindowMatcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_window_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="skillner.core.Word.html#skillner.core.Word" title="skillner.core.data_structures.Word"><span class="pre">Word</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/4f42d17/skillner/matchers/sliding_window.py#L9"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.matchers.SlidingWindowMatcher" title="Permalink to this definition">#</a></dt>
 <dd><p>Sliding Window matcher class.</p>
 <p>A matcher that uses sliding/shrinking window algorithm to find
 spans in sentence.</p>
@@ -240,7 +240,7 @@ the words in window.</p>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="skillner.matchers.SlidingWindowMatcher.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_window_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#skillner.matchers.SlidingWindowMatcher.__init__" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_window_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="skillner.core.Word.html#skillner.core.Word" title="skillner.core.data_structures.Word"><span class="pre">Word</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/4f42d17/skillner/matchers/sliding_window.py#L33"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.matchers.SlidingWindowMatcher.__init__" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <p class="rubric">Methods</p>
@@ -250,15 +250,45 @@ the words in window.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#skillner.matchers.SlidingWindowMatcher.__init__" title="skillner.matchers.SlidingWindowMatcher.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(query_method[, max_window_size, ...])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">enrich_doc</span></code>(doc)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#skillner.matchers.SlidingWindowMatcher.enrich_doc" title="skillner.matchers.SlidingWindowMatcher.enrich_doc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enrich_doc</span></code></a>(doc)</p></td>
 <td><p>Find spans in <code class="docutils literal notranslate"><span class="pre">doc</span></code>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_span</span></code>(sentence, idx_word)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skillner.matchers.SlidingWindowMatcher.find_span" title="skillner.matchers.SlidingWindowMatcher.find_span"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_span</span></code></a>(sentence, idx_word)</p></td>
 <td><p>Find the span in <code class="docutils literal notranslate"><span class="pre">sentence</span></code> given starting index of <code class="docutils literal notranslate"><span class="pre">Word</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
+<dl class="py method">
+<dt class="sig sig-object py" id="skillner.matchers.SlidingWindowMatcher.enrich_doc">
+<span class="sig-name descname"><span class="pre">enrich_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="skillner.core.Document.html#skillner.core.Document" title="skillner.core.data_structures.Document"><span class="pre">Document</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/4f42d17/skillner/matchers/sliding_window.py#L45"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.matchers.SlidingWindowMatcher.enrich_doc" title="Permalink to this definition">#</a></dt>
+<dd><p>Find spans in <code class="docutils literal notranslate"><span class="pre">doc</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>doc: Document</strong></dt><dd><p>The document in which to find spans.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="skillner.matchers.SlidingWindowMatcher.find_span">
+<span class="sig-name descname"><span class="pre">find_span</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sentence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="skillner.core.Sentence.html#skillner.core.Sentence" title="skillner.core.data_structures.Sentence"><span class="pre">Sentence</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx_word</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="skillner.core.Span.html#skillner.core.Span" title="skillner.core.data_structures.Span"><span class="pre">Span</span></a></span></span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/4f42d17/skillner/matchers/sliding_window.py#L66"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.matchers.SlidingWindowMatcher.find_span" title="Permalink to this definition">#</a></dt>
+<dd><p>Find the span in <code class="docutils literal notranslate"><span class="pre">sentence</span></code> given starting index of <code class="docutils literal notranslate"><span class="pre">Word</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>sentence: Sentence</strong></dt><dd><p>Sentence in which to find span.</p>
+</dd>
+<dt><strong>idx_word: ind</strong></dt><dd><p>The index of the word from which to start finding.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -292,7 +322,7 @@ the words in window.</p>
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2021-2023, Anas AIT AOMAR &amp; Badr MOUFAD
+                Copyright &#169; 2021-2023, skillner
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
@@ -333,6 +363,8 @@ the words in window.</p>
 <li><a class="reference internal" href="#">skillner.matchers.SlidingWindowMatcher</a><ul>
 <li><a class="reference internal" href="#skillner.matchers.SlidingWindowMatcher"><code class="docutils literal notranslate"><span class="pre">SlidingWindowMatcher</span></code></a><ul>
 <li><a class="reference internal" href="#skillner.matchers.SlidingWindowMatcher.__init__"><code class="docutils literal notranslate"><span class="pre">SlidingWindowMatcher.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#skillner.matchers.SlidingWindowMatcher.enrich_doc"><code class="docutils literal notranslate"><span class="pre">SlidingWindowMatcher.enrich_doc()</span></code></a></li>
+<li><a class="reference internal" href="#skillner.matchers.SlidingWindowMatcher.find_span"><code class="docutils literal notranslate"><span class="pre">SlidingWindowMatcher.find_span()</span></code></a></li>
 </ul>
 </li>
 </ul>

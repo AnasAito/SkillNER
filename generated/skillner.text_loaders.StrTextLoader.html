@@ -217,7 +217,7 @@
 <h1>skillner.text_loaders.StrTextLoader<a class="headerlink" href="#skillner-text-loaders-strtextloader" title="Permalink to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="skillner.text_loaders.StrTextLoader">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">skillner.text_loaders.</span></span><span class="sig-name descname"><span class="pre">StrTextLoader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillner.text_loaders.StrTextLoader" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">skillner.text_loaders.</span></span><span class="sig-name descname"><span class="pre">StrTextLoader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/4f42d17/skillner/text_loaders/str_text.py#L8"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.text_loaders.StrTextLoader" title="Permalink to this definition">#</a></dt>
 <dd><p>Loader of text as string.</p>
 <p>Used in a pipeline to create the sentences of document.</p>
 <dl class="field-list simple">
@@ -230,7 +230,7 @@
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="skillner.text_loaders.StrTextLoader.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#skillner.text_loaders.StrTextLoader.__init__" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/4f42d17/skillner/text_loaders/str_text.py#L20"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.text_loaders.StrTextLoader.__init__" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <p class="rubric">Methods</p>
@@ -240,12 +240,26 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#skillner.text_loaders.StrTextLoader.__init__" title="skillner.text_loaders.StrTextLoader.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(text)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">enrich_doc</span></code>(doc)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#skillner.text_loaders.StrTextLoader.enrich_doc" title="skillner.text_loaders.StrTextLoader.enrich_doc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enrich_doc</span></code></a>(doc)</p></td>
 <td><p>Create document sentences.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
+<dl class="py method">
+<dt class="sig sig-object py" id="skillner.text_loaders.StrTextLoader.enrich_doc">
+<span class="sig-name descname"><span class="pre">enrich_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="skillner.core.Document.html#skillner.core.Document" title="skillner.core.data_structures.Document"><span class="pre">Document</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/4f42d17/skillner/text_loaders/str_text.py#L24"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.text_loaders.StrTextLoader.enrich_doc" title="Permalink to this definition">#</a></dt>
+<dd><p>Create document sentences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>doc: Document</strong></dt><dd><p>The document to enrich with sentences.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -279,7 +293,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2021-2023, Anas AIT AOMAR &amp; Badr MOUFAD
+                Copyright &#169; 2021-2023, skillner
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
@@ -320,6 +334,7 @@
 <li><a class="reference internal" href="#">skillner.text_loaders.StrTextLoader</a><ul>
 <li><a class="reference internal" href="#skillner.text_loaders.StrTextLoader"><code class="docutils literal notranslate"><span class="pre">StrTextLoader</span></code></a><ul>
 <li><a class="reference internal" href="#skillner.text_loaders.StrTextLoader.__init__"><code class="docutils literal notranslate"><span class="pre">StrTextLoader.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#skillner.text_loaders.StrTextLoader.enrich_doc"><code class="docutils literal notranslate"><span class="pre">StrTextLoader.enrich_doc()</span></code></a></li>
 </ul>
 </li>
 </ul>
