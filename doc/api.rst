@@ -7,6 +7,19 @@ API Documentation
 .. currentmodule:: skillner
 
 
+Word processor
+==============
+
+.. currentmodule:: skillner.word_processing
+
+.. autosummary::
+   :toctree: generated/
+
+    WordProcessor
+    PorterStemmer
+
+
+
 Matchers
 ========
 

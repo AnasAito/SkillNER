@@ -12,6 +12,11 @@ class Word(str):
     word: str
         a string to initialize word.
 
+    Attributes
+    ----------
+    metadata: Dict[str, str]
+        A dictionary that stores metadata throughout the enrichment of document.
+
     Examples
     --------
     >>> from skillner.core import Word
@@ -25,6 +30,7 @@ class Word(str):
         # word is passed in implicitly to the constructor of str
         # TODO: Validate word namely check it's a word not a phrase
         super().__init__()
+        self.metadata: Dict[str, str] = {}
 
 
 class Candidate:
