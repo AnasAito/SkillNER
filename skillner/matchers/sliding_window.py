@@ -1,7 +1,7 @@
 from typing import Callable
 
 from skillner.core.base import Node
-from skillner.core.data_structures import Document, Sentence, Span, Candidate
+from skillner.core.data_structures import Document, Sentence, Span, Candidate, Word
 
 CONCEPT_ID: str = "concept_id"
 
@@ -34,7 +34,7 @@ class SlidingWindowMatcher(Node):
         self,
         query_method: Callable[[str], dict],
         max_window_size: int = 4,
-        pre_filter: Callable[[str], str] = None,
+        pre_filter: Callable[[Word], str] = None,
     ) -> None:
         self.query_method = query_method
         self.max_window_size = max_window_size

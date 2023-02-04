@@ -7,9 +7,7 @@ import sys
 
 from numpydoc import numpydoc, docscrape  # noqa
 
-# TODO: link code docs with source code in github
 sys.path.insert(0, os.path.abspath("sphinxext"))
-
 from github_link import make_linkcode_resolve
 
 
@@ -75,7 +73,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "skillner"
-copyright = "2021-2023, Anas AIT AOMAR & Badr MOUFAD"
+copyright = "2021-2023, skillner"
 author = "Anas AIT AOMAR & Badr MOUFAD"
 
 # The version info for the project you're documenting, acts as replacement for
