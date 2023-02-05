@@ -7,6 +7,9 @@ from skillner.core.data_structures import Word
 class PorterStemmer:
     """A word stemmer based on the Porter stemming algorithm.
 
+    An instance of ``PorterStemmer`` has a function-like behavior
+    and hence can be called directly on a word.
+
     Parameters
     ----------
     to_lowercase: bool, default=True
@@ -119,7 +122,7 @@ class PorterStemmer:
         self.vowels = frozenset(["a", "e", "i", "o", "u"])
 
     def stem(self, word: Word):
-        """Stem the word.
+        """Stem ``word``.
 
         Parameters
         ----------
