@@ -7,6 +7,19 @@ API Documentation
 .. currentmodule:: skillner
 
 
+Conflict resolvers
+==================
+
+.. currentmodule:: skillner.conflict_resolvers
+
+.. autosummary::
+   :nosignatures:
+   :toctree: generated/
+
+    SpanProcessor
+
+
+
 Word processor
 ==============
 

@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="skillner.word_processing.WordProcessor" href="generated/skillner.word_processing.WordProcessor.html" /><link rel="prev" title="skillner" href="index.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="skillner.conflict_resolvers.SpanProcessor" href="generated/skillner.conflict_resolvers.SpanProcessor.html" /><link rel="prev" title="skillner" href="index.html" />
 
     <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
         <title>API Documentation - skillner 2.0.dev documentation</title>
@@ -165,6 +165,7 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">API Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/skillner.conflict_resolvers.SpanProcessor.html">skillner.conflict_resolvers.SpanProcessor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/skillner.word_processing.WordProcessor.html">skillner.word_processing.WordProcessor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/skillner.word_processing.PorterStemmer.html">skillner.word_processing.PorterStemmer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/skillner.word_processing.TypeIdentifier.html">skillner.word_processing.TypeIdentifier</a></li>
@@ -216,13 +217,25 @@
         <article role="main">
           <section id="api-documentation">
 <span id="id1"></span><h1>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this heading">#</a></h1>
+<section id="conflict-resolvers">
+<h2>Conflict resolvers<a class="headerlink" href="#conflict-resolvers" title="Permalink to this heading">#</a></h2>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/skillner.conflict_resolvers.SpanProcessor.html#skillner.conflict_resolvers.SpanProcessor" title="skillner.conflict_resolvers.SpanProcessor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpanProcessor</span></code></a></p></td>
+<td><p>Span processor class that runs functions on all words of document.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 <section id="word-processor">
 <h2>Word processor<a class="headerlink" href="#word-processor" title="Permalink to this heading">#</a></h2>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/skillner.word_processing.WordProcessor.html#skillner.word_processing.WordProcessor" title="skillner.word_processing.WordProcessor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WordProcessor</span></code></a></p></td>
-<td><p>Word preprocessor class that runs functions on all words of document.</p></td>
+<td><p>Word processor class that runs functions on all words of document.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/skillner.word_processing.PorterStemmer.html#skillner.word_processing.PorterStemmer" title="skillner.word_processing.PorterStemmer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PorterStemmer</span></code></a></p></td>
 <td><p>A word stemmer based on the Porter stemming algorithm.</p></td>
@@ -304,12 +317,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="generated/skillner.word_processing.WordProcessor.html">
+          <a class="next-page" href="generated/skillner.conflict_resolvers.SpanProcessor.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">skillner.word_processing.WordProcessor</div>
+                <div class="title">skillner.conflict_resolvers.SpanProcessor</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -367,6 +380,7 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">API Documentation</a><ul>
+<li><a class="reference internal" href="#conflict-resolvers">Conflict resolvers</a></li>
 <li><a class="reference internal" href="#word-processor">Word processor</a></li>
 <li><a class="reference internal" href="#matchers">Matchers</a></li>
 <li><a class="reference internal" href="#text-loaders">Text loaders</a></li>

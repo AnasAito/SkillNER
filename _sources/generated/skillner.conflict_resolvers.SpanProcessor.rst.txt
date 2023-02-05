@@ -1,0 +1,23 @@
+﻿skillner.conflict\_resolvers.SpanProcessor
+==========================================
+
+.. currentmodule:: skillner.conflict_resolvers
+
+.. autoclass:: SpanProcessor
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SpanProcessor.__init__
+      ~SpanProcessor.enrich_doc
+   
+   
+
+   
+   
+   
