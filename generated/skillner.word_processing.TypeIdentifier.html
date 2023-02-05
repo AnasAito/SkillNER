@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Development" href="../development.html" /><link rel="prev" title="skillner.core.Pipeline" href="skillner.core.Pipeline.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="skillner.matchers.SlidingWindowMatcher" href="skillner.matchers.SlidingWindowMatcher.html" /><link rel="prev" title="skillner.word_processing.PorterStemmer" href="skillner.word_processing.PorterStemmer.html" />
 
     <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
-        <title>skillner.core.Node - skillner 2.0.dev documentation</title>
+        <title>skillner.word_processing.TypeIdentifier - skillner 2.0.dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -167,7 +167,7 @@
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../api.html">API Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="skillner.word_processing.WordProcessor.html">skillner.word_processing.WordProcessor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skillner.word_processing.PorterStemmer.html">skillner.word_processing.PorterStemmer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="skillner.word_processing.TypeIdentifier.html">skillner.word_processing.TypeIdentifier</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">skillner.word_processing.TypeIdentifier</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skillner.matchers.SlidingWindowMatcher.html">skillner.matchers.SlidingWindowMatcher</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skillner.text_loaders.StrTextLoader.html">skillner.text_loaders.StrTextLoader</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skillner.core.Document.html">skillner.core.Document</a></li>
@@ -176,7 +176,7 @@
 <li class="toctree-l2"><a class="reference internal" href="skillner.core.Span.html">skillner.core.Span</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skillner.core.Candidate.html">skillner.core.Candidate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skillner.core.Pipeline.html">skillner.core.Pipeline</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">skillner.core.Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skillner.core.Node.html">skillner.core.Node</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
@@ -214,34 +214,44 @@
           </label>
         </div>
         <article role="main">
-          <section id="skillner-core-node">
-<h1>skillner.core.Node<a class="headerlink" href="#skillner-core-node" title="Permalink to this heading">#</a></h1>
+          <section id="skillner-word-processing-typeidentifier">
+<h1>skillner.word_processing.TypeIdentifier<a class="headerlink" href="#skillner-word-processing-typeidentifier" title="Permalink to this heading">#</a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="skillner.core.Node">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">skillner.core.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/f97a05d/skillner/core/base.py#L6"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.core.Node" title="Permalink to this definition">#</a></dt>
-<dd><p>Base for pipeline building blocks.</p>
+<dt class="sig sig-object py" id="skillner.word_processing.TypeIdentifier">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">skillner.word_processing.</span></span><span class="sig-name descname"><span class="pre">TypeIdentifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_lowercase</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/f97a05d/skillner/word_processing/type_identifier.py#L12"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.word_processing.TypeIdentifier" title="Permalink to this definition">#</a></dt>
+<dd><p>Class to classify a word as <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code> or <code class="docutils literal notranslate"><span class="pre">STOP_WORD</span></code>.</p>
+<p>An instance of <code class="docutils literal notranslate"><span class="pre">TypeIdentifier</span></code> has a function-like behavior
+and hence can be called directly on a word.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>to_lowercase: bool, default=True</strong></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the word is lowercased before checking it is type.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="skillner.core.Node.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skillner.core.Node.__init__" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="skillner.word_processing.TypeIdentifier.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_lowercase</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/f97a05d/skillner/word_processing/type_identifier.py#L25"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.word_processing.TypeIdentifier.__init__" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <p class="rubric">Methods</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#skillner.core.Node.__init__" title="skillner.core.Node.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(*args, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#skillner.word_processing.TypeIdentifier.__init__" title="skillner.word_processing.TypeIdentifier.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([to_lowercase])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#skillner.core.Node.enrich_doc" title="skillner.core.Node.enrich_doc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enrich_doc</span></code></a>(doc)</p></td>
-<td><p>Apply a transformation on <code class="docutils literal notranslate"><span class="pre">doc</span></code>.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#skillner.word_processing.TypeIdentifier.identify_type" title="skillner.word_processing.TypeIdentifier.identify_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">identify_type</span></code></a>(word)</p></td>
+<td><p>Identify the type of <code class="docutils literal notranslate"><span class="pre">word</span></code> as <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code> or <code class="docutils literal notranslate"><span class="pre">STOP_WORD</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="skillner.core.Node.enrich_doc">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">enrich_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="skillner.core.Document.html#skillner.core.Document" title="skillner.core.data_structures.Document"><span class="pre">Document</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/f97a05d/skillner/core/base.py#L9"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.core.Node.enrich_doc" title="Permalink to this definition">#</a></dt>
-<dd><p>Apply a transformation on <code class="docutils literal notranslate"><span class="pre">doc</span></code>.</p>
+<dt class="sig sig-object py" id="skillner.word_processing.TypeIdentifier.identify_type">
+<span class="sig-name descname"><span class="pre">identify_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="skillner.core.Word.html#skillner.core.Word" title="skillner.core.data_structures.Word"><span class="pre">Word</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/f97a05d/skillner/word_processing/type_identifier.py#L28"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.word_processing.TypeIdentifier.identify_type" title="Permalink to this definition">#</a></dt>
+<dd><p>Identify the type of <code class="docutils literal notranslate"><span class="pre">word</span></code> as <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code> or <code class="docutils literal notranslate"><span class="pre">STOP_WORD</span></code>.</p>
 </dd></dl>
 
 </dd></dl>
@@ -253,23 +263,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../development.html">
+          <a class="next-page" href="skillner.matchers.SlidingWindowMatcher.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Development</div>
+                <div class="title">skillner.matchers.SlidingWindowMatcher</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="skillner.core.Pipeline.html">
+          <a class="prev-page" href="skillner.word_processing.PorterStemmer.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">skillner.core.Pipeline</div>
+                <div class="title">skillner.word_processing.PorterStemmer</div>
                 
               </div>
             </a>
@@ -315,10 +325,10 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">skillner.core.Node</a><ul>
-<li><a class="reference internal" href="#skillner.core.Node"><code class="docutils literal notranslate"><span class="pre">Node</span></code></a><ul>
-<li><a class="reference internal" href="#skillner.core.Node.__init__"><code class="docutils literal notranslate"><span class="pre">Node.__init__()</span></code></a></li>
-<li><a class="reference internal" href="#skillner.core.Node.enrich_doc"><code class="docutils literal notranslate"><span class="pre">Node.enrich_doc()</span></code></a></li>
+<li><a class="reference internal" href="#">skillner.word_processing.TypeIdentifier</a><ul>
+<li><a class="reference internal" href="#skillner.word_processing.TypeIdentifier"><code class="docutils literal notranslate"><span class="pre">TypeIdentifier</span></code></a><ul>
+<li><a class="reference internal" href="#skillner.word_processing.TypeIdentifier.__init__"><code class="docutils literal notranslate"><span class="pre">TypeIdentifier.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#skillner.word_processing.TypeIdentifier.identify_type"><code class="docutils literal notranslate"><span class="pre">TypeIdentifier.identify_type()</span></code></a></li>
 </ul>
 </li>
 </ul>

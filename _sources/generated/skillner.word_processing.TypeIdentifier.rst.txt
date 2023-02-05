@@ -1,0 +1,23 @@
+﻿skillner.word\_processing.TypeIdentifier
+========================================
+
+.. currentmodule:: skillner.word_processing
+
+.. autoclass:: TypeIdentifier
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TypeIdentifier.__init__
+      ~TypeIdentifier.identify_type
+   
+   
+
+   
+   
+   

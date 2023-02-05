@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="skillner.matchers.SlidingWindowMatcher" href="skillner.matchers.SlidingWindowMatcher.html" /><link rel="prev" title="skillner.word_processing.WordProcessor" href="skillner.word_processing.WordProcessor.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="skillner.word_processing.TypeIdentifier" href="skillner.word_processing.TypeIdentifier.html" /><link rel="prev" title="skillner.word_processing.WordProcessor" href="skillner.word_processing.WordProcessor.html" />
 
     <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
         <title>skillner.word_processing.PorterStemmer - skillner 2.0.dev documentation</title>
@@ -167,6 +167,7 @@
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../api.html">API Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="skillner.word_processing.WordProcessor.html">skillner.word_processing.WordProcessor</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">skillner.word_processing.PorterStemmer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skillner.word_processing.TypeIdentifier.html">skillner.word_processing.TypeIdentifier</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skillner.matchers.SlidingWindowMatcher.html">skillner.matchers.SlidingWindowMatcher</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skillner.text_loaders.StrTextLoader.html">skillner.text_loaders.StrTextLoader</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skillner.core.Document.html">skillner.core.Document</a></li>
@@ -217,8 +218,10 @@
 <h1>skillner.word_processing.PorterStemmer<a class="headerlink" href="#skillner-word-processing-porterstemmer" title="Permalink to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="skillner.word_processing.PorterStemmer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">skillner.word_processing.</span></span><span class="sig-name descname"><span class="pre">PorterStemmer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_lowercase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NLTK_EXTENSIONS'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/4f42d17/skillner/word_processing/porter_stemmer.py#L7"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.word_processing.PorterStemmer" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">skillner.word_processing.</span></span><span class="sig-name descname"><span class="pre">PorterStemmer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_lowercase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NLTK_EXTENSIONS'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/f97a05d/skillner/word_processing/porter_stemmer.py#L7"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.word_processing.PorterStemmer" title="Permalink to this definition">#</a></dt>
 <dd><p>A word stemmer based on the Porter stemming algorithm.</p>
+<p>An instance of <code class="docutils literal notranslate"><span class="pre">PorterStemmer</span></code> has a function-like behavior
+and hence can be called directly on a word.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -276,7 +279,7 @@ Program 14.3 (1980): 130-137.</p>
 for the homepage of the algorithm.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="skillner.word_processing.PorterStemmer.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_lowercase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NLTK_EXTENSIONS'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/4f42d17/skillner/word_processing/porter_stemmer.py#L80"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.word_processing.PorterStemmer.__init__" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_lowercase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NLTK_EXTENSIONS'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/f97a05d/skillner/word_processing/porter_stemmer.py#L83"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.word_processing.PorterStemmer.__init__" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <p class="rubric">Methods</p>
@@ -287,7 +290,7 @@ for the homepage of the algorithm.</p>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#skillner.word_processing.PorterStemmer.stem" title="skillner.word_processing.PorterStemmer.stem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stem</span></code></a>(word)</p></td>
-<td><p>Stem the word.</p></td>
+<td><p>Stem <code class="docutils literal notranslate"><span class="pre">word</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -310,8 +313,8 @@ for the homepage of the algorithm.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="skillner.word_processing.PorterStemmer.stem">
-<span class="sig-name descname"><span class="pre">stem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="skillner.core.Word.html#skillner.core.Word" title="skillner.core.data_structures.Word"><span class="pre">Word</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/4f42d17/skillner/word_processing/porter_stemmer.py#L121"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.word_processing.PorterStemmer.stem" title="Permalink to this definition">#</a></dt>
-<dd><p>Stem the word.</p>
+<span class="sig-name descname"><span class="pre">stem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="skillner.core.Word.html#skillner.core.Word" title="skillner.core.data_structures.Word"><span class="pre">Word</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/AnasAito/skillner/blob/f97a05d/skillner/word_processing/porter_stemmer.py#L124"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skillner.word_processing.PorterStemmer.stem" title="Permalink to this definition">#</a></dt>
+<dd><p>Stem <code class="docutils literal notranslate"><span class="pre">word</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -331,12 +334,12 @@ for the homepage of the algorithm.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="skillner.matchers.SlidingWindowMatcher.html">
+          <a class="next-page" href="skillner.word_processing.TypeIdentifier.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">skillner.matchers.SlidingWindowMatcher</div>
+                <div class="title">skillner.word_processing.TypeIdentifier</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
