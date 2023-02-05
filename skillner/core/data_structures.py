@@ -1,4 +1,4 @@
-from typing import List, Type, Dict
+from typing import List, Type, Dict, Any
 
 
 class Word(str):
@@ -100,6 +100,7 @@ class Span:
         self.stop: int = None
 
         self.li_candidates: List[Candidate] = []
+        self.metadata: Dict[str, Any] = {}
 
     @property
     def window(self) -> slice:

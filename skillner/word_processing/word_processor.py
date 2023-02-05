@@ -5,9 +5,9 @@ from skillner.core.data_structures import Document, Word
 
 
 class WordProcessor(Node):
-    """Word preprocessor class that runs functions on all words of document.
+    """Word processor class that runs functions on all words of document.
 
-    ``WordPreprocessor`` class acts on individual words of document. It runs
+    ``WordProcessor`` class acts on individual words of document. It runs
     independently functions and stores the result on the ``metadata``
     dictionary of word.
 
@@ -28,7 +28,7 @@ class WordProcessor(Node):
         Parameters
         ----------
         doc: Document
-            The document in which to find spans.
+            The document with words to be enriched.
 
         """
         for sentence in doc:
