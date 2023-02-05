@@ -31,6 +31,7 @@ Word processor
 
     WordProcessor
     PorterStemmer
+    TypeIdentifier
 
 
 
