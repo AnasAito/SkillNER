@@ -6,6 +6,16 @@
 --------
 
 
+Installation
+------------
+
+
+``skillner`` is available on PyPi. Install the latest version of the package by running
+
+.. code-block:: bash
+
+    $ pip install skillner -U
+
 
 Explore the documentation
 -------------------------
