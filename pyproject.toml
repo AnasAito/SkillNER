@@ -50,3 +50,7 @@ doc = [
     "sphinx_copybutton",
     "furo"
 ]
+
+
+[project.scripts]
+skillner-download = "skillner.download:download_kb"
