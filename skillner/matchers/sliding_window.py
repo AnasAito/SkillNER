@@ -1,7 +1,9 @@
 from typing import Callable
 
 from skillner.core.base import Node
-from skillner.core.data_structures import Document, Sentence, Span, Candidate
+from skillner.core.data_structures import Document, Sentence, Span, Candidate, Word
+
+CONCEPT_ID: str = "concept_id"
 
 
 class SlidingWindowMatcher(Node):
@@ -32,7 +34,7 @@ class SlidingWindowMatcher(Node):
         self,
         query_method: Callable[[str], dict],
         max_window_size: int = 4,
-        pre_filter: Callable[[str], str] = None,
+        pre_filter: Callable[[Word], str] = None,
     ) -> None:
         self.query_method = query_method
         self.max_window_size = max_window_size
@@ -102,16 +104,25 @@ class SlidingWindowMatcher(Node):
                 )
             )
 
-            # ask knowledge graph
-            response = self.query_method(query)
+            # ask knowledge graph and retrieve a list of responses
+            # every response is a dict that must have a key `CONCEPT_ID`
+            li_responses = self.query_method(query)
 
-            if response is None:
+            if li_responses is None or len(li_responses) == 0:
                 continue
 
-            # create candidate
-            candidate = Candidate(window)
-            candidate.metadata = response
+            # create candidates
+            for response in li_responses:
 
-            span.add_candidate(candidate)
+                # sanity check of response not empty
+                if response is None or len(response) == 0:
+                    continue
+
+                concept_id = response[CONCEPT_ID]
+
+                candidate = Candidate(window, concept_id)
+                candidate.metadata = response
+
+                span.add_candidate(candidate)
 
         return span

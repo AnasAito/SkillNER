@@ -1,4 +1,4 @@
-from typing import List, Type, Dict
+from typing import List, Type, Dict, Any
 
 
 class Word(str):
@@ -11,6 +11,11 @@ class Word(str):
     ----------
     word: str
         a string to initialize word.
+
+    Attributes
+    ----------
+    metadata: Dict[str, str]
+        A dictionary that stores metadata throughout the enrichment of document.
 
     Examples
     --------
@@ -25,6 +30,7 @@ class Word(str):
         # word is passed in implicitly to the constructor of str
         # TODO: Validate word namely check it's a word not a phrase
         super().__init__()
+        self.metadata: Dict[str, str] = {}
 
 
 class Candidate:
@@ -34,6 +40,10 @@ class Candidate:
     ----------
     window: slice
         A slice the identifies candidate in Sentence.
+
+    concept_id: str
+        The id of the concept identified by candidate in the
+        knowledge base.
 
     Attributes
     ----------
@@ -48,9 +58,11 @@ class Candidate:
 
     """
 
-    def __init__(self, window: slice) -> None:
+    def __init__(self, window: slice, concept_id: str) -> None:
         self.window = window
         self.metadata: Dict[str, str] = {}
+
+        self.concept_id = concept_id
 
     @property
     def start(self) -> int:
@@ -88,6 +100,7 @@ class Span:
         self.stop: int = None
 
         self.li_candidates: List[Candidate] = []
+        self.metadata: Dict[str, Any] = {}
 
     @property
     def window(self) -> slice:

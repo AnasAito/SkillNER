@@ -13,6 +13,14 @@
 ![PyPI version](https://badge.fury.io/py/skillner.svg)
 
 
+## Quick start
+
+Run the following command to get the latest version ``skillner``
+```bash
+pip install skillner -U
+```
+
+
 ## Development 
 
 1. Start by forking the repository
