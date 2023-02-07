@@ -17,6 +17,14 @@ Installation
     $ pip install skillner -U
 
 
+then download the english skills knowledge base ``ESCO_EN``
+
+.. code-block:: bash
+
+    $ skillner-download ESCO_EN
+
+
+
 Explore the documentation
 -------------------------
 

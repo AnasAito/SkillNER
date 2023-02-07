@@ -20,13 +20,18 @@ Run the following command to get the latest version ``skillner``
 pip install skillner -U
 ```
 
+Download the english skills knowledge base
+```bash
+skillner-download ESCO_EN
+```
+
 
 ## Development 
 
 1. Start by forking the repository
 2. Clone the repository and ``cd`` to it
 ```bash
-git clone https://github.com/{YOU_GITHUB_USERNAME}/SkillNER.git
+git clone https://github.com/{YOUR_GITHUB_USERNAME}/SkillNER.git
 cd SkillNER
 ```
 3. Install the package in development mode

@@ -9,7 +9,7 @@ Development
 
 .. code-block:: bash
 
-    $ git clone https://github.com/{YOU_GITHUB_USERNAME}/SkillNER.git
+    $ git clone https://github.com/{YOUR_GITHUB_USERNAME}/SkillNER.git
     $ cd SkillNER
 
 
