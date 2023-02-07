@@ -11,8 +11,28 @@ SUPPORTED_KB = {"ESCO_EN"}
 
 
 def download_kb():
+    """Download a given Knowledge bases through the CLI.
 
+    The function called when running ``skillner-download $KB_NAME``.
+    If executed successfully, the knowledge base will stored in
+    ``.skillner-kb/$KB_NAME.pkl``.
+
+    Examples
+    --------
+    In a terminal
+    $ skillner-download ESCO_EN
+    Downloading ESCO_EN ...
+    Saving ESCO_EN ...
+    ESCO_EN was downloaded successfully.
+    Then in a python console
+    >>> from skillner.download import DIR_KB
+    >>> import pickle
+    >>> with open(f"{DIR_KB}/ESCO_EN.pkl", 'rb') as handle:
+            data = pickle.load(handle)
+
+    """
     # get and validate name of KB
+    # handle case KB name not provided
     if len(sys.argv) == 1:
         raise ValueError("Provide the name of Knowledge Base to download.")
 
