@@ -4,9 +4,7 @@ import requests
 
 
 DIR_KB = ".skillner-kb"
-BASE_URL = (
-    "https://github.com/AnasAito/SkillNER/raw/download-kb/.skillner-kb/{kb_name}.pkl"
-)
+BASE_URL = "https://github.com/AnasAito/SkillNER/raw/main/.skillner-kb/{kb_name}.pkl"
 SUPPORTED_KB = {"ESCO_EN"}
 
 
