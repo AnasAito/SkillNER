@@ -30,14 +30,14 @@ pip install skillNer
 ```
 
 2. Next, run the following command to install ``spacy en_core_web_lg ``
-which is one of the main plugins of SkillNer. Thanks its modular nature, you can 
-customize SkillNer behavior just by adjusting  | plugin | unplugin modules. Don't worry about these details, we will discuss them in details in the an **upcomming Tutorial section**.
+which is one of the main plugins of SkillNer. Thanks to its modular nature, you can 
+customize SkillNer behavior just by adjusting  | plugin | unplugin modules. Don't worry about these details, we will discuss them in detail in the **upcoming Tutorial section**.
 
 ```bash
 python -m spacy download en_core_web_lg
 ```
 
-**Note:** The later installation will take few seconds before it get done since ``spacy en_core_web_lg `` is a bit too large (800 MB). Yet, you need to wait only one time.
+**Note:** The later installation will take a few seconds before it gets done since ``spacy en_core_web_lg `` is a bit too large (800 MB). Yet, you need to wait only one time.
 
 
 ## Example of usage
@@ -88,8 +88,8 @@ annotations = skill_extractor.annotate(job_description)
 ### Exploit annotations
 
 Voilà! Now you can inspect results by rendering the text with the annotated skills.
-You can acheive that through the ``.describe`` method. Note that the output of this method is 
-litteraly an HTML document that gets rendered in your notebook.
+You can achieve that through the ``.describe`` method. Note that the output of this method is 
+literally an HTML document that gets rendered in your notebook.
 
 
 <p align="center">
@@ -129,7 +129,7 @@ Below is the value of the ``annotations`` variable from the code above.
 }
 ```
 
-# Contribure
+# Contribute
 
 SkillNer is the first **Open Source** skill extractor. 
 Hence it is a tool dedicated to the community and thereby relies on its contribution to evolve.
@@ -150,7 +150,7 @@ You can contribute to SkillNer either by
 
 
 
-Finally, make sure to read carefully [our guidelines](https://badr-moufad.github.io/SkillNER/contribute.html) before contributing. It will specifies standards to follow so that we can understand what you want to say.
+Finally, make sure to read carefully [our guidelines](https://badr-moufad.github.io/SkillNER/contribute.html) before contributing. It will specify standards to follow so that we can understand what you want to say.
 
 
 Besides, it will help you setup SkillNer on your local machine, in case you are willing to push code.
