@@ -288,7 +288,7 @@ class Text:
         Returns
         -------
         Word
-            returns thhe word object in the index-position
+            returns the word object in the index-position
 
         Examples
         --------
